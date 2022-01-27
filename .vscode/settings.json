@@ -1,0 +1,15 @@
+{
+    "jupyter.jupyterServerType": "local",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./TCs",
+        "-p",
+        "*test.py"
+    ],
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestArgs": [
+        "."
+    ]
+}

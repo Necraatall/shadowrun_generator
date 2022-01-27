@@ -13,6 +13,10 @@ from GeneratorJmen.Data.surname_it import *
 from GeneratorJmen.Data.surname_kr import *
 from GeneratorJmen.Data.surname_ne import *
 from GeneratorJmen.Data.surname_pl import *
+from GeneratorJmen.Data.surname_pt import *
+from GeneratorJmen.Data.surname_ru import *
+from GeneratorJmen.Data.surname_uk import *
+from GeneratorJmen.Data.surname_us import *
 
 import random
 
@@ -33,7 +37,11 @@ class surname_rand:
             intent_surname_it,
             intent_surname_kr,
             intent_surname_ne,
-            intent_surname_pl        
+            intent_surname_pl,
+            intent_surname_pt,
+            intent_surname_ru,
+            intent_surname_uk,
+            intent_surname_us
         ]
         chosen_surname = random.choice(intent_tribe_backround)
         return chosen_surname

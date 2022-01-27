@@ -1,5 +1,4 @@
 
-
 intent_surname_pl = [
 	"Abramczy",
 	"Abramczy",

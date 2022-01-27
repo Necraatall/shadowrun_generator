@@ -1,4 +1,4 @@
-intent_surname_chinees = [
+intent_surname_cn = [
 	"Ang",
 	"Au-Yong",
 	"Bai",

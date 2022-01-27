@@ -1,19 +1,3 @@
-
-
-# intent_general_date =[
-#   "Kolikátého je?",
-#   "Co je za den?",
-#   "Jaký je den?",
-#   "Co je dneska?",
-#   "jaky je den",
-#   "Jaký je dnes den?",
-#   "Jaký je dneska den",
-#   "Jaké je datum?"
-# ]
-
-
-
-
 intent_name_all = [
     "Áditi",
     "África",

@@ -1,4 +1,4 @@
-intent_surname_slavic = [
+intent_surname_cz = [
 	"Abl",
 	"Adsit",
 	"Ajdrna",
@@ -516,6 +516,7 @@ intent_surname_slavic = [
 	"Zimola",
 	"Zipperer",
 	"Zitka",
+	"Zlámal",
 	"Zoucha",
 	"Zwolenksy"
 ]	

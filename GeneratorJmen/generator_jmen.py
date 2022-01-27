@@ -1,9 +1,18 @@
-from GeneratorJmen.jmeno_all import *
-from GeneratorJmen.surname_cz import *
-from GeneratorJmen.surname_cn import *
-from GeneratorJmen.surname_de import *
-from GeneratorJmen.surname_es import *
-from GeneratorJmen.surname_eus import *
+from GeneratorJmen.Data.jmeno_all import *
+from GeneratorJmen.Data.surname_cz import *
+from GeneratorJmen.Data.surname_cn import *
+from GeneratorJmen.Data.surname_de import *
+from GeneratorJmen.Data.surname_es import *
+from GeneratorJmen.Data.surname_eus import *
+from GeneratorJmen.Data.surname_fr import *
+from GeneratorJmen.Data.surname_gk import *
+from GeneratorJmen.Data.surname_hi import *
+from GeneratorJmen.Data.surname_ie import *
+from GeneratorJmen.Data.surname_il import *
+from GeneratorJmen.Data.surname_it import *
+from GeneratorJmen.Data.surname_kr import *
+from GeneratorJmen.Data.surname_ne import *
+from GeneratorJmen.Data.surname_pl import *
 
 import random
 
@@ -16,7 +25,15 @@ class surname_rand:
             intent_surname_cn,
             intent_surname_de,
             intent_surname_es,
-            intent_surname_eus
+            intent_surname_eus,
+            intent_surname_fr,
+            intent_surname_gk,
+            intent_surname_hi,
+            intent_surname_ie,
+            intent_surname_it,
+            intent_surname_kr,
+            intent_surname_ne,
+            intent_surname_pl        
         ]
         chosen_surname = random.choice(intent_tribe_backround)
         return chosen_surname

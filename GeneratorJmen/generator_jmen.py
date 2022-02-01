@@ -15,7 +15,7 @@ class generator_of_full_name:
         #chosen_god_about = str(intent_gods_about_gk[chosen_god])
         print(
             str(random.choice(name_rand.list_of_intents_tribe_names())) 
-            + " " + 
+            + " " + str(random.choice(nickName_rand.list_of_intents_tribe_nickNames())) + " " + 
             str(random.choice(surname_rand.list_of_intents_tribe_surname()))
             )
         print(god_rand.list_of_intents_tribe_gods())

@@ -1,4 +1,5 @@
 from GeneratorJmen.generator_jmen import *
+#from GeneratorJmen.zkus import *
 
 #from Vlastnosti import *
 # import try_datetime

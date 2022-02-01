@@ -4,27 +4,35 @@ import random
 
 #TODO: jak setupovat vse
 #set_name_by_tribe zda bylo pozadovano z jakych tribes je jmeno a prijmeni 
-set_name_by_tribe = False
+set_tribe_name = ""
+set_tribe_surname = ""
+set_tribe_NickName = ""
+set_tribe_gods = "" 
 
 class generator_of_full_name:
-    if set_name_by_tribe != False:
+    #TODO list
+    #Todays is only for set uped languages
+    if set_tribe_name != "" and set_tribe_surname != "" and set_tribe_NickName != "" and set_tribe_gods != "":
+        # dodelat
+        # if set_tribe_name == surname_rand.list_of_intents_tribe_surname()[surname_rand.list_of_intents_tribe_surname()[1]]:
+        #     pass
         #nutno dodelat
-        pass
-    else:
-        #chosen_god = str(random.choice(god_rand.list_of_intents_tribe_gods()[0]))
-        #chosen_god_about = str(intent_gods_about_gk[chosen_god])
         print(
             str(random.choice(name_rand.list_of_intents_tribe_names())) 
-            + " " + str(random.choice(nickName_rand.list_of_intents_tribe_nickNames())) + " " + 
+            + " \"" + str(random.choice(nickName_rand.list_of_intents_tribe_nickNames())) + "\" " + 
             str(random.choice(surname_rand.list_of_intents_tribe_surname()))
             )
         print(god_rand.list_of_intents_tribe_gods())
-        # print(
-        #     " " + 
-        #     chosen_god
-        #     + " neco o nem: " + 
-        #     chosen_god_about
-        #     + "."
-        # )
+
+        pass
+    else:
+
+        print(
+            str(random.choice(name_rand.list_of_intents_tribe_names())) 
+            + " \"" + str(random.choice(nickName_rand.list_of_intents_tribe_nickNames())) + "\" " + 
+            str(random.choice(surname_rand.list_of_intents_tribe_surname()))
+            )
+        print(god_rand.list_of_intents_tribe_gods())
+
 
 

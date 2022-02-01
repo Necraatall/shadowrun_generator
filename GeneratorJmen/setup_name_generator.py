@@ -63,7 +63,8 @@ class surname_rand:
             intent_surname_us
         ]
         chosen_surname = random.choice(intent_tribe_surname)
-        return chosen_surname
+        chosen_surname_index = intent_tribe_surname.index(chosen_surname)
+        return chosen_surname[chosen_surname_index], chosen_surname_index
 
 class name_rand:
     @staticmethod

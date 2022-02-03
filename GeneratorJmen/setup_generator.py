@@ -132,6 +132,9 @@ class god_rand:
         get_index_of_god = intent_tribe_god[get_index_of_tribes_god].index(chosen_god)
 
         #rozsekam vystup na jmeno boha a jeho popis kdy si vemu jen popis
-        split_output_chosen_god_about = str(intent_tribe_god_about[get_index_of_tribes_god][get_index_of_god]).split((", { "+ str(get_index_of_god) + ": '") )
-        # odeslu jmeno boha a popis boha bez zacatecnich znaku
-        return chosen_god, str(split_output_chosen_god_about)[6:]
+        #vemu si hodnotu popisu boha a dam do stringu 
+        split_output_chosen_god_about = str(intent_tribe_god_about[get_index_of_tribes_god][get_index_of_god])
+        #osetrim aby hodnota nemela nechtene zvlastni znaky
+        split_output_chosen_god_about = split_output_chosen_god_about[5:][:-2].replace("'","")
+        # odeslu jmeno boha a popis boha
+        return chosen_god, split_output_chosen_god_about

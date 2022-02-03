@@ -1,4 +1,4 @@
-from GeneratorJmen.generator_jmen import *
+from GeneratorJmen.generator_background import *
 #from GeneratorJmen.zkus import *
 
 #from Vlastnosti import *

@@ -1,4 +1,4 @@
-from GeneratorJmen.setup_name_generator import *
+from GeneratorJmen.setup_generator import *
 
 import random
 

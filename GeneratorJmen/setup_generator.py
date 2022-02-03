@@ -66,7 +66,7 @@ class surname_rand:
             intent_surname_uk,
             intent_surname_us
         ]
-        chosen_surname = random.choice(intent_tribe_surname)
+        chosen_surname = random.choice(random.choice(intent_tribe_surname))
         return chosen_surname
 
 class name_rand:
@@ -88,7 +88,7 @@ class name_rand:
             intent_names_vn
             
         ]
-        chosen_name = random.choice(intent_tribe_name)
+        chosen_name = random.choice(random.choice(intent_tribe_name))
         return chosen_name
 
 class nickName_rand:
@@ -98,7 +98,7 @@ class nickName_rand:
             intent_nickNames_cz
             
         ]
-        chosen_nickName = random.choice(intent_tribe_nickName)
+        chosen_nickName = random.choice(random.choice(intent_tribe_nickName))
         return chosen_nickName
 
 class god_rand:

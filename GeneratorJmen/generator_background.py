@@ -1,6 +1,8 @@
 from GeneratorJmen.setup_generator import *
 
 import random
+from enum import auto, Enum
+
 
 #TODO: jak setupovat vse
 #set_name_by_tribe zda bylo pozadovano z jakych tribes je jmeno a prijmeni 
@@ -9,7 +11,9 @@ set_tribe_surname = ""
 set_tribe_NickName = ""
 set_tribe_gods = "" 
 
-class generator_of_full_name:
+ 
+
+def define_inputs():
     #TODO list
     #Todays is only for set uped languages
     if set_tribe_name != "" and set_tribe_surname != "" and set_tribe_NickName != "" and set_tribe_gods != "":
@@ -25,12 +29,13 @@ class generator_of_full_name:
         print(god_rand.list_of_intents_tribe_gods())
 
         pass
-    else:
 
+    else:
+        
         print(
-            str(random.choice(name_rand.list_of_intents_tribe_names())) 
-            + " \"" + str(random.choice(nickName_rand.list_of_intents_tribe_nickNames())) + "\" " + 
-            str(random.choice(surname_rand.list_of_intents_tribe_surname()))
+            name_rand.list_of_intents_tribe_names() 
+            + " \"" + nickName_rand.list_of_intents_tribe_nickNames() + "\" " +
+            surname_rand.list_of_intents_tribe_surname()
             )
         print(god_rand.list_of_intents_tribe_gods())
 

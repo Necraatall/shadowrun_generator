@@ -1,4 +1,7 @@
 from GeneratorJmen.generator_background import *
+
+define_inputs()
+
 #from GeneratorJmen.zkus import *
 
 #from Vlastnosti import *

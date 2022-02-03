@@ -4,7 +4,6 @@ from GeneratorJmen.Data.Surname.surname_cz import *
 from GeneratorJmen.Data.Surname.surname_cn import *
 from GeneratorJmen.Data.Surname.surname_de import *
 from GeneratorJmen.Data.Surname.surname_es import *
-from GeneratorJmen.Data.Surname.surname_eus import *
 from GeneratorJmen.Data.Surname.surname_fr import *
 from GeneratorJmen.Data.Surname.surname_gk import *
 from GeneratorJmen.Data.Surname.surname_hi import *
@@ -35,9 +34,15 @@ from GeneratorJmen.Data.Name.names_vn import *
 
 from GeneratorJmen.Data.NickName.nicknames_cz import *
 
-from GeneratorJmen.Data.Gods.gods_gk import *
+from GeneratorJmen.Data.Gods.gods_greek import *
+from GeneratorJmen.Data.Gods.gods_egypt import *
+from GeneratorJmen.Data.Gods.gods_kelt import *
+from GeneratorJmen.Data.Gods.gods_slovan import *
 
 import random
+
+
+
 
 class surname_rand:
     @staticmethod
@@ -48,7 +53,6 @@ class surname_rand:
             intent_surname_cn,
             intent_surname_de,
             intent_surname_es,
-            intent_surname_eus,
             intent_surname_fr,
             intent_surname_gk,
             intent_surname_hi,
@@ -63,8 +67,7 @@ class surname_rand:
             intent_surname_us
         ]
         chosen_surname = random.choice(intent_tribe_surname)
-        chosen_surname_index = intent_tribe_surname.index(chosen_surname)
-        return chosen_surname[chosen_surname_index], chosen_surname_index
+        return chosen_surname
 
 class name_rand:
     @staticmethod
@@ -102,15 +105,33 @@ class god_rand:
     @staticmethod
     def list_of_intents_tribe_gods():
         intent_tribe_god = [
-            intent_gods_gk
-            
+            intent_gods_gk,
+            intent_gods_eg,
+            intent_gods_kelt,
+            intent_gods_slovan
+
         ]
-        
+
+        intent_tribe_god_about = [
+            intent_gods_about_gk,
+            intent_gods_about_eg,
+            intent_gods_about_kelt,
+            intent_gods_about_slovan
+
+        ]
+
+
+        #vyber list uvnitr listu intent_tribe_god - nevybere jmeno, ale hodnoty
         chosen_list = random.choice(intent_tribe_god)
+        #vyber index listu pro pozdejsi pouziti
         get_index_of_tribes_god = intent_tribe_god.index(chosen_list)
 
+        #vybere jednoho boha z listu bohu dle indexu ziskaneho vyse
         chosen_god = random.choice(intent_tribe_god[get_index_of_tribes_god])
-        get_index_of_god = intent_gods_gk.index(chosen_god)
-     
-        split_output_chosen_god_about = str(intent_gods_about_gk[get_index_of_god]).split((", { "+ str(get_index_of_god) + ": '") )
-        return chosen_god, str(split_output_chosen_god_about)[7:]
+        #vybere index vybraneho boha
+        get_index_of_god = intent_tribe_god[get_index_of_tribes_god].index(chosen_god)
+
+        #rozsekam vystup na jmeno boha a jeho popis kdy si vemu jen popis
+        split_output_chosen_god_about = str(intent_tribe_god_about[get_index_of_tribes_god][get_index_of_god]).split((", { "+ str(get_index_of_god) + ": '") )
+        # odeslu jmeno boha a popis boha bez zacatecnich znaku
+        return chosen_god, str(split_output_chosen_god_about)[6:]

@@ -47,7 +47,6 @@ import random
 class surname_rand:
     @staticmethod
     def list_of_intents_tribe_surname():
-        #TODO dodelat prijmeni
         intent_tribe_surname = [
             intent_surname_cz,
             intent_surname_cn,

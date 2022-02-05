@@ -31,6 +31,7 @@ from GeneratorJmen.Data.Name.names_sk import *
 from GeneratorJmen.Data.Name.names_fr import *
 from GeneratorJmen.Data.Name.names_es import *
 from GeneratorJmen.Data.Name.names_vn import *
+from GeneratorJmen.Data.Name.names_cz import *
 
 from GeneratorJmen.Data.NickName.nicknames_cz import *
 

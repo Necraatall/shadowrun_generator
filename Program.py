@@ -1,6 +1,6 @@
 from GeneratorJmen.generator_background import *
 
-define_inputs()
+write_results()
 
 #from GeneratorJmen.zkus import *
 

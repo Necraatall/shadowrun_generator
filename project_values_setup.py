@@ -172,6 +172,7 @@ skin_tone = ['almond', 'brown', 'bronze', 'chocolate','cocoa', 'dark chocolate',
 
 rase_choice = ['Caucasian', 'Latino/Hispanic', 'African', 'Caribbean', 'Middle Eastern', 'South Asian', 'East Asian', 'Mixed']
 
+#TODO: opravit hair slovnik a hair color - white a dark brown
 # 1 means eye_color
 # 2 means hair_color
 # 3 means skin_tone

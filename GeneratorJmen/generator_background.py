@@ -18,7 +18,9 @@ def write_results():
         #########################################################################
         #### TAKTO TO HEZKY FUNGUJE VE SLOVNIKU S POLEM
         #########################################################################
-        #print(random.choice(race_details['Caucasian'][1]))
+        # rasa = random.choice(rase_choice)
+        # oci = random.choice(race_details[rasa][1])
+        # print(random.choice(oci))
 
     else:        
         print(

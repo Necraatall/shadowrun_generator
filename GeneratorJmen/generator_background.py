@@ -15,6 +15,11 @@ def write_results():
         print(tribe_name_origin + " \"" + nickname + "\" " + tribe_surname_origin)
         print(god_rand.list_of_intents_tribe_gods())
 
+        #########################################################################
+        #### TAKTO TO HEZKY FUNGUJE VE SLOVNIKU S POLEM
+        #########################################################################
+        #print(random.choice(race_details['Caucasian'][1]))
+
     else:        
         print(
             name_rand.list_of_intents_tribe_names() 

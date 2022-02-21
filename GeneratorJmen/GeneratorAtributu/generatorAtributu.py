@@ -1,7 +1,15 @@
-###TODO: prekopat a dat tam static methody a spol
+'''
+    High level: kod dokaze vygenerovat atributy, ovlivnit rasou, zapsat do atributes_dict (vcetne Magie a resonance) a vypsat je
+    Deep level: kod vyrandomuje zda dotycny je magic/resonance user (a odecte je ze zbyvajicich Pointspool)
+                kod vybere z ktereho listu hodnot bude pridelovat hodnoty do atributu
+                kod vybere hodnoty a priradi
+                kod vybere rasu a modifikuje hodnoty atributu o jeji minima a maxima
+                kod vypise hodnoty do terminalu a ulozi je docasne do slovniku 
+    Deepest level:  kod potrebuje mit hodnotu pointspool - je to pocet bodu na celou postavu
+                    kod si zjisti hodnotu poctu bodu pro generovani atributu - pointspool_atr_start (polovina pointspool) a pripocte k ni 80 (za kazdy atribut 10)
+                    kod si randomizuje zda je magic user, pokud ano, tak 
 
-
-# kód neumí ohlídat rozdělení všech bodů, pouze hlídá zápornou hodnotu bodů na rozdělení
+'''
 
 import random
 # startovní body na rozdělení, zatím fix hodnota 280 do zakl. 8mi atr.
@@ -35,9 +43,12 @@ def make_decision():
     #make_decision = random.randint(1, 100)
     choose_destiny: int = random.randint(1, 100)
     atributgen: int
-    pointspool: int         # na platbu za edge, rasu a skilly
+    pointspool: int         
+    pointspool_skills: int      # na platbu za edge, rasu a skilly
+    pointspool_atr_start: int   # na vypocet atributu vcetne bonusu rasy
     # pointspool/2 must be [100,150,200,250,300] and between 425 and 600 BP
     pointspool = 500
+
     pointspool_atr_start = int((pointspool / 2) + (len(listatr)*10))
     max: int = len(listatr)
     print('Počáteční body na rozdělení:', (pointspool_atr_start - 80))
@@ -351,8 +362,9 @@ def metahuman_race(atributes_dict):
 
     # this one is prepared for the future
     metahuman_race_list = ['Human', 'Orc', 'Dwarf', 'Elf', 'Troll']
+    celk_atributy = []
 
-    metahuman_race_decision = random.randint(1, 80)
+    metahuman_race_decision = random.randint(96, 100)
     match metahuman_race_decision: 
         case metahuman_race_decision if metahuman_race_decision in range(95, 101):
             # this is Troll
@@ -365,8 +377,12 @@ def metahuman_race(atributes_dict):
                     elif key == 'Iniciative_Phases': pass
                     else: 
                         atributes_dict[key] = atributes_dict[key] + troll_race_dict[key][3]
+                        celk_atributy.append(str(key + " " + str(troll_race_dict[key][1]) + " min " + str(troll_race_dict[key][0]) + " max " + str(troll_race_dict[key][2])))
                         if atributes_dict.get(key) < 1:
                             atributes_dict[key] = 1
+                            celk_atributy.append(str(key + " " + str(troll_race_dict[key][1]) + " min " + str(troll_race_dict[key][0]) + " max " + str(troll_race_dict[key][2])))
+                if m == len(vysl_atr)+2: 
+                    print(celk_atributy)            
                 m += +1
         case metahuman_race_decision if metahuman_race_decision in range(90, 96):
             # this is Elf
@@ -379,8 +395,12 @@ def metahuman_race(atributes_dict):
                     elif key == 'Iniciative_Phases': pass
                     else: 
                         atributes_dict[key] = atributes_dict[key] + elf_race_dict[key][3]
+                        celk_atributy.append(str(key + " " + str(elf_race_dict[key][1]) + " min " + str(elf_race_dict[key][0]) + " max " + str(elf_race_dict[key][2])))
                         if atributes_dict.get(key) < 1:
                             atributes_dict[key] = 1
+                            celk_atributy.append(str(key + " " + str(elf_race_dict[key][1]) + " min " + str(elf_race_dict[key][0]) + " max " + str(elf_race_dict[key][2])))
+                if m == len(vysl_atr)+2: 
+                    print(celk_atributy)                               
                 m += +1
         case metahuman_race_decision if metahuman_race_decision in range(85, 91):
             # this is Dwarf
@@ -393,8 +413,12 @@ def metahuman_race(atributes_dict):
                     elif key == 'Iniciative_Phases': pass
                     else: 
                         atributes_dict[key] = atributes_dict[key] + dwarf_race_dict[key][3]
+                        celk_atributy.append(str(key + " " + str(dwarf_race_dict[key][1]) + " min " + str(dwarf_race_dict[key][0]) + " max " + str(dwarf_race_dict[key][2])))                        
                         if atributes_dict.get(key) < 1:
                             atributes_dict[key] = 1
+                            celk_atributy.append(str(key + " " + str(dwarf_race_dict[key][1]) + " min " + str(dwarf_race_dict[key][0]) + " max " + str(dwarf_race_dict[key][2])))
+                if m == len(vysl_atr)+2: 
+                    print(celk_atributy)
                 m += +1
         case metahuman_race_decision if metahuman_race_decision in range(80, 86):
             # this is Orc
@@ -407,8 +431,12 @@ def metahuman_race(atributes_dict):
                     elif key == 'Iniciative_Phases': pass
                     else: 
                         atributes_dict[key] = atributes_dict[key] + orc_race_dict[key][3]
+                        celk_atributy.append(str(key + " " + str(orc_race_dict[key][1]) + " min " + str(orc_race_dict[key][0]) + " max " + str(orc_race_dict[key][2])))                        
                         if atributes_dict.get(key) < 1:
                             atributes_dict[key] = 1
+                            celk_atributy.append(str(key + " " + str(orc_race_dict[key][1]) + " min " + str(orc_race_dict[key][0]) + " max " + str(orc_race_dict[key][2])))
+                if m == len(vysl_atr)+2: 
+                    print(celk_atributy)
                 m += +1
         case metahuman_race_decision if metahuman_race_decision in range(0, 81):
             # this is Human
@@ -421,6 +449,10 @@ def metahuman_race(atributes_dict):
                     elif key == 'Iniciative_Phases': pass
                     else: 
                         atributes_dict[key] = atributes_dict[key] + human_race_dict[key][3]
+                        celk_atributy.append(str(key + " " + str(human_race_dict[key][1]) + " min " + str(human_race_dict[key][0]) + " max " + str(human_race_dict[key][2])))                        
                         if atributes_dict.get(key) < 1:
                             atributes_dict[key] = 1
+                            celk_atributy.append(str(key + " " + str(human_race_dict[key][1]) + " min " + str(human_race_dict[key][0]) + " max " + str(human_race_dict[key][2])))
+                if m == len(vysl_atr)+2: 
+                    print(celk_atributy)                            
                 m += +1

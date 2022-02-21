@@ -7,7 +7,7 @@
                 kod vypise hodnoty do terminalu a ulozi je docasne do slovniku 
     Deepest level:  kod potrebuje mit hodnotu pointspool - je to pocet bodu na celou postavu
                     kod si zjisti hodnotu poctu bodu pro generovani atributu - pointspool_atr_start (polovina pointspool) a pripocte k ni 80 (za kazdy atribut 10)
-                    kod si randomizuje zda je magic user, pokud ano, tak 
+                    kod si randomizuje zda je magic user, pokud ano, tak vygeneruje mu hodnotu k atributu Magic/Reason, zapise jej do dict
 
 '''
 
@@ -41,7 +41,7 @@ atributes_dict = {
 
 def make_decision():
     #make_decision = random.randint(1, 100)
-    choose_destiny: int = random.randint(1, 100)
+    choose_destiny: int = random.randint(98, 100)
     atributgen: int
     pointspool: int         
     pointspool_skills: int      # na platbu za edge, rasu a skilly
@@ -56,16 +56,19 @@ def make_decision():
         case choose_destiny if choose_destiny in range(95, 101):
             atributgen = random.randint(1, 4)
             atributes_dict['Magic'] = atributgen
+            vysl_atr.append('Magic ' + str(atributgen))
             pointspool = (pointspool + 10) - (atributgen * 10)
             max = len(listatr) + 1
         case choose_destiny if choose_destiny in range(80, 96):
             atributgen = random.randint(1, 3)
             atributes_dict['Magic'] = atributgen
+            vysl_atr.append('Magic ' + str(atributgen))            
             pointspool = (pointspool + 10) - (atributgen * 10)
             max = len(listatr) + 1
         case choose_destiny if choose_destiny in range(75, 81):
             atributgen = random.randint(1, 3)
             atributes_dict['Resonance'] = atributgen
+            vysl_atr.append('Resonance ' + str(atributgen))            
             pointspool = (pointspool + 10) - (atributgen * 10)
             max = len(listatr) + 1 
         case choose_destiny if choose_destiny in range(0, 76):
@@ -272,7 +275,6 @@ def make_atributes_loop():
             # print result
             print(atributes_dict)
         i += 1
-
 
 def metahuman_race(atributes_dict):
     human_race_dict = {

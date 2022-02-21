@@ -1,7 +1,12 @@
 from GeneratorJmen.generator_background import *
-
+from GeneratorJmen.GeneratorAtributu.generatorAtributu import *
+# from Vlastnosti import *
 
 write_results()
+make_atributes_loop()
+
+
+#Student.vek
 
 #from GeneratorJmen.zkus import *
 

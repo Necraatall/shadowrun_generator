@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 class Student:
-
+    
     def __init__(self, jmeno, pohlavi, vek):
         self.__jmeno = jmeno
         self.__muz = pohlavi

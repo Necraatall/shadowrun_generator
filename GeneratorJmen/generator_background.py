@@ -49,6 +49,7 @@ def gender_input():
     return gender
 
 
+
 @staticmethod
 def tribe_name_origin_input():
     chosen_tribe_name = 8

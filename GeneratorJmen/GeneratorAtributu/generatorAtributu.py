@@ -31,15 +31,16 @@ atributes_dict = {
     'Metatype Ability':         ""
     }
 
-
 def make_decision():
     #make_decision = random.randint(1, 100)
-    choose_destiny: int = random.randint(1, 10)
+    choose_destiny: int = random.randint(1, 100)
     atributgen: int
     pointspool: int         # na platbu za edge, rasu a skilly
-    pointspool_atr = 200 + (len(listatr)*10)
+    # pointspool/2 must be [100,150,200,250,300] and between 425 and 600 BP
+    pointspool = 500
+    pointspool_atr_start = int((pointspool / 2) + (len(listatr)*10))
     max: int = len(listatr)
-    print('Počáteční body na rozdělení:', (pointspool_atr - 80))
+    print('Počáteční body na rozdělení:', (pointspool_atr_start - 80))
     match choose_destiny:
         case choose_destiny if choose_destiny in range(95, 101):
             atributgen = random.randint(1, 4)
@@ -53,18 +54,16 @@ def make_decision():
             max = len(listatr) + 1
         case choose_destiny if choose_destiny in range(75, 81):
             atributgen = random.randint(1, 3)
-            atributes_dict['Resonance'] = atributgen          
+            atributes_dict['Resonance'] = atributgen
             pointspool = (pointspool + 10) - (atributgen * 10)
             max = len(listatr) + 1 
         case choose_destiny if choose_destiny in range(0, 76):
-            pointspool_atr = 200 + (len(listatr)*10)
             atributgen = 0
             max = len(listatr) + 1
     if choose_destiny is None:
-            pointspool_atr = 200 + (len(listatr)*10)
             atributgen = 0
             max = len(listatr) + 1
-    result = [atributgen, pointspool_atr, max]
+    result = [atributgen, pointspool_atr_start, max]
     #print('Stav bodu:', pointspool)
     return result
 
@@ -73,56 +72,173 @@ def make_atributes_loop():
     i: int = 1
     decision = make_decision()
     atributgen = int(decision[0])
+    pointspool_atr_start = decision[1]
     pointspool_atr = int(decision[1])
     max = int(decision[2])
     while i < max:
-        chosensystem_dict_six = {
-            1 :   [6,	5,	4,	3,	3,	3,	1,	1],
-            2 :   [6,	5,	4,	3,	2,	2,	2,	2],
-            3 :   [6,	5,	4,	4,	3,	2,	1,	1],
-            4 :   [6,	5,	4,	3,	3,	3,	1,	1],
-            5 :   [6,	5,	4,	3,	2,	2,	2,	2],
-            6 :   [6,	5,	3,	3,	3,	3,	2,	1],
-            7 :   [6,	4,	4,	3,	3,	3,	2,	1],
-            8 :   [6,	4,	3,	3,	3,	3,	3,	1],
-            9 :   [6,	3,	3,	3,	3,	3,	3,	2]
-        }
-        chosensystem_dict_five = {
-            1 :   [5,	5,	4,	4,	4,	3,	2,	1], 
-            2 :   [5,	5,	4,	4,	3,	3,	3,	1], 
-            3 :   [5,	5,	4,	4,	3,	3,	2,	2], 
-            4 :   [5,	5,	4,	3,	3,	3,	3,	2], 
-            5 :   [5,	4,	4,	4,	3,	3,	3,	2], 
-            6 :   [5,	4,	4,	3,	3,	3,	3,	3]  
-        }
+        if pointspool_atr_start == 180:   #100BP
+            chosensystem_dict_six = {
+                1 :   [6,	4,	1,	1,	1,	1,	1,	1],
+                2 :   [6,	3,	2,	1,	1,	1,	1,	1],
+                3 :   [6,	2,	2,	2,	1,	1,	1,	1]
+            }
+            chosensystem_dict_five = {
+                1 :   [5,	5,	3,	1,	1,	1,	1,	1], 
+                2 :   [5,	5,	2,	2,	1,	1,	1,	1], 
+                3 :   [5,	4,	4,	1,	1,	1,	1,	1], 
+                4 :   [5,	4,	3,	2,	1,	1,	1,	1], 
+                5 :   [5,	4,	2,	2,	2,	1,	1,	1], 
+                6 :   [5,	3,	3,	3,	1,	1,	1,	1],
+                7 :   [5,	3,	2,	2,	2,	2,	1,	1],
+                8 :   [5,	2,	2,	2,	2,	2,	2,	1]
+            }
+            chosensystem_dict_four = {
+                1 :   [4,	4,	4,	2,	1,	1,	1,	1],
+                2 :   [4,	4,	3,	3,	1,	1,	1,	1],
+                3 :   [4,	4,	3,	2,	2,	1,	1,	1],
+                4 :   [4,	4,	2,	2,	2,	2,	1,	1],
+                5 :   [4,	3,	3,	3,	2,	1,	1,	1],
+                6 :   [4,	3,	3,	2,	2,	2,	1,	1],
+                7 :   [4,	3,	2,	2,	2,	2,	2,	1],
+                8 :   [4,	2,	2,	2,	2,	2,	2,	2],
+                9 :   [3,	3,	3,	3,	3,	1,	1,	1],                
+                10 :  [3,	3,	3,	3,	2,	2,	1,	1],
+                11 :  [3,	3,	3,	2,	2,	2,	2,	1],
+                12 :  [3,	3,	2,	2,	2,	2,	2,	2]                                               
+            }
+        if pointspool_atr_start == 230:   #150BP
+            chosensystem_dict_six = {
+                1 :   [6,	5,	5,	1,	1,	1,	1,	1],
+                2 :   [6,	5,	4,	2,	1,	1,	1,	1],
+                3 :   [6,	5,	3,	3,	1,	1,	1,	1], 
+                4 :   [6,	4,	3,	3,	2,	1,	1,	1],
+                5 :   [6,	3,	3,	3,	3,	1,	1,	1],
+                6 :   [6,	3,	3,	3,	2,	2,	1,	1],
+                7 :   [6,	3,	3,	2,	2,	2,	2,	1],
+                8 :   [6,	3,	2,	2,	2,	2,	2,	2]
+            }
+            chosensystem_dict_five = {
+                1 :   [5,	5,	4,	4,	2,	1,	1,	1], 
+                2 :   [5,	5,	4,	3,	3,	1,	1,	1], 
+                3 :   [5,	5,	4,	3,	3,	2,	1,	1], 
+                4 :   [5,	4,	4,	4,	3,	1,	1,	1], 
+                5 :   [5,	4,	4,	3,	3,	2,	1,	1], 
+                6 :   [5,	4,	4,	3,	2,	2,	2,	1], 
+                7 :   [5,	4,	4,	2,	2,	2,	2,	2], 
+                8 :   [5,	4,	3,	3,	3,	3,	1,	1], 
+                9 :   [5,	4,	3,	3,	3,	2,	2,	1], 
+                10 :  [5,	4,	3,	3,	2,	2,	2,	2], 
+                11 :  [5,	3,	3,	3,	3,	3,	2,	1], 
+                12 :  [5,	3,	3,	3,	3,	2,	2,	2]
+            }
+            chosensystem_dict_four = {
+                1 :   [4,	4,	4,	3,	3,	3,	1,	1],
+                2 :   [4,	4,	4,	3,	3,	2,	2,	1], 
+                3 :   [4,	4,	4,	3,	2,	2,	2,	2], 
+                4 :   [4,	4,	3,	3,	3,	3,	2,	1], 
+                5 :   [4,	4,	3,	3,	3,	2,	2,	2], 
+                6 :   [4,	3,	3,	3,	3,	3,	3,	1], 
+                5 :   [4,	3,	3,	3,	3,	3,	2,	2], 
+                5 :   [3,	3,	3,	3,	3,	3,	3,	2]
+            }
+        if pointspool_atr_start == 280:   #200 BP
+            chosensystem_dict_six = {
+                1 :   [6,	5,	4,	3,	3,	3,	1,	1],
+                2 :   [6,	5,	4,	3,	2,	2,	2,	2],
+                3 :   [6,	5,	4,	4,	3,	2,	1,	1],
+                4 :   [6,	5,	4,	3,	3,	3,	1,	1],
+                5 :   [6,	5,	4,	3,	2,	2,	2,	2],
+                6 :   [6,	5,	3,	3,	3,	3,	2,	1],
+                7 :   [6,	4,	4,	3,	3,	3,	2,	1],
+                8 :   [6,	4,	3,	3,	3,	3,	3,	1],
+                9 :   [6,	3,	3,	3,	3,	3,	3,	2]
+            }
+            chosensystem_dict_five = {
+                1 :   [5,	5,	4,	4,	4,	3,	2,	1], 
+                2 :   [5,	5,	4,	4,	3,	3,	3,	1], 
+                3 :   [5,	5,	4,	4,	3,	3,	2,	2], 
+                4 :   [5,	5,	4,	3,	3,	3,	3,	2], 
+                5 :   [5,	4,	4,	4,	3,	3,	3,	2], 
+                6 :   [5,	4,	4,	3,	3,	3,	3,	3]  
+            }
+            chosensystem_dict_four = {
+                1 :   [4,	4,	4,	4,	3,	3,	3,	3],
+                2 :   [4,	4,	4,	4,	3,	3,	3,	1],
+                3 :   [4,	4,	4,	4,	4,	4,	2,	2],
+                4 :   [4,	4,	4,	4,	4,	3,	3,	2],
+            }
+        if pointspool_atr_start == 330:   #250 BP
+            chosensystem_dict_six = {
+                1 :   [6,	6,	5,	5,	4,	2,	1,	1],
+                2 :   [6,	6,	5,	4,	4,	2,	2,	1],
+                3 :   [6,	6,	5,	4,	3,	3,	2,	1], 
+                4 :   [6,	6,	5,	3,	3,	3,	3,	1],
+                5 :   [6,	6,	5,	3,	3,	3,	2,	2], 
+                6 :   [6,	6,	4,	3,	3,	3,	3,	2], 
+                7 :   [6,	5,	5,	4,	4,	3,	3,	1], 
+                8 :   [6,	5,	5,	4,	4,	3,	2,	2], 
+                9 :   [6,	5,	5,	4,	3,	3,	3,	2], 
+                10 :  [6,	5,	4,	4,	4,	3,	3,	2], 
+                11 :  [6,	4,	4,	4,	4,	3,	3,	3]
+            }
+            chosensystem_dict_five = {
+                1 :   [5,	5,	5,	4,	4,	4,	3,	3], 
+                2 :   [5,	5,	4,	4,	4,	4,	4,	3], 
+                3 :   [5,	4,	4,	4,	4,	4,	4,	4]
+            }
+        if pointspool_atr_start == 380:   #300 BP
+            chosensystem_dict_six = {
+                1 :   [6,	6,	5,	5,	4,	4,	4,	1],
+                2 :   [6,	6,	5,	5,	4,	4,	3,	2],
+                3 :   [6,	6,	5,	5,	4,	3,	3,	3], 
+                4 :   [6,	6,	5,	4,	4,	4,	3,	3], 
+                5 :   [6,	6,	4,	4,	4,	4,	4,	3], 
+                6 :   [6,	5,	5,	5,	4,	4,	4,	3], 
+                7 :   [6,	5,	5,	4,	4,	4,	4,	4]
+            }
+            chosensystem_dict_five = {
+                1 :   [5,	5,	5,	5,	5,	5,	4,	4] 
+            }
+        if pointspool_atr_start >= 425 and pointspool_atr <= 600 :
+            chosen_realy_big_pool = {
+                1 :   [6,	5,	5,	5,	5,	5,	5,	5],
+                2 :   [6,	6,	5,	5,	5,	5,	5,	5],
+                3 :   [6,	6,	6,	5,	5,	5,	5,	5],
+                4 :   [6,	6,	6,	6,	5,	5,	5,	5], 
+                5 :   [6,	6,	6,	6,	6,	5,	5,	5], 
+                6 :   [6,	6,	6,	6,	6,	6,	5,	5], 
+                7 :   [6,	6,	6,	6,	6,	6,	6,	5], 
+                8 :   [6,	6,	6,	6,	6,	6,	6,	6]
+            }
+        # 330 and 380 BP dont have combination with 4 numbers
+        # 425 BP up to the 600 BP is only number of 5 in pool of 6, 600 is maximum when all 6 is set
+        if i==1: 
+            if pointspool_atr_start >= 425 and pointspool_atr_start < 600: 
+                number_of_five = int((pointspool_atr_start - 80 - 400)/25)
+                choosen_set = chosen_realy_big_pool[number_of_five]
 
-        chosensystem_dict_four = {
-            1 :   [4,	4,	4,	4,	3,	3,	3,	3],
-            2 :   [4,	4,	4,	4,	3,	3,	3,	1],
-            3 :   [4,	4,	4,	4,	4,	4,	2,	2],
-            4 :   [4,	4,	4,	4,	4,	3,	3,	2],
-        }
+            if pointspool_atr_start >= 180 and pointspool_atr_start <= 230:    
+                atributgen = random.randint(4, 6)
+            elif pointspool_atr_start == 330 or pointspool_atr_start == 380: 
+                atributgen = random.randint(5, 6)
 
-        if i==1: atributgen = random.randint(4, 6)
-        match atributgen:
-            case 6:
-                if i == 1:
-                    choose = random.randint(1, len(chosensystem_dict_six.keys()))
-                    choosen_set = chosensystem_dict_six[choose]
-
-            case 5:
-                if i == 1:
-                    choose = random.randint(1, len(chosensystem_dict_five.keys()))
-                    choosen_set = chosensystem_dict_five[choose]
-
-            case 4:
-                if i == 1:
-                    choose = random.randint(1, len(chosensystem_dict_four.keys()))
-                    choosen_set = chosensystem_dict_four[choose]
+        if pointspool_atr_start >= 180 and pointspool_atr_start <= 230 or pointspool_atr_start == 330 or pointspool_atr_start == 380:
+            match atributgen:
+                case 6:
+                    if i == 1:
+                        choose = random.randint(1, len(chosensystem_dict_six.keys()))
+                        choosen_set = chosensystem_dict_six[choose]
+                case 5:
+                    if i == 1:
+                        choose = random.randint(1, len(chosensystem_dict_five.keys()))
+                        choosen_set = chosensystem_dict_five[choose]
+                case 4:        
+                    if i == 1:
+                        choose = random.randint(1, len(chosensystem_dict_four.keys()))
+                        choosen_set = chosensystem_dict_four[choose]
 
         atributgen = choosen_set[i-1]
                              
-
         if atributgen == 6:
             pointspool_atr = (pointspool_atr - (atributgen * 10)) - 15
         else: pointspool_atr = pointspool_atr - (atributgen * 10)
@@ -236,7 +352,7 @@ def metahuman_race(atributes_dict):
     # this one is prepared for the future
     metahuman_race_list = ['Human', 'Orc', 'Dwarf', 'Elf', 'Troll']
 
-    metahuman_race_decision = random.randint(100, 100)
+    metahuman_race_decision = random.randint(1, 80)
     match metahuman_race_decision: 
         case metahuman_race_decision if metahuman_race_decision in range(95, 101):
             # this is Troll

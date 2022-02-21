@@ -7,12 +7,14 @@
                 kod vypise hodnoty do terminalu a ulozi je docasne do slovniku 
     Deepest level:  kod potrebuje mit hodnotu pointspool - je to pocet bodu na celou postavu
                     kod si zjisti hodnotu poctu bodu pro generovani atributu - pointspool_atr_start (polovina pointspool) a pripocte k ni 80 (za kazdy atribut 10)
+                    kod prida hodnotu 5 ke skill bodum, paklize zustal zbytek diky lichemu poctu cisel 6
                     kod si randomizuje zda je magic user, pokud ano, tak vygeneruje mu hodnotu k atributu Magic/Reason, zapise jej do dict a listu
                     kod zjisti si kolik bodu ma na skilly a vygeneruje si jeden list z ktereho bude plnit random nepouzity atribut (100, 200, 250, 300, 425 a vice do hodnoty 600)
                     kod si zavola meta cast - rasy, a upravi hodnoty v dict i v listech
                     kod vypise vysledek
+                    
 '''
-
+# import random modulu/knihovny
 import random
 
 # základní list s atributy, ze kterého se vybírá
@@ -22,7 +24,7 @@ vysl_atr =[]
 # TODO: dopsat popisky - domyslet remeslniky a pod. 
 # choose_destiny = None   # 96 - 100 is full Thaumaturgic, 91-95 is full shamanic, 86-90 is Thaumaturgy Adept, 81-85 is Shamanic Adept, 75-80 is Technomancer  
 # is_mage = None          # 10 is full Thaumaturgic, 9 is full shamanic, 8 is Thaumaturgy Adept, 7 is Shamanic Adept, 6 physical Adept, 7 is Technomancer 
-# 
+
 
 atributes_dict = {
     'Metatype':           "Human",
@@ -41,15 +43,20 @@ atributes_dict = {
     }
 
 def make_decision():
-    #make_decision = random.randint(1, 100)
+    # choose_destiny - urci zda je mag, technomancer, remeslnik, vagus... 
     choose_destiny: int = random.randint(1, 100)
+    # atributgen promenna pro vygenerovanou hodnotu atributu
     atributgen: int
-    pointspool: int         
+    # pointspool celkovy pocet bodu na postavu
+    pointspool: int
+    # pointspool_skills pocet bodu na skilly, Edge, rasu, Merits and Flows (neg: critters)
     pointspool_skills: int      # na platbu za edge, rasu a skilly
+    # pointspool_atr_start kolik je do zacatku max na atributy - zde rozdeluji vsechny body ktere lze zakoupit (muze zustat 5 bodu)
     pointspool_atr_start: int   # na vypocet atributu vcetne bonusu rasy
     # pointspool/2 must be [100,150,200,250,300] and between 425 and 600 BP
-    pointspool = 500
+    pointspool = 200
     pointspool_atr_start = int((pointspool / 2) + (len(listatr)*10))
+    pointspool_skills = pointspool_atr_start
     max: int = len(listatr)
     print('Počáteční body na rozdělení:', (pointspool_atr_start - 80))
     match choose_destiny:
@@ -87,10 +94,12 @@ def make_atributes_loop():
     atributgen = int(decision[0])
     pointspool_atr_start = decision[1]
     pointspool_atr = int(decision[1])
+    pointspool_skills = int(decision[3])
     max = int(decision[2])
     while i < max:
         if pointspool_atr_start == 180:   #100BP
             chosensystem_dict_six = {
+                # 0 :   pointspool_skills + 5,
                 1 :   [6,	4,	1,	1,	1,	1,	1,	1],
                 2 :   [6,	3,	2,	1,	1,	1,	1,	1],
                 3 :   [6,	2,	2,	2,	1,	1,	1,	1]
@@ -121,6 +130,7 @@ def make_atributes_loop():
             }
         if pointspool_atr_start == 230:   #150BP
             chosensystem_dict_six = {
+                # 0 :   pointspool_skills + 5,
                 1 :   [6,	5,	5,	1,	1,	1,	1,	1],
                 2 :   [6,	5,	4,	2,	1,	1,	1,	1],
                 3 :   [6,	5,	3,	3,	1,	1,	1,	1], 
@@ -156,6 +166,7 @@ def make_atributes_loop():
             }
         if pointspool_atr_start == 280:   #200 BP
             chosensystem_dict_six = {
+                # 0 :   pointspool_skills + 5,
                 1 :   [6,	5,	4,	3,	3,	3,	1,	1],
                 2 :   [6,	5,	4,	3,	2,	2,	2,	2],
                 3 :   [6,	5,	4,	4,	3,	2,	1,	1],
@@ -182,6 +193,7 @@ def make_atributes_loop():
             }
         if pointspool_atr_start == 330:   #250 BP
             chosensystem_dict_six = {
+                # 0 :   [[7, 8, 9, 10, 11], pointspool_skills + 5],
                 1 :   [6,	6,	5,	5,	4,	2,	1,	1],
                 2 :   [6,	6,	5,	4,	4,	2,	2,	1],
                 3 :   [6,	6,	5,	4,	3,	3,	2,	1], 
@@ -201,6 +213,7 @@ def make_atributes_loop():
             }
         if pointspool_atr_start == 380:   #300 BP
             chosensystem_dict_six = {
+                # 0 :   [[6, 7], pointspool_skills + 5],
                 1 :   [6,	6,	5,	5,	4,	4,	4,	1],
                 2 :   [6,	6,	5,	5,	4,	4,	3,	2],
                 3 :   [6,	6,	5,	5,	4,	3,	3,	3], 
@@ -214,6 +227,7 @@ def make_atributes_loop():
             }
         if pointspool_atr_start >= 425 and pointspool_atr <= 600 :
             chosen_realy_big_pool = {
+                # 0 :   [[1, 3, 5, 7], pointspool_skills + 5],
                 1 :   [6,	5,	5,	5,	5,	5,	5,	5],
                 2 :   [6,	6,	5,	5,	5,	5,	5,	5],
                 3 :   [6,	6,	6,	5,	5,	5,	5,	5],
@@ -232,15 +246,29 @@ def make_atributes_loop():
 
             if pointspool_atr_start >= 180 and pointspool_atr_start <= 230:    
                 atributgen = random.randint(4, 6)
+
             elif pointspool_atr_start == 330 or pointspool_atr_start == 380: 
                 atributgen = random.randint(5, 6)
 
         if pointspool_atr_start >= 180 and pointspool_atr_start <= 230 or pointspool_atr_start == 330 or pointspool_atr_start == 380:
+            atributgen = 6
             match atributgen:
                 case 6:
                     if i == 1:
                         choose = random.randint(1, len(chosensystem_dict_six.keys()))
                         choosen_set = chosensystem_dict_six[choose]
+                        match pointspool_atr_start:
+                            case pointspool_atr_start if pointspool_atr_start in [180, 230, 280]:
+                                pointspool_skills = pointspool_skills + 5
+                            case 330: 
+                                if chosensystem_dict_six [choose][1] != 6:
+                                    pointspool_skills = pointspool_skills + 5
+                            case 380: 
+                                if chosensystem_dict_six [choose][1] != 6:
+                                    pointspool_skills = pointspool_skills + 5
+                            case pointspool_atr_start if pointspool_atr_start in [425, 475, 525, 575]:
+                                if chosensystem_dict_six [choose][1] != 6:
+                                    pointspool_skills = pointspool_skills + 5
                 case 5:
                     if i == 1:
                         choose = random.randint(1, len(chosensystem_dict_five.keys()))

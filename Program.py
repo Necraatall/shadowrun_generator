@@ -1,5 +1,5 @@
-from GeneratorJmen.generator_background import *
-from GeneratorJmen.GeneratorAtributu.generatorAtributu import *
+from .GeneratorJmen.generator_background import *
+from .GeneratorJmen.GeneratorAtributu.generatorAtributu import *
 # from Vlastnosti import *
 
 write_results()

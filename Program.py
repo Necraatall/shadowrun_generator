@@ -1,4 +1,4 @@
-from GeneratorJmen.generator_background import *
+from GeneratorJmen.generatorJmen import *
 from GeneratorAtributu.generatorAtributu import *
 
 write_results()

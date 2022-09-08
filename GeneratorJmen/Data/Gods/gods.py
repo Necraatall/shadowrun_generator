@@ -23,7 +23,7 @@ intent_tribe_god_about = [
 
 class God:
     @staticmethod
-    def list_of_intents_tribe_gods():
+    def get_random_tribe_god_with_abouts():
         return get_random_god_with_abouts()
 
 

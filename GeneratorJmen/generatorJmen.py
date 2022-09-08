@@ -18,7 +18,7 @@ def write_results():
 
     if tribe_name_origin is not NULL or tribe_surname_origin is not NULL:
         print(tribe_name_origin + " \"" + nickname + "\" " + tribe_surname_origin)
-        print(God.list_of_intents_tribe_gods())
+        print(God.get_random_tribe_god_with_abouts())
 
         #########################################################################
         #### TAKTO TO HEZKY FUNGUJE VE SLOVNIKU S POLEM
@@ -33,7 +33,7 @@ def write_results():
             + " \"" + Nickname.get_random_tribe_nickname() + "\" " +
             Surname.get_random_tribe_surname()
         )
-        print(God.list_of_intents_tribe_gods())
+        print(God.get_random_tribe_god_with_abouts())
 
 
 @staticmethod

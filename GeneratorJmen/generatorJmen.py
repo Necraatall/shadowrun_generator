@@ -1,5 +1,5 @@
 from asyncio.windows_events import NULL
-from project_values_setup import *
+from GeneratorJmen.project_values_setup import *
 
 from GeneratorJmen.Data.Surname.surname import *
 from GeneratorJmen.Data.Name.names import *

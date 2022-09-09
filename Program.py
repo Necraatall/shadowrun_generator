@@ -1,5 +1,6 @@
 from GeneratorJmen.generatorJmen import *
 from GeneratorAtributu.generatorAtributu import *
 
-write_results()
-make_atributes_loop()
+if __name__ == '__main__':
+    write_results()
+    make_atributes_loop()

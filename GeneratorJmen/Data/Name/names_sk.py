@@ -1,4 +1,4 @@
-intent_names_sk = [
+intent_names_sk = (
 	"Alexandra",
 	"Daniela",
 	"Drahoslav",
@@ -380,4 +380,4 @@ intent_names_sk = [
 	"Milada",
 	"Dávid",
 	"Silvester"
-]    
+)

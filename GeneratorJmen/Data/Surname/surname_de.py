@@ -1,5 +1,5 @@
 
-intent_surname_de = [
+intent_surname_de = (
 	"Anders",
 	"Ochsner",
 	"Oder",
@@ -29638,4 +29638,4 @@ intent_surname_de = [
 	"Zwirnlein",
 	"Zydz",
 	"Zylstra"
-]
+)

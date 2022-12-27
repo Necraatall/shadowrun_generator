@@ -1,5 +1,5 @@
 
-intent_surname_hi =[
+intent_surname_hi = (
 	"Adani",
 	"Advani",
 	"Agarkar",
@@ -1979,4 +1979,4 @@ intent_surname_hi =[
 	"Yudhajit",
 	"Zahin",
 	"Zev"
-]    
+)

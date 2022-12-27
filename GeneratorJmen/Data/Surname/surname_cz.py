@@ -1,4 +1,4 @@
-intent_surname_cz = [
+intent_surname_cz = (
 	"Abl",
 	"Adsit",
 	"Ajdrna",
@@ -519,4 +519,4 @@ intent_surname_cz = [
 	"Zlámal",
 	"Zoucha",
 	"Zwolenksy"
-]	
+)

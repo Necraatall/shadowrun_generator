@@ -1,5 +1,5 @@
 
-intent_surname_pt = [
+intent_surname_pt = (
 	"Evora",
 	"Abade",
 	"Abadesso",
@@ -4840,4 +4840,4 @@ intent_surname_pt = [
 	"Zuna",
 	"Zuquete",
 	"Zuzarte"
-]    
+)

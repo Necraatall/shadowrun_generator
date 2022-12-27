@@ -1,4 +1,4 @@
-intent_names_fr = [
+intent_names_fr = (
 	"Basile",
 	"Geneviève",
 	"Odilon",
@@ -544,4 +544,4 @@ intent_names_fr = [
 	"Roger",
 	"Colombe",
 	"Sylvestre"
-]    
+)

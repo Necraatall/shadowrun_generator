@@ -1,4 +1,4 @@
-intent_surname_cn = [
+intent_surname_cn = (
 	"Ang",
 	"Au-Yong",
 	"Bai",
@@ -267,4 +267,4 @@ intent_surname_cn = [
 	"Zhi",
 	"Zhuan",
 	"Zhui"
-]    
+)

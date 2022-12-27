@@ -1,4 +1,4 @@
-intent_gods_gk = [
+intent_gods_gk = (
 	"Adrasteia",
 	"Afrodita (Venuše)",
 	"Achelóos",
@@ -45,10 +45,10 @@ intent_gods_gk = [
 	"Poseidon (Neptun)",
 	"Psyché",
 	"Zeus (Jupiter, jméno skloňováno Dia, Diovi...)"
-]
+)
 
 
-intent_gods_about_gk = [
+intent_gods_about_gk = (
 	{
 	0:"Bohyně osudu, před níž nikdo neunikne...Nymfa Adrásteia spolu se svou sestrou Ídaiou vychovala nejvyššího boha Dia. Jiná Adrásteia byla fryžská bohyně hor a někdy byla ztotožňována s bohyní odplaty Nemesis."
 	},
@@ -187,5 +187,4 @@ intent_gods_about_gk = [
 	{
 	45:"Syn Krona a Rheie, nejvyšší bůh. Narodil se na Krétě v jeskyni v pohoří Ída (občas se uvádějí i jiné jeskyně na Krétě). Zde jej matka uschovala před jeho otcem titánem Kronem, který ze strachu před naplněním proroctví, že bude jedním ze svých synů svržen, všechny své syny ihned po narození pozřel. Živil se mlékem Amaltheie (podle jedné verze koza, podle jiné nymfa) a medem od včel. Když vyrostl, přinutil otce vydávit bratry a po desetiletém boji jej svrhl. S bratry si pak losem rozdělili vládu nad světem."
 	}
-
-]
+)

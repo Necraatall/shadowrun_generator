@@ -1,4 +1,4 @@
-intent_surname_kr =[
+intent_surname_kr = (
 	"Ahn",
 	"Baik",
 	"Bang",
@@ -93,4 +93,4 @@ intent_surname_kr =[
 	"Youn",
 	"Yu",
 	"Yun"
-]
+)

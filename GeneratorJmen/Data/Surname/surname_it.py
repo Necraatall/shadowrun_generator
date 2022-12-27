@@ -1,4 +1,4 @@
-intent_surname_it =[
+intent_surname_it = (
 	"Abate",
 	"Abati",
 	"Abba",
@@ -4357,4 +4357,4 @@ intent_surname_it =[
 	"Vita",
 	"Vito",
 	"Vivo"
-]
+)

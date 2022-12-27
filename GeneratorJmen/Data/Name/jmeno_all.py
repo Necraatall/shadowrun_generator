@@ -1,4 +1,4 @@
-intent_name_all = [
+intent_name_all = (
     "Áditi",
     "África",
     "Ágata",
@@ -1348,4 +1348,4 @@ intent_name_all = [
     "Zoraida",
     "Zoran",
     "Zulema"
-]
+)

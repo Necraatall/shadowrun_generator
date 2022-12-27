@@ -1,4 +1,4 @@
-intent_surname_ie =[
+intent_surname_ie = (
 	"Adam",
 	"Ahearn",
 	"Aodh",
@@ -193,4 +193,4 @@ intent_surname_ie =[
 	"Whalen",
 	"Whelan",
 	"William"
-]    
+)

@@ -1,4 +1,4 @@
-intent_gods_eg = [
+intent_gods_eg = (
 	"Aker",
 	"Amon",
 	"Anat",
@@ -37,9 +37,9 @@ intent_gods_eg = [
 	"Tauret",
 	"Usir",
 	"Vadžet"
-]
+)
 
-intent_gods_about_eg = [
+intent_gods_about_eg = (
     {
         1:"Bůh země Aker byl zosobněním východního a západního horizontu, které znázorňovaly vchod a východ z podsvětí. Často se vyskytovala v pohřebních textech a obrazech. Byla znázorněna dvěma lvy sedícími k sobě zády nebo pruhem země se lví nebo lidskou hlavou na každém konci (jednou otočenou k východu a druhou k západu)."
     },
@@ -154,4 +154,4 @@ intent_gods_about_eg = [
     {
         38:"Starověká bohyně Vadžet byla téměř vždy zobrazována jako kobra s červenou korunou Dolního Egypta. Egypťané považovali kobru za symbol svrchovanosti. Svůj kult měla v Bútó v nilské Deltě. Její jméno znamená \"Zelená\" nebo \"Ta, které patří papyrus\". Věřilo se, že společně se supí bohyní Nechbet je ochránkyní králů."
     }
-]
+)

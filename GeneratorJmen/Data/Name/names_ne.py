@@ -1,4 +1,4 @@
-intent_names_ne =[
+intent_names_ne = (
 	"Abel",
 	"Enoch",
 	"Metusalem",
@@ -360,4 +360,4 @@ intent_names_ne =[
 	"Noah",
 	"David",
 	"Sylvester"
-]    
+)

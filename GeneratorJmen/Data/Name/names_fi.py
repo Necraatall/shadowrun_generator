@@ -1,6 +1,6 @@
 
 
-intent_names_fi =[
+intent_names_fi = (
 	"Aapeli",
 	"Elmer",
 	"Elmo",
@@ -553,4 +553,4 @@ intent_names_fi =[
 	"Piia",
 	"Rauha",
 	"Daavid"
-]    
+)

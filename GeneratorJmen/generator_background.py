@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from GeneratorJmen.setup_generator import *
 from project_values_setup import *
 
@@ -11,7 +10,7 @@ def write_results():
     tribe_surname_origin = tribe_surname_origin_input()
     nickname = nickName_rand.list_of_intents_tribe_nickNames()
     
-    if tribe_name_origin is not NULL or tribe_surname_origin is not NULL:
+    if tribe_name_origin is not None or tribe_surname_origin is not None:
         print(tribe_name_origin + " \"" + nickname + "\" " + tribe_surname_origin)
         print(god_rand.list_of_intents_tribe_gods())
 
@@ -52,7 +51,7 @@ def gender_input():
 
 @staticmethod
 def tribe_name_origin_input():
-    chosen_tribe_name = 8
+    chosen_tribe_name = random.randint(1,8)
     gender = gender_input()
     match chosen_tribe_name:
         case 1 : tribe_name_origin = random.choice(intent_names_pl)
@@ -67,7 +66,7 @@ def tribe_name_origin_input():
 
 @staticmethod
 def tribe_surname_origin_input():
-    tribe_surname_origin = 1
+    tribe_surname_origin = random.randint(1,8)
     match tribe_surname_origin:
         case 1 : tribe_surname_origin = random.choice(intent_surname_pl)
         case 2 : tribe_surname_origin = random.choice(intent_surname_ne)
@@ -76,8 +75,5 @@ def tribe_surname_origin_input():
         case 5 : tribe_surname_origin = random.choice(intent_surname_gk)
         case 6 : tribe_surname_origin = random.choice(intent_surname_it)
         case 7 : tribe_surname_origin = random.choice(intent_surname_us)
-        case 7 : tribe_surname_origin = random.choice(intent_surname_cz)
+        case 8 : tribe_surname_origin = random.choice(intent_surname_cz)
     return tribe_surname_origin
-
-
-

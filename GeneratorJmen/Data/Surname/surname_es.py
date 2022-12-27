@@ -1,4 +1,4 @@
-intent_surname_es = [
+intent_surname_es = (
 	"Garcia",
 	"Gonzalez",
 	"Rodriguez",
@@ -25949,4 +25949,4 @@ intent_surname_es = [
 	"Pinzariu",
 	"Stancescu",
 	"Ursaru"
-]    
+)

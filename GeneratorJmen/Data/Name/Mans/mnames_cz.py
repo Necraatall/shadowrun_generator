@@ -1,4 +1,4 @@
-intent_mnames_cz = [
+intent_mnames_cz = (
 	"Aaron",
 	"Ábel",
 	"Abraham",
@@ -2111,4 +2111,4 @@ intent_mnames_cz = [
 	"Zvonko",
 	"Zygmunt",
 	"Łukasz"
-]
+)

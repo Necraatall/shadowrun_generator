@@ -48,7 +48,7 @@ import random
 class surname_rand:
     @staticmethod
     def list_of_intents_tribe_surname():
-        intent_tribe_surname = [
+        intent_tribe_surname = (
             intent_surname_cz,
             intent_surname_cn,
             intent_surname_de,
@@ -65,14 +65,14 @@ class surname_rand:
             intent_surname_ru,
             intent_surname_uk,
             intent_surname_us
-        ]
+        )
         chosen_surname = random.choice(random.choice(intent_tribe_surname))
         return chosen_surname
 
 class name_rand:
     @staticmethod
     def list_of_intents_tribe_names():
-        intent_tribe_name = [
+        intent_tribe_name = (
             intent_names_gk,
             intent_names_fi,
             intent_names_pl,
@@ -86,39 +86,35 @@ class name_rand:
             intent_names_fr,
             intent_names_es,
             intent_names_vn
-            
-        ]
+        )
         chosen_name = random.choice(random.choice(intent_tribe_name))
         return chosen_name
 
 class nickName_rand:
     @staticmethod
     def list_of_intents_tribe_nickNames():
-        intent_tribe_nickName = [
+        intent_tribe_nickName = (
             intent_nickNames_cz
-            
-        ]
-        chosen_nickName = random.choice(random.choice(intent_tribe_nickName))
+        )
+        chosen_nickName = random.choice(intent_tribe_nickName)
         return chosen_nickName
 
 class god_rand:
     @staticmethod
     def list_of_intents_tribe_gods():
-        intent_tribe_god = [
+        intent_tribe_god = (
             intent_gods_gk,
             intent_gods_eg,
             intent_gods_kelt,
             intent_gods_slovan
+        )
 
-        ]
-
-        intent_tribe_god_about = [
+        intent_tribe_god_about = (
             intent_gods_about_gk,
             intent_gods_about_eg,
             intent_gods_about_kelt,
             intent_gods_about_slovan
-
-        ]
+        )
 
 
         #vyber list uvnitr listu intent_tribe_god - nevybere jmeno, ale hodnoty

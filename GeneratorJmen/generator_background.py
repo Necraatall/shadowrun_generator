@@ -36,7 +36,7 @@ def gender_input():
     #set_name_by_tribe zda bylo pozadovano z jakych tribes je jmeno a prijmeni 
     #TODO: gender pozdeji
     # potom odkomentovat IF
-    gender = 1
+    gender = random.randint(1,2)
     # gender: int
     # if gender == 1 or gender == 2:
     #     if gender == 1:
@@ -46,8 +46,6 @@ def gender_input():
     # elif gender not in range(1,2):
     #     raise NameError('Oops! You type: ' + gender + ' That was no valid number. Valid number is 1 or 2 Try again...')
     return gender
-
-
 
 @staticmethod
 def tribe_name_origin_input():

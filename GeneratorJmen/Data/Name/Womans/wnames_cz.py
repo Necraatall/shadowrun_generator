@@ -1,4 +1,4 @@
-intent_wnames_cz = [
+intent_wnames_cz = (
     "Abigail",
     "Ada",
     "Adalbertina",
@@ -2769,4 +2769,4 @@ intent_wnames_cz = [
     "Zoi",
     "Zoja",
     "Zora"
-]
+)

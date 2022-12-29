@@ -1,7 +1,3 @@
-__pycache__
-try_it.py
-Vlastnosti.py
-
 Skip to content
 Search or jump to…
 Pull requests
@@ -37,6 +33,8 @@ Latest commit 7c89c1d on Sep 5
 __pycache__/
 *.py[cod]
 *$py.class
+try_it.py
+Vlastnosti.py
 
 # C extensions
 *.so

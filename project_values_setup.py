@@ -252,6 +252,8 @@ print(race_detail_type, 'skin_tone is : ', random.choice(race_details[race_detai
 # gods_egypt.intent_gods_eg
 
 print(random.choice(gods_egypt.intent_gods_eg))
-x=random.choice(len(gods_egypt.intent_gods_eg))
+x = len(gods_egypt.intent_gods_eg)
+print(x)
+
 if x in gods_egypt.intent_gods_about_eg:
     print(gods_egypt.intent_gods_about_eg[x])

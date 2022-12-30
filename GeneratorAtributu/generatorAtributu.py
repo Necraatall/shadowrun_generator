@@ -17,7 +17,7 @@
 import random
 
 # základní list s atributy, ze kterého se vybírá
-listatr = ['Body', 'Agility', 'Reaction', 'Strength', 'Charisma', 'Intuition', 'Logic', 'Willpower']
+listatr = ('Body', 'Agility', 'Reaction', 'Strength', 'Charisma', 'Intuition', 'Logic', 'Willpower')
 
 vysl_atr = []
 # TODO: dopsat popisky - domyslet remeslniky a pod. 

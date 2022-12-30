@@ -1,4 +1,4 @@
-from GeneratorJmen.generatorJmen import *
+from GeneratorJmen.generator_jmen import *
 from GeneratorAtributu.generatorAtributu import *
 
 if __name__ == '__main__':

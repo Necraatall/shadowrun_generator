@@ -1,4 +1,4 @@
-from asyncio.windows_events import NULL
+# from asyncio.windows_events import NULL
 from GeneratorJmen.project_values_setup import *
 
 from GeneratorJmen.Data.Surname.surname import *
@@ -16,7 +16,7 @@ def write_results():
     tribe_surname_origin = tribe_surname_origin_input()
     nickname = Nickname.get_random_tribe_nickname()
 
-    if tribe_name_origin is not NULL or tribe_surname_origin is not NULL:
+    if tribe_name_origin is not None or tribe_surname_origin is not None:
         print(tribe_name_origin + " \"" + nickname + "\" " + tribe_surname_origin)
         print(God.get_random_tribe_god_with_abouts())
 

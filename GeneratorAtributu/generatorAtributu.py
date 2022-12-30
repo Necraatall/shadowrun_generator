@@ -17,7 +17,7 @@
 import random
 
 # základní list s atributy, ze kterého se vybírá
-listatr = ('Body', 'Agility', 'Reaction', 'Strength', 'Charisma', 'Intuition', 'Logic', 'Willpower')
+listatr = ['Body', 'Agility', 'Reaction', 'Strength', 'Charisma', 'Intuition', 'Logic', 'Willpower']
 
 vysl_atr = []
 # TODO: dopsat popisky - domyslet remeslniky a pod. 
@@ -412,10 +412,6 @@ def metahuman_race(atributes_dict):
                         atributes_dict[key] = atributes_dict[key] + troll_race_dict[key][3]
                         celk_atributy.append(str(key + " " + str(troll_race_dict[key][1]) + " min " + str(
                             troll_race_dict[key][0]) + " max " + str(troll_race_dict[key][2])))
-                        if atributes_dict.get(key) < 1:
-                            atributes_dict[key] = 1
-                            celk_atributy.append(str(key + " " + str(troll_race_dict[key][1]) + " min " + str(
-                                troll_race_dict[key][0]) + " max " + str(troll_race_dict[key][2])))
                 if m == len(vysl_atr) + 2:
                     print(celk_atributy)
                 m += +1

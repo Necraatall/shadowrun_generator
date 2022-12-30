@@ -430,10 +430,6 @@ def metahuman_race(atributes_dict):
                         atributes_dict[key] = atributes_dict[key] + elf_race_dict[key][3]
                         celk_atributy.append(str(key + " " + str(elf_race_dict[key][1]) + " min " + str(
                             elf_race_dict[key][0]) + " max " + str(elf_race_dict[key][2])))
-                        if atributes_dict.get(key) < 1:
-                            atributes_dict[key] = 1
-                            celk_atributy.append(str(key + " " + str(elf_race_dict[key][1]) + " min " + str(
-                                elf_race_dict[key][0]) + " max " + str(elf_race_dict[key][2])))
                 if m == len(vysl_atr) + 2:
                     print(celk_atributy)
                 m += +1
@@ -452,10 +448,6 @@ def metahuman_race(atributes_dict):
                         atributes_dict[key] = atributes_dict[key] + dwarf_race_dict[key][3]
                         celk_atributy.append(str(key + " " + str(dwarf_race_dict[key][1]) + " min " + str(
                             dwarf_race_dict[key][0]) + " max " + str(dwarf_race_dict[key][2])))
-                        if atributes_dict.get(key) < 1:
-                            atributes_dict[key] = 1
-                            celk_atributy.append(str(key + " " + str(dwarf_race_dict[key][1]) + " min " + str(
-                                dwarf_race_dict[key][0]) + " max " + str(dwarf_race_dict[key][2])))
                 if m == len(vysl_atr) + 2:
                     print(celk_atributy)
                 m += +1
@@ -474,10 +466,6 @@ def metahuman_race(atributes_dict):
                         atributes_dict[key] = atributes_dict[key] + orc_race_dict[key][3]
                         celk_atributy.append(str(key + " " + str(orc_race_dict[key][1]) + " min " + str(
                             orc_race_dict[key][0]) + " max " + str(orc_race_dict[key][2])))
-                        if atributes_dict.get(key) < 1:
-                            atributes_dict[key] = 1
-                            celk_atributy.append(str(key + " " + str(orc_race_dict[key][1]) + " min " + str(
-                                orc_race_dict[key][0]) + " max " + str(orc_race_dict[key][2])))
                 if m == len(vysl_atr) + 2:
                     print(celk_atributy)
                 m += +1
@@ -496,10 +484,6 @@ def metahuman_race(atributes_dict):
                         atributes_dict[key] = atributes_dict[key] + human_race_dict[key][3]
                         celk_atributy.append(str(key + " " + str(human_race_dict[key][1]) + " min " + str(
                             human_race_dict[key][0]) + " max " + str(human_race_dict[key][2])))
-                        if atributes_dict.get(key) < 1:
-                            atributes_dict[key] = 1
-                            celk_atributy.append(str(key + " " + str(human_race_dict[key][1]) + " min " + str(
-                                human_race_dict[key][0]) + " max " + str(human_race_dict[key][2])))
                 if m == len(vysl_atr) + 2:
                     print(celk_atributy)
                 m += +1

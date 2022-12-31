@@ -355,7 +355,9 @@ race_details = {
                         "Lebka" : "dlouhá (dolichocefalie), lebeční index kolem 75",
                         "Čelo" : "strmé, široké, velmi vyvinuté nadočnicové oblouky",
                         "Čelist" : "široká a masivní s vystouplou bradou",
-                        "Oblast" : "nejčastěji v oblasti Vestfálska a částečně pak v severských zemí (střední Švédsko)",
+                        "Oblast" : random.choice(
+                            "Vestfálsko",
+                            "střední Švédsko"),
                     },
                     "Baltic" : {
                         "Vzrůst" : random.choice("malý", "střední"),
@@ -568,17 +570,6 @@ race_details = {
             }
 }
 
-                eye_color = ('brown', 'black', 'blue', 'green', 'yellow')
-                ('brown', 'black', 'green')
-                ("modré", "zelené", "šedé")
-hair_color = ('auburn', 'brown', 'black', 'blonde', 'copper', 'ginger', 'golden', 'grey', 'mouse', 'red', 'dark brown', 'white')
-("kaštanová", "hnědá", "černá", "blond", "měděná", "zrzavá", "zlatá", "šedá", "myší", "červená", "tmavě hnědá", "bílá")
 
-
-("hnědé", "černé", "šedé",)
-skin_tone = ('almond', 'brown', 'bronze', 'chocolate', 'cocoa', 'dark chocolate', 'fair', 'light', 'olive', 'pale', 'walnut')
-('chocolate', 'cocoa', 'dark chocolate', 'walnut')
-("mandle", "olivy", "vlašský ořech")
-("čokoládová", "kakaová", "hořká čokoláda", "ořechová")
 
 

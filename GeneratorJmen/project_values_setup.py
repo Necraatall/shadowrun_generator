@@ -107,12 +107,14 @@ class Weight(Enum):
     underweight = "underweight"
     very_underweight = "very underweight"
 
+
 class Build(Enum):
     very_well_built = "very well-built"
     well_built = "well-built"
     average_build = "average build"
     fine_build = "fine build"
     very_fine_build = "very fine build"
+
 
 class Hair(Enum):
     blonde = "blonde" 

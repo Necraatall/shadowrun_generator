@@ -120,8 +120,6 @@ celk_atributy = {}
 
 def make_atributes_loop():
 
-    # atributgen promenna pro vygenerovanou hodnotu atributu
-    atributgen: int
     # pointspool celkovy pocet bodu na postavu
     pointspool: int
     # pointspool_skills pocet bodu na skilly, Edge, rasu, Merits and Flows (neg: critters)
@@ -130,8 +128,9 @@ def make_atributes_loop():
     pointspool_atr_start: int  # na vypocet atributu vcetne bonusu rasy
     # pointspool/2 must be [100,150,200,250,300] and between 425 and 600 BP
     pointspool = 600
-    pointspool_atr_start = int((pointspool/2) + (len(usedatr) * 10))
-    pointspool_skills = pointspool_atr_start
+    # TODO: better way for counting atributes and so one
+    pointspool_atr_start = round((pointspool/2) + (len(usedatr) * 10))
+    pointspool_skills = round(pointspool/2)
     if pointspool_atr_start == 180:  # 100BP
         chosensystem_dict_four = {
             1: (4, 4, 2, 2, 2, 2, 1, 1),

@@ -4,7 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-prospector = "*"
+pylint = "*"
+flake8 = "*"
+autopep8 = "*"
 
 [dev-packages]
 pytest = "*"

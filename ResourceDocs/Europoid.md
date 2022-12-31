@@ -139,10 +139,10 @@ Oblast: jihovýchodní Evropa, Balkánský poloostrov, Chorvatsko, Srbsko, Čern
 
 
 
-
+Middle-East
 Rasy blizky vychod Kavkazoidni
 
-
+Cesky
 Armenoidní typ (Die vorderasiatische Rasse)
 
 Vzrůst: střední
@@ -160,7 +160,25 @@ Lebka: krátká (brachycefalie) se zploštělým týlem
 Čelist: nízká, ustupující brada
 Oblast: Blízký východ (Malá Asie), Kavkaz, Arménie, Asýrie, Ázerbájdžán, Gruzie, Libanon a Sýrie
 
+Anglicky
+Armenoid type (Die vorderasiatische Rasse)
 
+Growth: medium
+Stature: stocky (digestive)
+Limbs: short
+Pigmentation: brown
+Nose: hooked, fleshy downwards (resembles the number 6)
+Lips: fleshy, lower lip larger than upper
+Hair: dark, curly, eyebrows often knitted together
+Eyes: dark, upper eyelids exposed (undeveloped supraorbital arches)
+Ears: large
+Face: medium width, prominent cheekbones
+Skull: short (brachycephaly) with flattened occiput
+Forehead: low, oblique, rounded
+Jaw: low, receding chin
+Region: Middle East (Asia Minor), Caucasus, Armenia, Assyria, Azerbaijan, Georgia, Lebanon and Syria
+
+Cesky
 Orientální typ (Die orientalische Rasse)
 
 Vzrůst: malý až střední
@@ -174,9 +192,22 @@ Obličej: vysoký, převážně úzký a rovný
 Lebka: dlouhá (dolichocefalie)
 Oblast: severní Afrika, Blízký východ, Arábie, Libanon, Irák, Sýrie, Turecko, Degestán a Írán
 
+Anglicky
+Oriental type (Die orientalische Rasse)
 
+Growth: small to medium
+Physique: slender (respiratory)
+Pigmentation: brown
+Nose: narrow, high
+Lips: full
+Hair: dark
+Eyes: dark
+Face: tall, mostly narrow and straight
+Skull: long (dolichocephaly)
+Region: North Africa, Middle East, Arabia, Lebanon, Iraq, Syria, Turkey, Degestan and Iran
+
+Cesky
 Sudetský typ (die sudetische Rasse):
-
 Vzrůst: malý
 Pigmentace: tmavší
 Nos: široký, plochý
@@ -186,3 +217,33 @@ Obličej: středně široký, výrazné lícní kosti
 Lebka: střední (mesocefalie)
 Čelist: nevystupující brada
 Oblast: východní Evropa
+
+Anglicky
+The Sudeten type (die sudetische Rasse):
+Growth: small
+Pigmentation: darker
+Nose: broad, flat
+Hair: dark
+Eyes: dark
+Face: medium width, prominent cheekbones
+Skull: medium (mesocephaly)
+Jaw: chin not protruding
+Region: Eastern Europe
+
+
+NEGROID
+Základní rasové typy negroidní rasy
+Negroidní typ (Die negerische Rasse)
+Hamitský typ (Die hamitische Rasse)
+
+Vzrůst: vysoký
+Postava: hodně astenická (respiratorní)
+Pigmentace: světle černá
+Nos: rovný
+Rty: masité
+Vlasy: černé, kudrnaté
+Oči: tmavé
+Obličej: vysoký
+Lebka: dlouhá (dolichocefalie)
+Oblast: severní, východní a jižní Afrika
+

@@ -4,21 +4,19 @@ from GeneratorJmen.Data.Gods.gods_egypt import *
 from GeneratorJmen.Data.Gods.gods_kelt import *
 from GeneratorJmen.Data.Gods.gods_slovan import *
 
-intent_tribe_god = [
+intent_tribe_god = (
     intent_gods_gk,
     intent_gods_eg,
     intent_gods_kelt,
-    intent_gods_slovan
+    intent_gods_slovan,
+)
 
-]
-
-intent_tribe_god_about = [
+intent_tribe_god_about = (
     intent_gods_about_gk,
     intent_gods_about_eg,
     intent_gods_about_kelt,
-    intent_gods_about_slovan
-
-]
+    intent_gods_about_slovan,
+)
 
 
 class God:

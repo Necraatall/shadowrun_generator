@@ -15,7 +15,7 @@ from GeneratorJmen.Data.Name.names_es import *
 from GeneratorJmen.Data.Name.names_vn import *
 from GeneratorJmen.Data.Name.names_cz import *
 
-names_all = [
+names_all = (
     intent_names_gk,
     intent_names_fi,
     intent_names_pl,
@@ -29,8 +29,7 @@ names_all = [
     intent_names_fr,
     intent_names_es,
     intent_names_vn
-
-]
+)
 
 
 class Name:

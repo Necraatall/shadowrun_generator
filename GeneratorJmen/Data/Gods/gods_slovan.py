@@ -1,5 +1,5 @@
 
-intent_gods_slovan = [
+intent_gods_slovan = (
 	"Bělboh",
 	"Cica",
 	"Černoboh",
@@ -62,9 +62,9 @@ intent_gods_slovan = [
 	"Zela",
 	"Živa",
 	"Žywye"
-]
+)
 
-intent_gods_about_slovan = [
+intent_gods_about_slovan = (
 	{
 	1:"bůh dobra a světla"
 	},
@@ -251,4 +251,4 @@ intent_gods_about_slovan = [
 	{
 	62:"bůh života, podle Stryjkowského šumící vítr"
 	}
-]
+)

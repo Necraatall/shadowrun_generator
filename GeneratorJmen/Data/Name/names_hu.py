@@ -1,4 +1,4 @@
-intent_names_hu =[
+intent_names_hu = (
 	"Fruzsina",
 	"Ábel",
 	"Genovéva",
@@ -495,4 +495,4 @@ intent_names_hu =[
 	"Tamara",
 	"Dávid",
 	"Szilveszter"
-]    
+)

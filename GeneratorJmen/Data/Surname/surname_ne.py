@@ -1,4 +1,4 @@
-intent_surname_ne =[
+intent_surname_ne = (
 	"Aalsburg",
 	"Aalst",
 	"Aarle",
@@ -296,4 +296,4 @@ intent_surname_ne =[
 	"Vandale",
 	"Vandroogenbroeck",
 	"Vann"
-]    
+)

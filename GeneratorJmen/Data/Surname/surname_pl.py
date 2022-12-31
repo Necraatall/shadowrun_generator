@@ -1,5 +1,5 @@
 
-intent_surname_pl = [
+intent_surname_pl = (
 	"Abramczy",
 	"Abramczy",
 	"Abramsk",
@@ -1467,4 +1467,4 @@ intent_surname_pl = [
 	"Zwierzynsk",
 	"Zylinsk",
 	"Zywiyask"
-]
+)

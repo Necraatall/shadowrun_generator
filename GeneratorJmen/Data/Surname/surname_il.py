@@ -1,5 +1,5 @@
 
-intent_surname_il =[
+intent_surname_il = (
 	"Aaron",
 	"Aaronin",
 	"Aaronsen",
@@ -3050,4 +3050,4 @@ intent_surname_il =[
 	"Zwibel",
 	"Zwillenberg",
 	"Zwirn"
-]
+)

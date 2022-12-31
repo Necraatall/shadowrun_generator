@@ -1,4 +1,4 @@
-intent_surname_ru =[
+intent_surname_ru = (
 	"Ababko",
 	"Abaev",
 	"Abagyan",
@@ -9486,4 +9486,4 @@ intent_surname_ru =[
 	"Zozrov",
 	"Zozulya",
 	"Zukerman"
-]    
+)

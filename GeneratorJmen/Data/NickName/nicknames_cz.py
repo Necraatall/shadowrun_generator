@@ -1,4 +1,4 @@
-intent_nickNames_cz = [
+intent_nickNames_cz = (
     "Áďa",
 	"Adam",
 	"Ája",
@@ -678,4 +678,4 @@ intent_nickNames_cz = [
 	"Žofka",
 	"Žralok",
 	"Žužu"
-]    
+)

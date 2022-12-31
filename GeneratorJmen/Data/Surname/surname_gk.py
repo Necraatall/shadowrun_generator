@@ -1,5 +1,5 @@
 
-intent_surname_gk =[
+intent_surname_gk = (
 	"Adamidis",
 	"Adamou",
 	"Agelakos",
@@ -204,4 +204,4 @@ intent_surname_gk =[
 	"Xydis",
 	"Zaloumi",
 	"Zouvelekis"
-]    
+)

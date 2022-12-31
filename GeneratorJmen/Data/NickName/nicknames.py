@@ -2,9 +2,9 @@ import random
 
 from GeneratorJmen.Data.NickName.nicknames_cz import *
 
-nicknames = [
+nicknames = (
     intent_nickNames_cz
-]
+)
 
 
 class Nickname:

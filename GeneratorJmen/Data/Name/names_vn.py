@@ -1,4 +1,4 @@
-intent_names_vn = [
+intent_names_vn = (
 	"Anh",
 	"Antoan",
 	"Cadao",
@@ -92,4 +92,4 @@ intent_names_vn = [
 	"Viet",
 	"Vui",
 	"Xuan"
-]    
+)

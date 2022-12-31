@@ -1,5 +1,5 @@
 
-intent_names_gk =[
+intent_names_gk = (
 	"Vasilis",
 	"Vasiliki",
 	"Koula",
@@ -715,4 +715,4 @@ intent_names_gk =[
 	"Emma",
 	"Panagiotis",
 	"Emmanuel"
-]    
+)

@@ -1,4 +1,4 @@
-intent_gods_kelt = [
+intent_gods_kelt = (
 	"Andraste",
 	"Arawn",
 	"Arduinna",
@@ -24,9 +24,9 @@ intent_gods_kelt = [
 	"Tigernonos - Teeger-nonos",
 	"Taranis",
 	"Vosegus"
-]
+)
 
-intent_gods_about_kelt = [
+intent_gods_about_kelt = (
     {
     1:"Keltská bohyně vítězství, uctívaná na Britských ostrovech."
     },
@@ -102,4 +102,4 @@ intent_gods_about_kelt = [
     {
     25:"Podobně jako Arduinna chrání Vogézy"
     }
-]
+)

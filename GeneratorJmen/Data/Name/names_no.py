@@ -1,4 +1,4 @@
-intent_names_no =[
+intent_names_no = (
 	"Dagfinn",
 	"Dagfrid",
 	"Alf",
@@ -822,4 +822,4 @@ intent_names_no =[
 	"Diana",
 	"Din",
 	"Sylv"
-]    
+)

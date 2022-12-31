@@ -1,5 +1,5 @@
 
-intent_surname_uk =[
+intent_surname_uk = (
 	"Abbas",
 	"Abbey",
 	"Abbott",
@@ -3706,4 +3706,4 @@ intent_surname_uk =[
 	"Yule",
 	"Yusuf",
 	"Zaoui"
-]    
+)

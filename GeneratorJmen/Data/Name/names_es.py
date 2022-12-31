@@ -1,4 +1,4 @@
-intent_names_es = [
+intent_names_es = (
 	"Manuel",
 	"Emanuel",
 	"Jesús",
@@ -912,4 +912,4 @@ intent_names_es = [
 	"Davíd",
 	"Raúl0.",
 	"Silvestre"
-]    
+)

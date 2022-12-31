@@ -1,4 +1,4 @@
-intent_surname_us = [
+intent_surname_us = (
 	"Aaberg",
 	"Aaby",
 	"Aadland",
@@ -88798,4 +88798,4 @@ intent_surname_us = [
 	"Zysk",
 	"Zyskowski",
 	"Zywiec"
-]    
+)

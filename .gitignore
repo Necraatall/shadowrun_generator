@@ -3,6 +3,15 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# __pycache__/mnames_cz.cpython-310.pyc
+# **/Mans/__pycache__/
+# */GeneratorJmen/Data/Name/Mans/__pycache__/
+# mnames_cz.cpython-310.pyc
+# GeneratorJmen/Data/Name/Womans/__pycache__/
+# mnames_cz.cpython-310.pyc
+# project_values_setup.cpython-310.pyc
+# generator_jmen.cpython-310.pyc
+
 # C extensions
 *.so
 
@@ -102,4 +111,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
- 
+*.pyc

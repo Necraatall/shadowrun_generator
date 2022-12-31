@@ -307,95 +307,25 @@ if x in gods_egypt.intent_gods_about_eg:
 # •Např. Eskymáci a
 # Indiáni
 
-# NEGROIDNÍ
-# ČERNÁ
-# VLASY: kudrnaté,
-# krátké, pomalu rostou
-# NOS: široký, zploštělý
-# OČI: velké, široké,
-# tmavé
-# OBLAST PŮVODU:
-# subsaharská Afrika
-
-# EUROPOIDNÍ
-# BÍLÁ
-# VLASY: mírně vlnité,
-# různé barvy, rychle
-# rostou
-# NOS: rovný, úzký,
-# zahnutý
-# OČI: rovné, různé barvy
-# OBLAST PŮVODU:
-# Evropa, Severní Afrika
-# a Západní Asie
-
-# MÍŠENCI
-#  MESTICI: bílá + žlutá rasa
-#  MULATI: bílá + černá rasa
-#  ZAMBOVÉ: černá + žlutá rasa
-# Kastico beloch + indian + beloch
-# Kajot mulat (cernoch + beloch) + mestic (beloch + indian)
-# Kreolové: europoidní + negroidní
-# Malgaši: negroidní + mongoloidní +
-# tzv. australonéská rasa (uváděna jako 4.
-# rasa – původní obyvatelé Austrálie)
-
-# Bile plemeno
-# alpinský
-# • baltický
-# • nordický
-# • dinárský
-# • mediteránní
-
-
-
-
-# 6 Bílá – europoidní rasa
-# Původní rozšíření: Evropa, Blízký východ, Střední východ, severní Afrika, Indie
-
-# 7 Žlutohnědá – mongoloidní rasa
-# Původní rozšíření: Asie, Amerika, Indonésie
-
-# 8 Původní rozšíření: Afrika, Austrálie
-# Černá – negroidní rasa
-# Původní rozšíření: Afrika, Austrálie
-
-# 9 Co bylo příčinou vzniku různých ras ?
-# 10 Lidské rasy se vytvářely postupně před mnoha lety ze společných předků vlivem různého rozdílného prostředí.
-# Těmto různým přírodním podmínkám se
-# musely přizpůsobovat.
-# (adaptovat se)
-
-# 11 Co bylo příčinou jednotlivých odlišností ?
-# tmavá pleť, tmavé oči
-# štíhlá, vysoká postava
-# ochrana před slunečním zářením
-# větší povrch těla, rychle se zbavují tepla
-
-# 12 menší, podsaditá postava
-# úzká oční štěrbina
-# menší, podsaditá postava
-# oko chráněno před odrazem světla od sněhu, před mrazem
-# menší povrch, méně se zbavují tepla, více tuku
-
-# try it another way - more complex races
-
 race_details = {
 				'Europoidic' : {
 					"Nordic" : {
-                        "Vzrůst" : "vysoký",
-                        "Postava" : "atletická (respiratorní), široká ramena",
+                        "Vzrůst" : random.choice("vysoký", "štíhlý"),
+                        "Postava" : "atletická (respiratorní), široká ramena, pevné držení těla",
                         "Končetiny" : "dlouhé ruce a nohy",
-                        "Pigmentace" : "světle bílá",
-                        "Nos" : "úzký, vysoký, rovný",
+                        "Tělesná_výška" : "175",
+                        "Pigmentace" : "světle " + random.choice("bílá", "narůžovělá, jemná") + " pleť",
+                        "Nos" : "dlouhý, úzký, " + random.choice("rovný", "zahnutý"),
                         "Rty" : "tenké",
-                        "Vlasy" : "světlé",
-                        "Oči" : "světlé",
+                        "Vlasy" : "světlé " + random.choice("jemné", "rovné", "vlnité") + " barvy "
+                            + random.choice("šedá", "myší", "zlatá", "blond", "bílá"),
+                        "Oči" : "světle " + random.choice("modré", "zelené", "šedé"),
                         "Obličej" : "úzký, vysoký",
+                        "Brada" : random.choice("úzká", "hranatá", "ostrá"),
                         "Lebka" : "dlouhá (dolichocefalie) – lebeční index 75-75,5, obličejový index nad 90",
-                        "Čelo" : "vysoké, rozvinuté nadočnicové oblouky",
+                        "Čelo" : "Ploché, úzké, dozadu sklopené ",
                         "Čelist" : "dobře vyvinutá brada",
-                        "Oblast" : (
+                        "Oblast" : random.choice(
                             "severní Evropa",
                             "Skandinávský poloostrov",
                             "Pobaltí",
@@ -428,21 +358,24 @@ race_details = {
                         "Oblast" : "nejčastěji v oblasti Vestfálska a částečně pak v severských zemí (střední Švédsko)",
                     },
                     "Baltic" : {
-                        "Vzrůst" : "malý až střední",
-                        "Postava" : "podsaditá, široká ramena (digestivní)",
+                        "Vzrůst" : random.choice("malý", "střední"),
+                        "Postava" : "podsaditá, rovná, široká ramena (digestivní)",
                         "Končetiny" : "krátké",
+                        "Tělesná_výška" : "164",
                         "Krk" : "široký, krátký",
-                        "Pigmentace" : "světle bílá",
-                        "Nos" : "středně široký, nízký, prohlý (konkávní)",
-                        "Vlasy" : "světlé",
-                        "Oči" : "světlé, posazeny daleko od sebe, někdy i polo-mongoloidní tvar",
+                        "Pigmentace" : random.choice("světlá", "žlutošedá"),
+                        "Nos" : random.choice("krátký", "mělký"),
+                        "Vlasy" : random.choice("pevné", "rovné") + random.choice("popelavé", "světlý blond"),
+                        "Oči" : random.choice("světle modré", "modrobílé") + "posazeny daleko od sebe, někdy i polo-mongoloidní tvar",
                         "Obličej" : "robustní, široký, vysedlé lícní kosti",
                         "Lebka" : "krátká (brachycefalie) – lebeční index 80,9-83,2 ",
-                        "Čelist" : "Masivní s nevystupující bradou",
-                        "Oblast" : (
+                        "Čelist" : "masivní s nevystupující bradou",
+                        "Brada" : random.choice("kulatá", "ustupující"),
+                        "Čelo" : "dozadu sklopené",
+                        "Oblast" : random.choice(
                             "východní Evropa" 
                             "střední a jižní Polsko",
-                            "Pobaltí (Litva, Lotyšsko, Estonsko)",
+                            "Pobaltí " + random.choice("Litva", "Lotyšsko", "Estonsko"),
                             "Česko",
                             "Slovensko",
                             "Maďarsko",
@@ -450,21 +383,25 @@ race_details = {
                             "Bělorusko",
                             "Finsko",
                             "Rusko",
-                            "částečně ve Skandinávii a v Holandsku",
+                            "Skandinávie",
+                            "Holandsko",
                         )
                     },
                     "Mediterran" : {
-                        "Vzrůst" : "malý",
-                        "Postava" : "štíhlá (respiratorní)",
+                        "Vzrůst" : "nízký",
+                        "Postava" : "štíhlá (respiratorní), držení pružné",
                         "Končetiny" : "v poměru k tělu dlouhé",
+                        "Tělesná_výška" : "161",
                         "Pigmentace" : "hnědobílá",
-                        "Nos" : "rovný, vysoký, úzký",
+                        "Nos" : random.choice("rovný", "vysoký", "úzký") + "s vysokým hřbetem",
                         "Rty" : "trochu výraznější oproti nordickému typu",
                         "Vlasy" : "tmavé",
-                        "Oči" : "tmavé",
+                        "Čelo" : random.choice("více strmé a klenuté", "úzké"),
+                        "Oči" : "tmavě hnědé",
                         "Obličej" : "oválný",
+                        "Brada" : "úzká",
                         "Lebka" : "dlouhá (dolichocefalie) – lebeční index 70-75, obličejový index nad 90",
-                        "Oblast" : (
+                        "Oblast" : random.choice(
                             "jižní a západní Evropa",
                             "Středomoří",
                             "Pádská nížina",
@@ -482,19 +419,22 @@ race_details = {
                     },
                     "Dinaric" : {
                         "Vzrůst" : "vysoký",
-                        "Postava" : "astenická (respiratorní)",
+                        "Postava" : "štíhlá, astenická (respiratorní) s nenuceným držením těla",
                         "Končetiny" : "dlouhé nohy, kratší ruce",
+                        "Tělesná_výška" : "174",
                         "Krk" : "dlouhý",
-                        "Pigmentace" : "hnědobílá",
-                        "Nos" : "úzký, vysoký, orlí (konvexní)",
-                        "Vlasy" : "tmavé",
-                        "Oči" : "tmavé",
+                        "Pigmentace" : random.choice("hnědobílá", "tmavší"),
+                        "Nos" : random.choice("velký", "úzký", "vysoký", "orlí (konvexní)"),
+                        "Vlasy" : "silné " + random.choice("tmavohnědé", "černé"),
+                        "Oči" : random.choice("tmavohnědé", "černé"),
                         "Uši" : "velké",
                         "Obličej" : "úzký, vystouplé lícní kosti",
+                        "Čelo" : "trochu dozadu sklopené",
                         "Lebka" : "krátká (brachycefalie) se zploštělým, ale zakulaceným týlem – lebeční index 85-87, obličejový index 90-93",
                         "Čelo" : "relativně vysoké, šikmé, rozvinuté nadočnicové oblouky",
                         "Čelist" : "nevýrazná brada",
-                        "Oblast" : (
+                        "Brada" : random.choice("široká", "kulatá", "vysoká"),
+                        "Oblast" : random.choice(
                             "jihovýchodní Evropa",
                             "Balkánský poloostrov",
                             "Chorvatsko",
@@ -517,10 +457,41 @@ race_details = {
                             "Polsko",
                             "jižní Německo",
                         )
+                    },
+                    "Alpine" : {
+                        "Vzrůst" : "malý",
+                        "Tělesná_výška" : "163",
+                        "Postava" : "podsaditá (digestivní), těžkopádné",
+                        "Končetiny" : "krátké",
+                        "Pigmentace" : random.choice("žlutohnědá", "o něco tlustší"),
+                        "Nos" : random.choice("krátký" "tupý"),
+                        "Vlasy" : "tlusté, pevné " + random.choice("tmavohnědé", "černé"),
+                        "Oči" : "tmavohnědé",
+                        "Obličej" : "široký, kulatý",
+                        "Lebka" : "krátká (brachycefalie) – lebeční index 84-87, obličejový index nad 80",
+                        "Čelo" : random.choice("strmé", "klenuté", "kulaté", "široké"),
+                        "Čelist" : "široká",
+                        "Brada" : random.choice("tupá", "zaoblená"),
+                        "Oblast" : random.choice( 
+                            "střední Evropa",
+                            "západní Evropa",
+                            "západní Alpy", 
+                            "střední Francie",
+                            "Rakousko",
+                            "Česko",
+                            "Švýcarsko",
+                            "střední Itálie",
+                            "Slovinsko",
+                            "jižní Německo",
+                            "jihozápadní Německo",
+                            "Maďarsko",
+                            "jižní Polsko",
+                        )
                     }
+
                 },
                 'Middle_Eastern' : {
-                    'Armenoidic' : {
+                    'Hamitic' : {
                         "Vzrůst" : "střední",
                         "Postava" : "podsaditá (digestivní)",
                         "Končetiny" : "krátké",
@@ -534,7 +505,7 @@ race_details = {
                         "Lebka" : "krátká (brachycefalie) se zploštělým týlem",
                         "Čelo" : "nízké, šikmé, kulaté",
                         "Čelist" : "nízká, ustupující brada",
-                        "Oblast" : (
+                        "Oblast" : random.choice(
                             "Blízký východ (Malá Asie)",
                             "Kavkaz",
                             "Arménie",
@@ -565,7 +536,7 @@ race_details = {
                         "Oči" : "tmavě " + random.choice("hnědé", "černé", "zelené"),
                         "Obličej" : "vysoký, převážně úzký a rovný",
                         "Lebka" : "dlouhá (dolichocefalie)",
-                        "Oblast" : (
+                        "Oblast" : random.choice(
                             "severní Afrika",
                             "Blízký východ",
                             "Arábie",
@@ -575,19 +546,39 @@ race_details = {
                             "Turecko",
                             "Degestán a Írán",
                         )
+                },
+                'African' : {
+                    'Oriental' : {
+                        "Vzrůst" : "vysoký",
+                        "Postava" : "hodně astenická (respiratorní)",
+                        "Pigmentace" : "světle " + random.choice("čokoládová", "kakaová", "ořechová"),
+                        "Nos" : "rovný",
+                        "Rty" : "masité",
+                        "Vlasy" : "kudrnatě " + random.choice("hnědé", "černé", "šedé"),
+                        "Oči" : "tmavě "+ random.choice("hnědé", "černé"),
+                        "Obličej" : "vysoký",
+                        "Lebka" : "dlouhá (dolichocefalie)",
+                        "Oblast" : random.choice(
+                            "severní Afrika",
+                            "východní Afrika",
+                            "jižní Afrika",
+                        )
+                    }
                 }
             }
+}
 
                 eye_color = ('brown', 'black', 'blue', 'green', 'yellow')
                 ('brown', 'black', 'green')
-                ("hnědé", "černé", "zelené")
+                ("modré", "zelené", "šedé")
 hair_color = ('auburn', 'brown', 'black', 'blonde', 'copper', 'ginger', 'golden', 'grey', 'mouse', 'red', 'dark brown', 'white')
-('brown', 'black', 'grey',)
+("kaštanová", "hnědá", "černá", "blond", "měděná", "zrzavá", "zlatá", "šedá", "myší", "červená", "tmavě hnědá", "bílá")
+
+
 ("hnědé", "černé", "šedé",)
 skin_tone = ('almond', 'brown', 'bronze', 'chocolate', 'cocoa', 'dark chocolate', 'fair', 'light', 'olive', 'pale', 'walnut')
-('almond', 'olive', 'walnut')
+('chocolate', 'cocoa', 'dark chocolate', 'walnut')
 ("mandle", "olivy", "vlašský ořech")
-
-
+("čokoládová", "kakaová", "hořká čokoláda", "ořechová")
 
 

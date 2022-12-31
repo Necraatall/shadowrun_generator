@@ -136,6 +136,20 @@ Lebka: krátká (brachycefalie) se zploštělým, ale zakulaceným týlem – le
 Čelist: nevýrazná brada
 Oblast: jihovýchodní Evropa, Balkánský poloostrov, Chorvatsko, Srbsko, Černá Hora, Bosna a Hercegovina, Albánie, Slovinsko, Bulharsko, Makedonie, Karpaty, Rumunsko, Slovensko, západní Ukrajina, severozápadní Itálie, východní a západní Alpy, Švýcarsko, střední Francie, Pyreneje, Polsko, jižní Německo
 
+Alpínský typ (Die ostische Rasse)
+
+Vzrůst: malý
+Postava: podsaditá (digestivní)
+Končetiny: krátké
+Pigmentace: středně bílá
+Nos: středně široký, nízký, prohlý (konkávní) nebo rovný
+Vlasy: tmavé
+Oči: tmavé
+Obličej: široký, kulatý
+Lebka: krátká (brachycefalie) – lebeční index 84-87, obličejový index nad 80
+Čelo: široké, oblé
+Čelist: široká
+Oblast: střední a západní Evropa, západní Alpy, střední Francie, Rakousko, Česko, Švýcarsko, střední Itálie, Slovinsko, jižní a jihozápadní Německo, Maďarsko, jižní Polsko
 
 
 
@@ -231,6 +245,10 @@ Jaw: chin not protruding
 Region: Eastern Europe
 
 
+#############################################################
+#########   NEGROID
+#############################################################
+Cesky
 NEGROID
 Základní rasové typy negroidní rasy
 Negroidní typ (Die negerische Rasse)
@@ -247,3 +265,19 @@ Obličej: vysoký
 Lebka: dlouhá (dolichocefalie)
 Oblast: severní, východní a jižní Afrika
 
+Anglicky
+NEGROID
+Basic racial types of the Negroid race
+Negroid type (Die negerische Rasse)
+Hamitic type (Die hamitische Rasse)
+
+Height: tall
+Physique: very asthenic (respiratory)
+Pigmentation: light black
+Nose: straight
+Lips: fleshy
+Hair: black, curly
+Eyes: dark
+Face: tall
+Skull: long (dolichocephaly)
+Region: northern, eastern and southern Africa

@@ -55,11 +55,11 @@ reading from csv or excel file using Pandas
 generation of pdf, csv and txt using Pandas etc. 
 
 ## ??final?? versions:
-Openapi/Fastapi/Flask - I will decide which will be more difficult and which will fit better into the context
-database
-AI text generator of the main events in the character's life
-Connection to AI service that generates images based on text input to generate character images
-Front-end (please dont coment it ;)
+  - Openapi/Fastapi/Flask - I will decide which will be more difficult and which will fit better into the context
+  - database
+  - AI text generator of the main events in the character's life
+  - Connection to AI service that generates images based on text input to generate character images
+  - Front-end (please dont coment it ;)
 
 ## **<font color='CIAN'>Security options decision</font>**
 **<font color='RED'>see more down on this link in section: Further reading</font>**

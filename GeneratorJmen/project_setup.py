@@ -1,6 +1,7 @@
 from enum import Enum, auto
 import random
 from GeneratorJmen.Data.Gods import gods_egypt, gods_greek, gods_kelt, gods_slovan
+from GeneratorJmen.generator_jmen import *
 
 
 #TODO: asi lepe dat zdrojovy kod teto stranky a zkopnout
@@ -33,12 +34,12 @@ class Tribe_surname_origin(Enum):
     cz = 8
 
 #nutno dovymyslet dalsi, aby jsme s nimi i mohli pocitat jinde
-class Physical_characteristic(Enum):
-    sexy = "sexy"
-    handsome = "handsome"
-    beautiful = "beautiful"
-    tall = "tall"
-    short = "short"
+# class Physical_characteristic(Enum):
+#     sexy = "sexy"
+#     handsome = "handsome"
+#     beautiful = "beautiful"
+#     tall = "tall"
+#     short = "short"
 
 class Social_class(Enum):
     runner = "runner"               # noqa byvalej runner, nebo popripade i modifikace bodu na rozdeleni
@@ -46,8 +47,12 @@ class Social_class(Enum):
     upper = "upper"
     middle = "middle"
     working = "working"
-    priest = "priest"               # popripade shaman
-    total_junkie = "total_junkie"      #totalni fetak
+    priest = random.choice((
+        "priest",
+        "mage",
+        "shaman"
+    )) + " of their society"        # of their society
+    total_junkie = "total_junkie"   # totalni fetak
     homeless = "homeless"           # klasickej homeless chlast
     native = "native"               # domorodec typu indian... ne cigan
     
@@ -189,15 +194,17 @@ class Religion(Enum):
 # neco(1, "jedeto", Nationality.Afghan)
 
 
-class Riding_enums():
-    gender = Enum("male", "female")
-    #tribe_name_origin = random.choice(Tribe_name_origin)
+class Gender(Enum):
+    gender = random.choice(("male", "female"))
 
 eye_color = ('brown', 'black', 'blue', 'green', 'yellow')
 hair_color = ('auburn', 'brown', 'black', 'blonde', 'copper', 'ginger', 'golden', 'grey', 'mouse', 'red', 'dark brown', 'white')
 skin_tone = ('almond', 'brown', 'bronze', 'chocolate', 'cocoa', 'dark chocolate', 'fair', 'light', 'olive', 'pale', 'walnut')
 
-rase_choice = ('Caucasian', 'Latino/Hispanic', 'African', 'Caribbean', 'Middle_Eastern', 'South_Asian', 'East_Asian', 'Mixed')
+rase_choice = ('Europoidic', 'Caucasian', 'Latino/Hispanic', 'African', 'Caribbean', 'Middle_Eastern', 'South_Asian', 'East_Asian', 'Mixed')
+sub_race_europoidic_choice = ('Nordic', 'Falian', 'Baltic', 'Mediterran', 'Dinaric', 'Alpine')
+sub_race_middle_eastern_choices = ('Hamitic', 'Sudeten', 'Oriental')
+sub_race_african_choice = ('Hamitic')
 
 race_details = {
     'Europoidic' : {
@@ -440,7 +447,7 @@ race_details = {
             ))
     },
     'African' : {
-        'Oriental' : {
+        'Hamitic' : {
             "Vzrůst" : "vysoký",
             "Postava" : "hodně astenická (respiratorní)",
             "Pigmentace" : "světle " + random.choice(("čokoládová", "kakaová", "ořechová")),
@@ -482,13 +489,43 @@ race_details = {
         "hair_color" : (hair_color[10], hair_color[2],hair_color[7], hair_color[11]),
         "skin_tone" : (skin_tone[9], skin_tone[6], skin_tone[7] ,skin_tone[1])
     },
-    'Mixed' : {
+    'Mixed' : {random.choice((
+        'Mestic - potomek Evropana a původního amerického indiána',
+        'Mulat - potomek bělocha a černocha',
+        'Zambaigo - potomek východního asiata a původního Američana/ eskymáka',
+        'Zambo - potomek černocha a Původního Američana',
+        'Kajot - potomek mestica a mulata',
+        )):
+        {
         "eye_color" : (eye_color),
         "hair_color" : (hair_color[1],hair_color[2],hair_color[7],hair_color[3],hair_color[9]),
         "skin_tone" : (skin_tone[9], skin_tone[6], skin_tone[7] ,skin_tone[2], skin_tone[2], skin_tone[8], skin_tone[3])
-    }
+    }}
 }
 }
+
+# TODO: sexualni orientaci
+# TODO: nejdrive generovat gender, sexualni preference, rasu, z jake lidske rasy je, 
+# zemi puvodu, pak jmeno a pak dalsi
+# TODO: lidske/metalidske rasy predelat samostatne
+# TODO: vymyslet jak generovat a z ceho - ? net ? zivotni udalosti
+# TODO: rozmyslet si lepe adresarovou strukturu
+# TODO: printovat bude jeden soubor k tomu urcenej
+# TODO: dodelat testy a "navrhove vzory" k priprave na dalsi verzi
+# - proste promyslet zda by u neceho nebylo lepsi mit jine datove typy, 
+# zda uz nemyslet na reseni pres soubory, spoustec, linux/windows verzi a ospath pokud bude potreba
+# / nabidnu at si vybere cestu
+
+# print((Gender.gender).value)
+# print(random.choice(tuple(Tribe_name_origin)).value)
+# print(random.choice(tuple(Tribe_surname_origin)).value)
+
+
+
+    
+# print(race_detail_type, 'eye_color is : ', random.choice(race_details[race_detail_type][]['eye_color']))
+# print(race_detail_type, 'hair_color is : ', random.choice(race_details[race_detail_type]['hair_color']))
+# print(race_detail_type, 'skin_tone is : ', random.choice(race_details[race_detail_type]['skin_tone']))
 
 # TODO: done races 
 # class print and choose
@@ -526,26 +563,3 @@ race_details = {
 # 8 South American
 # 9 Black American
 # 10 Central European
-
-
-# print(random.choice(list(Tribe_name_origin)).value)
-
-# race_detail_type = random.choice(list(race_details))
-# print(race_detail_type)
-
-# TODO: az po dodelani dat ras
-if race_details['Europoidic']:
-    None
-    
-# print(race_detail_type, 'eye_color is : ', random.choice(race_details[race_detail_type][]['eye_color']))
-# print(race_detail_type, 'hair_color is : ', random.choice(race_details[race_detail_type]['hair_color']))
-# print(race_detail_type, 'skin_tone is : ', random.choice(race_details[race_detail_type]['skin_tone']))
-
-# gods_egypt.intent_gods_eg
-
-# print(random.choice(gods_egypt.intent_gods_eg))
-# x = len(gods_egypt.intent_gods_eg)
-# print(x)
-
-# if x in gods_egypt.intent_gods_about_eg:
-#     print(gods_egypt.intent_gods_about_eg[x])

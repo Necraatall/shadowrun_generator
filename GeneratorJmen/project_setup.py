@@ -202,22 +202,22 @@ rase_choice = ('Caucasian', 'Latino/Hispanic', 'African', 'Caribbean', 'Middle_E
 race_details = {
     'Europoidic' : {
         "Nordic" : {
-            "Vzrůst" : random.choice("vysoký", "štíhlý"),
+            "Vzrůst" : random.choice(("vysoký", "štíhlý")),
             "Postava" : "atletická (respiratorní), široká ramena, pevné držení těla",
             "Končetiny" : "dlouhé ruce a nohy",
             "Tělesná_výška" : "175",
-            "Pigmentace" : "světle " + random.choice("bílá", "narůžovělá, jemná") + " pleť",
-            "Nos" : "dlouhý, úzký, " + random.choice("rovný", "zahnutý"),
+            "Pigmentace" : "světle " + random.choice(("bílá", "narůžovělá, jemná")) + " pleť",
+            "Nos" : "dlouhý, úzký, " + random.choice(("rovný", "zahnutý")),
             "Rty" : "tenké",
-            "Vlasy" : "světlé " + random.choice("jemné", "rovné", "vlnité") + " barvy "
-                + random.choice("šedá", "myší", "zlatá", "blond", "bílá"),
-            "Oči" : "světle " + random.choice("modré", "zelené", "šedé"),
+            "Vlasy" : "světlé " + random.choice(("jemné", "rovné", "vlnité")) + " barvy "
+                + random.choice(("šedá", "myší", "zlatá", "blond", "bílá")),
+            "Oči" : "světle " + random.choice(("modré", "zelené", "šedé")),
             "Obličej" : "úzký, vysoký",
-            "Brada" : random.choice("úzká", "hranatá", "ostrá"),
+            "Brada" : random.choice(("úzká", "hranatá", "ostrá")),
             "Lebka" : "dlouhá (dolichocefalie) – lebeční index 75-75,5, obličejový index nad 90",
             "Čelo" : "Ploché, úzké, dozadu sklopené ",
             "Čelist" : "dobře vyvinutá brada",
-            "Oblast" : random.choice(
+            "Oblast" : random.choice((
                 "severní Evropa",
                 "Skandinávský poloostrov",
                 "Pobaltí",
@@ -233,7 +233,7 @@ race_details = {
                 "Belgie",
                 "severní Francie",
                 "severní Rusko",
-            )
+            ))
         },
         "Falian" : {
             "Vzrůst" : "vysoký",
@@ -247,29 +247,29 @@ race_details = {
             "Lebka" : "dlouhá (dolichocefalie), lebeční index kolem 75",
             "Čelo" : "strmé, široké, velmi vyvinuté nadočnicové oblouky",
             "Čelist" : "široká a masivní s vystouplou bradou",
-            "Oblast" : random.choice(
+            "Oblast" : random.choice((
                 "Vestfálsko",
-                "střední Švédsko"),
+                "střední Švédsko")),
         },
         "Baltic" : {
-            "Vzrůst" : random.choice("malý", "střední"),
+            "Vzrůst" : random.choice(("malý", "střední")),
             "Postava" : "podsaditá, rovná, široká ramena (digestivní)",
             "Končetiny" : "krátké",
             "Tělesná_výška" : "164",
             "Krk" : "široký, krátký",
-            "Pigmentace" : random.choice("světlá", "žlutošedá"),
-            "Nos" : random.choice("krátký", "mělký"),
-            "Vlasy" : random.choice("pevné", "rovné") + random.choice("popelavé", "světlý blond"),
-            "Oči" : random.choice("světle modré", "modrobílé") + "posazeny daleko od sebe, někdy i polo-mongoloidní tvar",
+            "Pigmentace" : random.choice(("světlá", "žlutošedá")),
+            "Nos" : random.choice(("krátký", "mělký")),
+            "Vlasy" : random.choice(("pevné", "rovné")) + random.choice(("popelavé", "světlý blond")),
+            "Oči" : random.choice(("světle modré", "modrobílé")) + "posazeny daleko od sebe, někdy i polo-mongoloidní tvar",
             "Obličej" : "robustní, široký, vysedlé lícní kosti",
             "Lebka" : "krátká (brachycefalie) – lebeční index 80,9-83,2 ",
             "Čelist" : "masivní s nevystupující bradou",
-            "Brada" : random.choice("kulatá", "ustupující"),
+            "Brada" : random.choice(("kulatá", "ustupující")),
             "Čelo" : "dozadu sklopené",
-            "Oblast" : random.choice(
+            "Oblast" : random.choice((
                 "východní Evropa" 
                 "střední a jižní Polsko",
-                "Pobaltí " + random.choice("Litva", "Lotyšsko", "Estonsko"),
+                "Pobaltí " + random.choice(("Litva", "Lotyšsko", "Estonsko")),
                 "Česko",
                 "Slovensko",
                 "Maďarsko",
@@ -279,7 +279,7 @@ race_details = {
                 "Rusko",
                 "Skandinávie",
                 "Holandsko",
-            )
+            ))
         },
         "Mediterran" : {
             "Vzrůst" : "nízký",
@@ -287,15 +287,15 @@ race_details = {
             "Končetiny" : "v poměru k tělu dlouhé",
             "Tělesná_výška" : "161",
             "Pigmentace" : "hnědobílá",
-            "Nos" : random.choice("rovný", "vysoký", "úzký") + "s vysokým hřbetem",
+            "Nos" : random.choice(("rovný", "vysoký", "úzký")) + "s vysokým hřbetem",
             "Rty" : "trochu výraznější oproti nordickému typu",
             "Vlasy" : "tmavé",
-            "Čelo" : random.choice("více strmé a klenuté", "úzké"),
+            "Čelo" : random.choice(("více strmé a klenuté", "úzké")),
             "Oči" : "tmavě hnědé",
             "Obličej" : "oválný",
             "Brada" : "úzká",
             "Lebka" : "dlouhá (dolichocefalie) – lebeční index 70-75, obličejový index nad 90",
-            "Oblast" : random.choice(
+            "Oblast" : random.choice((
                 "jižní a západní Evropa",
                 "Středomoří",
                 "Pádská nížina",
@@ -304,12 +304,10 @@ race_details = {
                 "Portugalsko", 
                 "Řecko",
                 "část Walesu",
-                "Skotsko",
-                "jižní Anglie a Irsko",
                 "jihozápadní Německo",
                 "jižní Polsko",
                 "částečně jižní a centrální Rusko a Balkán",
-            )
+            ))
         },
         "Dinaric" : {
             "Vzrůst" : "vysoký",
@@ -317,18 +315,18 @@ race_details = {
             "Končetiny" : "dlouhé nohy, kratší ruce",
             "Tělesná_výška" : "174",
             "Krk" : "dlouhý",
-            "Pigmentace" : random.choice("hnědobílá", "tmavší"),
-            "Nos" : random.choice("velký", "úzký", "vysoký", "orlí (konvexní)"),
-            "Vlasy" : "silné " + random.choice("tmavohnědé", "černé"),
-            "Oči" : random.choice("tmavohnědé", "černé"),
+            "Pigmentace" : random.choice(("hnědobílá", "tmavší")),
+            "Nos" : random.choice(("velký", "úzký", "vysoký", "orlí (konvexní)")),
+            "Vlasy" : "silné " + random.choice(("tmavohnědé", "černé")),
+            "Oči" : random.choice(("tmavohnědé", "černé")),
             "Uši" : "velké",
             "Obličej" : "úzký, vystouplé lícní kosti",
             "Čelo" : "trochu dozadu sklopené",
             "Lebka" : "krátká (brachycefalie) se zploštělým, ale zakulaceným týlem – lebeční index 85-87, obličejový index 90-93",
             "Čelo" : "relativně vysoké, šikmé, rozvinuté nadočnicové oblouky",
             "Čelist" : "nevýrazná brada",
-            "Brada" : random.choice("široká", "kulatá", "vysoká"),
-            "Oblast" : random.choice(
+            "Brada" : random.choice(("široká", "kulatá", "vysoká")),
+            "Oblast" : random.choice((
                 "jihovýchodní Evropa",
                 "Balkánský poloostrov",
                 "Chorvatsko",
@@ -350,23 +348,23 @@ race_details = {
                 "Pyreneje",
                 "Polsko",
                 "jižní Německo",
-            )
+            ))
         },
         "Alpine" : {
             "Vzrůst" : "malý",
             "Tělesná_výška" : "163",
             "Postava" : "podsaditá (digestivní), těžkopádné",
             "Končetiny" : "krátké",
-            "Pigmentace" : random.choice("žlutohnědá", "o něco tlustší"),
-            "Nos" : random.choice("krátký" "tupý"),
-            "Vlasy" : "tlusté, pevné " + random.choice("tmavohnědé", "černé"),
+            "Pigmentace" : random.choice(("žlutohnědá", "o něco tlustší")),
+            "Nos" : random.choice(("krátký" "tupý")),
+            "Vlasy" : "tlusté, pevné " + random.choice(("tmavohnědé", "černé")),
             "Oči" : "tmavohnědé",
             "Obličej" : "široký, kulatý",
             "Lebka" : "krátká (brachycefalie) – lebeční index 84-87, obličejový index nad 80",
-            "Čelo" : random.choice("strmé", "klenuté", "kulaté", "široké"),
+            "Čelo" : random.choice(("strmé", "klenuté", "kulaté", "široké")),
             "Čelist" : "široká",
-            "Brada" : random.choice("tupá", "zaoblená"),
-            "Oblast" : random.choice( 
+            "Brada" : random.choice(("tupá", "zaoblená")),
+            "Oblast" : random.choice(( 
                 "střední Evropa",
                 "západní Evropa",
                 "západní Alpy", 
@@ -380,7 +378,7 @@ race_details = {
                 "jihozápadní Německo",
                 "Maďarsko",
                 "jižní Polsko",
-            )
+            ))
         }
 
     },
@@ -389,17 +387,17 @@ race_details = {
             "Vzrůst" : "střední",
             "Postava" : "podsaditá (digestivní)",
             "Končetiny" : "krátké",
-            "Pigmentace" : "snědá - barvy " + random.choice("mandle", "olivy", "vlašský ořech"),
+            "Pigmentace" : "snědá - barvy " + random.choice(("mandle", "olivy", "vlašský ořech")),
             "Nos" : "zahnutý, masitý směrem dolů (podobá se číslici 6)",
             "Rty" : "masité, dolní ret je větší než horní",
-            "Vlasy" : "tmavě " + random.choice("hnědé", "černé", "šedé") + ", kudrnaté, obočí často srostlé",
-            "Oči" : "tmavě " + random.choice("hnědé", "černé", "zelené") + ", odhalená vrchní oční víčka (nevyvinuté nadočnicové oblouky)",
+            "Vlasy" : "tmavě " + random.choice(("hnědé", "černé", "šedé")) + ", kudrnaté, obočí často srostlé",
+            "Oči" : "tmavě " + random.choice(("hnědé", "černé", "zelené")) + ", odhalená vrchní oční víčka (nevyvinuté nadočnicové oblouky)",
             "Uši" : "velké",
             "Obličej" : "středně široký, vystouplé lícní kosti",
             "Lebka" : "krátká (brachycefalie) se zploštělým týlem",
             "Čelo" : "nízké, šikmé, kulaté",
             "Čelist" : "nízká, ustupující brada",
-            "Oblast" : random.choice(
+            "Oblast" : random.choice((
                 "Blízký východ (Malá Asie)",
                 "Kavkaz",
                 "Arménie",
@@ -407,14 +405,14 @@ race_details = {
                 "Ázerbájdžán",
                 "Gruzie",
                 "Libanon a Sýrie",
-            )
+            ))
         },
         'Sudeten' : {
             "Vzrůst": "malý",
-            "Pigmentace": "tmavší - barvy " + random.choice("mandle", "olivy", "vlašský ořech"),
+            "Pigmentace": "tmavší - barvy " + random.choice(("mandle", "olivy", "vlašský ořech")),
             "Nos": "široký, plochý",
-            "Vlasy": "tmavě " + random.choice("hnědé", "černé", "šedé"),
-            "Oči": "tmavě " + random.choice("hnědé", "zelené"),
+            "Vlasy": "tmavě " + random.choice(("hnědé", "černé", "šedé")),
+            "Oči": "tmavě " + random.choice(("hnědé", "zelené")),
             "Obličej": "středně široký, výrazné lícní kosti",
             "Lebka": "střední (mesocefalie)",
             "Čelist": "nevystupující brada",
@@ -423,14 +421,14 @@ race_details = {
         'Oriental' : {
             "Vzrůst" : "malý až střední",
             "Postava" : "štíhlá (respiratorní)",
-            "Pigmentace" : "snědá - barvy " + random.choice("mandle", "olivy", "vlašský ořech"),
+            "Pigmentace" : "snědá - barvy " + random.choice(("mandle", "olivy", "vlašský ořech")),
             "Nos" : "úzký, vysoký",
             "Rty" : "plné",
-            "Vlasy" : "tmavě " + random.choice("hnědé", "černé", "šedé"),
-            "Oči" : "tmavě " + random.choice("hnědé", "černé", "zelené"),
+            "Vlasy" : "tmavě " + random.choice(("hnědé", "černé", "šedé")),
+            "Oči" : "tmavě " + random.choice(("hnědé", "černé", "zelené")),
             "Obličej" : "vysoký, převážně úzký a rovný",
             "Lebka" : "dlouhá (dolichocefalie)",
-            "Oblast" : random.choice(
+            "Oblast" : random.choice((
                 "severní Afrika",
                 "Blízký východ",
                 "Arábie",
@@ -439,24 +437,24 @@ race_details = {
                 "Sýrie",
                 "Turecko",
                 "Degestán a Írán",
-            )
+            ))
     },
     'African' : {
         'Oriental' : {
             "Vzrůst" : "vysoký",
             "Postava" : "hodně astenická (respiratorní)",
-            "Pigmentace" : "světle " + random.choice("čokoládová", "kakaová", "ořechová"),
+            "Pigmentace" : "světle " + random.choice(("čokoládová", "kakaová", "ořechová")),
             "Nos" : "rovný",
             "Rty" : "masité",
-            "Vlasy" : "kudrnatě " + random.choice("hnědé", "černé", "šedé"),
-            "Oči" : "tmavě "+ random.choice("hnědé", "černé"),
+            "Vlasy" : "kudrnatě " + random.choice(("hnědé", "černé", "šedé")),
+            "Oči" : "tmavě "+ random.choice(("hnědé", "černé")),
             "Obličej" : "vysoký",
             "Lebka" : "dlouhá (dolichocefalie)",
-            "Oblast" : random.choice(
+            "Oblast" : random.choice((
                 "severní Afrika",
                 "východní Afrika",
                 "jižní Afrika",
-            )
+            ))
         }
     },
     'Caribbean' : {
@@ -530,24 +528,24 @@ race_details = {
 # 10 Central European
 
 
-print(random.choice(list(Tribe_name_origin)).value)
+# print(random.choice(list(Tribe_name_origin)).value)
 
-race_detail_type = random.choice(list(race_details))
-print(race_detail_type)
+# race_detail_type = random.choice(list(race_details))
+# print(race_detail_type)
 
 # TODO: az po dodelani dat ras
 if race_details['Europoidic']:
     None
     
-print(race_detail_type, 'eye_color is : ', random.choice(race_details[race_detail_type]['eye_color']))
-print(race_detail_type, 'hair_color is : ', random.choice(race_details[race_detail_type]['hair_color']))
-print(race_detail_type, 'skin_tone is : ', random.choice(race_details[race_detail_type]['skin_tone']))
+# print(race_detail_type, 'eye_color is : ', random.choice(race_details[race_detail_type][]['eye_color']))
+# print(race_detail_type, 'hair_color is : ', random.choice(race_details[race_detail_type]['hair_color']))
+# print(race_detail_type, 'skin_tone is : ', random.choice(race_details[race_detail_type]['skin_tone']))
 
 # gods_egypt.intent_gods_eg
 
-print(random.choice(gods_egypt.intent_gods_eg))
-x = len(gods_egypt.intent_gods_eg)
-print(x)
+# print(random.choice(gods_egypt.intent_gods_eg))
+# x = len(gods_egypt.intent_gods_eg)
+# print(x)
 
-if x in gods_egypt.intent_gods_about_eg:
-    print(gods_egypt.intent_gods_about_eg[x])
+# if x in gods_egypt.intent_gods_about_eg:
+#     print(gods_egypt.intent_gods_about_eg[x])

@@ -15,4 +15,4 @@ class Nickname:
 
 @staticmethod
 def get_random_nickname():
-    return random.choice(random.choice(nicknames))
+    return random.choice((nicknames))

@@ -536,6 +536,7 @@ race_details = {
 # TODO: az po dodelani dat ras
 if race_details['Europoidic']:
     None
+    None
     
 # print(race_detail_type, 'eye_color is : ', random.choice(race_details[race_detail_type][]['eye_color']))
 # print(race_detail_type, 'hair_color is : ', random.choice(race_details[race_detail_type]['hair_color']))

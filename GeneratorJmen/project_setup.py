@@ -33,14 +33,6 @@ class Tribe_surname_origin(Enum):
     us = 7
     cz = 8
 
-#nutno dovymyslet dalsi, aby jsme s nimi i mohli pocitat jinde
-# class Physical_characteristic(Enum):
-#     sexy = "sexy"
-#     handsome = "handsome"
-#     beautiful = "beautiful"
-#     tall = "tall"
-#     short = "short"
-
 class Social_class(Enum):
     runner = "runner"               # noqa byvalej runner, nebo popripade i modifikace bodu na rozdeleni
     hero = "hero"                   # noqa mistni hrdina - mozno vice kontaktu, lepsi vztahy nekde - popripade i modifikace bodu na rozdeleni
@@ -298,36 +290,202 @@ class Negative_characteristic(Enum):
 
 # na zaklade tohoto je mozne resit ze jej nekdo sikanoval ci si na nej nedovolili
 class Height(Enum):
-    very_tall = "very tall"
-    tall = "tall"
-    average = "average"
-    short = "short"
-    very_short ="very short"
+    Very_tall_height = "very tall"
+    Tall_height = "tall"
+    Average_height = "average height"
+    Short_height = "short"
+    Very_short_height ="very short"
 
 
 class Weight(Enum):
-    very_overweight = "very overweight"
-    overweight = "overweight"
-    average = "average"
-    underweight = "underweight"
-    very_underweight = "very underweight"
+    Very_overweight_weight = "very overweight"
+    Overweight_weight = "overweight"
+    Average_weight = "average weight"
+    Underweight_weight = "underweight"
+    Very_underweight_weight = "very underweight"
+    Big_weight = "big"
+    Heavyset_weight = "heavyset weight"
+    Thin_weight = "thin weight"
+
+class Body(Enum):
+    Very_well_built_body = "very well-built"
+    Well_build_body = "well-built"
+    Average_build_body = "average build"
+    Fine_build_body = "fine build"
+    Very_fine_build_body = "very fine build"
+    Skinny_build_body = "skinny build"
+    Slender_build_body = "slender build"
+
+class Body_shape(Enum):
+    Bottom_hourglass = "bottom hourglass"
+    Inverted_tringle = "inverted tringle"
+    Diamond = "diamond"
+    Athletic = "athletic"
+    Round = "round"
+    Rectangle = "rectangle"
+    Triangle = "triangle"
+    Hourglass = "hourglass"
+    Pear = "pear"
+    Apple = "apple"
+    Trapezoid = "trapezoid"
+
+class Face_shape(Enum):
+    Oval_face_shape = "oval" 
+    Square_face_shape = "square"
+    Oblong_face_shape = "oblong"
+    Triangular_face_shape = "triangular"
+    Round_face_shape = "round"
+    Diamond_face_shape = "diamond"
+    Heart_face_shape = "heart"
+
+class Oval_short_hair_styles(Enum):
+    pushed_back_long_oval_hair_style_short = "pushed back long"
+    side_parted_short_oval_hair_style_short = "side parted short"
+    undercut_oval_hair_style_short = "undercut"
+    fringe_up_oval_hair_style_short = "fringe up"
+
+class Square_short_hair_styles(Enum):
+    crew_aka_buzz_cut_square_hair_style_short = "crew aka buzz cut"
+    undercut_square_hair_style_short = "undercut"
+    faux_hawk_square_hair_style_short = "faux hawk"
+    slicked_back_side_part_square_hair_style_short = "slicked back side part"
+
+class Oblong_short_hair_styles(Enum):
+    side_parted_oblong_hair_style_short = "side parted"
+    buzz_cut_oblong_hair_style_short = "buz cut"
+    fringe_up_oblong_hair_style_short = "fringe up"
+    side_fringe_oblong_hair_style_short = "side fringe"
+
+class Triangular_short_hair_styles(Enum):
+    fringe_up_triangular_hair_style_short = "fringe up"
+    side_fringe_triangular_hair_style_short = "side fringe"
+    side_parted_triangular_hair_style_short = "side parted"
+
+class Round_short_hair_styles(Enum):
+    faux_hawk_with_shorter_sides_round_hair_style_short = "faux hawk with shorter sides"
+    fringe_up_round_hair_style_short = "fringe up"
+    undercut_round_hair_style_short = "undercut"
+    quiff_round_hair_style_short = "quiff"
+
+class Diamond_short_hair_styles(Enum):
+    quiff_diamond_hair_style_short = "quiff"
+    long_hair_pushed_back_diamond_hair_style_short = "long hair pushed back"
+    faux_hawk_diamond_hair_style_short = "faux hawk"
+    side_fringe_diamond_hair_style_short = "side fringe"
+
+class Heart_short_hair_styles(Enum):
+    long_fringes_heart_hair_style_short = "long fringes"
+    side_parted_long_heart_hair_style_short = "side parted long"
+    pushed_back_heart_hair_style_short = "pushed back"
+    undercut_heart_hair_style_short = "undercut"
 
 
-class Build(Enum):
-    very_well_built = "very well-built"
-    well_built = "well-built"
-    average_build = "average build"
-    fine_build = "fine build"
-    very_fine_build = "very fine build"
+# TODO: LONG HAIR
+# class Long_hair_styles(Enum):
+#     shag_haircut
+#     long_curly_hair
+#     long_layered
+#     long_hairstyle_with_texture_waves
+#     long_straight_hair
+#     long_hairstyle_with_side_part
+#     long_hair_with_middle_part
+#     long_surfer_hair
+#     long_dreadlocks
+#     man_bun
+#     man_bun_with_fade
+#     long_hairstyle_with_quiff
+#     braids_for_man
+#     long_half_up
+#     long_viking
+#     ponytail
+#     ponytail_with_undercut
+#     long_slick_back
+#     bro_flow
+#     long_hair_with_bangs
+#     shoulder_length_long_hair
+#     long_tight_curls
+#     long_hairstyle_with_fringe
+#     long_hair_dyed_hair
+#     mullet_haircut
+#     long_hair_with_fade
+#     long_hair_with_undercut
+#     long_hairstyles_for_men_with_thick_hair
+#     long_hair_with_pompadour
+#     long_hair_hard_part
 
 
-class Hair(Enum):
-    blonde = "blonde" 
-    red = "red"
-    brown = "brown"
-    black = "black"
-    grey = "grey"
 
+
+# koukni na nested enums
+# from enum import Enum
+
+# class _Inside(Enum):
+#     Downstairs = 'downstairs'
+#     Upstairs = 'upstairs'
+
+# class Location(Enum):
+#     Outside = 'outside'
+#     Inside = _Inside 
+
+# print(Location.Inside.value.Downstairs.value)
+# downstairs
+
+
+def Hair_style_short(Face_shape: Enum):
+    match Face_shape:
+        case Face_shape.oval_face_shape:
+            random.choice(Oval_short_hair_styles)
+        case Face_shape.oval_face_shape:
+            random.choice(Square_short_hair_styles)
+        case Face_shape.oval_face_shape:
+            random.choice(Oblong_short_hair_styles)
+        case Face_shape.oval_face_shape:
+            random.choice(Triangular_short_hair_styles)
+        case Face_shape.oval_face_shape:
+            random.choice(Diamond_short_hair_styles)
+        case Face_shape.oval_face_shape:
+            random.choice(Heart_short_hair_styles)
+
+# udelat to jako: 
+# Face_shape.oblong.short.side_parted
+
+# class Hair_style_short(Enum):
+
+#     match Face_shape:
+#         case Face_shape.oval_face_shape:
+#             random.choice(
+
+#             )
+
+class Hair_color(Enum):
+    auburn_hair_color = 'auburn'
+    brown_hair_color = 'brown'
+    black_hair_color = 'black'
+    blonde_hair_color = 'blonde'
+    copper_hair_color = 'copper'
+    ginger_hair_color = 'ginger'
+    golden_hair_color = 'golden'
+    grey_hair_color = 'grey'
+    mouse_hair_color = 'mouse'
+    red_hair_color = 'red'
+    dark_brown_hair_color = 'dark brown'
+    white_hair_color = 'white'
+
+class Hair_types(Enum):
+    very_straight_hair_type = "very straight hair"
+    straight_bend_hair_type = "straight hair with some bends"
+    straight_coarser_hair_type = "straight hair with coarser texture"
+    straight_hair_type = "straight hair"
+    soft_wave_hair_type = "soft wave"
+    wavy_hair_type = "wavy"
+    deep_wave_hair_type = "deep wave"
+    lost_curls_hair_type = "lost curls"
+    soft_curl_hair_type = "soft curl"
+    curly_hair_type = "curly"
+    ultra_curly_hair_type = "ultra curly"
+    coiled_hair_type = "coiled"
+    zig_zag_hair_type = "zig zag"
+    tightly_coiled_hair_type = "tightly coiled"
 
 #TODO: TOTO: mozna do jineho souboru
 class Nationality(Enum):

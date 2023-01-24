@@ -870,6 +870,8 @@ race_details = {
 # TODO: rozmyslet si lepe adresarovou strukturu
 # TODO: printovat bude jeden soubor k tomu urcenej - pokud soubory ci print dict
 # TODO: dodelat testy a kouknout na "navrhove vzory" k priprave na dalsi verzi
+# TODO: najit cestu jak testovat vysledne stringy ?AI?, 
+# slo by pres docstrings a pod kontrolory jazyka?
 # - proste promyslet zda by u neceho nebylo lepsi mit jine datove typy, ci to nepostavit jinak
 # zda uz nemyslet na reseni pres soubory, spoustec, linux/windows verzi a ospath pokud bude potreba
 # / nabidnu at si vybere cestu

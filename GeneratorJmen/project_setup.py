@@ -866,13 +866,20 @@ race_details = {
 # TODO: nejdrive generovat gender, sexualni preference, rasu, z jake lidske rasy je, 
 # zemi puvodu, pak jmeno a pak dalsi
 # TODO: lidske/metalidske rasy predelat samostatne
-# TODO: vymyslet jak generovat a z ceho - ? net ? zivotni udalosti
+# TODO: vymyslet jak generovat a z ceho - ? - sehnat data net ? zivotni udalosti
 # TODO: rozmyslet si lepe adresarovou strukturu
-# TODO: printovat bude jeden soubor k tomu urcenej
-# TODO: dodelat testy a "navrhove vzory" k priprave na dalsi verzi
-# - proste promyslet zda by u neceho nebylo lepsi mit jine datove typy, 
+# TODO: printovat bude jeden soubor k tomu urcenej - pokud soubory ci print dict
+# TODO: dodelat testy a kouknout na "navrhove vzory" k priprave na dalsi verzi
+# - proste promyslet zda by u neceho nebylo lepsi mit jine datove typy, ci to nepostavit jinak
 # zda uz nemyslet na reseni pres soubory, spoustec, linux/windows verzi a ospath pokud bude potreba
 # / nabidnu at si vybere cestu
+# kaslat na Os a jet pres pipenv
+# ve 3. verzi mit klikacku webu kde se to bude generovat a ukladat do pdf a pod - pandas
+# ve 4. zapojit tu webovku s AI co napises jakej obrazek a vygeneruje ti jej
+# ve 4. zapojit tu webovku s AI (pokud je) co nahodim texty a ono mi to vygeneruje zivotni udalosti
+
+
+
 
 # print((Gender.gender).value)
 # print(random.choice(tuple(Tribe_name_origin)).value)

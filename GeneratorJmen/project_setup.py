@@ -9,375 +9,456 @@ from GeneratorJmen.generator_jmen import *
 
 #TODO: lepsi nez enumy vypadaji listy s random choice
 class Gender(Enum):
-    male = auto()
-    female = auto()
+    MALE = auto()
+    FEMALE = auto()
 
+SEXUAL_PREFERENCY_LIST = random.choice(
+        "same gender",
+        "same gender older",
+        "same gender older 10-15 years",
+        "same gender older gerontophilia",
+        "same gender older 16-25 years",
+        "same gender 16-22 year",
+        "same gender 30-40 year",
+        "same gender 40-50 year",
+        "same gender under 16 year",
+        "oposite gender",
+        "oposite gender older 10-15 years",
+        "oposite gender older gerontophilia",
+        "oposite gender older 16-25 years",
+        "oposite gender 16-22 year",
+        "oposite gender 30-40 year",
+        "oposite gender 40-50 year",
+        "oposite gender under 16 year",
+        "bisexual",
+        "bisexual older 10-15 years",
+        "bisexual older gerontophilia",
+        "bisexual older 16-25 years",
+        "bisexual 16-22 year",
+        "bisexual 30-40 year",
+        "bisexual 40-50 year",
+        "bisexual under 16 year",
+        "group sex",
+        "group sex 2 females one male",
+        "group sex 2 females one male all others older 10-15 years",
+        "group sex 2 females one male all others older gerontophilia",
+        "group sex 2 females one male all others older 16-25 years",
+        "group sex 2 females one male all others 16-22 year",
+        "group sex 2 females one male all others 30-40 year",
+        "group sex 2 females one male all others 40-50 year",
+        "group sex 2 females one male all others under 16 year",
+        "group sex 2 males one female",
+        "group sex 2 males one female all others older 10-15 years",
+        "group sex 2 males one female all others older gerontophilia",
+        "group sex 2 males one female all others older 16-25 years",
+        "group sex 2 males one female all others 16-22 year",
+        "group sex 2 males one female all others 30-40 year",
+        "group sex 2 males one female all others 40-50 year",
+        "group sex 2 males one female all others under 16 year",
+        "big group sex",
+        "gang bang",
+        "a game of rape", 
+        "sexual non sado maso games",
+        "sado maso light",
+        "sado maso hard"
+)
+
+
+class Sexual_preferency(Enum):
+    SEXUAL_PREFERENCY = random.choice((
+        "same gender",
+        "same gender older",
+        "same gender older 10-15 years",
+        "same gender older gerontophilia",
+        "same gender older 16-25 years",
+        "same gender 16-22 year",
+        "same gender 30-40 year",
+        "same gender 40-50 year",
+        "same gender under 16 year",
+        "oposite gender",
+        "oposite gender older 10-15 years",
+        "oposite gender older gerontophilia",
+        "oposite gender older 16-25 years",
+        "oposite gender 16-22 year",
+        "oposite gender 30-40 year",
+        "oposite gender 40-50 year",
+        "oposite gender under 16 year",
+        "bisexual",
+        "bisexual older 10-15 years",
+        "bisexual older gerontophilia",
+        "bisexual older 16-25 years",
+        "bisexual 16-22 year",
+        "bisexual 30-40 year",
+        "bisexual 40-50 year",
+        "bisexual under 16 year",
+
+    ))
 
 class Tribe_name_origin(Enum):
-    pl = 1
-    ne = 2
-    es = 3
-    fr = 4
-    gk = 5
-    it = 6
-    us = 7
-    cz = 8
+    PL = 1
+    NE = 2
+    ES = 3
+    FR = 4
+    GK = 5
+    IT = 6
+    US = 7
+    CZ = 8
 
 class Tribe_surname_origin(Enum):
-    pl = 1
-    ne = 2
-    es = 3
-    fr = 4
-    gk = 5
-    it = 6
-    us = 7
-    cz = 8
+    PL = 1
+    NE = 2
+    ES = 3
+    FR = 4
+    GK = 5
+    IT = 6
+    US = 7
+    CZ = 8
 
 class Social_class(Enum):
-    runner = "runner"               # noqa byvalej runner, nebo popripade i modifikace bodu na rozdeleni
-    hero = "hero"                   # noqa mistni hrdina - mozno vice kontaktu, lepsi vztahy nekde - popripade i modifikace bodu na rozdeleni
-    upper = "upper"
-    middle = "middle"
-    working = "working"
-    priest = random.choice((
+    RUNNER = "runner"               # noqa byvalej runner, nebo popripade i modifikace bodu na rozdeleni
+    HERO = "hero"                   # noqa mistni hrdina - mozno vice kontaktu, lepsi vztahy nekde - popripade i modifikace bodu na rozdeleni
+    UPPER = "upper"
+    MIDDLE = "middle"
+    WORKING = "working"
+    PRIEST = random.choice((
         "priest",
         "mage",
         "shaman"
     )) + " of their society"        # of their society
-    total_junkie = "total_junkie"   # totalni fetak
-    homeless = "homeless"           # klasickej homeless chlast
-    native = "native"               # domorodec typu indian... ne cigan
+    TOTAL_JUNKIE = "total_junkie"   # totalni fetak
+    HOMELESS = "homeless"           # klasickej homeless chlast
+    NATIVE = "native"               # domorodec typu indian... ne cigan
     
 
 class Positive_characteristic(Enum):
-    creative = "creative"
-    brave = "brave"
-    smart = "smart"
-    exciting = "exciting"
-    energetic = "energetic"
-    entertaining = "entertaining"
-    inspiring = "inspiring"
-    gentle = "gentle"
-    friendly = "friendly"
-    generous = "generous"
-    considerate = "considerate"
-    bright = "bright"
-    kind = "kind"
-    giving = "giving"
-    loveable = "loveable"
-    stable = "stable"
-    abundant = "abundant"
-    artistic = "artistic"
-    appreciative = "appreciative"
-    authentic = "authentic"
-    blessed = "blessed"
-    blissful = "blissful"
-    beautiful = "beautiful"
-    calm = "calm"
-    cheerful = "cheerful"
-    confident = "confident"
-    divine = "divine"
-    determined = "determined"
-    dynamic = "dynamic"
-    dazzled = "dazzled"
-    empathetic = "empathetic"
-    exuberant = "exuberant"
-    enthusiastic = "enthusiastic"
-    enlightened = "enlightened"
-    focused = "focused"
-    forgiving = "forgiving"
-    free = "free"
-    fearless = "fearless"
-    grateful = "grateful"
-    graceful = "graceful"
-    glorious = "glorious"
-    happy = "happy"
-    hopeful = "hopeful"
-    harmonious = "harmonious"
-    healthy = "healthy"
-    imaginative = "imaginative"
-    insightful = "insightful"
-    inventive = "inventive"
-    inspired = "inspired"
-    joyful = "joyful"
-    joyous = "joyous"
-    just = "just"
-    jubilant = "jubilant"
-    kind_hearted = "kind hearted"
-    knowledgeable = "knowledgeable"
-    kalon = "kalon"
-    lucky = "lucky"
-    loving = "loving"
-    loyal = "loyal"
-    lovable = "lovable"
-    magic = "magic"
-    magnificent = "magnificent"
-    mindful = "mindful"
-    motivated = "motivated"
-    noble = "noble"
-    nourished = "nourished"
-    non_resistant = "non-resistant"
-    nice = "nice"
-    optimistic = "optimistic"
-    omniscient = "omniscient"
-    original = "original"
-    open_hearted = "open-hearted"
-    peaceful = "peaceful"
-    prosperous = "prosperous"
-    perseverent = "perseverent"
-    playful = "playful"
-    quick_thinker = "quick thinker"
-    quiet = "quiet"
-    relaxed = "relaxed"
-    respectful = "respectful"
-    relieved = "relieved"
-    resilient = "resilient"
-    serene = "serene"
-    strong = "strong"
-    soulful = "soulful"
-    thoughtful = "thoughtful"
-    thankful = "thankful"
-    trustworthy = "trustworthy"
-    tranquil = "tranquil"
-    upbeat = "upbeat"
-    useful = "useful"
-    understanding = "understanding"
-    unique = "unique"
-    virtuous = "virtuous"
-    victorious = "victorious"
-    vibrant = "vibrant"
-    valuable = "valuable"
-    wealthy = "wealthy"
-    warmhearted = "warmhearted"
-    wise = "wise"
-    worthy = "worthy"
-    xenial = "xenial"
-    young = "young at heart"
-    zealous = "zealous"
-    zany = "zany"
-    heartwarming = "heartwarming"
-    willing_to_learn = "willing to learn"
-    empowered = "empowered"
-    world_builder = "world-builder"
-    sweet = "sweet"
-    selfless = "selfless"
-    supercharged = "supercharged"
-    willing_understood = "willing understood"
-    limitless = "limitless"
-    courageous = "courageous"
-    worthy_to_take_up_space = "worthy to take up space"
-    sufficient = "sufficient"
-    resourceful = "resourceful"
+    CREATIVE = "creative"
+    BRAVE = "brave"
+    SMART = "smart"
+    EXCITING = "exciting"
+    ENERGETIC = "energetic"
+    ENTERTAINING = "entertaining"
+    INSPIRING = "inspiring"
+    GENTLE = "gentle"
+    FRIENDLY = "friendly"
+    GENEROUS = "generous"
+    CONSIDERATE = "considerate"
+    BRIGHT = "bright"
+    KIND = "kind"
+    GIVING = "giving"
+    LOVEABLE = "loveable"
+    STABLE = "stable"
+    ABUNDANT = "abundant"
+    ARTISTIC = "artistic"
+    APPRECIATIVE = "appreciative"
+    AUTHENTIC = "authentic"
+    BLESSED = "blessed"
+    BLISSFUL = "blissful"
+    BEAUTIFUL = "beautiful"
+    CALM = "calm"
+    CHEERFUL = "cheerful"
+    CONFIDENT = "confident"
+    DIVINE = "divine"
+    DETERMINED = "determined"
+    DYNAMIC = "dynamic"
+    DAZZLED = "dazzled"
+    EMPATHETIC = "empathetic"
+    EXUBERANT = "exuberant"
+    ENTHUSIASTIC = "enthusiastic"
+    ENLIGHTENED = "enlightened"
+    FOCUSED = "focused"
+    FORGIVING = "forgiving"
+    FREE = "free"
+    FEARLESS = "fearless"
+    GRATEFUL = "grateful"
+    GRACEFUL = "graceful"
+    GLORIOUS = "glorious"
+    HAPPY = "happy"
+    HOPEFUL = "hopeful"
+    HARMONIOUS = "harmonious"
+    HEALTHY = "healthy"
+    IMAGINATIVE = "imaginative"
+    INSIGHTFUL = "insightful"
+    INVENTIVE = "inventive"
+    INSPIRED = "inspired"
+    JOYFUL = "joyful"
+    JOYOUS = "joyous"
+    JUST = "just"
+    JUBILANT = "jubilant"
+    KIND_HEARTED = "kind hearted"
+    KNOWLEDGEABLE = "knowledgeable"
+    KALON = "kalon"
+    LUCKY = "lucky"
+    LOVING = "loving"
+    LOYAL = "loyal"
+    LOVABLE = "lovable"
+    MAGIC = "magic"
+    MAGNIFICENT = "magnificent"
+    MINDFUL = "mindful"
+    MOTIVATED = "motivated"
+    NOBLE = "noble"
+    NOURISHED = "nourished"
+    NON_RESISTANT = "non-resistant"
+    NICE = "nice"
+    OPTIMISTIC = "optimistic"
+    OMNISCIENT = "omniscient"
+    ORIGINAL = "original"
+    OPEN_HEARTED = "open-hearted"
+    PEACEFUL = "peaceful"
+    PROSPEROUS = "prosperous"
+    PERSEVERENT = "perseverent"
+    PLAYFUL = "playful"
+    QUICK_THINKER = "quick thinker"
+    QUIET = "quiet"
+    RELAXED = "relaxed"
+    RESPECTFUL = "respectful"
+    RELIEVED = "relieved"
+    RESILIENT = "resilient"
+    SERENE = "serene"
+    STRONG = "strong"
+    SOULFUL = "soulful"
+    THOUGHTFUL = "thoughtful"
+    THANKFUL = "thankful"
+    TRUSTWORTHY = "trustworthy"
+    TRANQUIL = "tranquil"
+    UPBEAT = "upbeat"
+    USEFUL = "useful"
+    UNDERSTANDING = "understanding"
+    UNIQUE = "unique"
+    VIRTUOUS = "virtuous"
+    VICTORIOUS = "victorious"
+    VIBRANT = "vibrant"
+    VALUABLE = "valuable"
+    WEALTHY = "wealthy"
+    WARMHEARTED = "warmhearted"
+    WISE = "wise"
+    WORTHY = "worthy"
+    XENIAL = "xenial"
+    YOUNG = "young at heart"
+    ZEALOUS = "zealous"
+    ZANY = "zany"
+    HEARTWARMING = "heartwarming"
+    WILLING_TO_LEARN = "willing to learn"
+    EMPOWERED = "empowered"
+    WORLD_BUILDER = "world-builder"
+    SWEET = "sweet"
+    SELFLESS = "selfless"
+    SUPERCHARGED = "supercharged"
+    WILLING_UNDERSTOOD = "willing understood"
+    LIMITLESS = "limitless"
+    COURAGEOUS = "courageous"
+    WORTHY_TO_TAKE_UP_SPACE = "worthy to take up space"
+    SUFFICIENT = "sufficient"
+    RESOURCEFUL = "resourceful"
 
 
 class Negative_characteristic(Enum):
-    disloyal = "disloyal"
-    sneaky = "sneaky"
-    untrustworthy = "untrustworthy"
-    cowardly = "cowardly"
-    unintelligent = "unintelligent"
-    dull = "dull"
-    boring = "boring"
-    lazy = "lazy"
-    rude = "rude"
-    unkind = "unkind"
-    standoffish = "standoffish"
-    unfriendly = "unfriendly"
-    stingy = "stingy"
-    greedy = "greedy"
-    selfish = "selfish"
-    violent = "violent"
-    unstable = "unstable"
-    sadistic = "sadistic"
-    evil = "evil"
-    abrasive = "abrasive"
-    addictive = "addictive"
-    antisocial = "antisocial"
-    apathetic = "apathetic"
-    callous = "callous"
-    catty = "catty"
-    childish = "childish"
-    cocky = "cocky"
-    compulsive = "compulsive"
-    confrontational = "confrontational"
-    controlling = "controlling"
-    cruel = "cruel"
-    cynical = "cynical"
-    defensive = "defensive"
-    devious = "devious"
-    dishonest = "dishonest"
-    disorganized = "disorganized"
-    disrespectful = "disrespectful"
-    evasive = "evasive"
-    extravagant = "extravagant"
-    fanatical = "fanatical"
-    flaky = "flaky"
-    foolish = "foolish"
-    forgetful = "forgetful"
-    frivolous = "frivolous"
-    fussy = "fussy"
-    gossipy = "gossipy"
-    grumpy = "grumpy"
-    gullible = "gullible"
-    haughty = "haughty"
-    hostile = "hostile"
-    humorless = "humorless"
-    hypocritical = "hypocritical" 
-    ignorant = "ignorant"
-    impatient = "impatient"
-    impulsive = "impulsive"
-    inattentive = "inattentive"
-    indecisive = "indecisive"
-    inflexible = "inflexible"
-    inhibited = "inhibited"
-    insecure = "insecure"
-    irrational = "irrational"
-    irresponsible = "irresponsible"
-    jealous = "jealous"
-    judgmental = "judgmental"
-    know_it_all = "know-it-all"
-    macho = "macho"
-    manipulative = "manipulative"
-    martyr = "martyr"
-    materialistic = "materialistic"
-    melodramatic = "melodramatic"
-    mischievous = "mischievous"
-    morbid = "morbid"
-    nagging = "nagging"
-    needy = "needy"
-    nervous = "nervous"
-    nosy = "nosy"
-    obsessive = "obsessive"
-    oversensitive = "oversensitive"
-    paranoid = "paranoid"
-    perfectionist = "perfectionist"
-    pessimistic = "pessimistic"
-    possessive = "possessive"
-    prejudiced = "prejudiced"
-    pretentious = "pretentious"
-    pushy = "pushy"
-    rebellious = "rebellious" 
-    reckless = "reckless"
-    resentful = "resentful"
-    rowdy = "rowdy"
-    scatterbrained = "scatterbrained"
-    self_destructive = "self-destructive"
-    self_indulgent = "self-indulgent"
-    sleazy = "sleazy"
-    spoiled = "spoiled"
-    stubborn = "stubborn"
-    subservient = "subservient"
-    superstitious = "superstitious"
-    suspicious = "suspicious"
-    tactless = "tactless"
-    temperamental = "temperamental"
-    timid = "timid"
-    uncommunicative = "uncommunicative"
-    uncooperative = "uncooperative"
-    uncouth = "uncouth"
-    unethical = "unethical"
-    ungrateful = "ungrateful"
-    vain = "vain"
-    verbose = "verbose"
-    vindictive = "vindictive"
-    volatile = "volatile"
-    weak_willed = "weak-willed"
-    whiny = "whiny"
-    withdrawn = "withdrawn"
-    workaholic = "workaholic"
-    worrywart = "worrywart"
+    DISLOYAL = "disloyal"
+    SNEAKY = "sneaky"
+    UNTRUSTWORTHY = "untrustworthy"
+    COWARDLY = "cowardly"
+    UNINTELLIGENT = "unintelligent"
+    DULL = "dull"
+    BORING = "boring"
+    LAZY = "lazy"
+    RUDE = "rude"
+    UNKIND = "unkind"
+    STANDOFFISH = "standoffish"
+    UNFRIENDLY = "unfriendly"
+    STINGY = "stingy"
+    GREEDY = "greedy"
+    SELFISH = "selfish"
+    VIOLENT = "violent"
+    UNSTABLE = "unstable"
+    SADISTIC = "sadistic"
+    EVIL = "evil"
+    ABRASIVE = "abrasive"
+    ADDICTIVE = "addictive"
+    ANTISOCIAL = "antisocial"
+    APATHETIC = "apathetic"
+    CALLOUS = "callous"
+    CATTY = "catty"
+    CHILDISH = "childish"
+    COCKY = "cocky"
+    COMPULSIVE = "compulsive"
+    CONFRONTATIONAL = "confrontational"
+    CONTROLLING = "controlling"
+    CRUEL = "cruel"
+    CYNICAL = "cynical"
+    DEFENSIVE = "defensive"
+    DEVIOUS = "devious"
+    DISHONEST = "dishonest"
+    DISORGANIZED = "disorganized"
+    DISRESPECTFUL = "disrespectful"
+    EVASIVE = "evasive"
+    EXTRAVAGANT = "extravagant"
+    FANATICAL = "fanatical"
+    FLAKY = "flaky"
+    FOOLISH = "foolish"
+    FORGETFUL = "forgetful"
+    FRIVOLOUS = "frivolous"
+    FUSSY = "fussy"
+    GOSSIPY = "gossipy"
+    GRUMPY = "grumpy"
+    GULLIBLE = "gullible"
+    HAUGHTY = "haughty"
+    HOSTILE = "hostile"
+    HUMORLESS = "humorless"
+    HYPOCRITICAL = "hypocritical" 
+    IGNORANT = "ignorant"
+    IMPATIENT = "impatient"
+    IMPULSIVE = "impulsive"
+    INATTENTIVE = "inattentive"
+    INDECISIVE = "indecisive"
+    INFLEXIBLE = "inflexible"
+    INHIBITED = "inhibited"
+    INSECURE = "insecure"
+    IRRATIONAL = "irrational"
+    IRRESPONSIBLE = "irresponsible"
+    JEALOUS = "jealous"
+    JUDGMENTAL = "judgmental"
+    KNOW_IT_ALL = "know-it-all"
+    MACHO = "macho"
+    MANIPULATIVE = "manipulative"
+    MARTYR = "martyr"
+    MATERIALISTIC = "materialistic"
+    MELODRAMATIC = "melodramatic"
+    MISCHIEVOUS = "mischievous"
+    MORBID = "morbid"
+    NAGGING = "nagging"
+    NEEDY = "needy"
+    NERVOUS = "nervous"
+    NOSY = "nosy"
+    OBSESSIVE = "obsessive"
+    OVERSENSITIVE = "oversensitive"
+    PARANOID = "paranoid"
+    PERFECTIONIST = "perfectionist"
+    PESSIMISTIC = "pessimistic"
+    POSSESSIVE = "possessive"
+    PREJUDICED = "prejudiced"
+    PRETENTIOUS = "pretentious"
+    PUSHY = "pushy"
+    REBELLIOUS = "rebellious" 
+    RECKLESS = "reckless"
+    RESENTFUL = "resentful"
+    ROWDY = "rowdy"
+    SCATTERBRAINED = "scatterbrained"
+    SELF_DESTRUCTIVE = "self-destructive"
+    SELF_INDULGENT = "self-indulgent"
+    SLEAZY = "sleazy"
+    SPOILED = "spoiled"
+    STUBBORN = "stubborn"
+    SUBSERVIENT = "subservient"
+    SUPERSTITIOUS = "superstitious"
+    SUSPICIOUS = "suspicious"
+    TACTLESS = "tactless"
+    TEMPERAMENTAL = "temperamental"
+    TIMID = "timid"
+    UNCOMMUNICATIVE = "uncommunicative"
+    UNCOOPERATIVE = "uncooperative"
+    UNCOUTH = "uncouth"
+    UNETHICAL = "unethical"
+    UNGRATEFUL = "ungrateful"
+    VAIN = "vain"
+    VERBOSE = "verbose"
+    VINDICTIVE = "vindictive"
+    VOLATILE = "volatile"
+    WEAK_WILLED = "weak-willed"
+    WHINY = "whiny"
+    WITHDRAWN = "withdrawn"
+    WORKAHOLIC = "workaholic"
+    WORRYWART = "worrywart"
 
 
 # na zaklade tohoto je mozne resit ze jej nekdo sikanoval ci si na nej nedovolili
 class Height(Enum):
-    Very_tall_height = "very tall"
-    Tall_height = "tall"
-    Average_height = "average height"
-    Short_height = "short"
-    Very_short_height ="very short"
+    VERY_TALL_HEIGHT = "very tall"
+    TALL_HEIGHT = "tall"
+    AVERAGE_HEIGHT = "average height"
+    SHORT_HEIGHT = "short"
+    VERY_SHORT_HEIGHT ="very short"
 
 
 class Weight(Enum):
-    Very_overweight_weight = "very overweight"
-    Overweight_weight = "overweight"
-    Average_weight = "average weight"
-    Underweight_weight = "underweight"
-    Very_underweight_weight = "very underweight"
-    Big_weight = "big"
-    Heavyset_weight = "heavyset weight"
-    Thin_weight = "thin weight"
+    VERY_OVERWEIGHT_WEIGHT = "very overweight"
+    OVERWEIGHT_WEIGHT = "overweight"
+    AVERAGE_WEIGHT = "average weight"
+    UNDERWEIGHT_WEIGHT = "underweight"
+    VERY_UNDERWEIGHT_WEIGHT = "very underweight"
+    BIG_WEIGHT = "big"
+    HEAVYSET_WEIGHT = "heavyset weight"
+    THIN_WEIGHT = "thin weight"
 
 class Body(Enum):
-    Very_well_built_body = "very well-built"
-    Well_build_body = "well-built"
-    Average_build_body = "average build"
-    Fine_build_body = "fine build"
-    Very_fine_build_body = "very fine build"
-    Skinny_build_body = "skinny build"
-    Slender_build_body = "slender build"
+    VERY_WELL_BUILT_BODY = "very well-built"
+    WELL_BUILD_BODY = "well-built"
+    AVERAGE_BUILD_BODY = "average build"
+    FINE_BUILD_BODY = "fine build"
+    VERY_FINE_BUILD_BODY = "very fine build"
+    SKINNY_BUILD_BODY = "skinny build"
+    SLENDER_BUILD_BODY = "slender build"
 
 class Body_shape(Enum):
-    Bottom_hourglass = "bottom hourglass"
-    Inverted_tringle = "inverted tringle"
-    Diamond = "diamond"
-    Athletic = "athletic"
-    Round = "round"
-    Rectangle = "rectangle"
-    Triangle = "triangle"
-    Hourglass = "hourglass"
-    Pear = "pear"
-    Apple = "apple"
-    Trapezoid = "trapezoid"
+    BOTTOM_HOURGLASS = "bottom hourglass"
+    INVERTED_TRINGLE = "inverted tringle"
+    DIAMOND = "diamond"
+    ATHLETIC = "athletic"
+    ROUND = "round"
+    RECTANGLE = "rectangle"
+    TRIANGLE = "triangle"
+    HOURGLASS = "hourglass"
+    PEAR = "pear"
+    APPLE = "apple"
+    TRAPEZOID = "trapezoid"
 
 class Face_shape(Enum):
-    Oval_face_shape = "oval" 
-    Square_face_shape = "square"
-    Oblong_face_shape = "oblong"
-    Triangular_face_shape = "triangular"
-    Round_face_shape = "round"
-    Diamond_face_shape = "diamond"
-    Heart_face_shape = "heart"
+    OVAL_FACE_SHAPE = "oval" 
+    SQUARE_FACE_SHAPE = "square"
+    OBLONG_FACE_SHAPE = "oblong"
+    TRIANGULAR_FACE_SHAPE = "triangular"
+    ROUND_FACE_SHAPE = "round"
+    DIAMOND_FACE_SHAPE = "diamond"
+    HEART_FACE_SHAPE = "heart"
 
 class Oval_short_hair_styles(Enum):
-    pushed_back_long_oval_hair_style_short = "pushed back long"
-    side_parted_short_oval_hair_style_short = "side parted short"
-    undercut_oval_hair_style_short = "undercut"
-    fringe_up_oval_hair_style_short = "fringe up"
+    PUSHED_BACK_LONG_OVAL_HAIR_STYLE_SHORT = "pushed back long"
+    SIDE_PARTED_SHORT_OVAL_HAIR_STYLE_SHORT = "side parted short"
+    UNDERCUT_OVAL_HAIR_STYLE_SHORT = "undercut"
+    FRINGE_UP_OVAL_HAIR_STYLE_SHORT = "fringe up"
 
 class Square_short_hair_styles(Enum):
-    crew_aka_buzz_cut_square_hair_style_short = "crew aka buzz cut"
-    undercut_square_hair_style_short = "undercut"
-    faux_hawk_square_hair_style_short = "faux hawk"
-    slicked_back_side_part_square_hair_style_short = "slicked back side part"
+    CREW_AKA_BUZZ_CUT_SQUARE_HAIR_STYLE_SHORT = "crew aka buzz cut"
+    UNDERCUT_SQUARE_HAIR_STYLE_SHORT = "undercut"
+    FAUX_HAWK_SQUARE_HAIR_STYLE_SHORT = "faux hawk"
+    SLICKED_BACK_SIDE_PART_SQUARE_HAIR_STYLE_SHORT = "slicked back side part"
 
 class Oblong_short_hair_styles(Enum):
-    side_parted_oblong_hair_style_short = "side parted"
-    buzz_cut_oblong_hair_style_short = "buz cut"
-    fringe_up_oblong_hair_style_short = "fringe up"
-    side_fringe_oblong_hair_style_short = "side fringe"
+    SIDE_PARTED_OBLONG_HAIR_STYLE_SHORT = "side parted"
+    BUZZ_CUT_OBLONG_HAIR_STYLE_SHORT = "buz cut"
+    FRINGE_UP_OBLONG_HAIR_STYLE_SHORT = "fringe up"
+    SIDE_FRINGE_OBLONG_HAIR_STYLE_SHORT = "side fringe"
 
 class Triangular_short_hair_styles(Enum):
-    fringe_up_triangular_hair_style_short = "fringe up"
-    side_fringe_triangular_hair_style_short = "side fringe"
-    side_parted_triangular_hair_style_short = "side parted"
+    FRINGE_UP_TRIANGULAR_HAIR_STYLE_SHORT = "fringe up"
+    SIDE_FRINGE_TRIANGULAR_HAIR_STYLE_SHORT = "side fringe"
+    SIDE_PARTED_TRIANGULAR_HAIR_STYLE_SHORT = "side parted"
 
 class Round_short_hair_styles(Enum):
-    faux_hawk_with_shorter_sides_round_hair_style_short = "faux hawk with shorter sides"
-    fringe_up_round_hair_style_short = "fringe up"
-    undercut_round_hair_style_short = "undercut"
-    quiff_round_hair_style_short = "quiff"
+    FAUX_HAWK_WITH_SHORTER_SIDES_ROUND_HAIR_STYLE_SHORT = "faux hawk with shorter sides"
+    FRINGE_UP_ROUND_HAIR_STYLE_SHORT = "fringe up"
+    UNDERCUT_ROUND_HAIR_STYLE_SHORT = "undercut"
+    QUIFF_ROUND_HAIR_STYLE_SHORT = "quiff"
 
 class Diamond_short_hair_styles(Enum):
-    quiff_diamond_hair_style_short = "quiff"
-    long_hair_pushed_back_diamond_hair_style_short = "long hair pushed back"
-    faux_hawk_diamond_hair_style_short = "faux hawk"
-    side_fringe_diamond_hair_style_short = "side fringe"
+    QUIFF_DIAMOND_HAIR_STYLE_SHORT = "quiff"
+    LONG_HAIR_PUSHED_BACK_DIAMOND_HAIR_STYLE_SHORT = "long hair pushed back"
+    FAUX_HAWK_DIAMOND_HAIR_STYLE_SHORT = "faux hawk"
+    SIDE_FRINGE_DIAMOND_HAIR_STYLE_SHORT = "side fringe"
 
 class Heart_short_hair_styles(Enum):
-    long_fringes_heart_hair_style_short = "long fringes"
-    side_parted_long_heart_hair_style_short = "side parted long"
-    pushed_back_heart_hair_style_short = "pushed back"
-    undercut_heart_hair_style_short = "undercut"
+    LONG_FRINGES_HEART_HAIR_STYLE_SHORT = "long fringes"
+    SIDE_PARTED_LONG_HEART_HAIR_STYLE_SHORT = "side parted long"
+    PUSHED_BACK_HEART_HAIR_STYLE_SHORT = "pushed back"
+    UNDERCUT_HEART_HAIR_STYLE_SHORT = "undercut"
 
 
 # TODO: LONG HAIR
@@ -458,78 +539,78 @@ def Hair_style_short(Face_shape: Enum):
 #             )
 
 class Hair_color(Enum):
-    auburn_hair_color = 'auburn'
-    brown_hair_color = 'brown'
-    black_hair_color = 'black'
-    blonde_hair_color = 'blonde'
-    copper_hair_color = 'copper'
-    ginger_hair_color = 'ginger'
-    golden_hair_color = 'golden'
-    grey_hair_color = 'grey'
-    mouse_hair_color = 'mouse'
-    red_hair_color = 'red'
-    dark_brown_hair_color = 'dark brown'
-    white_hair_color = 'white'
+    AUBURN_HAIR_COLOR = 'auburn'
+    BROWN_HAIR_COLOR = 'brown'
+    BLACK_HAIR_COLOR = 'black'
+    BLONDE_HAIR_COLOR = 'blonde'
+    COPPER_HAIR_COLOR = 'copper'
+    GINGER_HAIR_COLOR = 'ginger'
+    GOLDEN_HAIR_COLOR = 'golden'
+    GREY_HAIR_COLOR = 'grey'
+    MOUSE_HAIR_COLOR = 'mouse'
+    RED_HAIR_COLOR = 'red'
+    DARK_BROWN_HAIR_COLOR = 'dark brown'
+    WHITE_HAIR_COLOR = 'white'
 
 class Hair_types(Enum):
-    very_straight_hair_type = "very straight hair"
-    straight_bend_hair_type = "straight hair with some bends"
-    straight_coarser_hair_type = "straight hair with coarser texture"
-    straight_hair_type = "straight hair"
-    soft_wave_hair_type = "soft wave"
-    wavy_hair_type = "wavy"
-    deep_wave_hair_type = "deep wave"
-    lost_curls_hair_type = "lost curls"
-    soft_curl_hair_type = "soft curl"
-    curly_hair_type = "curly"
-    ultra_curly_hair_type = "ultra curly"
-    coiled_hair_type = "coiled"
-    zig_zag_hair_type = "zig zag"
-    tightly_coiled_hair_type = "tightly coiled"
+    VERY_STRAIGHT_HAIR_TYPE = "very straight hair"
+    STRAIGHT_BEND_HAIR_TYPE = "straight hair with some bends"
+    STRAIGHT_COARSER_HAIR_TYPE = "straight hair with coarser texture"
+    STRAIGHT_HAIR_TYPE = "straight hair"
+    SOFT_WAVE_HAIR_TYPE = "soft wave"
+    WAVY_HAIR_TYPE = "wavy"
+    DEEP_WAVE_HAIR_TYPE = "deep wave"
+    LOST_CURLS_HAIR_TYPE = "lost curls"
+    SOFT_CURL_HAIR_TYPE = "soft curl"
+    CURLY_HAIR_TYPE = "curly"
+    ULTRA_CURLY_HAIR_TYPE = "ultra curly"
+    COILED_HAIR_TYPE = "coiled"
+    ZIG_ZAG_HAIR_TYPE = "zig zag"
+    TIGHTLY_COILED_HAIR_TYPE = "tightly coiled"
 
 #TODO: TOTO: mozna do jineho souboru
 class Nationality(Enum):
     AFGHAN = 'Afghan'
     ABORIGIN = 'Aborigin'
     ARGENTINIAN = 'Argentinian'
-    Spanish = 'Spanish'
-    Australian = 'Australian'
-    British = 'British'
-    American = 'American'
-    Belgian = 'Belgian'
-    Brazilian = 'Brazilian'
-    Welsh = 'Welsh'
-    Portuguese = 'Portuguese'
-    Canadian = 'Canadian'
-    French = 'French'
-    English = 'English'
-    Scottish = 'Scottish'
-    Irish = 'Irish'
-    Cornish = 'Cornish'
-    Colombian = 'Colombian'
-    Danish = 'Danish'
-    Egyptian = 'Egyptian'
-    Ethiopian = 'Ethiopian'
-    Finnish = 'Finnish'
-    German = 'German'
-    Greek = 'Greek'
-    Italian = 'Italian'
-    Japanese = 'Japanese'
-    Mexican = 'Mexican'
-    Dutch = 'Dutch'
-    Swedish = 'Swedish'
-    Thai = 'Thai'
-    Polish = 'Polish'
-    Hungarian = 'Hungarian'
-    Czech = 'Czech'
-    Slovak = 'Slovak'
-    Austrian = 'Austrian'
-    Ukrain = 'Ukrain'
-    Slovenian = 'Slovenian'
-    Hrvat = 'Hrvat'
-    Monte = 'Monte Negro'
-    Rusian = 'Rusian'
-    Chinees = 'Chinees'
+    SPANISH = 'Spanish'
+    AUSTRALIAN = 'Australian'
+    BRITISH = 'British'
+    AMERICAN = 'American'
+    BELGIAN = 'Belgian'
+    BRAZILIAN = 'Brazilian'
+    WELSH = 'Welsh'
+    PORTUGUESE = 'Portuguese'
+    CANADIAN = 'Canadian'
+    FRENCH = 'French'
+    ENGLISH = 'English'
+    SCOTTISH = 'Scottish'
+    IRISH = 'Irish'
+    CORNISH = 'Cornish'
+    COLOMBIAN = 'Colombian'
+    DANISH = 'Danish'
+    EGYPTIAN = 'Egyptian'
+    ETHIOPIAN = 'Ethiopian'
+    FINNISH = 'Finnish'
+    GERMAN = 'German'
+    GREEK = 'Greek'
+    ITALIAN = 'Italian'
+    JAPANESE = 'Japanese'
+    MEXICAN = 'Mexican'
+    DUTCH = 'Dutch'
+    SWEDISH = 'Swedish'
+    THAI = 'Thai'
+    POLISH = 'Polish'
+    HUNGARIAN = 'Hungarian'
+    CZECH = 'Czech'
+    SLOVAK = 'Slovak'
+    AUSTRIAN = 'Austrian'
+    UKRAIN = 'Ukrain'
+    SLOVENIAN = 'Slovenian'
+    HRVAT = 'Hrvat'
+    MONTE = 'Monte Negro'
+    RUSIAN = 'Rusian'
+    CHINEES = 'Chinees'
 
 
 class Religion(Enum):
@@ -551,9 +632,6 @@ class Religion(Enum):
 
 # neco(1, "jedeto", Nationality.Afghan)
 
-
-class Gender(Enum):
-    gender = random.choice(("male", "female"))
 
 eye_color = ('brown', 'black', 'blue', 'green', 'yellow')
 hair_color = ('auburn', 'brown', 'black', 'blonde', 'copper', 'ginger', 'golden', 'grey', 'mouse', 'red', 'dark brown', 'white')
@@ -862,7 +940,6 @@ race_details = {
 }
 }
 
-# TODO: sexualni orientaci
 # TODO: nejdrive generovat gender, sexualni preference, rasu, z jake lidske rasy je, 
 # zemi puvodu, pak jmeno a pak dalsi
 # TODO: lidske/metalidske rasy predelat samostatne
@@ -879,8 +956,8 @@ race_details = {
 # ve 3. verzi mit klikacku webu kde se to bude generovat a ukladat do pdf a pod - pandas
 # ve 4. zapojit tu webovku s AI co napises jakej obrazek a vygeneruje ti jej
 # ve 4. zapojit tu webovku s AI (pokud je) co nahodim texty a ono mi to vygeneruje zivotni udalosti
-
-
+# MEMO: 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 key for an openapi
+# MEMO: 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 key for an openapi
 
 
 # print((Gender.gender).value)

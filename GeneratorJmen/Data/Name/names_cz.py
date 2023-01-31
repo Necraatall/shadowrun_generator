@@ -1,7 +1,7 @@
-from GeneratorJmen.Data.Name.Mans.mnames_cz import *
-from GeneratorJmen.Data.Name.Womans.wnames_cz import *
+import Mans.mnames_cz as mnames_cz
+import Womans.wnames_cz as wnames_cz
 
 intent_names_cz = (
-    intent_mnames_cz,
-    intent_wnames_cz
+    mnames_cz.intent_mnames_cz,
+    wnames_cz.intent_wnames_cz,
 )

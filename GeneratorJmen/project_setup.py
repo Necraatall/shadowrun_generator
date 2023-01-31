@@ -1,7 +1,58 @@
 from enum import Enum, auto
 import random
-from GeneratorJmen.Data.Gods import gods_egypt, gods_greek, gods_kelt, gods_slovan
-from GeneratorJmen.generator_jmen import *
+
+from Data.Gods import gods_egypt, gods_greek, gods_kelt, gods_slovan
+
+from Data.Name import names
+from Data.NickName import nicknames
+from Data.Surname import surname
+
+# from ..GeneratorJmen.Data.Gods import gods
+
+# from ..GeneratorAppearance.Data import body as body
+# from ..GeneratorAppearance.Data import head as head
+
+intent_tribe_god = (
+    gods_egypt.intent_gods_eg,
+    gods_greek.intent_gods_about_gk,
+    gods_kelt.intent_gods_kelt,
+    gods_slovan.intent_gods_slovan,
+)
+
+intent_tribe_god_about = (
+    gods_egypt.intent_gods_about_eg,
+    gods_greek.intent_gods_about_gk,
+    gods_kelt.intent_gods_about_kelt,
+    gods_slovan.intent_gods_about_slovan,
+)
+
+
+class God:
+    @staticmethod
+    def get_random_tribe_god_with_abouts():
+        return get_random_god_with_abouts()
+
+
+def get_random_god_with_abouts():
+    # vyber list uvnitr listu intent_tribe_god - nevybere jmeno, ale hodnoty
+    chosen_list = random.choice(intent_tribe_god)
+    # vyber index listu pro pozdejsi pouziti
+    get_index_of_tribes_god = intent_tribe_god.index(chosen_list)
+
+    # vybere jednoho boha z listu bohu dle indexu ziskaneho vyse
+    chosen_god = random.choice(intent_tribe_god[get_index_of_tribes_god])
+    # vybere index vybraneho boha
+    get_index_of_god = intent_tribe_god[get_index_of_tribes_god].index(chosen_god)
+
+    # rozsekam vystup na jmeno boha a jeho popis kdy si vemu jen popis
+    # vemu si hodnotu popisu boha a dam do stringu
+    split_output_chosen_god_about = str(intent_tribe_god_about[get_index_of_tribes_god][get_index_of_god])
+    # osetrim aby hodnota nemela nechtene zvlastni znaky
+    split_output_chosen_god_about = split_output_chosen_god_about[5:][:-2].replace("'", "")
+    # odeslu jmeno boha a popis boha
+    return chosen_god, split_output_chosen_god_about
+
+
 
 
 #TODO: asi lepe dat zdrojovy kod teto stranky a zkopnout
@@ -12,7 +63,7 @@ class Gender(Enum):
     MALE = auto()
     FEMALE = auto()
 
-SEXUAL_PREFERENCY_LIST = random.choice(
+SEXUAL_PREFERENCY_LIST = random.choice((
         "same gender",
         "same gender older",
         "same gender older 10-15 years",
@@ -57,42 +108,105 @@ SEXUAL_PREFERENCY_LIST = random.choice(
         "group sex 2 males one female all others under 16 year",
         "big group sex",
         "gang bang",
+        "a sexual games",
         "a game of rape", 
         "sexual non sado maso games",
         "sado maso light",
-        "sado maso hard"
-)
+        "sado maso hard", 
+        "sex with animals", 
+        "froteur",
+        "material afilation",
+        "sex on public areas", 
+        "sex on nature",
+        "sex on holy places", 
+        "non-maried sex", 
+        "sex on brothel", 
+        "pasionate sex",
+        "bizzare sex", 
+        "watching people doing sex", 
+        "must be watched when doing sex",
+        "sex in the watter", 
+        "roleplay",
+        "be binded",
+        "bind someone",
+        "mask on eyes",
+        "anal sex", 
+        "one night sex",
+        "using erotic tools",
+        "using food",
+        "anal copulation on realy rich places with waterpool", 
+        "riping anal by female",
+        "double penetration",
+        "oral sex with many mans",
+        "swinging partners",
+        "erotic hypnotic",
+        "orgies",
+        "realy haired body",
+        "the desire to consider oneself a corpse and to be loved as a corpse",
+        "the thrill of thunder and lightning",
+        "the cancellation of the victim being beaten on the feet with a belt, a cane or even a stick",
+        "the thrill of being robbed",
+        "the pleasure of looking at or touching a particular substance",
+        "is triggered if the sufferer sees their partner crying",
+        "torture of the testicles, most commonly crushing or squeezing",
+        """he creates situations where strangers can see him naked just by chance. 
+        For example, he may leave the curtains open and walk around the apartment naked""",
+        "the excitement of observing some work activity or skill of another person",
+        "the person in question has a desire to deflower as many women as possible",
+        "attachment to sick people",
+        "sexual affection for gods, spirits and demons",
+        "preferences of partners who are blind or partially sighted",
+        "burning the brand with a very high temperature from hot metal, burning with a cigarette or candle flame",
+        "sexual arousal on the basis of a hot bath or shower",
+        "nipple orgasm",
+        "sex with pregnant womans",
+        "Multiple orgasm",
+        "Orgasm in sleep",
+        "Orgasm through erotic fantasies",
+        """Coregasm is an interesting response of the body to sport and movement. 
+        It is not a targeted sexual stimulation, but a pleasant part of movement, 
+        where the erogenous zones are stimulated by movement and rubbing against clothes or sports equipment.""",
+        "Latex, vinyl and leather",
+        "Voyeurismus",
+        "Dendrophilia: raped roots and trunks",
+        "Hybristophilia: sex with bad guys",
+        "Catoptronophilia: without a mirror not a shot",
+        """Salirophilia: you can't be attractive!
+        You used to be pretty, but that's not true anymore! 
+        Saliophilia consists of the actor dishonoring the object of his desire - usually an attractive person. 
+        But it is only about looks, not pain. 
+        The salirophiliac will rip the lover's stockings, smear her makeup, mess up her hair, 
+        cover her body with mud, and so on. 
+        That kinda sucks when you're taking care of yourself! 
+        Or do you let something like that go unnoticed?
+        """,
+        "Transvestitism and sexual orientation on same gender",
+        "Transvestitism and sexual orientation on oposite gender",
+        "shemale",
+        """Erotografomanie
+        Arousal is achieved by writing letters with erotic content to unknown objects. 
+        The Erotografomaniac is then satisfied by the idea of the woman reading the letter""",
+        """Skatophilia
+        In scatophilia (or erotophilia) arousal is achieved by anonymous phone calls with erotic content. 
+        Men who are aroused by calls with erotic content are usually completely sexually normal.
+        """,
+        """Tushering
+        Arousal is achieved by touching the private parts of anonymous female objects. 
+        A tusker usually touches, as if by accident, the breast, ass or genital area of a passing woman in a park or on a vehicle.
+        """,
+        "Homophilia - a sexual deviation in which a person imagines having sex during a mass or other religious ceremony",
+        "Candaulism - this deviation consists in the fact that a partner is sexually satisfied by showing his partner naked in public",
+        "Kochwarism - is a dangerous sexual deviation that consists in inducing sexual arousal by strangulation.",
+        "Narratophilia - arousal is induced by vulgar words and expressions",
+        "Ophidiophilia - ophidiophiles are aroused by snakes",
+        "Pyrophilia - a deviation in which sexual arousal is induced by fire",
+        "Retifism - a subgroup of fetishism where the erotic stimulus is women's shoes",
+        "Somnophilia - a somnophile pisses on a sleeping partner. Often over a complete stranger sleeping, for example in campsites or hostels.",
+        "Symphorophilia - a sexual deviation characterized by sexual exhibition in traffic accidents",
+        "stealing things.",
 
+))
 
-class Sexual_preferency(Enum):
-    SEXUAL_PREFERENCY = random.choice((
-        "same gender",
-        "same gender older",
-        "same gender older 10-15 years",
-        "same gender older gerontophilia",
-        "same gender older 16-25 years",
-        "same gender 16-22 year",
-        "same gender 30-40 year",
-        "same gender 40-50 year",
-        "same gender under 16 year",
-        "oposite gender",
-        "oposite gender older 10-15 years",
-        "oposite gender older gerontophilia",
-        "oposite gender older 16-25 years",
-        "oposite gender 16-22 year",
-        "oposite gender 30-40 year",
-        "oposite gender 40-50 year",
-        "oposite gender under 16 year",
-        "bisexual",
-        "bisexual older 10-15 years",
-        "bisexual older gerontophilia",
-        "bisexual older 16-25 years",
-        "bisexual 16-22 year",
-        "bisexual 30-40 year",
-        "bisexual 40-50 year",
-        "bisexual under 16 year",
-
-    ))
 
 class Tribe_name_origin(Enum):
     PL = 1
@@ -114,6 +228,7 @@ class Tribe_surname_origin(Enum):
     US = 7
     CZ = 8
 
+
 class Social_class(Enum):
     RUNNER = "runner"               # noqa byvalej runner, nebo popripade i modifikace bodu na rozdeleni
     HERO = "hero"                   # noqa mistni hrdina - mozno vice kontaktu, lepsi vztahy nekde - popripade i modifikace bodu na rozdeleni
@@ -128,7 +243,8 @@ class Social_class(Enum):
     TOTAL_JUNKIE = "total_junkie"   # totalni fetak
     HOMELESS = "homeless"           # klasickej homeless chlast
     NATIVE = "native"               # domorodec typu indian... ne cigan
-    
+
+SOCIAL_CLASS = random.choice(list(Social_class))
 
 class Positive_characteristic(Enum):
     CREATIVE = "creative"
@@ -250,6 +366,10 @@ class Positive_characteristic(Enum):
     SUFFICIENT = "sufficient"
     RESOURCEFUL = "resourceful"
 
+make_list = list(Positive_characteristic)
+POSITIVE_CHARACTERISTIC = random.sample(make_list, 2)
+POSITIVE_CHARACTERISTIC = (POSITIVE_CHARACTERISTIC[0].value, POSITIVE_CHARACTERISTIC[1].value)
+
 
 class Negative_characteristic(Enum):
     DISLOYAL = "disloyal"
@@ -368,6 +488,9 @@ class Negative_characteristic(Enum):
     WORKAHOLIC = "workaholic"
     WORRYWART = "worrywart"
 
+make_list = list(Negative_characteristic)
+NEGATIVE_CHARACTERISTIC = random.sample(make_list, 2)
+NEGATIVE_CHARACTERISTIC = (NEGATIVE_CHARACTERISTIC[0].value, NEGATIVE_CHARACTERISTIC[1].value)
 
 # na zaklade tohoto je mozne resit ze jej nekdo sikanoval ci si na nej nedovolili
 class Height(Enum):
@@ -377,6 +500,9 @@ class Height(Enum):
     SHORT_HEIGHT = "short"
     VERY_SHORT_HEIGHT ="very short"
 
+make_list = list(Height)
+HEIGHT = random.sample(make_list, 2)
+HEIGHT = (HEIGHT[0].value, HEIGHT[1].value)
 
 class Weight(Enum):
     VERY_OVERWEIGHT_WEIGHT = "very overweight"
@@ -388,6 +514,10 @@ class Weight(Enum):
     HEAVYSET_WEIGHT = "heavyset weight"
     THIN_WEIGHT = "thin weight"
 
+make_list = list(Weight)
+WEIGHT = random.sample(make_list, 2)
+WEIGHT = (WEIGHT[0].value, WEIGHT[1].value)
+
 class Body(Enum):
     VERY_WELL_BUILT_BODY = "very well-built"
     WELL_BUILD_BODY = "well-built"
@@ -396,6 +526,10 @@ class Body(Enum):
     VERY_FINE_BUILD_BODY = "very fine build"
     SKINNY_BUILD_BODY = "skinny build"
     SLENDER_BUILD_BODY = "slender build"
+
+make_list = list(Body)
+BODY = random.sample(make_list, 2)
+BODY = (BODY[0].value, BODY[1].value)
 
 class Body_shape(Enum):
     BOTTOM_HOURGLASS = "bottom hourglass"
@@ -410,92 +544,9 @@ class Body_shape(Enum):
     APPLE = "apple"
     TRAPEZOID = "trapezoid"
 
-class Face_shape(Enum):
-    OVAL_FACE_SHAPE = "oval" 
-    SQUARE_FACE_SHAPE = "square"
-    OBLONG_FACE_SHAPE = "oblong"
-    TRIANGULAR_FACE_SHAPE = "triangular"
-    ROUND_FACE_SHAPE = "round"
-    DIAMOND_FACE_SHAPE = "diamond"
-    HEART_FACE_SHAPE = "heart"
-
-class Oval_short_hair_styles(Enum):
-    PUSHED_BACK_LONG_OVAL_HAIR_STYLE_SHORT = "pushed back long"
-    SIDE_PARTED_SHORT_OVAL_HAIR_STYLE_SHORT = "side parted short"
-    UNDERCUT_OVAL_HAIR_STYLE_SHORT = "undercut"
-    FRINGE_UP_OVAL_HAIR_STYLE_SHORT = "fringe up"
-
-class Square_short_hair_styles(Enum):
-    CREW_AKA_BUZZ_CUT_SQUARE_HAIR_STYLE_SHORT = "crew aka buzz cut"
-    UNDERCUT_SQUARE_HAIR_STYLE_SHORT = "undercut"
-    FAUX_HAWK_SQUARE_HAIR_STYLE_SHORT = "faux hawk"
-    SLICKED_BACK_SIDE_PART_SQUARE_HAIR_STYLE_SHORT = "slicked back side part"
-
-class Oblong_short_hair_styles(Enum):
-    SIDE_PARTED_OBLONG_HAIR_STYLE_SHORT = "side parted"
-    BUZZ_CUT_OBLONG_HAIR_STYLE_SHORT = "buz cut"
-    FRINGE_UP_OBLONG_HAIR_STYLE_SHORT = "fringe up"
-    SIDE_FRINGE_OBLONG_HAIR_STYLE_SHORT = "side fringe"
-
-class Triangular_short_hair_styles(Enum):
-    FRINGE_UP_TRIANGULAR_HAIR_STYLE_SHORT = "fringe up"
-    SIDE_FRINGE_TRIANGULAR_HAIR_STYLE_SHORT = "side fringe"
-    SIDE_PARTED_TRIANGULAR_HAIR_STYLE_SHORT = "side parted"
-
-class Round_short_hair_styles(Enum):
-    FAUX_HAWK_WITH_SHORTER_SIDES_ROUND_HAIR_STYLE_SHORT = "faux hawk with shorter sides"
-    FRINGE_UP_ROUND_HAIR_STYLE_SHORT = "fringe up"
-    UNDERCUT_ROUND_HAIR_STYLE_SHORT = "undercut"
-    QUIFF_ROUND_HAIR_STYLE_SHORT = "quiff"
-
-class Diamond_short_hair_styles(Enum):
-    QUIFF_DIAMOND_HAIR_STYLE_SHORT = "quiff"
-    LONG_HAIR_PUSHED_BACK_DIAMOND_HAIR_STYLE_SHORT = "long hair pushed back"
-    FAUX_HAWK_DIAMOND_HAIR_STYLE_SHORT = "faux hawk"
-    SIDE_FRINGE_DIAMOND_HAIR_STYLE_SHORT = "side fringe"
-
-class Heart_short_hair_styles(Enum):
-    LONG_FRINGES_HEART_HAIR_STYLE_SHORT = "long fringes"
-    SIDE_PARTED_LONG_HEART_HAIR_STYLE_SHORT = "side parted long"
-    PUSHED_BACK_HEART_HAIR_STYLE_SHORT = "pushed back"
-    UNDERCUT_HEART_HAIR_STYLE_SHORT = "undercut"
-
-
-# TODO: LONG HAIR
-# class Long_hair_styles(Enum):
-#     shag_haircut
-#     long_curly_hair
-#     long_layered
-#     long_hairstyle_with_texture_waves
-#     long_straight_hair
-#     long_hairstyle_with_side_part
-#     long_hair_with_middle_part
-#     long_surfer_hair
-#     long_dreadlocks
-#     man_bun
-#     man_bun_with_fade
-#     long_hairstyle_with_quiff
-#     braids_for_man
-#     long_half_up
-#     long_viking
-#     ponytail
-#     ponytail_with_undercut
-#     long_slick_back
-#     bro_flow
-#     long_hair_with_bangs
-#     shoulder_length_long_hair
-#     long_tight_curls
-#     long_hairstyle_with_fringe
-#     long_hair_dyed_hair
-#     mullet_haircut
-#     long_hair_with_fade
-#     long_hair_with_undercut
-#     long_hairstyles_for_men_with_thick_hair
-#     long_hair_with_pompadour
-#     long_hair_hard_part
-
-
-
+make_list = list(Body_shape)
+BODY_SHAPE = random.sample(make_list, 2)
+BODY_SHAPE = (BODY_SHAPE[0].value, BODY_SHAPE[1].value)
 
 # koukni na nested enums
 # from enum import Enum
@@ -511,22 +562,6 @@ class Heart_short_hair_styles(Enum):
 # print(Location.Inside.value.Downstairs.value)
 # downstairs
 
-
-def Hair_style_short(Face_shape: Enum):
-    match Face_shape:
-        case Face_shape.oval_face_shape:
-            random.choice(Oval_short_hair_styles)
-        case Face_shape.oval_face_shape:
-            random.choice(Square_short_hair_styles)
-        case Face_shape.oval_face_shape:
-            random.choice(Oblong_short_hair_styles)
-        case Face_shape.oval_face_shape:
-            random.choice(Triangular_short_hair_styles)
-        case Face_shape.oval_face_shape:
-            random.choice(Diamond_short_hair_styles)
-        case Face_shape.oval_face_shape:
-            random.choice(Heart_short_hair_styles)
-
 # udelat to jako: 
 # Face_shape.oblong.short.side_parted
 
@@ -538,35 +573,6 @@ def Hair_style_short(Face_shape: Enum):
 
 #             )
 
-class Hair_color(Enum):
-    AUBURN_HAIR_COLOR = 'auburn'
-    BROWN_HAIR_COLOR = 'brown'
-    BLACK_HAIR_COLOR = 'black'
-    BLONDE_HAIR_COLOR = 'blonde'
-    COPPER_HAIR_COLOR = 'copper'
-    GINGER_HAIR_COLOR = 'ginger'
-    GOLDEN_HAIR_COLOR = 'golden'
-    GREY_HAIR_COLOR = 'grey'
-    MOUSE_HAIR_COLOR = 'mouse'
-    RED_HAIR_COLOR = 'red'
-    DARK_BROWN_HAIR_COLOR = 'dark brown'
-    WHITE_HAIR_COLOR = 'white'
-
-class Hair_types(Enum):
-    VERY_STRAIGHT_HAIR_TYPE = "very straight hair"
-    STRAIGHT_BEND_HAIR_TYPE = "straight hair with some bends"
-    STRAIGHT_COARSER_HAIR_TYPE = "straight hair with coarser texture"
-    STRAIGHT_HAIR_TYPE = "straight hair"
-    SOFT_WAVE_HAIR_TYPE = "soft wave"
-    WAVY_HAIR_TYPE = "wavy"
-    DEEP_WAVE_HAIR_TYPE = "deep wave"
-    LOST_CURLS_HAIR_TYPE = "lost curls"
-    SOFT_CURL_HAIR_TYPE = "soft curl"
-    CURLY_HAIR_TYPE = "curly"
-    ULTRA_CURLY_HAIR_TYPE = "ultra curly"
-    COILED_HAIR_TYPE = "coiled"
-    ZIG_ZAG_HAIR_TYPE = "zig zag"
-    TIGHTLY_COILED_HAIR_TYPE = "tightly coiled"
 
 #TODO: TOTO: mozna do jineho souboru
 class Nationality(Enum):
@@ -1007,3 +1013,18 @@ race_details = {
 # 8 South American
 # 9 Black American
 # 10 Central European
+
+
+# make_list = list(Body_shape)
+# BODY_SHAPE = random.sample(make_list, 2)
+# BODY_SHAPE = (BODY_SHAPE[0].value, BODY_SHAPE[1].value)
+
+print(SEXUAL_PREFERENCY_LIST)
+print(SOCIAL_CLASS)
+print(POSITIVE_CHARACTERISTIC)
+print(HEIGHT)
+print(WEIGHT)
+print(BODY)
+print(BODY_SHAPE)
+
+print()

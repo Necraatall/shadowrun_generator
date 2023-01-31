@@ -1,21 +1,19 @@
 import random
-from GeneratorJmen.Data.Gods.gods_greek import *
-from GeneratorJmen.Data.Gods.gods_egypt import *
-from GeneratorJmen.Data.Gods.gods_kelt import *
-from GeneratorJmen.Data.Gods.gods_slovan import *
+import gods_greek
+import gods_egypt, gods_kelt, gods_slovan
 
 intent_tribe_god = (
-    intent_gods_gk,
-    intent_gods_eg,
-    intent_gods_kelt,
-    intent_gods_slovan,
+    gods_egypt.intent_gods_eg,
+    gods_greek.intent_gods_about_gk,
+    gods_kelt.intent_gods_kelt,
+    gods_slovan.intent_gods_slovan,
 )
 
 intent_tribe_god_about = (
-    intent_gods_about_gk,
-    intent_gods_about_eg,
-    intent_gods_about_kelt,
-    intent_gods_about_slovan,
+    gods_egypt.intent_gods_about_eg,
+    gods_greek.intent_gods_about_gk,
+    gods_kelt.intent_gods_about_kelt,
+    gods_slovan.intent_gods_about_slovan,
 )
 
 

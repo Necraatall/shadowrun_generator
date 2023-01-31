@@ -1,6 +1,91 @@
 import random
 from enum import Enum
 
+class Tribe_name_origin(Enum):
+    PL = 1
+    NE = 2
+    ES = 3
+    FR = 4
+    GK = 5
+    IT = 6
+    US = 7
+    CZ = 8
+
+make_list = list(Tribe_name_origin)
+TRIBE_NAME_ORIGIN = random.choice(make_list)
+TRIBE_NAME_ORIGIN = TRIBE_NAME_ORIGIN.value
+
+class Tribe_surname_origin(Enum):
+    PL = 1
+    NE = 2
+    ES = 3
+    FR = 4
+    GK = 5
+    IT = 6
+    US = 7
+    CZ = 8
+
+make_list = list(Tribe_surname_origin)
+TRIBE_SURNAME_ORIGIN = random.choice(make_list)
+TRIBE_SURNAME_ORIGIN = TRIBE_SURNAME_ORIGIN.value
+
+class Relatives(Enum):
+    AFGHAN = 'Afghan'
+    ABORIGIN = 'Aborigin'
+    ARGENTINIAN = 'Argentinian'
+    SPANISH = 'Spanish'
+    AUSTRALIAN = 'Australian'
+    BRITISH = 'British'
+    AMERICAN = 'American'
+    BELGIAN = 'Belgian'
+    BRAZILIAN = 'Brazilian'
+    WELSH = 'Welsh'
+    PORTUGUESE = 'Portuguese'
+    CANADIAN = 'Canadian'
+    FRENCH = 'French'
+    ENGLISH = 'English'
+    SCOTTISH = 'Scottish'
+    IRISH = 'Irish'
+    CORNISH = 'Cornish'
+    COLOMBIAN = 'Colombian'
+    DANISH = 'Danish'
+    EGYPTIAN = 'Egyptian'
+    ETHIOPIAN = 'Ethiopian'
+    FINNISH = 'Finnish'
+    GERMAN = 'German'
+    GREEK = 'Greek'
+    ITALIAN = 'Italian'
+    JAPANESE = 'Japanese'
+    MEXICAN = 'Mexican'
+    DUTCH = 'Dutch'
+    SWEDISH = 'Swedish'
+    THAI = 'Thai'
+    POLISH = 'Polish'
+    HUNGARIAN = 'Hungarian'
+    CZECH = 'Czech'
+    SLOVAK = 'Slovak'
+    AUSTRIAN = 'Austrian'
+    UKRAIN = 'Ukrain'
+    SLOVENIAN = 'Slovenian'
+    HRVAT = 'Hrvat'
+    MONTE = 'Monte Negro'
+    RUSIAN = 'Rusian'
+    CHINEES = 'Chinees'
+
+make_list = list(Relatives)
+RELATIVES = random.choice(make_list)
+RELATIVES = RELATIVES.value
+
+class Religion(Enum):
+    EGYPTIAN = "some_other_value"
+    GREEK = "some_other_value"
+    KELT = "some_other_value"
+    SLOVAN = "some_other_value"
+
+make_list = list(Religion)
+RELIGION = random.choice(make_list)
+RELIGION = RELIGION.value
+
 class Positive_characteristic(Enum):
     CREATIVE = "creative"
     BRAVE = "brave"
@@ -416,74 +501,3 @@ SEXUAL_PREFERENCY_LIST = random.choice((
         "stealing things.",
 
 ))
-
-
-class Tribe_name_origin(Enum):
-    PL = 1
-    NE = 2
-    ES = 3
-    FR = 4
-    GK = 5
-    IT = 6
-    US = 7
-    CZ = 8
-
-class Tribe_surname_origin(Enum):
-    PL = 1
-    NE = 2
-    ES = 3
-    FR = 4
-    GK = 5
-    IT = 6
-    US = 7
-    CZ = 8
-
-class Nationality(Enum):
-    AFGHAN = 'Afghan'
-    ABORIGIN = 'Aborigin'
-    ARGENTINIAN = 'Argentinian'
-    SPANISH = 'Spanish'
-    AUSTRALIAN = 'Australian'
-    BRITISH = 'British'
-    AMERICAN = 'American'
-    BELGIAN = 'Belgian'
-    BRAZILIAN = 'Brazilian'
-    WELSH = 'Welsh'
-    PORTUGUESE = 'Portuguese'
-    CANADIAN = 'Canadian'
-    FRENCH = 'French'
-    ENGLISH = 'English'
-    SCOTTISH = 'Scottish'
-    IRISH = 'Irish'
-    CORNISH = 'Cornish'
-    COLOMBIAN = 'Colombian'
-    DANISH = 'Danish'
-    EGYPTIAN = 'Egyptian'
-    ETHIOPIAN = 'Ethiopian'
-    FINNISH = 'Finnish'
-    GERMAN = 'German'
-    GREEK = 'Greek'
-    ITALIAN = 'Italian'
-    JAPANESE = 'Japanese'
-    MEXICAN = 'Mexican'
-    DUTCH = 'Dutch'
-    SWEDISH = 'Swedish'
-    THAI = 'Thai'
-    POLISH = 'Polish'
-    HUNGARIAN = 'Hungarian'
-    CZECH = 'Czech'
-    SLOVAK = 'Slovak'
-    AUSTRIAN = 'Austrian'
-    UKRAIN = 'Ukrain'
-    SLOVENIAN = 'Slovenian'
-    HRVAT = 'Hrvat'
-    MONTE = 'Monte Negro'
-    RUSIAN = 'Rusian'
-    CHINEES = 'Chinees'
-
-
-class Religion(Enum):
-    EGYPTIAN = "some_other_value"
-    GREEK = "some_other_value"
-    KELT = "some_other_value"
-    SLOVAN = "some_other_value"

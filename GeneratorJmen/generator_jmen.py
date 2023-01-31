@@ -1,6 +1,6 @@
 # from asyncio.windows_events import NULL
 
-from GeneratorJmen.Data.Surname.surname import *
+from GeneratorJmen.Data.Surname import *
 from GeneratorJmen.Data.Name.names import *
 from GeneratorJmen.Data.NickName.nicknames import *
 from GeneratorJmen.Data.Gods.gods import *

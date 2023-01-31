@@ -1,11 +1,10 @@
 # from asyncio.windows_events import NULL
-from GeneratorJmen.project_setup import *
 
 from GeneratorJmen.Data.Surname.surname import *
 from GeneratorJmen.Data.Name.names import *
 from GeneratorJmen.Data.NickName.nicknames import *
 from GeneratorJmen.Data.Gods.gods import *
-
+from GeneratorJmen.project_setup import *
 import random
 
 
@@ -19,13 +18,6 @@ def write_results():
     if tribe_name_origin is not None or tribe_surname_origin is not None:
         print(tribe_name_origin + " \"" + nickname + "\" " + tribe_surname_origin)
         print(God.get_random_tribe_god_with_abouts())
-
-        #########################################################################
-        #### TAKTO TO HEZKY FUNGUJE VE SLOVNIKU S POLEM
-        #########################################################################
-        # rasa = random.choice(rase_choice)
-        # oci = random.choice(race_details[rasa][1])
-        # print(random.choice(oci))
 
     else:
         print(

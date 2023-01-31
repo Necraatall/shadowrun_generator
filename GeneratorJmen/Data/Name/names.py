@@ -1,34 +1,34 @@
 import random
 
-import names_gk as names_gk
-import names_fi as names_fi
-import names_pl as names_pl
-import names_it as names_it
-import names_no as names_no
-import names_ne as names_ne
-import names_se as names_se
-import names_hu as names_hu
-import names_us as names_us
-import names_sk as names_sk
-import names_fr as names_fr
-import names_es as names_es
-import names_vn as names_vn
-import names_cz as names_cz
+from ..Name.names_gk import *
+from ..Name.names_fi import *
+from ..Name.names_pl import *
+from ..Name.names_it import *
+from ..Name.names_no import *
+from ..Name.names_ne import *
+from ..Name.names_se import *
+from ..Name.names_hu import *
+from ..Name.names_us import *
+from ..Name.names_sk import *
+from ..Name.names_fr import *
+from ..Name.names_es import *
+from ..Name.names_vn import *
+from ..Name.names_cz import *
 
 names_all = (
-    names_gk.intent_names_gk,
-    names_fi.intent_names_fi,
-    names_pl.intent_names_pl,
-    names_it.intent_names_it,
-    names_no.intent_names_no,
-    names_ne.intent_names_ne,
-    names_se.intent_names_se,
-    names_hu.intent_names_hu,
-    names_us.intent_names_us,
-    names_sk.intent_names_sk,
-    names_fr.intent_names_fr,
-    names_es.intent_names_es,
-    names_vn.intent_names_vn
+    intent_names_gk,
+    intent_names_fi,
+    intent_names_pl,
+    intent_names_it,
+    intent_names_no,
+    intent_names_ne,
+    intent_names_se,
+    intent_names_hu,
+    intent_names_us,
+    intent_names_sk,
+    intent_names_fr,
+    intent_names_es,
+    intent_names_vn
 )
 
 

@@ -35,7 +35,7 @@ if age_appearance == 0:
     appearence_age = random.randrange((physical_age//2), (physical_age - (physical_age//3)+1+3), 1)
 else: 
     psychical_age = random.randrange((physical_age//2), (physical_age + (physical_age//4)-1), 1)
-    appearence_age = random.randrange((physical_age//2), (physical_age + (physical_age//3)-1+5), 1)
+    appearence_age = random.randrange((physical_age//2), (physical_age + (physical_age//3)-1+3), 1)
 
 
 class Age(Enum):

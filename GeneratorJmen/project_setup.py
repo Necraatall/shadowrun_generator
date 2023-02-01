@@ -121,7 +121,6 @@ from GeneratorSocial.Data.characteristics import *
 
 
 def write_results():
-    print("Gender", GENDER)
     # Todays is only for set uped languages
     tribe_name_origin = tribe_name_origin_input()
     tribe_surname_origin = tribe_surname_origin_input()
@@ -139,10 +138,9 @@ def write_results():
         )
         print(God.get_random_tribe_god_with_abouts())
 
-    
     make_atributes_loop()
-# TODO: nutno rozvrhnout lepe jak ma vypadat vystup
-    print("Visage:")
+
+    print("\nVisage:")
     print(f"Social Class: {SOCIAL_CLASS}")
     print(f"Height: {HEIGHT}")
     print(f"Weight: {WEIGHT}")
@@ -151,7 +149,7 @@ def write_results():
     print(f"Face and Hair: {FACE_AND_HAIR}")
    
     
-    print("Character:")
+    print("\nCharacter:")
     print(f"Sexual preferency: {SEXUAL_PREFERENCY_LIST}")
     print(f"Positive characteristics: {POSITIVE_CHARACTERISTIC[0]}, {POSITIVE_CHARACTERISTIC[1]}")
     print(f"Negative characteristics: {NEGATIVE_CHARACTERISTIC[0]}, {NEGATIVE_CHARACTERISTIC[1]}")
@@ -161,12 +159,10 @@ def write_results():
 # value = random.choice(list(Hair_types))
 # print (value.value)
 
-# print()
 
 @staticmethod
 def tribe_name_origin_input():
-    chosen_tribe_name = 8
-    # chosen_tribe_name = random.randint(1, 8)
+    chosen_tribe_name = random.randint(1, 8)
     gender = GENDER
     if gender == "female":
         gender_name = 1

@@ -25,7 +25,7 @@ listatr = list(listatr)
 race_dict: dict = {}
 
 vysl_atr = []
-# TODO: dopsat popisky - domyslet remeslniky a pod. 
+
 # choose_destiny = None   # 96 - 100 is full Thaumaturgic, 91-95 is full shamanic, 86-90 is Thaumaturgy Adept, 81-85 is Shamanic Adept, 75-80 is Technomancer  
 # is_mage = None          # 10 is full Thaumaturgic, 9 is full shamanic, 8 is Thaumaturgy Adept, 7 is Shamanic Adept, 6 physical Adept, 7 is Technomancer 
 

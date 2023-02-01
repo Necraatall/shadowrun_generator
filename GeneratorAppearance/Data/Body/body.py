@@ -61,10 +61,14 @@ eye_color = ('brown', 'black', 'blue', 'green', 'yellow')
 hair_color = ('auburn', 'brown', 'black', 'blonde', 'copper', 'ginger', 'golden', 'grey', 'mouse', 'red', 'dark brown', 'white')
 skin_tone = ('almond', 'brown', 'bronze', 'chocolate', 'cocoa', 'dark chocolate', 'fair', 'light', 'olive', 'pale', 'walnut')
 
-rase_choice = ('Europoidic', 'Caucasian', 'Latino/Hispanic', 'African', 'Caribbean', 'Middle_Eastern', 'South_Asian', 'East_Asian', 'Mixed')
-sub_race_europoidic_choice = ('Nordic', 'Falian', 'Baltic', 'Mediterran', 'Dinaric', 'Alpine')
-sub_race_middle_eastern_choices = ('Hamitic', 'Sudeten', 'Oriental')
-sub_race_african_choice = ('Hamitic')
+race_choice = "Europoidic"
+# race_choice = random.choice('Europoidic', 'Caucasian', 'Latino/Hispanic', 'African', 'Caribbean', 'Middle_Eastern', 'South_Asian', 'East_Asian', 'Mixed')
+if race_choice == 'Europoidic':
+    sub_race_europoidic_choice = ('Nordic', 'Falian', 'Baltic', 'Mediterran', 'Dinaric', 'Alpine')
+if race_choice == 'Middle_Eastern':
+    sub_race_middle_eastern_choices = ('Hamitic', 'Sudeten', 'Oriental')
+if race_choice == 'African':
+    sub_race_african_choice = ('Hamitic')
 
 race_details = {
     'Europoidic' : {
@@ -173,7 +177,7 @@ race_details = {
                 "část Walesu",
                 "jihozápadní Německo",
                 "jižní Polsko",
-                "částečně jižní a centrální Rusko a Balkán",
+                "částečně jižní a centrální Rusko či Balkán",
             ))
         },
         "Dinaric" : {
@@ -363,3 +367,11 @@ race_details = {
     }}
 }
 }
+
+# print(race_details[race_choice])
+
+# print(race_choice, 'eye_color is : ', random.choice(race_details[race_choice][]['eye_color']))
+# print(race_choice, 'hair_color is : ', random.choice(race_details[race_choice]['hair_color']))
+# print(race_choice, 'skin_tone is : ', random.choice(race_details[race_choice]['skin_tone']))
+
+print(*[str(k) + ': ' + str(v) for k,v in race_details[race_choice].items()], sep='\n')

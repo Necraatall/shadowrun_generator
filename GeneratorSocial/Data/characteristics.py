@@ -304,6 +304,8 @@ make_list = list(Negative_characteristic)
 NEGATIVE_CHARACTERISTIC = random.sample(make_list, 2)
 NEGATIVE_CHARACTERISTIC = (NEGATIVE_CHARACTERISTIC[0].value, NEGATIVE_CHARACTERISTIC[1].value)
 
+
+# TODO: dopsat popisky - domyslet remeslniky a pod. 
 class Social_class(Enum):
     RUNNER = "runner"               # noqa byvalej runner, nebo popripade i modifikace bodu na rozdeleni
     HERO = "hero"                   # noqa mistni hrdina - mozno vice kontaktu, lepsi vztahy nekde - popripade i modifikace bodu na rozdeleni
@@ -318,6 +320,7 @@ class Social_class(Enum):
     TOTAL_JUNKIE = "total_junkie"   # totalni fetak
     HOMELESS = "homeless"           # klasickej homeless chlast
     NATIVE = "native"               # domorodec typu indian... ne cigan
+    CRAFTER = "crafter"             # remeslnik
 
 make_list = list(Social_class)
 SOCIAL_CLASS = random.choice(make_list)

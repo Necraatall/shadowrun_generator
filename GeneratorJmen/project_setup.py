@@ -143,6 +143,15 @@ def write_results():
     print(f"\nGender: {GENDER}")
     print(f"Sexual preferency: {SEXUAL_PREFERENCY_LIST}")
     print(f"Physical age: {Age.PHYSICAL_AGE.value}")
+    
+    # TODO dict race print zakomponovat do vseho
+    if not any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
+        print("Origin: \n")
+        original_race_help = race_chosen[0]
+        original_race = race_details[race_choice][race_chosen[0]]
+        for keys, value in original_race.items():
+            print(f"{keys}: {value}")
+
     print("\nVisage:")
     print(f"Appearence age: {Age.APPEARENCE_AGE.value}")    
     print(f"Social Class: {SOCIAL_CLASS}")

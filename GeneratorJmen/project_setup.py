@@ -157,7 +157,6 @@ def write_results():
     print(f"Positive characteristics: {POSITIVE_CHARACTERISTIC[0]}, {POSITIVE_CHARACTERISTIC[1]}")
     print(f"Negative characteristics: {NEGATIVE_CHARACTERISTIC[0]}, {NEGATIVE_CHARACTERISTIC[1]}")
 
-    print(age_appearance, physical_age, psychical_age)
 # print(random.choice(tuple(Tribe_name_origin)).value)
 # print(random.choice(tuple(Tribe_surname_origin)).value)
 

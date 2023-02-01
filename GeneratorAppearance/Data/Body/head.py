@@ -2,13 +2,13 @@ from enum import Enum
 import random
 
 class Face_shape(Enum):
-    OVAL_FACE_SHAPE = "oval" 
-    SQUARE_FACE_SHAPE = "square"
-    OBLONG_FACE_SHAPE = "oblong"
-    TRIANGULAR_FACE_SHAPE = "triangular"
-    ROUND_FACE_SHAPE = "round"
-    DIAMOND_FACE_SHAPE = "diamond"
-    HEART_FACE_SHAPE = "heart"
+    OVAL_FACE_SHAPE = "Oval" 
+    SQUARE_FACE_SHAPE = "Square"
+    OBLONG_FACE_SHAPE = "Oblong"
+    TRIANGULAR_FACE_SHAPE = "Triangular"
+    ROUND_FACE_SHAPE = "Round"
+    DIAMOND_FACE_SHAPE = "Diamond"
+    HEART_FACE_SHAPE = "Heart"
 
 make_list = list(Face_shape)
 FACE_SHAPE = random.choice(make_list)
@@ -49,15 +49,6 @@ class Long_hair_styles(Enum):
 make_list = list(Long_hair_styles)
 LONG_HAIR_STYLES = random.choice(make_list)
 LONG_HAIR_STYLES = (LONG_HAIR_STYLES.value)
-
-
-class Hair_longiness(Enum):
-    LONG = LONG_HAIR_STYLES
-    SHORT = FACE_SHAPE
-
-make_list = list(Hair_longiness)
-HAIR_LONGINESS = random.choice(make_list)
-HAIR_LONGINESS = (HAIR_LONGINESS.value)
 
 class Oval_short_hair_styles(Enum):
     PUSHED_BACK_LONG_OVAL_HAIR_STYLE_SHORT = "pushed back long"
@@ -118,6 +109,10 @@ class Hair_color(Enum):
     DARK_BROWN_HAIR_COLOR = 'dark brown'
     WHITE_HAIR_COLOR = 'white'
 
+make_list = list(Hair_color)
+HAIR_COLOR = random.choice(make_list)
+HAIR_COLOR = (HAIR_COLOR.value)
+
 class Hair_types(Enum):
     VERY_STRAIGHT_HAIR_TYPE = "very straight hair"
     STRAIGHT_BEND_HAIR_TYPE = "straight hair with some bends"
@@ -133,3 +128,50 @@ class Hair_types(Enum):
     COILED_HAIR_TYPE = "coiled"
     ZIG_ZAG_HAIR_TYPE = "zig zag"
     TIGHTLY_COILED_HAIR_TYPE = "tightly coiled"
+
+make_list = list(Hair_types)
+HAIR_TYPES = random.choice(make_list)
+HAIR_TYPES = (HAIR_TYPES.value)
+
+@staticmethod
+def haircut_by_face_shape():
+
+    match FACE_SHAPE:
+        case "Oval":
+            make_list = list(Oval_short_hair_styles)
+            haircut = random.choice(make_list)
+            haircut = haircut.value
+        case "Square":
+            make_list = list(Square_short_hair_styles)
+            haircut = random.choice(make_list)
+            haircut = haircut.value
+        case "Oblong":
+            make_list = list(Oblong_short_hair_styles)
+            haircut = random.choice(make_list)
+            haircut = haircut.value
+        case "Triangular":
+            make_list = list(Triangular_short_hair_styles)
+            haircut = random.choice(make_list)
+            haircut = haircut.value
+        case "Round":
+            make_list = list(Round_short_hair_styles)
+            haircut = random.choice(make_list)
+            haircut = haircut.value
+        case "Diamond":
+            make_list = list(Diamond_short_hair_styles)
+            haircut = random.choice(make_list)
+            haircut = haircut.value
+        case "Heart":
+            make_list = list(Heart_short_hair_styles)
+            haircut = random.choice(make_list)
+            haircut = haircut.value
+    return haircut
+
+
+class Face_and_hair(Enum):
+    FACE_LONG = f"{FACE_SHAPE} face with naturally {HAIR_TYPES} hair of the {HAIR_COLOR} color and long haircut: {LONG_HAIR_STYLES}"
+    FACE_SHORT = f"{FACE_SHAPE} face with naturally {HAIR_TYPES} hair of the {HAIR_COLOR} color and short haircut: {haircut_by_face_shape()}"
+
+make_list = list(Face_and_hair)
+FACE_AND_HAIR = random.choice(make_list)
+FACE_AND_HAIR = (FACE_AND_HAIR.value)

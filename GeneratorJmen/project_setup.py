@@ -143,22 +143,20 @@ def write_results():
     make_atributes_loop()
 # TODO: nutno rozvrhnout lepe jak ma vypadat vystup
     print("Visage:")
-    print("Social Class: ", SOCIAL_CLASS)
-    print("Height: ", HEIGHT)
-    print("Weight: ", WEIGHT)
-    print("Body: ", BODY)
-    print("Body shape: ", BODY_SHAPE)
-    print("Hair longiness: ", HAIR_LONGINESS)
+    print(f"Social Class: {SOCIAL_CLASS}")
+    print(f"Height: {HEIGHT}")
+    print(f"Weight: {WEIGHT}")
+    print(f"Body: {BODY}")
+    print(f"Body shape: {BODY_SHAPE}")
+    print(f"Face and Hair: {FACE_AND_HAIR}")
+   
+    
     print("Character:")
-    print("Sexual preferency: ", SEXUAL_PREFERENCY_LIST)
-    print("Positive characteristics: ", POSITIVE_CHARACTERISTIC[0], ",", POSITIVE_CHARACTERISTIC[1])
-    print("Negative characteristics: ", NEGATIVE_CHARACTERISTIC[0], ",", NEGATIVE_CHARACTERISTIC[1])
+    print(f"Sexual preferency: {SEXUAL_PREFERENCY_LIST}")
+    print(f"Positive characteristics: {POSITIVE_CHARACTERISTIC[0]}, {POSITIVE_CHARACTERISTIC[1]}")
+    print(f"Negative characteristics: {NEGATIVE_CHARACTERISTIC[0]}, {NEGATIVE_CHARACTERISTIC[1]}")
 # print(random.choice(tuple(Tribe_name_origin)).value)
 # print(random.choice(tuple(Tribe_surname_origin)).value)
-
-# print(SEXUAL_PREFERENCY_LIST)
-# print(POSITIVE_CHARACTERISTIC)
-
 
 # value = random.choice(list(Hair_types))
 # print (value.value)

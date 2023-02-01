@@ -9,9 +9,6 @@ class Height(Enum):
     SHORT_HEIGHT = "short"
     VERY_SHORT_HEIGHT ="very short"
 
-make_list = list(Height)
-HEIGHT = random.choice(make_list)
-HEIGHT = (HEIGHT.value)
 
 class Weight(Enum):
     VERY_OVERWEIGHT_WEIGHT = "very overweight"
@@ -273,66 +270,67 @@ race_details = {
     },
     'Middle_Eastern' : {
         'Hamitic' : {
-            "Vzrůst" : "střední",
-            "Postava" : "podsaditá (digestivní)",
-            "Končetiny" : "krátké",
-            "Pigmentace" : "snědá - barvy " + random.choice(("mandle", "olivy", "vlašský ořech")),
-            "Nos" : "zahnutý, masitý směrem dolů (podobá se číslici 6)",
-            "Rty" : "masité, dolní ret je větší než horní",
-            "Vlasy" : "tmavě " + random.choice(("hnědé", "černé", "šedé")) + ", kudrnaté, obočí často srostlé",
-            "Oči" : "tmavě " + random.choice(("hnědé", "černé", "zelené")) + ", odhalená vrchní oční víčka (nevyvinuté nadočnicové oblouky)",
-            "Uši" : "velké",
-            "Obličej" : "středně široký, vystouplé lícní kosti",
-            "Lebka" : "krátká (brachycefalie) se zploštělým týlem",
-            "Čelo" : "nízké, šikmé, kulaté",
-            "Čelist" : "nízká, ustupující brada",
-            "Oblast" : random.choice((
-                "Blízký východ (Malá Asie)",
-                "Kavkaz",
-                "Arménie",
-                "Asýrie",
-                "Ázerbájdžán",
-                "Gruzie",
-                "Libanon a Sýrie",
+            "Stature" : "medium",
+            "Build" : "stocky",
+            "Limbs" : "short",
+            "Pigmentation" : "brown - color" + random.choice(("almond", "olive", "walnut")),
+            "Nose" : "curved, fleshy downward (resembles a 6)",
+            "Lips" : "fleshy, lower lip larger than upper lip",
+            "Hair" : "dark" + random.choice(("brown", "black", "grey")) + ", curly, eyebrows often knitted",
+            "Eyes" : "dark " + random.choice(("brown", "black", "green")) + ", upper eyelids exposed (undeveloped supraorbital arches)",
+            "Ears" : "large",
+            "Face" : "medium width, prominent cheekbones",
+            "Skull" : "short (brachycephaly) with flattened occiput",
+            "Forehead" : "low, sloping, round",
+            "Jaw" : "low, receding chin",
+            "Region" : random.choice((
+                "Middle East (Asia Minor)",
+                "Caucasus",
+                "Armenia",
+                "Assyria",
+                "Azerbaijan",
+                "Georgia",
+                "Lebanon and Syria",
             ))
         },
         'Sudeten' : {
-            "Vzrůst": "malý",
-            "Pigmentace": "tmavší - barvy " + random.choice(("mandle", "olivy", "vlašský ořech")),
-            "Nos": "široký, plochý",
-            "Vlasy": "tmavě " + random.choice(("hnědé", "černé", "šedé")),
-            "Oči": "tmavě " + random.choice(("hnědé", "zelené")),
-            "Obličej": "středně široký, výrazné lícní kosti",
-            "Lebka": "střední (mesocefalie)",
-            "Čelist": "nevystupující brada",
-            "Oblast": "východní Evropa",
+            "Stature": "small",
+            "Body_height" : "163",
+            "Pigmentation": "darker - colors" + random.choice(("almond", "olive", "walnut")),
+            "Nose": "wide, flat",
+            "Hair": "dark" + random.choice(("brown", "black", "gray")),
+            "Eyes": "dark " + random.choice(("brown", "green")),
+            "Face": "medium width, prominent cheekbones",
+            "Skull": "medium (mesocephaly)",
+            "Jaw": "no protruding chin",
+            'Region': 'Eastern Europe',
         },
         'Oriental' : {
-            "Vzrůst" : "malý až střední",
-            "Postava" : "štíhlá (respiratorní)",
-            "Pigmentace" : "snědá - barvy " + random.choice(("mandle", "olivy", "vlašský ořech")),
-            "Nos" : "úzký, vysoký",
-            "Rty" : "plné",
-            "Vlasy" : "tmavě " + random.choice(("hnědé", "černé", "šedé")),
-            "Oči" : "tmavě " + random.choice(("hnědé", "černé", "zelené")),
-            "Obličej" : "vysoký, převážně úzký a rovný",
-            "Lebka" : "dlouhá (dolichocefalie)",
-            "Oblast" : random.choice((
-                "severní Afrika",
-                "Blízký východ",
-                "Arábie",
-                "Libanon",
-                "Irák",
-                "Sýrie",
-                "Turecko",
-                "Degestán a Írán",
+            "Stature" : "small to medium",
+            "Build" : "slender (respiratory)",
+            "Pigmentation" : "brown - colors" + random.choice(("almond", "olive", "walnut")),
+            "Nose" : "narrow, high",
+            "Lips" : "full",
+            "Hair" : "dark" + random.choice(("brown", "black", "gray")),
+            "Eyes" : "dark " + random.choice(("brown", "black", "green")),
+            "Face" : "tall, mostly narrow and straight",
+            "Skull" : "long (dolichocephaly)",
+            "Region" : random.choice((
+                "North Africa",
+                "Middle East",
+                "Arabia",
+                "Lebanon",
+                "Iraq",
+                "Syria",
+                "Turkey",
+                "Degestan and Iran",
             ))
         }
     },
     'African' : {
         'Hamitic' : {
-            "stature" : "medium",
-            "build" : "stocky",
+            "Stature" : "medium",
+            "Build" : "stocky",
             "Limbs" : "short",
             "Pigmentation" : "brown - color" + random.choice(("almond", "olive", "walnut")),
             "Nose" : "straight",
@@ -344,7 +342,7 @@ race_details = {
             "Skull" : "long (dolichocephaly)",
             "Forehead" : "low, round",
             "Jaw" : "low, receding chin",
-            "area" : random.choice((
+            "Region" : random.choice((
                 "North Africa",
                 "East Africa",
                 "southern Africa",
@@ -392,8 +390,20 @@ race_details = {
 
 if any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
     race_chosen=race_details[race_choice]
+    race_chosen_data=""
     # print("\n", race_details[race_choice].items(), "\n")
+    make_list = list(Height)
+    HEIGHT = random.choice(make_list)
+    HEIGHT = (HEIGHT.value)
 else: 
     race_chosen=random.choice(list(race_details[race_choice].items()))
+    race_chosen_data=race_details[race_choice][race_chosen[0]]
     # print(random.choice(list(race_details[race_choice].items())), "\n")
 
+thus = race_chosen_data
+if thus !="":
+    for key, value in thus.items():
+        if thus['Eyes']:
+            HEIGHT = thus['Eyes']
+        elif thus['Oči']:
+            HEIGHT = thus['Oči']

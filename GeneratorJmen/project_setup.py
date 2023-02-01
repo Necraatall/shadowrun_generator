@@ -144,7 +144,7 @@ def write_results():
     print(f"Sexual preferency: {SEXUAL_PREFERENCY_LIST}")
     print(f"Physical age: {Age.PHYSICAL_AGE.value}")
     
-    # TODO dict race print zakomponovat do vseho
+    # TODO dict race print zakomponovat do vseho vcetne randomu vysky
     if not any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
         print("Origin: \n")
         original_race_help = race_chosen[0]

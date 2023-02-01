@@ -23,8 +23,8 @@ class Weight(Enum):
     THIN_WEIGHT = "thin weight"
 
 make_list = list(Weight)
-WEIGHT = random.sample(make_list, 2)
-WEIGHT = (WEIGHT[0].value, WEIGHT[1].value)
+WEIGHT = random.choice(make_list)
+WEIGHT = (WEIGHT.value)
 
 class Body(Enum):
     VERY_WELL_BUILT_BODY = "very well-built"
@@ -36,8 +36,8 @@ class Body(Enum):
     SLENDER_BUILD_BODY = "slender build"
 
 make_list = list(Body)
-BODY = random.sample(make_list, 2)
-BODY = (BODY[0].value, BODY[1].value)
+BODY = random.choice(make_list)
+BODY = (BODY.value)
 
 class Body_shape(Enum):
     BOTTOM_HOURGLASS = "bottom hourglass"
@@ -53,8 +53,8 @@ class Body_shape(Enum):
     TRAPEZOID = "trapezoid"
 
 make_list = list(Body_shape)
-BODY_SHAPE = random.sample(make_list, 2)
-BODY_SHAPE = (BODY_SHAPE[0].value, BODY_SHAPE[1].value)
+BODY_SHAPE = random.choice(make_list)
+BODY_SHAPE = (BODY_SHAPE.value)
 
 
 eye_color = ('brown', 'black', 'blue', 'green', 'yellow')

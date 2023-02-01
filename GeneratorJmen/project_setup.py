@@ -121,7 +121,7 @@ from GeneratorSocial.Data.characteristics import *
 
 
 def write_results():
-    # TODO list
+    print("Gender", GENDER)
     # Todays is only for set uped languages
     tribe_name_origin = tribe_name_origin_input()
     tribe_surname_origin = tribe_surname_origin_input()
@@ -139,28 +139,31 @@ def write_results():
         )
         print(God.get_random_tribe_god_with_abouts())
 
-    print("Gender", GENDER)
+    
     make_atributes_loop()
 # TODO: nutno rozvrhnout lepe jak ma vypadat vystup
     print("Visage:")
-    print(SOCIAL_CLASS)
-    print(HEIGHT)
-    print(WEIGHT)
-    print(BODY)
-    print(BODY_SHAPE)
-    print(HAIR_LONGINESS)
-    
+    print("Social Class: ", SOCIAL_CLASS)
+    print("Height: ", HEIGHT)
+    print("Weight: ", WEIGHT)
+    print("Body: ", BODY)
+    print("Body shape: ", BODY_SHAPE)
+    print("Hair longiness: ", HAIR_LONGINESS)
+    print("Character:")
+    print("Sexual preferency: ", SEXUAL_PREFERENCY_LIST)
+    print("Positive characteristics: ", POSITIVE_CHARACTERISTIC[0], ",", POSITIVE_CHARACTERISTIC[1])
+    print("Negative characteristics: ", NEGATIVE_CHARACTERISTIC[0], ",", NEGATIVE_CHARACTERISTIC[1])
 # print(random.choice(tuple(Tribe_name_origin)).value)
 # print(random.choice(tuple(Tribe_surname_origin)).value)
 
 # print(SEXUAL_PREFERENCY_LIST)
-print(POSITIVE_CHARACTERISTIC)
+# print(POSITIVE_CHARACTERISTIC)
 
 
-value = random.choice(list(Hair_types))
-print (value.value)
+# value = random.choice(list(Hair_types))
+# print (value.value)
 
-print()
+# print()
 
 @staticmethod
 def tribe_name_origin_input():

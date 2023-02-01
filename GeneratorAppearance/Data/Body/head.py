@@ -1,5 +1,6 @@
 from enum import Enum
 import random
+from ..Body.body import *
 
 class Face_shape(Enum):
     OVAL_FACE_SHAPE = "Oval" 
@@ -11,8 +12,27 @@ class Face_shape(Enum):
     HEART_FACE_SHAPE = "Heart"
 
 make_list = list(Face_shape)
-FACE_SHAPE = random.choice(make_list)
-FACE_SHAPE = (FACE_SHAPE.value)
+if not any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
+    if race_chosen[0]=='Hamitic' :
+        face_shape = "Round"
+
+    if race_chosen[0]=='Alpine':
+        face_shape = "Round"
+
+    if race_chosen[0]=='Mediterran':
+        face_shape = "Oval"
+
+    if race_chosen[0]=='Falian':
+        face_shape = "Square"
+    
+    if not any(s in race_choice for s in ('Hamitic', 'Alpine', 'Mediterran', 'Falian')):
+        face_shape = random.choice(make_list)
+        face_shape = (face_shape.value)
+
+else: 
+    face_shape = random.choice(make_list)
+    face_shape = (face_shape.value)
+FACE_SHAPE = face_shape
 
 class Long_hair_styles(Enum):
     SHAG_HAIRCUT = "shag haircut"

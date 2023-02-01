@@ -127,32 +127,37 @@ def write_results():
     nickname = nicknames.Nickname.get_random_tribe_nickname()
 
     if tribe_name_origin is not None or tribe_surname_origin is not None:
-        print(tribe_name_origin + " \"" + nickname + "\" " + tribe_surname_origin)
+        print(tribe_name_origin + " \"" + nickname + "\" " + tribe_surname_origin, "\n")
         print(God.get_random_tribe_god_with_abouts())
 
     else:
         print(
             names.Name.get_random_tribe_name()
             + " \"" + nicknames.Nickname.get_random_tribe_nickname() + "\" " +
-            surname.get_random_tribe_surname()
+            surname.get_random_tribe_surname(), "\n"
         )
         print(God.get_random_tribe_god_with_abouts())
 
     make_atributes_loop()
 
+    print(f"\nGender: {GENDER}")
+    print(f"Sexual preferency: {SEXUAL_PREFERENCY_LIST}")
+    print(f"Physical age: {Age.PHYSICAL_AGE.value}")
     print("\nVisage:")
+    print(f"Appearence age: {Age.APPEARENCE_AGE.value}")    
     print(f"Social Class: {SOCIAL_CLASS}")
     print(f"Height: {HEIGHT}")
     print(f"Weight: {WEIGHT}")
     print(f"Body: {BODY}")
     print(f"Body shape: {BODY_SHAPE}")
     print(f"Face and Hair: {FACE_AND_HAIR}")
-   
-    
+
     print("\nCharacter:")
-    print(f"Sexual preferency: {SEXUAL_PREFERENCY_LIST}")
+    print(f"Psychical age: {Age.PSYCHICAL_AGE.value}")
     print(f"Positive characteristics: {POSITIVE_CHARACTERISTIC[0]}, {POSITIVE_CHARACTERISTIC[1]}")
     print(f"Negative characteristics: {NEGATIVE_CHARACTERISTIC[0]}, {NEGATIVE_CHARACTERISTIC[1]}")
+
+    print(age_appearance, physical_age, psychical_age)
 # print(random.choice(tuple(Tribe_name_origin)).value)
 # print(random.choice(tuple(Tribe_surname_origin)).value)
 

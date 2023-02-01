@@ -1,6 +1,7 @@
 from enum import Enum
 import random
 
+
 class Height(Enum):
     VERY_TALL_HEIGHT = "very tall"
     TALL_HEIGHT = "tall"
@@ -25,6 +26,23 @@ class Weight(Enum):
 make_list = list(Weight)
 WEIGHT = random.choice(make_list)
 WEIGHT = (WEIGHT.value)
+
+age_appearance = random.randrange(0, 2, 1)
+physical_age = random.randrange(6, 60, 1)
+psychical_age = 0
+if age_appearance == 0:
+    psychical_age = random.randrange((physical_age//2), (physical_age - (physical_age//4)+1), 1)
+    appearence_age = random.randrange((physical_age//2), (physical_age - (physical_age//3)+1+3), 1)
+else: 
+    psychical_age = random.randrange((physical_age//2), (physical_age + (physical_age//4)-1), 1)
+    appearence_age = random.randrange((physical_age//2), (physical_age + (physical_age//3)-1+5), 1)
+
+
+class Age(Enum):
+    PHYSICAL_AGE = physical_age
+    PSYCHICAL_AGE = psychical_age
+    APPEARENCE_AGE = appearence_age
+
 
 class Body(Enum):
     VERY_WELL_BUILT_BODY = "very well-built"
@@ -61,14 +79,14 @@ eye_color = ('brown', 'black', 'blue', 'green', 'yellow')
 hair_color = ('auburn', 'brown', 'black', 'blonde', 'copper', 'ginger', 'golden', 'grey', 'mouse', 'red', 'dark brown', 'white')
 skin_tone = ('almond', 'brown', 'bronze', 'chocolate', 'cocoa', 'dark chocolate', 'fair', 'light', 'olive', 'pale', 'walnut')
 
-race_choice = "Europoidic"
-# race_choice = random.choice('Europoidic', 'Caucasian', 'Latino/Hispanic', 'African', 'Caribbean', 'Middle_Eastern', 'South_Asian', 'East_Asian', 'Mixed')
+# race_choice = "Europoidic"
+race_choice = random.choice(('Europoidic', 'Caucasian', 'Latino/Hispanic', 'African', 'Caribbean', 'Middle_Eastern', 'South_Asian', 'East_Asian', 'Mixed'))
 if race_choice == 'Europoidic':
-    sub_race_europoidic_choice = ('Nordic', 'Falian', 'Baltic', 'Mediterran', 'Dinaric', 'Alpine')
+    sub_race_europoidic_choice = random.choice(('Nordic', 'Falian', 'Baltic', 'Mediterran', 'Dinaric', 'Alpine'))
 if race_choice == 'Middle_Eastern':
-    sub_race_middle_eastern_choices = ('Hamitic', 'Sudeten', 'Oriental')
+    sub_race_middle_eastern_choices = random.choice(('Hamitic', 'Sudeten', 'Oriental'))
 if race_choice == 'African':
-    sub_race_african_choice = ('Hamitic')
+    sub_race_african_choice = random.choice(('Hamitic'))
 
 race_details = {
     'Europoidic' : {
@@ -309,69 +327,73 @@ race_details = {
                 "Turecko",
                 "Degestán a Írán",
             ))
+        }
     },
     'African' : {
         'Hamitic' : {
-            "Vzrůst" : "vysoký",
-            "Postava" : "hodně astenická (respiratorní)",
-            "Pigmentace" : "světle " + random.choice(("čokoládová", "kakaová", "ořechová")),
-            "Nos" : "rovný",
-            "Rty" : "masité",
-            "Vlasy" : "kudrnatě " + random.choice(("hnědé", "černé", "šedé")),
-            "Oči" : "tmavě "+ random.choice(("hnědé", "černé")),
-            "Obličej" : "vysoký",
-            "Lebka" : "dlouhá (dolichocefalie)",
-            "Oblast" : random.choice((
-                "severní Afrika",
-                "východní Afrika",
-                "jižní Afrika",
+            "stature" : "medium",
+            "build" : "stocky",
+            "Limbs" : "short",
+            "Pigmentation" : "brown - color" + random.choice(("almond", "olive", "walnut")),
+            "Nose" : "straight",
+            "Lips" : "fleshy",
+            "Hair" : "dark" + random.choice(("brown", "black", "grey")) + ", curly, eyebrows often knitted",
+            "Eyes" : "dark " + random.choice(("brown", "black")),
+            "Ears" : "large",
+            "Face" : "tall",
+            "Skull" : "long (dolichocephaly)",
+            "Forehead" : "low, round",
+            "Jaw" : "low, receding chin",
+            "area" : random.choice((
+                "North Africa",
+                "East Africa",
+                "southern Africa",
             ))
         }
     },
     'Caribbean' : {
-        "eye_color" : (eye_color[0], eye_color[1],eye_color[3]),
-        "hair_color" : (hair_color[1],hair_color[2],hair_color[7]),
-        "skin_tone" : (skin_tone[10], skin_tone[4],skin_tone[3],skin_tone[5])
+        "eye_color" : random.choice((eye_color[0], eye_color[1],eye_color[3])),
+        "hair_color" : random.choice((hair_color[1],hair_color[2],hair_color[7])),
+        "skin_tone" : random.choice((skin_tone[10], skin_tone[4],skin_tone[3],skin_tone[5]))
     },
     'Latino/Hispanic' : {
-        "eye_color" : (eye_color[0], eye_color[2], eye_color[3]), 
-        "hair_color" : (hair_color[1],hair_color[2],hair_color[7]),
-        "skin_tone" : (skin_tone[10], skin_tone[4], skin_tone[3],skin_tone[5], skin_tone[10])
+        "eye_color" : random.choice((eye_color[0], eye_color[2], eye_color[3])), 
+        "hair_color" : random.choice((hair_color[1],hair_color[2],hair_color[7])),
+        "skin_tone" : random.choice((skin_tone[10], skin_tone[4], skin_tone[3],skin_tone[5], skin_tone[10]))
     },
     'Caucasian' : {
-        "eye_color" : (eye_color[0], eye_color[2], eye_color[3]),
+        "eye_color" : random.choice((eye_color[0], eye_color[2], eye_color[3])),
         "hair_color" : hair_color,
-        "skin_tone" : (skin_tone[9], skin_tone[9],skin_tone[8],skin_tone[7],skin_tone[2])
+        "skin_tone" : random.choice((skin_tone[9], skin_tone[9],skin_tone[8],skin_tone[7],skin_tone[2]))
     },
     'South_Asian' : {
-        "eye_color" : (eye_color[0], eye_color[1]),
-        "hair_color" : (hair_color[1],hair_color[2],hair_color[7]),
-        "skin_tone" : (skin_tone[10], skin_tone[8],skin_tone[1])
+        "eye_color" : random.choice((eye_color[0], eye_color[1])),
+        "hair_color" : random.choice((hair_color[1],hair_color[2],hair_color[7])),
+        "skin_tone" : random.choice((skin_tone[10], skin_tone[8],skin_tone[1]))
     },
     'East_Asian' : {
-        "eye_color" : (eye_color[0], eye_color[1]),
-        "hair_color" : (hair_color[10], hair_color[2],hair_color[7], hair_color[11]),
-        "skin_tone" : (skin_tone[9], skin_tone[6], skin_tone[7] ,skin_tone[1])
+        "eye_color" : random.choice((eye_color[0], eye_color[1])),
+        "hair_color" : random.choice((hair_color[10], hair_color[2],hair_color[7], hair_color[11])),
+        "skin_tone" : random.choice((skin_tone[9], skin_tone[6], skin_tone[7] ,skin_tone[1]))
     },
     'Mixed' : {random.choice((
-        'Mestic - potomek Evropana a původního amerického indiána',
-        'Mulat - potomek bělocha a černocha',
-        'Zambaigo - potomek východního asiata a původního Američana/ eskymáka',
-        'Zambo - potomek černocha a Původního Američana',
-        'Kajot - potomek mestica a mulata',
+        'Mestic - descendant of a European and a Native American Indian',
+        'Mulat - the offspring of a white man and a black man',
+        'Zambaigo - descendant of an East Asian and a Native American/Eskimo',
+        'Zambo - descended from a black man and a Native American',
+        'Kajot - descendant of a mestizo and a mulatto',
         )):
         {
         "eye_color" : (eye_color),
-        "hair_color" : (hair_color[1],hair_color[2],hair_color[7],hair_color[3],hair_color[9]),
-        "skin_tone" : (skin_tone[9], skin_tone[6], skin_tone[7] ,skin_tone[2], skin_tone[2], skin_tone[8], skin_tone[3])
+        "hair_color" : random.choice((hair_color[1],hair_color[2],hair_color[7],hair_color[3],hair_color[9])),
+        "skin_tone" : random.choice((skin_tone[9], skin_tone[6], skin_tone[7] ,skin_tone[2], skin_tone[2], skin_tone[8], skin_tone[3]))
     }}
 }
-}
 
-# print(race_details[race_choice])
+if any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
+    race_chosen=race_details[race_choice]
+    # print("\n", race_details[race_choice].items(), "\n")
+else: 
+    race_chosen=random.choice(list(race_details[race_choice].items()))
+    # print(random.choice(list(race_details[race_choice].items())), "\n")
 
-# print(race_choice, 'eye_color is : ', random.choice(race_details[race_choice][]['eye_color']))
-# print(race_choice, 'hair_color is : ', random.choice(race_details[race_choice]['hair_color']))
-# print(race_choice, 'skin_tone is : ', random.choice(race_details[race_choice]['skin_tone']))
-
-print(*[str(k) + ': ' + str(v) for k,v in race_details[race_choice].items()], sep='\n')

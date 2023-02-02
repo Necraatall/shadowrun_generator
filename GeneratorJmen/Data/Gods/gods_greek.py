@@ -50,142 +50,203 @@ intent_gods_gk = (
 
 intent_gods_about_gk = (
 	{
-	0:"Bohyně osudu, před níž nikdo neunikne...Nymfa Adrásteia spolu se svou sestrou Ídaiou vychovala nejvyššího boha Dia. Jiná Adrásteia byla fryžská bohyně hor a někdy byla ztotožňována s bohyní odplaty Nemesis."
+	1: "The goddess of fate, from whom no one can escape...The nymph Adrasteia, together with her sister Idaia, \
+raised the supreme god Zeus. Another Adrasteia was the Phrygian goddess of the mountains and was sometimes identified with Nemesis, \
+the goddess of retribution.",
 	},
 	{
-	1:"Dcera Dia a Diony, bohyně lásky a krásy, bývá vyobrazena s růží, nebo vystupující z mušle. Byla manželkou boha Héfaista, avšak otcem jejích synů, Foba, Deima a Eróta, a dcery Harmonie byl bůh války Árés. S bohem obchodu a pocestných Hermem měla syna Hermafrodíta a s bohem moře Poseidónem měla další dva syny, Rhoda a Hérofila. Bohu vína Dionýsovi zplodila syna Priápa."
+	2: "The daughter of Zeus and Dido, the goddess of love and beauty, is usually depicted with a rose, or emerging from a shell. \
+She was the wife of the god Hephaestus, but the father of her sons, Phobos, Deimos and Eros, and daughter Harmonia, was the god of war, Ares. \
+With Hermes, the god of trade and travellers, she had a son, Hermaphroditus, and with Poseidon, the god of the sea, she had two more sons, \
+Rhodes and Herophilus. To the god of wine, Dionysus, she bore a son, Priapus.",
 	},
 	{
-	2:"Syn Ókeana a Téthye(podle jiné verze syn Héliose a bohyně země Gaiy), bůh nějvětší řeky v Řecku Achelóos a vládce všech řek. Bojoval s hrdinou Héraklem o krásnou Déianeiru, dceru kalydónského krále Oinea. V souboji se změnil v hada a Héraklés ho téměř zardousil. Proměnil se v býka a Héraklés mu v souboji ulomil jeden roh, který pak bohyně Néreovny naplnily různými plody a jako roh hojnosti ho daroval nejvyššímu bohu Diovi."
+	3: "Son of Okeanos and Thetis(according to another version, son of Helios and the earth goddess Gaia), \
+god of the greatest river in Greece, Achelóos and ruler of all rivers. He fought with the hero Heracles for the beautiful Déianeira, \
+daughter of the Calydonian king Oineus. In the fight, he turned into a snake and was nearly strangled by Heracles. \
+He turned into a bull, and Hēraklēs broke off one of his horns in the duel, \
+which the goddess Néreovna then filled with various fruits and presented as a horn of plenty to the supreme god Zeus.",
 	},
 	{
-	3:"Syn bohyně noci Nykty a boha věčné tmy Ereba. Bůh jasného světla a čistého vrchního vzduchu. Často bývá ve společnosti své sestry, bohyně jasného dne Hémery."
+	4: "Son of Nykta, goddess of night, and Erebus, god of eternal darkness. God of bright light and pure upper air. \
+He is often in the company of his sister, the goddess of the bright day, Hemer.",
 	},
 	{
-	4:"Zrodila ji bez otce bohyně temné noci Nyx. Bohyně klamu nebo klam sám. Vycházela z temnot jak na zem mezi lidi, tak na Olymp mezi bohy. Proti její moci byli bezmocní jak lidé tak sami bohové."
+	5: "She was born fatherless by Nyx, goddess of the dark night. The goddess of deception or deception itself. \
+She came out of the darkness both to earth among men and to Olympus among the gods. \
+Against her power, both men and the gods themselves were powerless.",
 	},
 	{
-	5:"Syn Dia a bohyně Léto, bratr Artemis, otec Orfea, bůh slunečního světla a krásy, věštby, básnického umění, hudby, také moru, uzdravení a lukostřelby. Bývá vyobrazen s vavřínem, lyrou a flétnou."
+	6: "Son of Zeus and the goddess Summer, brother of Artemis, father of Orpheus, god of sunlight and beauty, \
+divination, poetic art, music, also of plague, healing and archery. He is depicted with laurel, lyre and flute.",
 	},
 	{
-	6:"Dcera Dia a Léty,sestra Apollóna, bohyně měsíce a lovu. Bývá vyobrazena se šípy, někdy s lukem. Podle mytologie se narodila v podobě srny o den dříve než její bratr Apollón. Matce potom pomáhala s jeho porodem, proto bývala označována také jako ochránkyně matek. Obdobně jako její bratr mohla rozdávat smrt nebo nemoc, ale mohla také léčit."
+	7: "Daughter of Zeus and Lethe,sister of Apollo, goddess of the moon and hunting. She is depicted with arrows, \
+sometimes with a bow. According to mythology, she was born in the form of a doe a day earlier than her brother Apollo. \
+She then helped her mother with his birth, which is why she was also known as the protector of mothers. \
+Like her brother, she could deal out death or disease, but she could also heal.",
 	},
 	{
-	7:"Syn Appolónův, bůh lékařství. Konkrétní osoba, která žila v Řecku ve 13. století př. n. l. Společně se svou dcerou Hygieí provozovali léčitelství a položili základy moderního lékařství. Časem byli oba díky svým údajným nadpřirozeným schopnostem prohlášeni za bohy. Asképios bývá často přirovnáván k egyptskému učenci a lékaři Imhotepovi. V mýtech se tvrdí, že byl synem Apollónovým. Ten jej dal na výchovu k Kentauru Cheirónovi a u toho se Asklépios naučil lékařskému umění.Asklépiovi synové Macháón a Podaleirios byli slavní lékaři Achájů před Trójou. Jeho dcerou byla bohyně zdraví Hygieia. Když Asklépios křísil i mrtvé, zabil ho Zeus bleskem. Apollón pak za to Diovi zahubil Kyklopy, kteří pro něho kovali blesky."
+	8: "Son of Appollo, god of medicine. A particular person who lived in Greece in the 13th century B.C. \
+Together with his daughter Hygieia, they practiced medicine and laid the foundations of modern medicine. \
+In time, both were declared gods due to their supposed supernatural abilities. \
+Ascepias is often compared to the Egyptian scholar and physician Imhotep. \
+In myth, he is said to have been the son of Apollo. \
+He had him educated by the centaur Cheiron, and it was there that Asclepius learned the art of medicine.Asclepius' \
+sons Machaon and Podaleirios were famous physicians to the Achaeans before Troy. His daughter was the goddess of health, Hygieia. \
+When Asclepius was raising the dead, Zeus killed him with a bolt of lightning. \
+\"Apollo, in retaliation, killed the Cyclopes who forged lightning for Zeus.",
 	},
 	{
-	8:"Dcera Dia a Themidy (nebo také Titána Koia a Foibé). Symbol ctnosti, bohyně spravedlnosti. Manželkoa Titána Persa, s ním zplodila Hekaté, bohyni podsvětí."
+	9: "Daughter of Zeus and Themis (or also of the Titan Koi and Phoibe). Symbol of virtue, goddess of justice. \
+Wife of the Titan Perseus, with whom she begat Hecate, goddess of the underworld.",
 	},
 	{
-	9:"Dcera Dia a Métidy. Bohyně bojovnosti, spravedlnosti, moudrosti umění, ochránkyně práva. Ochránkyně mužů. Vyobrazena bývá ve zbroji v helmici, se štítem a kopím. o jejím původu koluje mnoho mýtů. Nejznámější je ten, že když Zeus zatoužil po Titánce Métydě, ta mu dlouho v různých proměnách unikala. Nakonec ji dostihl a zplodil s ní Athénu. Pak se však zalekl proroctví, že pokud s Métidou zplodí syna, svrhne jej z trůnu stejně jako kdysi on svého otce Krona. Métidu raději pozřel. Avšak po čase jej začala bolet hlava. Bůh Hermés proto společně s Prométheem pomocí palice a klínu udělali Diovi do lebky otvor, aby mu pomohli. Z otvoru pak vyskočila Athéna."
+	10: "Daughter of Zeus and Medea. Goddess of warrior, justice, wisdom of art, protector of the law. \
+Protector of men. She is depicted in armour, wearing a helmet, with a shield and a spear. There are many myths about her origin. \
+The most famous is that when Zeus longed for the Titaness Meteida, she eluded him for a long time in various guises. \
+He finally caught up with her and fathered Athena. But then he was frightened by a prophecy that if he fathered a son by Medea, \
+he would dethrone him, just as he had once dethroned his father, Cronus. He devoured Medea instead. \
+But after a while, he got a headache. So the god Hermes, together with Prometheus, used a club and a wedge to make a hole in Zeus' \
+skull to help him. Then Athena jumped out of the hole.",
 	},
 	{
-	10:"Syn Dia a Héry , bůh války a bojů. Neuznával žádné vyjednávání, nezáleželo mu na důvodu války. Ve svém živlu byl jen uprostřed krutých bojů a potoky krve. Jeho stálými průvodci byli synové Deimos - zosobnění děsu a Fobos - zosobnění hrůzy. Byl sice zkušeným válečníkem a podporoval tu či onu stranu, jak se mu zlíbilo, často ale bývá líčen i jako zbabělec, který po zranění z bojiště utekl. Udajně byl velice pohledný, proto se do něho zamilovala sama bohyně lásky Afrodíté, manželka ošklivého boha Héfaista. Ta mu pak porodila syny byli Deimose, Fobose, Eróse, Anteróse a dceru Harmonii."
+	11: "Son of Zeus and Hera, god of war and battle. He didn't recognize any negotiation, didn't care about the reason for the war. \
+He was in his element only in the midst of vicious battles and torrents of blood. His constant companions were his sons Deimos, \
+the personification of terror, and Phobos, the personification of terror. \
+Although he was a skilled warrior and supported one side or the other as he pleased, \
+he is often portrayed as a coward who fled the battlefield after being wounded. He was supposedly very handsome, \
+which is why the goddess of love Aphrodite, wife of the ugly god Hephaestus, fell in love with him. \
+She bore him sons, Deimos, Phobos, Eros, Anteros and a daughter, Harmonia.",
 	},
 	{
-	11:"Syn Titána Astraia a Éós, bůh severního větru."
+	12: "Son of the Titan Astraia and Éós, god of the north wind.",
 	},
 	{
-	12:"Dcera Diova. Krétská bohyně lovu a rybářů."
+	13: "Daughter of Zeus. Cretan goddess of hunting and fishermen.",
 	},
 	{
-	13:"Dcera Króna a Rheie, ochránkyně rolníků, bohyně úrody. Vyobrazena bývá nesoucí koš na hlavě, nebo s věncem."
+	14: "Daughter of Cronus and Rhea, protector of the peasants, goddess of the harvest. \
+She is depicted carrying a basket on her head or wearing a wreath.",
 	},
 	{
-	14:"Dcera Dia a Themis, bohyně spravedlnosti."
+	15: "Daughter of Zeus and Themis, goddess of justice.",
 	},
 	{
-	15:"Dcera Ókeana a Téthye, nebo také Krona a Gaie, bohyně zúrodňujícího deště a bohyně dubu, na němž hnízdila holubice (symbol lásky)."
+	16: "Daughter of Okeanus and Thetis, or also of Cronus and Gaia, goddess of the fertilizing rain and goddess \
+of the oak tree on which the dove (symbol of love) nested.",
 	},
 	{
-	16:"Syn Dia a Semely, bůh vína a radovánek. Často zobrazován na vývěsních štítech vináren."
+	17: "Son of Zeus and Semele, god of wine and revelry. Often depicted on the signboards of wine bars.",
 	},
 	{
-	17:"Dcera Dia a Héry, bohyně přinášející porodní bolesti a svou přítomností usnadňující porod."
+	18: "Daughter of Zeus and Hera, goddess of labor pains and of facilitating childbirth by her presence.",
 	},
 	{
-	18:"Dcera Titánů Hyperiona a Theie, bohyně úsvitu a ranních červánků (Jitřenka)."
+	19: "Daughter of the Titans Hyperion and Theia, goddess of the dawn and morning reds (Morningstar).",
 	},
 	{
-	19:"Dcera Gaye, starší než olympští bohové, bohyně pomsty a kletby, trestající posmrtně"
+	20: "Daughter of Gaea, older than the Olympian gods, goddess of vengeance and curses, punishing posthumously.",
 	},
 	{
-	20:"Dcera Nykty (Noci), bohyně sváru."
+	21: "Daughter of Nykta (Night), goddess of strife.",
 	},
 	{
-	21:"Syn Ponta a Gaie, vládce všech mořských příšer."
+	22: "Son of Pontus and Gaia, ruler of all sea monsters.",
 	},
 	{
-	22:"Dcera Chaosu, bohyně Země (matka všeho), plodnosti a mrtvých, matka Titánů."
+	23: "Daughter of Chaos, goddess of the Earth (mother of all), fertility and the dead, mother of the Titans.",
 	},
 	{
-	23:"Dcera Nérea a Doris, bohyně moří."
+	24: "Daughter of Nereus and Doris, goddess of the seas.",
 	},
 	{
-	24:"Syn Krona a Rheiy,bratr Dia a Poseidona, bůh podsvětí, vládce nad dušemi mrtvých."
+	25: "Son of Cronus and Rhea, brother of Zeus and Poseidon, god of the underworld, ruler over the souls of the dead.",
 	},
 	{
-	25:"Dcera boha války Area a bohyně lásky Afrodíty, manželka prvního thébského krále Kadma. Když byl její manžel bohy proměněn v hada, přála si jej následovat. Přání jí bylo splněno a stala se také hadem."
+	26: "Daughter of the god of war Ares and the goddess of love Aphrodite, wife of the first Theban king Cadmus. \
+When her husband was turned into a serpent by the gods, she wished to follow him. Her wish was granted and she became a serpent too.",
 	},
 	{
-	26:"Dcera Dia a Héry, bohyně mládí."
+	27: "Daughter of Zeus and Hera, goddess of youth.",
 	},
 	{
-	27:"Syn Dia a Héry, bůh ohně, ochránce kovářů."
+	28: "Son of Zeus and Hera, god of fire, protector of blacksmiths.",
 	},
 	{
-	28:"Dcera Titána Persa a Asterie, bohyně strašidel a kouzel; ochránkyně jezdců, pastýřů, rybářů a matek."
+	29: "Daughter of the Titan Perseus and Asteria, goddess of ghosts and magic; protector of horsemen, shepherds, fishermen and mothers.",
 	},
 	{
-	29:"Syn Titánů Hyperiona a Theie, bůh slunce."
+	30: "Son of the Titans Hyperion and Theia, god of the sun.",
+	},
+		{
+	31: "Daughter of Kronos and Rhea, goddess of marriage and protector of women.",
 	},
 	{
-	30:"Dcera Krona a Rheiy, bohyně manželství a ochránkyně žen."
+	32: "Son of Zeus and Alcmene, demigod, powerful, glorious hero.",
 	},
 	{
-	31:"Syn Diův a Alkmenin, polobůh, silný slavný hrdina."
+	33: "Son of Zeus and Maia, messenger of the gods, protector of merchants and pilgrims.",
 	},
 	{
-	32:"Syn Dia a Maie, posel bohů,ochránce obchodníků a poutníků."
+	34: "Daughter of Rhea and Kronos, goddess of the hearth and fire, protector of the family, the kindest of the gods.",
 	},
 	{
-	33:"Dcera Rhey a Krona, bohyně domácího krbu a ohně, ochránkyně rodiny, nejlaskavější z bohů."
+	35: "Daughters of the titans Atlas and Pleione, half-sisters of the Pleiades and Hesperides, brother of Hyas. \
+When their brother was killed by a lion while hunting, they could not bear the grief and committed suicide. \
+The moved Zeus then transported them into the sky to the constellation of the bull.",
 	},
 	{
-	34:"Dcery titána Atlase a Pleioné, nevlastní sestry Plejády a Hesperidky, bratr Hyas. Když jejich bratra při lovu zabil lev, neunesly zármutek a spáchaly sebevraždu. Dojatý Zeus je pak přenesl na oblohu do souhvězdí býka."
+	36: "Daughter of the titan Atlas and Pleione, half-sisters of the Pleiades and Hesperides, brother of Hyas. \
+When their brother was killed by a lion while hunting, they could not bear their grief and committed suicide. \
+The moved Zeus then transported them into the sky to the constellation of the bull.",
 	},
 	{
-	35:"Dcera titána Atlase a Pleioné, nevlastní sestry Plejády a Hesperidky, bratr Hyas. Když jejich bratra při lovu zabil lev, neunesly zármutek a spáchaly sebevraždu. Dojatý Zeus je pak přenesl na oblohu do souhvězdí býka."
+	37: "Daughter of the titan Atlas and Pleione, half-sisters of the Pleiades and Hesperides, brother of Hyas.\
+ When their brother was killed by a lion while hunting, they could not bear their grief and committed suicide. \
+The moved Zeus then transported them to the sky in the constellation of the bull.",
 	},
 	{
-	36:"Dcera titána Atlase a Pleioné, nevlastní sestry Plejády a Hesperidky, bratr Hyas. Když jejich bratra při lovu zabil lev, neunesly zármutek a spáchaly sebevraždu. Dojatý Zeus je pak přenesl na oblohu do souhvězdí býka."
+	38: "Daughter of the titan Atlas and Pleione, half-sisters of the Pleiades and Hesperides, brother of Hyas. \
+When their brother was killed by a lion while hunting, they could not bear their grief and committed suicide. \
+The moved Zeus then transported them into the sky to the constellation of the bull.",
 	},
 	{
-	37:"Dcera titána Atlase a Pleioné, nevlastní sestry Plejády a Hesperidky, bratr Hyas. Když jejich bratra při lovu zabil lev, neunesly zármutek a spáchaly sebevraždu. Dojatý Zeus je pak přenesl na oblohu do souhvězdí býka."
+	39: "Daughter of the titan Atlas and Pleione, half-sisters of the Pleiades and Hesperides, brother of Hyas. \
+When their brother was killed by a lion while hunting, they could not bear their grief and committed suicide. \
+The moved Zeus then transported them to the sky in the constellation of the bull.",
 	},
 	{
-	38:"Dcera titána Atlase a Pleioné, nevlastní sestry Plejády a Hesperidky, bratr Hyas. Když jejich bratra při lovu zabil lev, neunesly zármutek a spáchaly sebevraždu. Dojatý Zeus je pak přenesl na oblohu do souhvězdí býka."
+	40: "Daughter of the titan Atlas and Pleione, half-sisters of the Pleiades and Hesperides, brother of Hyas. \
+When their brother was killed by a lion while hunting, they could not bear their grief and committed suicide. \
+The moved Zeus then transported them to the sky in the constellation of the bull.",
 	},
 	{
-	39:"Dcera titána Atlase a Pleioné, nevlastní sestry Plejády a Hesperidky, bratr Hyas. Když jejich bratra při lovu zabil lev, neunesly zármutek a spáchaly sebevraždu. Dojatý Zeus je pak přenesl na oblohu do souhvězdí býka."
+	41: "Daughter of the titan Atlas and Pleione, half-sisters of the Pleiades and Hesperides, brother of Hyas. \
+When their brother was killed by a lion while hunting, they could not bear their grief and committed suicide. \
+The moved Zeus then transported them to the sky in the constellation of the bull.",
 	},
 	{
-	40:"Dcera titána Atlase a Pleioné, nevlastní sestry Plejády a Hesperidky, bratr Hyas. Když jejich bratra při lovu zabil lev, neunesly zármutek a spáchaly sebevraždu. Dojatý Zeus je pak přenesl na oblohu do souhvězdí býka."
+	42: "Daughter of the titan Atlas and Pleione, half-sisters of the Pleiades and Hesperides, brother of Hyas. \
+When their brother was killed by a lion while hunting, they could not bear their grief and committed suicide. \
+The moved Zeus then transported them into the sky to the constellation of the bull.",
 	},
 	{
-	41:"Dcera titána Atlase a Pleioné, nevlastní sestry Plejády a Hesperidky, bratr Hyas. Když jejich bratra při lovu zabil lev, neunesly zármutek a spáchaly sebevraždu. Dojatý Zeus je pak přenesl na oblohu do souhvězdí býka."
+	43: "Daughter of Zeus and Themis, goddess of the seasons (Thalló-Spring, Auxó-Summer, Carpó-Autumn) \
+and of order in nature and society(Eunomiá-Lawfulness, Diké-Justice, Eiréné-Peace).",
 	},
 	{
-	42:"Dcera Dia a Themis, bohyně ročních období (Thalló-jaro, Auxó-léto, Karpó-podzim) a pořádku v přírodě i ve společnosti(Eunomiá-Zákonnost, Diké-Spravedlnost, Eiréné-Mír)."
+	44: "Son of Cronus and Rhea, brother of Zeus, god of the seas and oceans.",
 	},
 	{
-	43:"Syn Krona a Rheie, bratr Dia, bůh moří a oceánů."
+	45: "A beautiful royal daughter, originally human, later taken as Eroth's wife by Zeus on Opymp. Zeus gave her immortality. See also myths",
 	},
 	{
-	44:"Překrásná královská dcera, původně člověk, později vzata jako Erótova žena Diem na Opymp. Zeus jí dal nesmrtelnost. Viz také báje"
-	},
-	{
-	45:"Syn Krona a Rheie, nejvyšší bůh. Narodil se na Krétě v jeskyni v pohoří Ída (občas se uvádějí i jiné jeskyně na Krétě). Zde jej matka uschovala před jeho otcem titánem Kronem, který ze strachu před naplněním proroctví, že bude jedním ze svých synů svržen, všechny své syny ihned po narození pozřel. Živil se mlékem Amaltheie (podle jedné verze koza, podle jiné nymfa) a medem od včel. Když vyrostl, přinutil otce vydávit bratry a po desetiletém boji jej svrhl. S bratry si pak losem rozdělili vládu nad světem."
+	46: "Son of Kronos and Rhea, the supreme god. He was born in Crete in a cave in Mount Ida (other caves in Crete are sometimes mentioned). \
+Here his mother kept him from his father, the titan Kronos, who, fearing the fulfilment of the prophecy \
+that he would be overthrown by one of his sons, devoured all his sons immediately after birth. \
+He fed on the milk of Amalthea (according to one version a goat, according to another a nymph) and honey from bees. \
+When he grew up, he forced his father to give up his brothers and overthrew him after a ten-year struggle. \
+He and his brothers then divided the rule of the world by lot.",
 	}
-
 )

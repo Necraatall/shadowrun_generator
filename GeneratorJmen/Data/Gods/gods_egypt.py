@@ -155,3 +155,181 @@ intent_gods_about_eg = (
         38:"Starověká bohyně Vadžet byla téměř vždy zobrazována jako kobra s červenou korunou Dolního Egypta. Egypťané považovali kobru za symbol svrchovanosti. Svůj kult měla v Bútó v nilské Deltě. Její jméno znamená \"Zelená\" nebo \"Ta, které patří papyrus\". Věřilo se, že společně se supí bohyní Nechbet je ochránkyní králů."
     }
 )
+
+
+intent_gods_about_eg = (
+    {
+        1: "The earth god Aker was the personification of the eastern and western horizons, \
+which represented the entrance and exit from the underworld. It often appeared in funerary texts and paintings. \
+She was represented by two lions sitting back to back or a strip of land with a lion or human head at each end \
+(one facing east and the other facing west).",
+    },
+    {
+        2: "In the New Kingdom period, Amon gained the status of head of the pantheon. \
+He acquired such importance mainly due to the success of the local Theban rulers, who, after a period of disruption, \
+succeeded in reuniting Egypt and controlling the whole of it. The White Chapel of Pharaoh Senusret I at Karnak \
+describes Amon as the \"king of the gods\". He also gained prominence by merging with the ancient sun god Heliopolis Reem, \
+thus creating the deity Amon-Re. He was also associated with the fertility god Min - the god Amon-Min. \
+The name Amon means \"Hidden\" and one of his nicknames was \"Mysterious in Form\" \
+although he was usually depicted in human form wearing a crown with a pair of high feathers. \
+He was also represented as a ram with horns pointing inwards towards his head. His consort was the vulture goddess Mut, \
+and their offspring was the moon god Chonsu.",
+    },
+    {
+        3: "The goddess of war Anat was supposed to protect the pharaoh in battle. \
+Therefore, she was often depicted with a spear, javelin, and shield. Anat also wore a tall crown topped with feathers. \
+She came from Syropalestine - she was the goddess of the Canaanites and Phoenicians. \
+Anat is said to have been the sister or even wife of the supreme Phoenician god Baal. \
+It is evidence that the Egyptians adopted the deities of surrounding peoples.",
+    },
+    {
+        4: "Anup was the ancient god of embalming and cemeteries during the early days of the Old Kingdom, \
+before he became the god of the dead, Osiris. Prayers were made to him for the transition of the deceased to the afterlife. \
+Even later, he assisted in death sentences and accompanied the deceased to the throne of Osiris - for the ritual of weighing hearts. \
+He was depicted as a jackal or a man with a jackal's head. \
+The priests who prepared the bodies for burial wore jackal masks representing this god.",
+    },
+    {
+        5: "The goddess Astarte is very similar to the goddess Anat. She is also associated with war \
+(especially with horses and war chariots), and prayers were made to her for the protection of the ruler in war. \
+There is no mention of her cult in Egypt until the 18th Dynasty. She was usually depicted as a naked woman \
+wearing an atef crown or with bull horns on her head, riding a horse. She was considered the wife of Sutekh and daughter of Rea or Ptah.",
+    },
+    {
+        6: "Atum was a self-proclaimed creator god who rose from the primordial chaos of Num \
+to form the primordial stump of the earth and give rise to the elements in the universe. \
+As the head of the so-called Ennead (Nine Gods), he had the title \"Lord of the Sky's Boundaries\". \
+His cult centre was Heliopolis. He was often associated with royal power, believed to carry dead rulers from the pyramids to the stars. \
+Later, he became the protector of all the deceased on their journey to the afterlife.",
+    },
+    {
+        7: "The Egyptians believed that Baba killed people and fed on their entrails. \
+Blh Baba was associated with aggression and masculinity - especially of rulers. It was believed that he could ward off the danger of snakes, \
+control darkness and troubled waters. He was depicted as a baboon.",
+    },
+    {
+        8: "The goddess Bastet was the embodiment of refined femininity. Like any woman or cat in whose form she was depicted, \
+Bastet's calmness hid an unsuspected temperament that could transform her into a fearsome creature. \
+She was considered the protector of mankind. Originally a local deity, Bastet protected the city of Tell el-Basta in the north-eastern delta. \
+As relations deepened between the different regions of the country, Bastet became better known as the \"Lady of the Two Lands\". \
+The first shrine to the goddess Bastet was built in Tell el-Basta during the Old Kingdom under Pepi I, who dedicated a chapel to her. \
+It was also of great importance during the reign of the 22nd Dynasty, who came from this city and also chose it as their residential city.",
+    },
+    {
+        9: "Bes was a typical folk idol. However, he was not yet well known during the Old Kingdom and Middle Kingdom. \
+His protective power began to be invoked by the people in the New Kingdom, but it was not until the Late Kingdom \
+that he became a full-fledged deity and shrines began to be built to him. In the New Kingdom period, \
+he was particularly popular with the artisans of Dér el-Medina. However, the earliest evidence of this lion-faced dwarf is rather disputed.",
+    },
+    {
+        10: "Like Hathor, Eset was a mother goddess specified as the mother of Horus - hence the king. The idea of Eset nursing Horus \
+(especially discovered in bronze statues from the Late Roman and Greco-Roman periods) is reminiscent of Christian icons (mother and child). \
+Eset was depicted with her head adorned with a throne or sun disc framed by cow horns. \
+She was sometimes considered to be a personification of the throne. She was also often depicted with large protective wings. \
+Eset was part of the Ennead at Heliopolis, and as the wife of Osiris and mother of Horus, she appears in the triad worshipped at Abydos (Abedi). \
+Her most famous cult centre was on the island of Philae - on the southern border of Egypt near Aswan. \
+Eset was closely associated with sorcery and magic. \
+Myths often speak of her ability to heal and transform into whatever form she needed at the time. \
+Eset had two important roles - she was the \"Great White Sow of Heliopolis\" and the \"Eset-cow\" \
+who caused the birth of the holy bull Apis of Memphis (Mennofer). Her worship spread beyond Egypt to Syria, \
+Palestine, Greece and throughout the Roman Empire, and she was venerated until the advent of Christianity...",
+    },
+    {
+        11: "As the divine personification of the earth, Geb was the god of the harvest. \
+Therefore, he was sometimes depicted in green with flowers growing from his body, \
+but he was also often depicted lying under the bent body of the sky goddess Nut. \
+In the creation myth of Heliopolis, Geb and Nut were the children of the god Shu and the goddess Tefnut. \
+They were lovers who were forcibly separated by their father Shu (the god of air). Geb was also depicted in a human body, \
+sometimes with an erect pyjid. Geb occasionally wore the red crown of Lower Egypt, \
+but more often had his head decorated with a white goose. His daughter Eset may therefore have been described as a \"goose egg\". \
+Like Shu, she too had a negative relationship with Geb, reflected in the funerary religion, \
+where she was said to be able to trap the dead in their bodies. The earthquake was described as \"Geb\'s laughter.",
+    },
+    {
+        12: "The mother goddess, Hathor, was associated with love, fertility, sexuality, music, dance, and alcohol. \
+She was sometimes depicted entirely anthropomorphically, also in the shape of a cow or as a woman with cow horns. \
+If she was depicted in a human body, she may have had her head adorned with cow horns framing a sun disc or a falcon \
+perched on a necklace. She was also the goddess of the sky - she was thought to be a huge cow straddling the heavens, \
+with her legs marked by four basic points. In various guises, Hathor was worshipped as \"Lady of the West\", \
+\"Lady of the Western Mountains\", \"Lady of the City of Byblos\", \"Lady of Turquoise\" and \"Lady of Faience\". \
+\"The West\" or \"Western Mountains\" corresponds to the sunset and, by analogy, the realm of the dead. \
+Byblos was a port city on the Lebanese coast that was of great importance to Egyptian trade. \
+It was a major importer of cedar wood, as Egypt did not grow trees suitable for building ships and large buildings. \
+Like Eset, Hathor was considered the mother of the falcon god Horus and also the mother of the king (who was identified with Horus). \
+Her name means \"House of Horus\". Interestingly, inscriptions in the Temple of Horus at Edfu mention Hathor's marriage to Horus. \
+Hathor, in the form of a cow, is sometimes depicted nursing the king, who is very fond of such a diet. \
+An example of this is the magnificent statue of the 18th Dynasty pharaoh Amenhotep II (c. 1427-1400 BC) found at Dér el-Bahri. \
+The goddess Hathor was sometimes identified with the \"eye of Rea\", on other occasions she also appeared as the daughter of the sun god. \
+The main cult centre of the goddess Hathor since the Old Kingdom was Dendera. It seems that the festivals at her number were rather debauched. \
+The sign of her cult was the sistrum (rattlesnake), which was shaken during rituals. \
+In Dendera, a temple dating back to the Greco-Roman period survives, dedicated to the triad of Hathor, Horus and Ihei - Hathor's son, \
+rattling the sistrum in her honour.",
+    },
+    {
+        13: "From the beginning of the dynastic period (approximately 3100 BC), the pharaoh was closely associated with Horus. \
+He was represented as a falcon or a man with a falcon's head, and his ubiquitous symbol was the \"Eye of Horus\" (eye of the vijat). \
+In one version of the Horus-Sutech rivalry myth, Horus had both eyes gouged out. In another version, he lost (and regained) only his left eye. \
+In the form without both eyes Hor was associated with the moon, while in the form with the right eye he was associated with the sun. \
+Because in both cases his sight was eventually healed, his eye became a symbol of healing (vedjat, literally \"whole\"). \
+The eye was used as an amulet symbolizing strength and perfection, and also represented the waxing and waning of the moon. \
+Hor's name means \"He who is above\" and stems from his title of sky god and the fact that Hor was depicted as a falcon that could fly very high. \
+As \"Hor of the horizon\" he was called Harakhtey and in this concept he was merged with the sun deity Reem - Re-Harakhtey. \
+From the Late Period (c. 747 BC) he appears in the form of the child Hor-pa-chered (the Greeks called him Harpocrates) \
+on a stele known as the Horus cippus. He is usually depicted trampling crocodiles, strangling snakes, scorpions and other dangerous animals. \
+It is obvious that he was meant to be perceived as a child, as he was depicted naked, with a peculiar hairstyle known as \"curls of infancy\". \
+Horus is said to have managed to survive various dangers as a young boy, so a ritual using his likeness was performed \
+to protect children from similar dangers (or to cure snake bites and scorpion stings). \
+The cippus (enchanted with a spell) was poured over water, thus imbuing the water with magical power, \
+and then ritually drunk or applied to wounds. Hor was worshipped as part of the divine triad at the cult centre in Abydos (Abed). \
+However, Hor is usually associated with the temple at Edfu (ancient Djeba), \
+where he was worshipped as part of a triad with his wife Hathor and son Harsomtum. Hor was also closely associated with Hierankopolis \
+(the \"Falcon City\", ancient Nechen) in the south and the city of Behdet in the Nile Delta. \"Hor of Behdet\" \
+was represented as a winged sun disc.",
+    },
+    {
+        14: "Heh, the frog-headed god, was the personification of formlessness and infinity. His consort was the serpent-headed goddess Hehet. \
+He was often depicted anthropomorphically holding a palm leaf in each hand (hieroglyph for year).",
+    },
+    {
+        15: "The god Cheprer (literally \"He who begins to exist\") was the creator and sun god. \
+He was represented as a scarab - a dung beetle - or a man with the head of a dung beetle. \
+Why the dung beetle was chosen to represent the creator and rising sun god is due to the activity of the beetle. \
+He was observed rolling his eggs in dung and rolling them into a ball - this represented the sun. \
+The Egyptians observed the hatched beetles emerging from the ball of dung and were reminded of the emergence of life \
+from the primordial clod of earth, and so the dung beetles were considered capable of creating new life.",
+    },
+    {
+        16: "Chnum was an ancient god who was depicted as a man with the head of a ram or in the form of a ram. \
+The species of ram (Ovis longipes) used to represent him was the earliest species to be domesticated in Egypt \
+- it had spiral horns growing horizontally from its head. The ancient Egyptian term for \"ram\" was ba, \
+which was also a term for a principle related to the \"personhood\" of man (presumably the non-physical attributes \
+that make human existence unique, or perhaps the moral nature of human motives and actions). \
+Probably due to the ancient Egyptian penchant for puns, Chnum came to be regarded as the sun god Rea, \
+and so this god was depicted with a ram's head sailing through the underworld on a sun barge. \
+The dead man's ba was certainly more mobile than his ka (spirit). \
+Chnum's status as creator god was linked to his role as a protective deity of the potters and his association with fertile soil, \
+the annual Nile flood and the Nile cataracts. The main cult centre of Chnuma was located on the island of Elephantine \
+at the first cataract on the southern border of Egypt. Another important temple dedicated to Chnuma was located at Esna. \
+In this temple, his consort was the lion goddess Menhit, and it was here that the \"Feast of the Potter\'s Circle\" was also celebrated annually.",
+    },
+    {
+        17: "Chonsu was the son of Amon and Mut and was the god of the moon. His name means \"He who travels\", \
+which is probably derived from the movement of the moon across the sky. In the Late Period, he was also the god of medicine. \
+His main cult centre was Thebes (Veset).",
+    },
+    {
+        18: "This frog-headed god was the personification of darkness. His consort was the serpent-headed goddess Kauket.",
+    },
+    {
+        19: "The fertility god Min was depicted as a partially mummified human. His left hand held an erect pipe, his right hand was raised. \
+The typical head ornament was a pair of high lips. The signs of his cult were a bow and an unidentified object, \
+perhaps a door stopper or a notched arrow, a shining lightning bolt or a pair of petrified shells. \
+The god Min was a relatively ancient god and was also considered the protector of the mining area in the Eastern Desert. \
+His main cult centres were Koptos and Achmim (Panopolis in Greek, because the Greeks identified their god Pan with Min). \
+He was sometimes described as the son of Eseta, sometimes he was her husband, and Hor was their common son. \
+By the time of the New Kingdom, he was identified with the Theban god Amon.",
+    },
+
+
+# TODO: dodelat zbylych 20
+)

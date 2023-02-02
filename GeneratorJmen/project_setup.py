@@ -47,7 +47,7 @@ from GeneratorJmen.Data.Surname import (
 from GeneratorAppearance.Data.Body.body import *
 from GeneratorAppearance.Data.Body.head import *
 from GeneratorSocial.Data.characteristics import *
-
+from GeneratorAtributu.generator_atributu import *
 
 #TODO: asi lepe dat zdrojovy kod teto stranky a zkopnout
 #    view-source:https://www.character-generator.org.uk/bio/
@@ -127,27 +127,33 @@ def write_results():
     nickname = nicknames.Nickname.get_random_tribe_nickname()
 
     if tribe_name_origin is not None or tribe_surname_origin is not None:
-        print(tribe_name_origin + " \"" + nickname + "\" " + tribe_surname_origin, "\n")
-        print(God.get_random_tribe_god_with_abouts())
-
+        print("\n", tribe_name_origin + " \"" + nickname + "\" " + tribe_surname_origin, "\n")
+        god_name, god_definition = God.get_random_tribe_god_with_abouts()
+        print("God:", god_name, god_definition)
     else:
         print(
-            names.Name.get_random_tribe_name()
+            "\n"
+            + names.Name.get_random_tribe_name()
             + " \"" + nicknames.Nickname.get_random_tribe_nickname() + "\" " +
             surname.get_random_tribe_surname(), "\n"
         )
-        print(God.get_random_tribe_god_with_abouts())
+        god_name, god_definition = God.get_random_tribe_god_with_abouts()
+        print("God:", god_name + ", " + god_definition)
 
     make_atributes_loop()
 
     print(f"\nGender: {GENDER}")
     print(f"Sexual preferency: {SEXUAL_PREFERENCY_LIST}")
     print(f"Physical age: {Age.PHYSICAL_AGE.value}")
-    
+    if not any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
+        print(f"Human race and type: {race_choice}, {race_chosen[0]}")
+    else:
+        print(f"Human race: {race_choice}")
+
+    print(f"Metahuman race: {celk_atributy['Metatype']}")    
     # TODO dict race print zakomponovat do vseho vcetne randomu vysky
     if not any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
         print("Origin: \n")
-        original_race_help = race_chosen[0]
         original_race = race_details[race_choice][race_chosen[0]]
         for keys, value in original_race.items():
             print(f"{keys}: {value}")
@@ -165,7 +171,7 @@ def write_results():
     print(f"Psychical age: {Age.PSYCHICAL_AGE.value}")
     print(f"Positive characteristics: {POSITIVE_CHARACTERISTIC[0]}, {POSITIVE_CHARACTERISTIC[1]}")
     print(f"Negative characteristics: {NEGATIVE_CHARACTERISTIC[0]}, {NEGATIVE_CHARACTERISTIC[1]}")
-
+    print(f"Political lean: {POLITICAL_LEAN}")
 # print(random.choice(tuple(Tribe_name_origin)).value)
 # print(random.choice(tuple(Tribe_surname_origin)).value)
 

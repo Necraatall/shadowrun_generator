@@ -64,191 +64,199 @@ intent_gods_slovan = (
 	"Žywye"
 )
 
-intent_gods_about_slovan = (
+
+intent_gods_about_slovan =(
 	{
-	1:"bůh dobra a světla"
+	1: "god of good and light",
 	},
 	{
-	2:"bohyně zmiňovaná v 17. století"
+	2: "goddess mentioned in the 17th century",
 	},
 	{
-	3:"bůh zla a temnoty"
+	3: "god of evil and darkness",
 	},
 	{
-	4:"bůh Slunce, podle některých pramenů bůh východu, spravedlnosti a síly"
+	4: "the sun god, according to some sources the god of the east, justice and power",
 	},
 	{
-	5:"Venera, bohyně manželství, podle Matěje Stryjkowského plodnosti a rozkoše."
+	5: "Venera, goddess of marriage, according to Matthew Stryjkowski, of fertility and pleasure.",
 	},
 	{
-	6:"Diana, nevěsta i panna zároveň vládnoucí lesům"
+	6: "Diana, bride and maiden at the same time ruling the forests",
 	},
 	{
-	7:"bůh zmiňovaný Saskou kronikou Konráda Botha z roku 1492, jeho modlu měl zničit vévoda Lothar"
+	7: "a god mentioned by the Saxon chronicle of Konrad Botha in 1492, his idol was to be destroyed by Duke Lothar",
 	},
 	{
-	8:"místní jméno, Arnoldem z Lübecku na počátku 13. století považované za božstvo"
+	8: "a local name, considered a deity by Arnold of Lübeck in the early 13th century",
 	},
 	{
-	9:"božstvo z druhé ebsdorfské legendy, nejspíš Amon, slovanské jméno má význam „svatý býk“"
+	9: "deity from the second Ebsdorf legend, probably Amon, the Slavic name has the meaning \"holy bull\"",
 	},
 	{
-	10:""
+	10: "Unknown",
 	},
 	{
-	11:"spojována s vílami a považována za bohyni měsíce a noční oblohy"
+	11: "associated with fairies and considered the goddess of the moon and the night sky",
 	},
 	{
-	12:""
+	12: "Unknown",
 	},
 	{
-	13:"bůh plodnosti nebo jara, zobrazován jako mladík"
+	13: "god of fertility or spring, depicted as a youth",
 	},
 	{
-	14:""
+	14: "Unknown",
 	},
 	{
-	15:"Jupiter, nejvyšší bůh od kterého přichází vše příznivé i nepříznivé."
+	15: "Jupiter, the supreme god from whom all good and bad things come.",
 	},
 	{
-	16:"bůh, jehož jméno kronikář Ebbo odvodil z jména města Wolin"
+	16: "the god whose name the chronicler Ebbo derived from the name of the city of Wolin",
 	},
 	{
-	17:"bůh zmiňovaný Albinovou kronikou z roku 1519"
+	17: "the god mentioned in the 1519 chronicle of Albinus",
 	},
 	{
-	18:"bůh nejasného významu, uctíván údajně i pohanskými Sasy"
+	18: "a god of obscure meaning, supposedly worshipped by the pagan Saxons",
 	},
 	{
-	19:""
+	19: "Unknown",
 	},
 	{
-	20:"Mars, bůh války, ke kterému se modlilo za vítězství a odvahu a byl uctíván divokými obřady. Matěj z Miechova jí považuje za bohyni, která je matkou Lela a Polela a srovnává ji s Léthé."
+	20: "Mars, the god of war, to whom was prayed for victory and courage, and worshipped in fierce ceremonies. \
+Matthias of Miechov regards her as the goddess who is the mother of Lel a Polel, and compares her to Léthé.",
 	},
 	{
-	21:"blíženci Kastor a Pollux"
+	21: "the twins Kastor and Pollux",
 	},
 	{
-	22:""
+	22: "Unknown",
 	},
 	{
-	23:"Ceres, bohyně úrody a mateřství, podle Matěje Stryjkowského měla velký chrám v Hnězdně"
+	23: "Ceres, goddess of harvest and motherhood, according to Matthew Stryjkowski, had a large temple in Hnězdno",
 	},
 	{
-	24:"bohyně země a vody, slovanská forma Velké Matky"
+	24: "goddess of earth and water, Slavic form of the Great Mother",
 	},
 	{
-	25:"nejvyšší božstvo, možná polabská obdoba Svaroga"
+	25: "supreme deity, possibly the Polabian equivalent of Svarog",
 	},
 	{
-	26:"Pluto, bůh podsvětí a ochránce duší co opouští tělo. Podle Matěje Stryjkowského byl žádán o déšť a o zahnání špatného počasí. Podle některých teorií bohyně smrti a zanikání analogická řecké Enyó, jméno pak může být příbuzné se staročeským nav „zasvětí“."
+	26: "Pluto, god of the underworld and protector of souls leaving the body. \
+According to Matthew Stryjkowski, he was asked for rain and to ward off bad weather. \
+According to some theories, the goddess of death and extinction analogous to the Greek Enyó, \
+the name may then be related to the Old Czech nav \"consecrate\".",
 	},
 	{
-	27:"bohyně nápojů a měnících se osudů"
+	27: "goddess of drinks and changing fortunes",
 	},
 	{
-	28:"bůh hromu stojící v čele panteonu, někdy označován také za boha válek, bouřek a blesku"
+	28: "the god of thunder at the head of the pantheon, sometimes also called the god of war, storms and lightning",
 	},
 	{
-	29:"bůh zmiňovaný v Knýtlingasáze, jehož modla v Jasmundu byla zničená roku 1168, snad Běsomar či Bezmiar."
+	29: "a god mentioned in the Knytlingasaga, whose idol in Jasmund was destroyed in 1168, perhaps Běsomar or Bezmiar.",
 	},
 	{
-	30:"bůh ctěný v Plunu, snad bůh počasí"
+	30: "a god worshipped in Plun, perhaps a weather god",
 	},
 	{
-	31:"„počasí“, dárce vhodného povětří, podle Matěje Miechovského ctěn také jako Pochwist či Pogwizd - bůh vichru, podle Stryjkowského bůh jasných a veselých dní"
+	31:"\"weather\", the giver of suitable weather, according to Matej Miechowski also revered as Pochwist or Pogwizd \
+- the god of wind, according to Stryjkowski the god of bright and cheerful days",
 	},
 	{
-	32:"Pochvist - též Pogvizd, Pohvizd, bůh zmiňovaný v Životě sv. Vladimíra, snad bůh větru"
+	32: "Pochvist - also Pogvizd, Pohvizd, a god mentioned in the Life of St. Vladimir, perhaps the god of wind",
 	},
 	{
-	33:"syn Perunův, měl čtyři hlavy a pátou na prsou"
+	33: "son of Perun, he had four heads and a fifth on his breast",
 	},
 	{
-	34:"bůh ctěný v Korenici na Rujáně, měl pět hlav"
+	34: "a god worshipped at Corenice in Rüjana, he had five heads.",
 	},
 	{
-	35:""
+	35: "Unknown",
 	},
 	{
-	36:"bůh související s plodností, uctívaným kmenem Luticů"
+	36: "a fertility-related god worshipped by the Lutic tribe",
 	},
 	{
-	37:""
+	37: "Unknown",
 	},
 	{
-	38:"bůh kmene Ratarů, bůh slunce, války a hojnosti"
+	38: "god of the Ratara tribe, god of the sun, war and abundance",
 	},
 	{
-	39:"bůh zrodu, možná jen nižší bytost"
+	39: "god of birth, perhaps a lesser being",
 	},
 	{
-	40:"trojice bohyň osudu analogická českým Sudičkám"
+	40: "a trio of goddesses of fate analogous to the Czech Weird Sister",
+	},	
+	{
+	41: "God is worshipped in Korenica on Ruyana",
 	},
 	{
-	41:"bůh ctěný v Korenici na Rujáně"
+	42: "one of the most mysterious gods, according to one interpretation a winged dog with two claws, protecting vegetation and livestock",
 	},
 	{
-	42:"jeden z nejzáhadnějších bohů, podle jednoho výkladu to byl okřídlený pes s dvěma pařáty, chránící vegetaci a dobytek"
+	43: "god of wind and air",
 	},
 	{
-	43:"bůh větru a vzduchu"
+	44: "the god of the tribe of the Ranas inhabiting Ruyana",
 	},
 	{
-	44:"bůh kmene Ránů obývajících Rujánu"
+	45: "heavenly father of creation and celestial light, father of Dažboga and Svarožice",
 	},
 	{
-	45:"nebeský otec stvoření a nebeského světla, otec Dažboga a Svarožice"
+	46: "god of sacred fire associated with the harvest, son of Svarog",
 	},
 	{
-	46:"bůh posvátného ohně spojovaným s úrodou, syn Svaroga"
+	47: "god of the Ratars, the sacred fire associated with the harvest, son of Svarog",
 	},
 	{
-	47:"bůh Ratarů, posvátného ohně spojovaným s úrodou, syn Svaroga"
+	48: "Unknown",
 	},
 	{
-	48:""
+	49: "Unknown",
 	},
 	{
-	49:""
+	50: "Unknown",
 	},
 	{
-	50:""
+	51: "Unknown",
 	},
 	{
-	51:""
+	52: "an idol mentioned in the Knytlingasaza, revered in the Jasmund, possibly Trihlav, Chernobog or the separate god Chernohlav. \
+His idol was supposed to have a silvered beard and was destroyed 1171. Since he accompanied the army into battle \
+one might consider his warlike function.",
 	},
 	{
-	52:"modla zmiňovaná v Knýtlingasáze, ctěný v Jasmundu, možná Trihlav, Černobog či samostatný bůh Černohlav. Jeho modla měla mít postříbřené vousy a byla zničena 1171. Jelikož doprovázel vojsko do bitvy dá se uvažovat o jeho válečné funkci."
+	53: "a god worshipped mainly in Szczecin, he has a war and economic function",
 	},
 	{
-	53:"bůh ctěný hlavně ve Štětíně, má válečnou i hospodářskou funkci"
+	54: "god of unclear meaning, appears as a wealthy tsar.",
 	},
 	{
-	54:"bůh nejasného významu, objevuje jako bohatý car."
+	55: "also Turupit, a god worshipped at Garsu in Ruyana. Mentioned in the Knytlingasazi, may be related to the Estonian Tarapit or Toropec",
 	},
 	{
-	55:"též Turupit, bůh ctěný v Garsu na Rujáně. Zmiňován v Knýtlingasáze, může být příbuzný estonskému Tarapitovi či Toropcovi"
+	56: "god of water, wealth and the underworld, together with Perun the chief deity",
 	},
 	{
-	56:"bůh vody, bohatství a podsvětí, společně s Perunem hlavní božstvo"
+	57: "deity of the second Ebsdorf legend, probably personal name Itoljub or Vitold",
 	},
 	{
-	57:"božstvo z druhé ebsdorfské legendy, nejspíš osobní jméno itoljub nebo Vitold"
+	58: "cattle god, almost certainly identical with Veles",
 	},
 	{
-	58:"bůh skotu, téměř jistě totožný s Velesem"
+	59: "Unknown",
 	},
 	{
-	59:""
+	60: "goddess mentioned in the 14th century Neplach Chronicle, according to Ivanov and Toporov, perhaps a goddess of vegetation",
 	},
 	{
-	60:"bohyně zmiňovaná v Neplachově kronice ze 14. století, podle Ivanova a Toporova snad bohyně rostlinstva"
+	61: "goddess associated with fertility, perhaps a form of Mokoš",
 	},
 	{
-	61:"bohyně spojovaná s plodností, snad forma Mokoš"
-	},
-	{
-	62:"bůh života, podle Stryjkowského šumící vítr"
+	62: "god of life, according to Stryjkowski, the rustling wind",
 	}
 )

@@ -476,3 +476,19 @@ SEXUAL_PREFERENCY_LIST = random.choice((
         "stealing things.",
 
 ))
+
+
+class Political_lean(Enum):
+    APATHETIC = "apathetic"
+    FAR_LEFT = "far left"
+    LEFT = "left"
+    CENTRE = "centre"
+    RIGHT = "right"
+    FAR_RIGHT = "far right"
+    CONSTITUTIONAL_MONARCHY = "constitutional monarchy"
+    SERFDOM = "serfdom"
+    POSPOLITE = "the original pospolite"
+    MONARCHY = "monarchy"
+
+POLITICAL_LEAN = random.choice(list(Political_lean))
+POLITICAL_LEAN = POLITICAL_LEAN.value

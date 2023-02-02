@@ -19,17 +19,16 @@ from dataclasses import dataclass
 from typing import Dict
 
 # základní list s atributy, ze kterého se vybírá
-listatr = ['Body', 'Agility', 'Reaction', 'Strength', 'Charisma', 'Intuition', 'Logic', 'Willpower']
-usedatr = listatr
-listatr = list(listatr)
-race_dict: dict = {}
-
+LISTATR = ['Body', 'Agility', 'Reaction', 'Strength', 'Charisma', 'Intuition', 'Logic', 'Willpower']
+usedatr = LISTATR
+LISTATR = list(LISTATR)
+RACE_DICT: dict = {}
 vysl_atr = []
 
 # choose_destiny = None   # 96 - 100 is full Thaumaturgic, 91-95 is full shamanic, 86-90 is Thaumaturgy Adept, 81-85 is Shamanic Adept, 75-80 is Technomancer  
 # is_mage = None          # 10 is full Thaumaturgic, 9 is full shamanic, 8 is Thaumaturgy Adept, 7 is Shamanic Adept, 6 physical Adept, 7 is Technomancer 
 
-human_race_dict = {
+human_RACE_DICT = {
     'BS': 0,
     'Metatype': "Human",
     'Body':         (1, 6, 9, 0),
@@ -46,7 +45,7 @@ human_race_dict = {
     'Metatype Ability': "+1 Edge"
 }
 
-orc_race_dict = {
+orc_RACE_DICT = {
     'BS': 20,
     'Metatype': "Orc",
     'Body':         (4, 9, 13, 3),
@@ -63,7 +62,7 @@ orc_race_dict = {
     'Metatype Ability': "Low-Light Vision"
 }
 
-dwarf_race_dict = {
+dwarf_RACE_DICT = {
     'BS': 25,
     'Metatype': "Dwarf",
     'Body':         (2, 7, 10, 1),
@@ -80,7 +79,7 @@ dwarf_race_dict = {
     'Metatype Ability': "Thermographic Vision, +2 dice for Body Tests to resist pathogens and toxins"
 }
 
-elf_race_dict = {
+elf_RACE_DICT = {
     'BS': 30,
     'Metatype': "Elf",
     'Body':         (1, 6, 9, 0),
@@ -97,7 +96,7 @@ elf_race_dict = {
     'Metatype Ability': "Low-Light Vision"
 }
 
-troll_race_dict = {
+troll_RACE_DICT = {
     'BS': 40,
     'Metatype': "Troll",
     'Body':         (5, 10, 15, 4),
@@ -286,27 +285,34 @@ def make_atributes_loop():
 class Set_all_atributes(object):
     """ sets the non-main atributes
     """
-    def __init__(self, race_dict: dict, metahuman_race: str, listatr: list, pointspool: int, choosen_set: dict):
-        self.race_dict = race_dict
+    def __init__(self, RACE_DICT: dict, metahuman_race: str, LISTATR: list, pointspool: int, choosen_set: dict):
+        self.RACE_DICT = RACE_DICT
         self.metahuman_race = metahuman_race
-        self.listatr = listatr
+        self.LISTATR = LISTATR
         self.pointspool = pointspool
         self.choosen_set = choosen_set
       
-        for char in listatr:
+        for char in LISTATR:
             addon = random.choice(choosen_set)
-            celk_atributy [char] = [race_dict[char][0] + addon, \
-                    ' min: ', race_dict[char][0], \
-                        ' max: ', race_dict[char][1], \
-                            'over: ', race_dict[char][2]]
+            celk_atributy [char] = [RACE_DICT[char][0] + addon, \
+                    ' min: ', RACE_DICT[char][0], \
+                        ' max: ', RACE_DICT[char][1], \
+                            'over: ', RACE_DICT[char][2]]
 
-            celk_atributy[char] = race_dict[char][1] + addon
+            celk_atributy[char] = RACE_DICT[char][1] + addon
 
-        celk_atributy['Metatype'] = race_dict['Metatype']
-        celk_atributy['Edge'] = race_dict['Edge'][0]
+        celk_atributy['Metatype'] = RACE_DICT['Metatype']
+        celk_atributy['Edge'] = RACE_DICT['Edge'][0]
         celk_atributy['Initiative'] = round((celk_atributy['Reaction'] + celk_atributy['Intuition'])/2)
-        celk_atributy['Initiative_Phases'] = race_dict['Initiative_Phases']
-        print(celk_atributy)
+        celk_atributy['Initiative_Phases'] = RACE_DICT['Initiative_Phases']
+
+        atributes_borders = list(zip(celk_atributy, RACE_DICT))
+        # atributes_borders = atributes_borders.sort(key=lambda x: x[1],reverse=True)
+        print(atributes_borders.sort(key=lambda x: x[1],reverse=True))
+        # for k, key in zip(sorted(celk_atributy, RACE_DICT)):
+        #     v = celk_atributy[k]
+        #     val = RACE_DICT[key]
+        #     print( k, ':', v, 'min :', key, 'max :', val)
 
 def make_decision(choosen_set, pointspool):
     # choose_destiny - urci zda je mag, technomancer, remeslnik, vagus... 
@@ -316,27 +322,27 @@ def make_decision(choosen_set, pointspool):
         case metahuman_race_decision if metahuman_race_decision in range(95, 101):
             # this is Troll
             metahuman_race_decision = metahuman_race_list[4]
-            race_dict: dict = troll_race_dict
+            RACE_DICT: dict = troll_RACE_DICT
 
         case metahuman_race_decision if metahuman_race_decision in range(90, 96):
             # this is Elf
             metahuman_race_decision = metahuman_race_list[3]
-            race_dict: dict = elf_race_dict
+            RACE_DICT: dict = elf_RACE_DICT
 
         case metahuman_race_decision if metahuman_race_decision in range(85, 91):
             # this is Dwarf
             metahuman_race_decision = metahuman_race_list[2]
-            race_dict: dict = dwarf_race_dict
+            RACE_DICT: dict = dwarf_RACE_DICT
 
         case metahuman_race_decision if metahuman_race_decision in range(80, 86):
             # this is Orc
             metahuman_race_decision = metahuman_race_list[1]            
-            race_dict: dict = orc_race_dict
+            RACE_DICT: dict = orc_RACE_DICT
 
         case metahuman_race_decision if metahuman_race_decision in range(0, 81):
             # this is Human
             metahuman_race_decision = metahuman_race_list[0]
-            race_dict: dict = human_race_dict
+            RACE_DICT: dict = human_RACE_DICT
 
 
     # choose_destiny - urci zda je mag, technomancer, remeslnik, vagus... 
@@ -355,5 +361,4 @@ def make_decision(choosen_set, pointspool):
         pointspool_skills = (pointspool + 10) - (atributgen * 10)
     if choose_destiny in range(0, 76):
         None
-
-    Set_all_atributes(race_dict, metahuman_race_decision, listatr, pointspool, choosen_set)
+    Set_all_atributes(RACE_DICT, metahuman_race_decision, LISTATR, pointspool, choosen_set)

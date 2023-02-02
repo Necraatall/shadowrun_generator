@@ -26,80 +26,128 @@ intent_gods_kelt = (
 	"Vosegus"
 )
 
+
 intent_gods_about_kelt = (
     {
-    1:"Keltská bohyně vítězství, uctívaná na Britských ostrovech."
+    1: "Celtic goddess of victory, worshipped in the British Isles.",
     },
     {
-    2:"Bůh uctívaný na Britských ostrovech včetně Irska. Jako král vládne podsvětí. Někdy se může objevit i v našem světě se smečkou bílých psů. Obracejí se na něj pocestní v nouzi."
+    2: "God worshipped in the British Isles, including Ireland. As king, he rules the underworld. \
+He can sometimes appear in our world with a pack of white dogs. He's the one to whom travellers turn in times of need.",
     },
     {
-    3:"Bohyně jezdící na divokém kanci, která bděla nad lesním masivem pohoří Ardeny (Belgie)."
+    3: "A goddess riding on a wild boar, who watched over the forest massif of the Ardennes (Belgium).",
     },
     {
-    4:"Ostrovní bohyně věštců a často je také považována za Bohyni osudu."
+    4: "The island goddess of the oracles and is also often considered the Goddess of Fate.",
     },
     {
-    5:"Je znám také pod jmény Bel nebo Belenus. Jedná se o božstvo symbolizující jaro, nový život, a je s jeho jménem spojován i velice významný keltský svátek Beltine (Beltaine). Chrání umělce."
+    5: "She is also known by the names Bel or Belenus. It is a deity symbolizing spring, new life, \
+and a very important Celtic festival Beltine (Beltaine) is associated with his name. He protects artists.",
     },
     {
-    6:"Je to britský Bůh obří postavy, jehož hlava je údajně pohřbená pod White Hill. Šlo původně o hrdinu, který se po smrti stal Bohem. Ochraňuje kmenové hranice."
+    6: "He is a British God of giant stature, whose head is said to be buried beneath White Hill. \
+He was originally a hero who became a god after death. He protects the tribal borders.",
     },
     {
-    7:"Původně se jmenovala Brigancia a proslula jako Bohyně ochraňující lidi, kteří jsou v nesnázi. Bohůmžel s příchodem křesťanství se tato původně keltská Bohyně změnila ve světici. Došlo k tomu v Irsku, kde ji sv. Patrick našel v podobě spícího dítěte pod dubem. Prý založila v městě zvaným Kildare první ženský klášter. Je jí věnován svátek Imbolc (dnešní hromnice)."
+    7: "Originally named Brigancia, she was famous as a Goddess protecting people who are in distress. \
+With the advent of Christianity, this originally Celtic Goddess turned into a saint. \
+This occurred in Ireland, where St. Patrick found her in the form of a sleeping child under an oak tree. \
+She is said to have founded the first female monastery in a town called Kildare. \
+The feast of Imbolc (today's Groundhog Day) is dedicated to her.",
     },
     {
-    8:"Bohyně uctívaná na Britských ostrovech kmenem Britonů, může se zjevovat v podobách staré či mladé ženy. Je spojována s moudrostí."
+    8: "A goddess worshipped in the British Isles by a tribe of Britons, she may appear in the forms of an old or young woman. \
+She is associated with wisdom.",
     },
     {
-    9:"Bůh-jelen. Je nazýván pánem lesa. Má na hlavě bohaté paroží zdobené zářivými prsteny. Kromě titulu pána lesa je také Bohem hojnosti a plodnosti. Dnes si jej mimo jiné přisvojují ekologové a milovníci přírody."
+    9: "A deer god. He is called the lord of the forest. He wears rich antlers adorned with shining rings. \
+In addition to the title of lord of the forest, he is also the god of abundance and fertility. \
+Today he is appropriated by environmentalists and nature lovers, among others.",
     },
     {
-    10:"V irštině toto slovo znamená stařena. Je rovněž známa pod jmény Modrá čarodějka nebo Černá Annis."
+    10: "In Irish, this word means old woman. She is also known by the names Blue Witch or Black Annis.",
     },
     {
-    11:"Kmenový Bůh v Irsku. Jeho funkce spočívala v ochraně kmene. Připisuje se mu schopnost ovládat počasí a tvořit zázraky. V překladu to znamená: Dobrý bůh. Často je také představován jako typický Bůh druidů a jeho atributem je obrovská železná hůl s níž může zabíjet, ale i křísit mrtvé. Dagda z Gundestrupu"
+    11: "A tribal god in Ireland. His function was to protect the tribe. \
+He is credited with the ability to control the weather and create miracles. \
+Translated, it means: 'Good God. He is also often represented as a typical Druid God \
+and his attribute is a huge iron staff with which he can kill, but also raise the dead. Dagda of Gundestrup",
     },
     {
-    12:"V doslovném překladu to znamená božský býk. Možná šlo o mytické zvíře Tarvos trigarnos. Tarvos trigarnos je plastika býčka se třemi rohy pocházející z Galie. Deiotaros je zvíře uctívané hlavně Galaty v Malé Asii."
+    12: "Literally translated, it means divine bull. Perhaps it was the mythical animal Tarvos trigarnos. \
+Tarvos trigarnos is a sculpture of a bull with three horns from Gaul. \
+Deiotaros is an animal worshipped mainly by the Galatians in Asia Minor.",
     },
     {
-    13:"Bůh, od něhož odvozovaly svůj původ všechny galské kmeny. Jedná se o velice významného keltského Boha."
+    13: "The god from whom all the Gallic tribes derived their origin. It is a very important Celtic god."
     },
     {
-    14:"Jedná se o Bohyni, která byla uctívána v celém keltském světě. Je zobrazována jako jezdkyně na koni a její kůň je proto posvátné zvíře. V západních zemích je známa pod jménem Epona, v Boiohaemu a nejen v něm spíše pod jménem Kotyz. Pokud to trošku znáte v Českém krasu, tak jistě jste se již setkali s pojmem Kotýz, je to národní přírodní rezervace, kde kromě paleontologicky a geologicky významných skalních výchozů (kotýské vápence, stopeň PRAG, spodní devon), jsou patrné dvojité valy halštatského hradiště. Je zde i momořádně důležitá tzv. Děravá jeskyně, kde byly učiněny nálezy břidličných tabulek s vyrytými symboly (ne-keltské) a jedná se o vůbec nejstarší projev umění v Čechách, dále zde bylo nalezeno mnoho pazourků. Na nedalekém skalním ostrohu je lokalita Zlatý kůň s Koněpruskými jeskyněmi, i tento název evokuje, že toto místo je významným místem. V jeskyni Nad hájovnou se pravděpodobně v době halštatské konaly rituály."
+    14: "This is a Goddess who was worshipped throughout the Celtic world. \
+She is depicted as riding a horse and her horse is therefore a sacred animal. \
+She is known as Epona in the western countries, but in Boiohaem and not only there, she is known as Kotyz. \
+If you know a little bit about the Czech Karst, you will have already come across the term Kotýz, \
+it is a national nature reserve, where in addition to the paleontologically and geologically significant \
+rock outcrops (Kotýz\'s limestones, PRAG trace, Lower Devonian), the double ramparts of the Hallstatt hillfort are visible. \
+There is also the ever-important so-called Leaky Cave, where finds of slate tablets with engraved symbols (non-Celtic) have been made, \
+and it is the oldest manifestation of art in Bohemia, and many flint stones have been found here. \
+On a nearby rock promontory is the site of the Golden Horse with the Koněprus's Caves, \
+even this name evokes that this place is an important site. \
+Rituals were probably held in the cave Above the Grove during the Hallstatt period.",
     },
     {
-    15:"Má mnoho přízvisek, např. krutý Esus, božský dřevorubec, nebeský oráč a podobně. Galové se ho báli a druidové pro něj nechávali pokrmy na stromech. Je zobrazován jako svalnatý muž se sekyrou."
+    15: "It has many adjectives, e.g. cruel Esus, divine woodcutter, heavenly ploughman, etc. \
+The Gauls feared him, and the Druids left food for him on trees. He is depicted as a muscular man with an axe.",
     },
     {
-    16:"Bůh, který je považován za keltskou obdobu římského Boha Apollóna a byl uctíván na území ovládaném Římany od 2. poloviny 1. století př. n. l.."
+    16: "A god who is considered to be the Celtic equivalent of the Roman god Apollo and was worshipped in Roman-controlled \
+territory from the second half of the 1st century BC.",
     },
     {
-    17:"Toto slovo označuje zároveň havrana a Boha, kterému Galové zasvětili prostřední den léta - první srpen. Je bohem světla, a z tohoto důvodu by se zdálo zvláštním, že Keltové takto označovali havrana s černým peřím. Je to tím, že havrani odlétali každou noc, aby doprovodili Slunce na jeho noční cestu, není to nelogická dedukce."
+    17: "This word denotes both a raven and a god to whom the Gauls dedicated the middle day of summer, \
+the first of August. He is the god of light, and for this reason it would seem strange that the Celts should thus designate \
+a raven with black feathers. It is because ravens flew away every night to accompany the sun on his nocturnal journey \
+that this is not an illogical deduction.",
     },
     {
-    18:"Keltská Bohyně uctívaná v Irsku. Zjevuje se v podobě vysoké rudovlasé ženy, která má v některých případech v ruce zrcadlo jako symbol své moci nad dušemi lidí. Nahání hrůzu, ale v některých případech pomáhá potřebným."
+    18: "Celtic Goddess worshipped in Ireland. She appears in the form of a tall red-haired woman \
+who in some cases holds a mirror as a symbol of her power over the souls of men. She is terrifying, but in some cases she helps those in need.",
     },
     {
-    19:"Tento Bůh byl zobrazován jako stařec s ohnutými zády, s řídkými chomáči vlasů spadajících na ramena. Obléká se do lví kůže, na ramennou mu visí toulec a v pravé ruce drží kyj, v levé luk. Podle legend za ním kráčívala skupina lidí. Ušima byli připoutáni k tenkému zlatému řetězu, který je spojoval s Ogmiovým propíchnutým jazykem. Ogmios je také Bůh výřečnosti a vládce slov. Přitahoval si lidi pronikavou mocí hlasu. Šípy v toulci symbolizují jeho rychlost myšlenky, ostrovtip, pohotové odpovědi a duchaplnost."
+    19: "This god was depicted as an old man with a bent back, with sparse tufts of hair falling on his shoulders. \
+He is dressed in lion's skin, with a quiver hanging from his shoulder, and holds a club in his right hand and a bow in his left. \
+According to legend, a group of people walked behind him. \
+Their ears were attached to a thin gold chain that connected them to Ogmio's pierced tongue. \
+Ogmios is also the god of eloquence and the ruler of words. He drew people to him by the piercing power of his voice. \
+The arrows in his quiver symbolize his quickness of thought, sharp wit, quick responses, and wit.",
     },
     {
-    20:"Keltská Bohyně Irů a Britonů. Velmi často je spatřována s koňskou hlavou místo lidské a s hříbětem po boku. Pomáhala ženám a neprávem obviněným lidem."
+    20: "Celtic Goddess of the Irish and Britons. She is very often seen with a horse's head instead of a human's and a foal at her side. \
+She helped women and wrongly accused people.",
     },
     {
-    21:"Bohyně vyskytující se ve dvojici s Bohem Grannusem. Je uctívána jako patronka léčitelů a je doložena především z Pannonie a Norika."
+    21: "A goddess occurring in a pair with the god Grannus. \
+She is worshipped as the patroness of healers and is attested mainly from Pannonia and Noricum.",
     },
     {
-    22:"Je ozbrojen dlouhou palicí a každý Gal se s ním setká v krajině mrtvých. Úder jednou stranou palice přináší smrt, ale úder druhou stranou může oživovat. Sucell byl tedy bohem smrti i vzkříšení."
+    22: "He is armed with a long staff, and every Gaul shall meet him in the land of the dead. \
+A blow with one side of the staff brings death, but a blow with the other side can revive. \
+Sucell was therefore the god of death and resurrection.",
     },
     {
-    23:"Manžel bohyně Rhiannon a na Britských ostrovech a v Irsku byl uznáván jako nejvyšší keltský Bůh. Vystupuje v našem světě jako pastýř, je velice moudrý a ochraňuje pocestné."
+    23: "Husband of the goddess Rhiannon, and in the British Isles and Ireland he was recognized as the supreme Celtic God. \
+He acts as a shepherd in our world, is very wise and protects the wayfarers.",
     },
     {
-    24:"Pán nebe. Je schopen sesílat blesky pomocí spirál, které zdobí jeho ramena. Je pánem nebeského ohně a jeho hněv kněží utišovali uplováním obětí zaživa. Chrání hory a vyvýšená místa, neboť to jsou posvátné oblasti. Římané ho srovnávali se svým nejvyšším Bohem Jupiterem. U nás se poměrně hojně vyskytují na různých lokalitách tzv. Taranisova kolečka - snad symbol slunce. Později se z tohoto symbolu vyvinul známý tzv. keltský kříž, je to však \"mutant\" mezi Taranisovým symbolem a klasickým křesťanským křížem. Mnoho lidí jej nosí na krku v domění, že se jedná o čistě keltskou záležitost, opak je pravdou, tak Bacha na to!"
+    24: "Lord of Heaven. He is able to send lightning bolts by means of the spirals that adorn his shoulders. \
+He is the lord of the fire of heaven, and his wrath was appeased by the priests by sacrifices being burnt alive. \
+He protects mountains and high places, for these are sacred areas. The Romans compared him to their supreme god, Jupiter. \
+In our country, the so-called Taranis wheels - perhaps a symbol of the sun - are quite abundant in various locations. \
+Later on, this symbol evolved into the well-known Celtic cross, but it is a \"mutant\" between the Taranis symbol \
+and the classical Christian cross. Many people wear it around their necks thinking it is a purely Celtic thing, \
+the opposite is true, so watch out!",
     },
     {
-    25:"Podobně jako Arduinna chrání Vogézy"
+    25: "Like Arduinna protects the Vosges",
     }
 )

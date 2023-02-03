@@ -329,7 +329,179 @@ His main cult centres were Koptos and Achmim (Panopolis in Greek, because the Gr
 He was sometimes described as the son of Eseta, sometimes he was her husband, and Hor was their common son. \
 By the time of the New Kingdom, he was identified with the Theban god Amon.",
     },
-
-
-# TODO: dodelat zbylych 20
+    {
+        20: "The goddess Mut was considered the wife of Amon and the mother of Chonsu. \
+This divine mother was worshipped in Egypt especially during the New Kingdom period. \
+Mut wore on her head a joint crown composed of the red crown of Lower Egypt and the white crown of Upper Egypt, \
+which were set into each other. Sometimes she wore a headdress in the form of a vulture, \
+whose two wings fell on either side of her face, while the head of a bird towered over the goddess's forehead. \
+Mut was worshipped in the temple of Ptah at Memphis (Mennofer) and in a shrine at Giza. \
+But she is especially famous for her temple at Karnak, which is adjacent to the south to the Temple of Amon.",
+    },
+    {
+        21: "Nefertho was associated with the lotus flower and depicted in male form with a blue lotus (Nymphaea Caerulea) on his head. \
+A pair of feathers and two balances were sometimes also part of his head ornamentation. \
+The Creation Myth of Hermopole Magna states that the sun arose from a primordial lotus flower. \
+Nefertho was therefore closely associated with the sun god. \
+Pyramid texts from the Old Kingdom period refer to Nefertem as the \"Lotus flower that is before the nose of Reus\". \
+The title \"Protector of the Two Lands\" (Chener tawei) - thought of Upper and Lower Egypt \
+- points to the universal importance of this god. Nefertem was worshipped in Memphis (Mennofer) \
+as the son of Ptah and the lion goddess Sachmet, hence he was sometimes depicted with a lion's head. \
+He was also sometimes considered to be the son of the cat goddess Bastet or, to make matters more complicated, \
+the son of the cobra goddess Vajet of Butoh.",
+    },
+    {
+        22: "Neit was an ancient goddess whose main cult center was Sais in the Nile Delta. \
+Neit acquired special significance during the reign of the 26th Dynasty (664-525 BC) \
+because Sais was then the home of the ruling family and the capital of all Egypt. \
+Its attribute was a shield with crossed arrows, emphasizing its association with warfare (the Greeks later identified it with Athena).",
+    },
+    {
+        23: "Because of her association with Osiris, Nebthet was considered in late mythology to be the mother of Anup, \
+the jackal-headed god of embalming. She was also the sister of Eseta, Usir and Sutekh (she was sometimes his wife). \
+Nebthet seems to have been the assistant of her better-known sister Eset. Nebthet, like Eset, used to be depicted in human form, \
+but could also be depicted as a hawk. Her name means \"Lady of the Pallas\" \
+and her crown consisted of hieroglyphs for this nickname (a basket on the walls of a great house). \
+Nebthet was associated with the head of the deceased or with the whole coffin (in association with Eseta at her feet. \
+She was also one of the protective celestial deities - protecting Horus' son Hapi with the head of the baboon guarding the lungs of the dead.",
+    },
+    {
+        24: "The god Nun was the divine personification of the truths of chaos that preceded creation. \
+He has been described as the \"Oldest Father\" and the \"Creator of mankind\". It was believed that when all was created, \
+chaos continued to exist beyond the edges of the universe and in the underworld, and was the place of outcasts and demons. \
+The perimeter walls of temples made of dried brick were sometimes built in undulating layers, the walls then giving an undulating impression. \
+The aim was probably to mimic the waters of the Nun, as the temple was a symbol of the universe. \
+Nun was also represented outside the temple in the form of a sacred lake. \
+Nun could be depicted as a baboon, also with a frog's head or in human form with a beard. In the latter case, \
+he was holding a sun barque above his head. His consort was the serpent-headed goddess Naunet.",
+    },
+    {
+        25: "The goddess Nut was the personification of the sky. According to the creation myth of Heliopolis, \
+she was one of the children of Shu and Tefnut and the sister-wife of Geb, the earth god. \
+The darkness of the night was explained by the fact that Nut swallowed the sun in the evening and gave birth to it at dawn, \
+so that the sun spent the night hours wandering over her body. \
+This idea was often depicted on the ceilings of tombs and on the undersides of sarcophagus lids. \
+The Egyptians believed that Nut was the divine personification of the coffin and burial chamber. \
+Because it gave birth to the sun every day, the dead could also be reborn from the coffin into the afterlife. \
+The goddess Nut was usually depicted as a woman bent over the ground, but she could also be depicted as a cow. \
+The \"Divine Cow\" was believed to carry the sun god Re on her back every morning.",
+    },
+    {
+        26: "The eye of the sun god was separate and could act independently. In the Destruction of Mankind myth, \
+she represents herself first as Hathor, later as Sachmet, a less threatening female divine force. \
+The eye was also identified with the cobra goddess Vajet, one of the protective deities of kings, \
+who appears on the front of royal head ornaments - erect and ready to spray poison on the king's enemies. \
+This erect cobra is known as the ureus.",
+    },
+    {
+        27: "Ptah was the chief deity of Memphis (Mennofer), worshipped as part of a triad along with his wife, the lion goddess Sachmet, \
+and the lotus god Nefertho. Later, Imhotep, the deified architect of the step pyramid complex of Djoser at Saqqara, \
+was considered to be Ptah's son. As the chief creator god, Ptah was considered the patron of craftsmen, \
+so he was an important figure in Dér el-Medina, the village of craftsmen who built tombs in the Valley of the Kings. \
+In Memphis (Mennofer), the high priest of the cult of Ptah had the title of \"Great Overseer of the Craftsmen\". \
+He was depicted in human, partly mummified form with a tight-fitting headdress. In his hand he held a staff consisting of a was \
+- a scepter of power, a jeed - a pillar of stability and anch - a sign for life. Since the Middle Kingdom, \
+Ptah has been depicted with a straight chin. In the Old Kingdom period, \
+Ptah was associated with the Memphid funerary god with a falcon head, Sokar (Ptah-Sokar). \
+In the Late Period, this deity became Ptah-Sokar-Usir. \
+Wooden mummified falcon-headed statuettes were often placed in tombs as part of the funerary furnishings.",
+    },
+    {
+        28: "The ancient Egyptians had good reason to regard the sun as an important source of power, \
+for a successful harvest was directly dependent on the sun and also on the annual Nile flood. \
+The sun god Re was the most important sun god. The cult centre of the god Re was Heliopolis \
+(called Luna by the ancient Egyptians, now a suburb of Cairo), where a very powerful priesthood held office. \
+From the reign of the 4th Dynasty king Rajedef (c. 2566-2558 BC), another of the pharaoh's five names, \
+the nickname \"Son of Reus\", was introduced to emphasize the king's identity with the god. \
+The most important point of the cult of Reus was the obelisk or benben stone (derived from the verb weben - to dawn). \
+In the myth of the Destruction of Mankind, Re is described with the bones, body and hair of an old man, \
+but his divinity is obvious because his bones are silver, his body golden and his hair made of lapis lazuli \
+(considered very valuable in Egypt because it was imported from as far away as Badakhshan in northeastern Afghanistan). \
+The sun god Re was often depicted as a man with a ram's or falcon's head adorned with a sun disc. \
+The Egyptians believed that during the twelve hours of daylight he traveled across the sky in a sun barque \
+and at night he wandered through the realm of the underworld. In another myth of his nocturnal wanderings, \
+he was supposedly swallowed by Nut, the goddess of the sky, and Re then traveled through her body, being reborn each morning. \
+The sun god was omnipresent and very powerful. Through a process of merging, Re was connected to other deities such as Amon \
+- (Amon-Re) and Horus - (Re-Harakhtey). Re may also have been identified with other gods; one of the texts on the walls of the tombs \
+in the Valley of the Kings in the New Kingdom is called the \"Litany of Rea\" and here Re plays the same role as Osiris, the god of the dead.",
+    },
+    {
+        29: "The goddess Sachmet was a cruel manifestation of a goddess, whether Hathora, \
+Bastet (the cat goddess of Búbastida in the Nile Delta) or the mother goddess Mut, in whose temple at Karnak, \
+during the reign of Amenhotep III in the 18th Dynasty (c. 1390-1352 BC), there were a vast number of statues of Sachmet \
+- it seems that one statue was designated for each day. Sachmet was associated with war and battle and helped kings defeat enemies. \
+Her name literally means \"Strong\", so Sachmet was depicted as a lioness or a woman with the head of a lioness. \
+She wore a sun disc on her head to indicate that she was the daughter of the sun god Rea. \
+She was the wife of the creator Ptah and the mother of Nefertem, so she was a very important Memphid goddess.",
+    },
+    {
+        30: "The crocodile god Sobek was depicted as a reptile or man with the head of a crocodile. \
+He was worshipped in Fayyum and in the temple at Kom Ombo. Sobek was associated with pharaonic power and in the form of Sobek-Re \
+was worshipped as a sun deity. Sobek's wife was Hathor and their child was considered to be Chonsu \
+(everywhere referred to as the son of Amon and Mut).",
+    },
+    {
+        31: "The god Sokar was associated with the earth and crops, but sometimes also with death \
+and the burial places of the capital city of Memphis (Mennofer). His association with burial led to his merger with Osiris, \
+and because he was a prominent Memphid god, there was a further syncretization of the most prominent Memphid deity, Ptah-Sokar-Usira. \
+Sokar's union with Ptah meant that he had the same wife, the lion goddess Sachmet. \
+In the pyramid texts he is described as the creator of the king's bones. He was depicted as a mummified man, \
+sometimes with a falcon's head. Wooden statuettes of him have been found in tombs along with many other funerary furnishings. \
+The main cult centre of Sokar was Memphis (Mennofer). During festivals held in his honour, \
+his worshippers wore braids of onions around their necks. The onion was used in embalming \
+- its skins or whole heads were placed over the eyes or inserted into the ears or abdominal cavity.",
+    },
+    {
+        32: "Sutech was Osiris' evil brother. He was a member of the Heliopolitan divine family and was associated with chaos, barrenness, \
+and the desert. Rulers of the 19th and 20th dynasties derived their names from this god - for example, Sethi and Sutnacht. \
+His worship acknowledged that chaos must have existed before order could exist. The main cult centre of Sutekh was Naqada in Upper Egypt. \
+According to tradition, it was Nakada that was the site of his sudden birth from the goddess Nut. \
+Sutech was depicted in the form of an animal whose identity cannot be precisely determined. \
+It had a long curved beak, erect square ears, the body of a dog and a forked tail. \
+He was also sometimes depicted as a man with an animal head. It may also have been depicted as a pig, a donkey or a hippopotamus \
+- see the myth of the rivalry between Horus and Sutekh.",
+    },
+    {
+        33: "The god Shu was the divine personification of air and sunshine. His name probably means \"He who ascends upwards\". \
+The Egyptians believed he gave life to the sun each morning and protected it from the serpent demon of the underworld, \
+Apopis, but he was also often associated with the moon gods Thoth and Chonsu. Although it seems unlikely, \
+the god Shu was thought to be the leader of a pack of demons who threatened to torture the dead. \
+Shu used to be depicted in human form with a feather n(a head, often standing between his descendants Geb and Nut, whom he protected. \
+If associated with the Eye of Rea, he could also be depicted with a lion's head. He was especially worshipped at Leontopoli in the Nile Delta.",
+    },
+    {
+        34: "The goddess Tefnut, one of the cosmic deities of Ennead, was the personification of moisture. \
+Her husband (brother) Shu was the god of air and sunshine, and therefore Tefnut was associated with the moon. \
+Like Shu, Tefunut may have been considered the \"Eye of Rea\", then she was depicted with a lion's head (and was worshipped in Leontopolis). \
+She also appeared as an erect cobra... When depicted in human form, she wore a sun disc wrapped around a cobra.",
+    },
+    {
+        35: "The god of wisdom and scribes, Thovt, was depicted as a baboon, an ibis, or a man with the head of an ibis. \
+He often figured in important processes such as the \"Weighing of Hearts\", which took place after death. \
+He was closely associated with the moon and therefore wore a moon disc and crescent on his head. \
+The cult centre of Thoth was Hermopole Magna in Central Egypt, where only two huge statues have survived, \
+erected by the 18th Dynasty pharaoh Amenhotep III. They are built from large blocks of quartzite, \
+are 4.5 metres high without foundations and weigh around 35 tonnes each. During the Ptolemaic reign, Thovt was identified with the Greek Hermes.",
+    },
+    {
+        36: "The goddess Tauret was, along with the dwarf Bes, the most popular folk idol. \
+She was embodied by the female hippopotamus, and her maternal and protective powers were invoked especially by the living and the dead.",
+    },
+    {
+        37: "Osir was the god of the dead and the afterlife as well as rebirth and harvest. \
+He was depicted as a mummified man, often holding a crutch, reprimands, and his head adorned with an atheph crown. \
+Osiris could have green or black skin, denoting fertility, or black Nile silt, or white skin (the colour of the linen bandages on mummies). \
+One of his attributes was the jeed pillar, a symbol of stability equal to his backbone, \
+and he was particularly revered at his cult centre of Búsiris in the Nile Delta. \
+But Usir's main cult centre was the legendary burial site of Abydos (Abedja), \
+where he was worshipped along with his sister and wife Eset and son Horus. \
+Osiris was a member of the important Heliopolitan Ennead, which first appears in the pyramid texts of the Old Kingdom period \
+- more specifically, during the 5th Dynasty.",
+    },
+    {
+        38: "The ancient goddess Vayet was almost always depicted as a cobra with the red crown of Lower Egypt. \
+The Egyptians considered the cobra a symbol of sovereignty. She had her cult at Bhutto in the Nile Delta. \
+Its name means \"the green one\" or \"she who belongs to papyrus\". \
+Together with the vulture goddess Nehbet, she was believed to be the protector of kings.",
+    }
 )

@@ -23,7 +23,9 @@ by innovation decision - see Down
 1. **<font color = 'GREEN'>Generation of atributes by point system (see more on docstrings in generatorAtributu.py)</font>**
 2. **<font color = 'GREEN'>Generation of race and updating the atributes by race statistics</font>**
 3. **<font color = 'GREEN'>Generating of Name/Nickname/Surname by rand list</font>**
-4. **<font color = 'GREEN'>Print all data of the character</font>**
+4. **<font color = 'GREEN'>Generating of God (greek, egypt, celtic, slovanic - nording in plan)</font>**
+5. **<font color = 'GREEN'>Generating of Gender, character pros and cons</font>**
+5. **<font color = 'GREEN'>Print all data of the character</font>**
 
 There is no pip3 libraries, no special pipenv or .venv
 

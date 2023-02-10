@@ -23,7 +23,7 @@ from GeneratorJmen.Data.Name import (
 
 from GeneratorJmen.Data.NickName import (
     nicknames,
-    nicknames_cz
+    # nicknames_cz for future if i find somewhere list of nicknames
 )
 from GeneratorJmen.Data.Surname import (
     surname,
@@ -60,6 +60,9 @@ from GeneratorAtributu.generator_atributu import *
 # TODO: rozmyslet si lepe adresarovou strukturu
 # TODO: printovat bude jeden soubor k tomu urcenej - pokud soubory ci print dict
 # TODO: dodelat testy a kouknout na "navrhove vzory" k priprave na dalsi verzi
+# TODO: GPT chat - staci dat rozumnou frazi pred to jako:
+# make me background story for shadowrun 4edition character played in post apocaliptic world afther nuclear bomb falls on earth 
+# see more about here: 
 # TODO: najit cestu jak testovat vysledne stringy ?AI?, 
 # slo by pres docstrings a pod kontrolory jazyka?
 # - proste promyslet zda by u neceho nebylo lepsi mit jine datove typy, ci to nepostavit jinak
@@ -139,12 +142,10 @@ def write_results():
             surname.get_random_tribe_surname(), "\n"
         )
         god = God.get_random_tribe_god_with_abouts()
-        print("God:", god_name + ", " + god_definition)
-
+        print("God:", god)
     make_atributes_loop()
-
     print(f"\nGender: {GENDER}")
-    print(f"Sexual preferency: {SEXUAL_PREFERENCY_LIST}")
+    print(f"Pleasure preferency: {SEXUAL_PREFERENCY_LIST}")
     print(f"Physical age: {Age.PHYSICAL_AGE.value}")
     if not any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
         print(f"Human race and type: {race_choice}, {race_chosen[0]}")
@@ -173,6 +174,12 @@ def write_results():
     print(f"Positive characteristics: {POSITIVE_CHARACTERISTIC[0]}, {POSITIVE_CHARACTERISTIC[1]}")
     print(f"Negative characteristics: {NEGATIVE_CHARACTERISTIC[0]}, {NEGATIVE_CHARACTERISTIC[1]}")
     print(f"Political lean: {POLITICAL_LEAN}")
+    
+    print(f"\nAtributy:")
+    for key, value in celk_atributy.items():
+        print(f"{key}: {value}")
+    print("\n")
+       
 # print(random.choice(tuple(Tribe_name_origin)).value)
 # print(random.choice(tuple(Tribe_surname_origin)).value)
 

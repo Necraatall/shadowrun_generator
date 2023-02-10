@@ -184,7 +184,7 @@ Pigmentation: brown
 Nose: hooked, fleshy downwards (resembles the number 6)
 Lips: fleshy, lower lip larger than upper
 Hair: dark, curly, eyebrows often knitted together
-Eyes: dark, upper eyelids exposed (undeveloped supraorbital arches)
+Eyes: dark, droopy upper eyelid (undeveloped supraorbital arches)
 Ears: large
 Face: medium width, prominent cheekbones
 Skull: short (brachycephaly) with flattened occiput

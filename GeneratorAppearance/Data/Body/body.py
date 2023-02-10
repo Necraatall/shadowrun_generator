@@ -277,7 +277,7 @@ race_details = {
             "Nose" : "curved, fleshy downward (resembles a 6)",
             "Lips" : "fleshy, lower lip larger than upper lip",
             "Hair" : "dark" + random.choice(("brown", "black", "grey")) + ", curly, eyebrows often knitted",
-            "Eyes" : "dark " + random.choice(("brown", "black", "green")) + ", upper eyelids exposed (undeveloped supraorbital arches)",
+            "Eyes" : "dark " + random.choice(("brown", "black", "green")) + ", droopy upper eyelid(undeveloped supraorbital arches)",
             "Ears" : "large",
             "Face" : "medium width, prominent cheekbones",
             "Skull" : "short (brachycephaly) with flattened occiput",

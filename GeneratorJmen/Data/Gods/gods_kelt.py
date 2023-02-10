@@ -1,4 +1,5 @@
 from enum import Enum
+import random
 class Gods_kelt(Enum):
 	ANDRASTE=(
         "Andraste",
@@ -122,3 +123,7 @@ the opposite is true, so watch out!"),
 	VOSEGUS=(
         "Vosegus"
         "Like Arduinna protects the Vosges"),
+
+make_list = list(Gods_kelt)
+GODS_KELT = random.choice(make_list)
+GODS_KELT = (GODS_KELT.value)

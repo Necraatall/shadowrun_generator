@@ -1,4 +1,5 @@
 from enum import Enum
+import random 
 
 class Gods_gk(Enum):
 	ADRASTEIA=(
@@ -227,3 +228,7 @@ that he would be overthrown by one of his sons, devoured all his sons immediatel
 He fed on the milk of Amalthea (according to one version a goat, according to another a nymph) and honey from bees. \
 When he grew up, he forced his father to give up his brothers and overthrew him after a ten-year struggle. \
 He and his brothers then divided the rule of the world by lot."),
+
+make_list = list(Gods_gk)
+GODS_GK = random.choice(make_list)
+GODS_GK = (GODS_GK.value)

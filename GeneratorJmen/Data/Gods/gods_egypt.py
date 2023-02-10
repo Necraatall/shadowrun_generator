@@ -1,4 +1,6 @@
 from enum import Enum
+import random
+
 class Gods_eg(Enum):
 	AKER=("Aker", 
 	"The earth god Aker was the personification of the eastern and western horizons, \
@@ -344,3 +346,7 @@ Osiris was a member of the important Heliopolitan Ennead, which first appears in
 The Egyptians considered the cobra a symbol of sovereignty. She had her cult at Bhutto in the Nile Delta. \
 Its name means \"the green one\" or \"she who belongs to papyrus\". \
 Together with the vulture goddess Nehbet, she was believed to be the protector of kings.")
+
+make_list = list(Gods_eg)
+GODS_EG = random.choice(make_list)
+GODS_EG = (GODS_EG.value)

@@ -20,6 +20,7 @@ from GeneratorJmen.Data.Name import (
     names_us,
     names_vn
 )
+
 from GeneratorJmen.Data.NickName import (
     nicknames,
     nicknames_cz
@@ -128,8 +129,8 @@ def write_results():
 
     if tribe_name_origin is not None or tribe_surname_origin is not None:
         print("\n", tribe_name_origin + " \"" + nickname + "\" " + tribe_surname_origin, "\n")
-        god_name, god_definition = God.get_random_tribe_god_with_abouts()
-        print("God:", god_name, god_definition)
+        god= God.get_random_tribe_god_with_abouts()
+        print("God:", god)
     else:
         print(
             "\n"
@@ -137,7 +138,7 @@ def write_results():
             + " \"" + nicknames.Nickname.get_random_tribe_nickname() + "\" " +
             surname.get_random_tribe_surname(), "\n"
         )
-        god_name, god_definition = God.get_random_tribe_god_with_abouts()
+        god = God.get_random_tribe_god_with_abouts()
         print("God:", god_name + ", " + god_definition)
 
     make_atributes_loop()
@@ -181,7 +182,7 @@ def write_results():
 
 @staticmethod
 def tribe_name_origin_input():
-    chosen_tribe_name = random.randint(1, 8)
+    chosen_tribe_name = random.randint(1, 14)
     gender = GENDER
     if gender == "female":
         gender_name = 1
@@ -203,6 +204,18 @@ def tribe_name_origin_input():
         case 7:
             tribe_name_origin = random.choice(names_us.intent_names_us)
         case 8:
+            tribe_name_origin = random.choice(names_fi.intent_names_fi)
+        case 9:
+            tribe_name_origin = random.choice(names_hu.intent_names_hu)
+        case 10:
+            tribe_name_origin = random.choice(names_no.intent_names_no)
+        case 11:
+            tribe_name_origin = random.choice(names_se.intent_names_se)
+        case 12:
+            tribe_name_origin = random.choice(names_sk.intent_names_sk)
+        case 13:
+            tribe_name_origin = random.choice(names_vn.intent_names_vn)
+        case 14:
             tribe_name_origin = random.choice(names_cz.intent_names_cz[gender_name])
     return tribe_name_origin
 

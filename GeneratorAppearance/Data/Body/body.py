@@ -403,7 +403,7 @@ else:
 thus = race_chosen_data
 if thus !="":
     for key, value in thus.items():
-        if not thus['Oči']:
+        if key != 'Oči':
             HEIGHT = thus['Eyes']
-        elif thus['Oči']:
+        elif key == 'Oči':
             HEIGHT = thus['Oči']

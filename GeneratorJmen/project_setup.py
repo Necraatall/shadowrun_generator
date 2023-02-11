@@ -42,7 +42,7 @@ from GeneratorJmen.Data.Surname import (
     surname_pl,
     surname_pt,
     surname_ru,
-    surname_uk,
+    surname_gb,
     surname_us,
 )
 from GeneratorAppearance.Data.Body.body import *
@@ -262,7 +262,7 @@ def tribe_surname_origin_input():
         case 15:
             tribe_surname_origin = random.choice(surname_ru.intent_surname_ru)
         case 16:
-            tribe_surname_origin = random.choice(surname_uk.intent_surname_uk)
+            tribe_surname_origin = random.choice(surname_gb.intent_surname_gb)
         case 17:
             tribe_surname_origin = random.choice(surname_us.intent_surname_us)
     return tribe_surname_origin

@@ -266,5 +266,5 @@ intent_surname_cn = (
 	"Zhang",
 	"Zhi",
 	"Zhuan",
-	"Zhui"
+	"Zhui",
 )

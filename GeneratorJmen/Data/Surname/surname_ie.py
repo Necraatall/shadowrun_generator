@@ -65,7 +65,6 @@ intent_surname_ie = (
 	"Duncan",
 	"Eoghan",
 	"Eoin",
-	"Eoin",
 	"Faolan",
 	"Farrell",
 	"Fearghal",

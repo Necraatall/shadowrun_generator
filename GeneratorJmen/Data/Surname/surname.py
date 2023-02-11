@@ -15,7 +15,7 @@ from GeneratorJmen.Data.Surname.surname_ne import *
 from GeneratorJmen.Data.Surname.surname_pl import *
 from GeneratorJmen.Data.Surname.surname_pt import *
 from GeneratorJmen.Data.Surname.surname_ru import *
-from GeneratorJmen.Data.Surname.surname_uk import *
+from GeneratorJmen.Data.Surname.surname_gb import *
 from GeneratorJmen.Data.Surname.surname_us import *
 
 surnames_all = (
@@ -33,7 +33,7 @@ surnames_all = (
     intent_surname_pl,
     intent_surname_pt,
     intent_surname_ru,
-    intent_surname_uk,
+    intent_surname_gb,
     intent_surname_us
 )
 

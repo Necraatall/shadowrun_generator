@@ -1,5 +1,5 @@
 
-intent_surname_uk = (
+intent_surname_gb = (
 	"Abbas",
 	"Abbey",
 	"Abbott",

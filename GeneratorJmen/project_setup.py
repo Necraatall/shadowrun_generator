@@ -231,7 +231,6 @@ def tribe_name_origin_input():
     return tribe_name_origin
 
 
-
 @staticmethod
 def tribe_surname_origin_input():
     tribe_surname_origin = random.randint(1, 17)

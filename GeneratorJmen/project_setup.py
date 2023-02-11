@@ -18,6 +18,7 @@ from GeneratorJmen.Data.Name import (
     names_se,
     names_sk,
     names_us,
+    names_gb_scotish,
     names_vn
 )
 
@@ -224,6 +225,8 @@ def tribe_name_origin_input():
             tribe_name_origin = random.choice(names_vn.intent_names_vn)
         case 14:
             tribe_name_origin = random.choice(names_cz.intent_names_cz[gender_name])
+        case 15:
+            tribe_name_origin = random.choice(names_cz.intent_names_gb_scotish[gender_name])
     return tribe_name_origin
 
 

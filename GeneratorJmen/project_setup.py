@@ -5,7 +5,6 @@ from GeneratorAtributu.generator_atributu import *
 from GeneratorJmen.Data.Gods.gods import *
 from GeneratorJmen.Data.Name import (
     names,
-    names_cz,
     names_es,
     names_fi,
     names_fr,
@@ -18,7 +17,6 @@ from GeneratorJmen.Data.Name import (
     names_se,
     names_sk,
     names_us,
-    names_gb_scotish,
     names_vn
 )
 
@@ -190,7 +188,8 @@ def write_results():
 
 @staticmethod
 def tribe_name_origin_input():
-    chosen_tribe_name = random.randint(1, 14)
+    chosen_tribe_name = 16
+    # chosen_tribe_name = random.randint(1, 16)
     gender = GENDER
     if gender == "female":
         gender_name = 1
@@ -224,10 +223,13 @@ def tribe_name_origin_input():
         case 13:
             tribe_name_origin = random.choice(names_vn.intent_names_vn)
         case 14:
-            tribe_name_origin = random.choice(names_cz.intent_names_cz[gender_name])
+            tribe_name_origin = random.choice(names.intent_names_cz[gender_name])
         case 15:
-            tribe_name_origin = random.choice(names_cz.intent_names_gb_scotish[gender_name])
+            tribe_name_origin = random.choice(names.intent_names_gb_scotish[gender_name])
+        case 16:
+            tribe_name_origin = random.choice(names.intent_names_gb_scotish[random.randint(0, 2)])
     return tribe_name_origin
+
 
 
 @staticmethod

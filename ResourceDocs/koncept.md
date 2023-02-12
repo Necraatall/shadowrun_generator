@@ -16,6 +16,7 @@ ne ted mozna az to budu mit v DB
 - po te co refaktoruji rasy, prejdu na novou verzi kdy vsechny vstupni staticke data si budu ukladat do souboru abych je pak pouzil 
 - napriklad ve verzi 3 kdy by uz mela byt databaze a zaklad webu
 - generator by mel vyplivnout postavu s dobrym backgroundem a popisem vzhledu
+- komunikace s lidmi a prace s lidmi muze mit stejnou stupnici
 
 ### Jak na to:
 - typ sveta
@@ -24,10 +25,10 @@ ne ted mozna az to budu mit v DB
 
 - generator jmen
 - atributy
-- merits and flows max 2+ a 2-
-- skilly - to bude orisek a obavam se ze bez nacitani dat z txt ci db to nepujde
+- merits and flows max 2+ a 2- (???s okecem ci bez??? - asi na volbe uzivatele)
+- skilly vzdy s pouzitym atributem - to bude orisek a obavam se ze bez nacitani dat z txt ci db to nepujde
 - vzhled
-    - pozdeji i zapojim AI na generovani obrazku
+    - pozdeji i zapojim AI na generovani obrazku postavy, mozna i toho co vlastni a mozna i pribehu
     - co ma na sobe a pod. - bude ovlivneno ostatnimi - napriklad ze je bezdak
 - charakter
     - vira - viz bohove
@@ -35,7 +36,69 @@ ne ted mozna az to budu mit v DB
     - 2 positivni vlastnosti (pilny, mily ...)
     - 2 negaticni vlastnosti (liny, puntickar ...)
     - ??? mozna budu davat dalsi dle toho co vyjde jinde ???
-- background
+    - je si jisty pri delani:
+        - hlavou
+        - rukama
+        - ve meste
+        - v prirode
+        - na venkove
+        - se zakazniky
+        - obchodovani
+        - rodici ci temi co jej vychovali
+        - s velmi starymi lidmi
+        - se stejne starymi lidmi
+        - opacnym pohlavim
+        - promlouvani k vicero lidem
+        - prateli
+        - znamymi
+        - sousedy
+        - uplne cizimi lidmi
+        - s autoritami
+        - s samany/knezimi... lidmi co maji co delat s bohy
+        - se spodinou
+        - s opacnym pohlavim
+        - se sexualnimi pracovniky
+        - hazardu
+        - lehkem fetu (trava, cigara)
+        - v hospode a na oslavach
+        - ve vyssi spolecnosti
+        - s vladci velkych uzemi
+        - vysokymi predstaviteli cirkvi/samany...
+        - magicky praktikujicimi
+        - magicky prirozenymi tvory
+        - dusemi zemrelych a ozivlymi mrtvolami - asi jen pokud bude nekde ze je uchyl ci nekdo kdo je studuje ci zabiji
+    -  jednani s lidmi a tvory a interakce - dela to rad ci je nerudny, je mily ci politicky pri jednani s:
+        - lidmi co delaji hlavou
+        - lidmi co delaji rukama
+        - ve meste
+        - v prirode
+        - na venkove
+        - rodici ci temi co jej vychovali
+        - s velmi starymi lidmi
+        - se stejne starymi lidmi
+        - opacnym pohlavim
+        - promlouvani k vicero lidem
+        - prateli
+        - znamymi
+        - sousedy
+        - uplne cizimi lidmi
+        - se zakazniky
+        - pri obchodovani
+        - s autoritami
+        - s samany/knezimi... lidmi co maji co delat s bohy
+        - se spodinou
+        - s opacnym pohlavim
+        - se sexualnimi pracovniky
+        - pri hazardu - vcetne zda je zavisly ci ma rad
+        - lehkem fetu (trava, cigara) - vcetne zda je zavisly ci ma rad
+        - v hospode a na oslavach
+        - ve vyssi spolecnosti
+        - s vladci velkych uzemi
+        - vysokymi predstaviteli cirkvi/samany...
+        - magicky praktikujicimi
+        - magicky prirozenymi tvory
+        - dusemi zemrelych a ozivlymi mrtvolami - asi jen pokud bude nekde ze je uchyl ci nekdo kdo je studuje ci zabiji
+    - background
     - jak vyrustal (kompletni rodina, ustav, kocovne, cirkus, sexualni otrok jako v princi prudasovi ;) )
         - jak se dokazal bavit a jake mel vztahy s:
             - mladsimi
@@ -43,6 +106,11 @@ ne ted mozna az to budu mit v DB
             - starsimi
             - velmi starymi
             - temi kdo jej vychovavali
+            - promlouvani k vicero lidem
+            - prateli
+            - znamymi
+            - sousedy
+            - uplne cizimi lidmi
     - jakou meli zivotni uroven rodice (vcetne obzivy - i mafian, zoldak, cirkusak a pod.)
     - udrzuje kontakty s rodici/pribuznymi/instituci
     - je soucasti organizace/spolku/etnika se zpusobem zivota ze ktereho nejde odejit snadno (Aboriginec, krovak, cigan, eskymak, zabijak mafie, starosta s neprateli, klanova/rodinna cest)

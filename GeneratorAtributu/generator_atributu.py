@@ -350,10 +350,10 @@ def make_decision(chosed_tuple:dict, pointspool:int, pointspool_skills:int) -> d
     for char in LISTATR:
         addon = random.choice(chosed_tuple)
         celk_atributy[char] = [(RACE_DICT[char][3] + addon), \
-                ' min: ', RACE_DICT[char][0], \
-                    ' max: ', RACE_DICT[char][1], \
-                        ' over: ', RACE_DICT[char][2], \
-                            ' race modifier ', RACE_DICT[char][3]]
+                'min:', RACE_DICT[char][0], \
+                    'max:', RACE_DICT[char][1], \
+                        'over:', RACE_DICT[char][2], \
+                            'race modifier', RACE_DICT[char][3]]
         final_atributes = celk_atributy
 
     final_atributes=OrderedDict(sorted(celk_atributy.items(), key=lambda t: t[0]))

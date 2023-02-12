@@ -30,6 +30,7 @@ ne ted mozna az to budu mit v DB
     - pozdeji i zapojim AI na generovani obrazku
     - co ma na sobe a pod. - bude ovlivneno ostatnimi - napriklad ze je bezdak
 - charakter
+    - vira - viz bohove
     - sexualni preference uchylky/orientace
     - 2 positivni vlastnosti (pilny, mily ...)
     - 2 negaticni vlastnosti (liny, puntickar ...)
@@ -53,6 +54,7 @@ ne ted mozna az to budu mit v DB
         - kde, jak a v cem zije
             - vlastni hospodarske zvirata
             - vlastni mazlicka
+    - je soucasti komunity/organizace
     - vybaveni: 
         - zbrane
         - zbroje
@@ -62,6 +64,7 @@ ne ted mozna az to budu mit v DB
         - nemovitosti
         - informace na mediich
         - dluzni upisy a jine prisliby
+        - otroci, vojaci, remeslnici ci nevolnici
 
 
 

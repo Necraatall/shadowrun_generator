@@ -122,157 +122,177 @@ metahuman_race_list = ['Human', 'Orc', 'Dwarf', 'Elf', 'Troll']
 class Atributes():
 
     def make_atributes():
-
+        # TODO: definovat nekde nahore ci uplne bokem body pres promennou
         # pointspool celkovy pocet bodu na postavu
         pointspool: int
         # pointspool_skills pocet bodu na skilly, Edge, rasu, Merits and Flows (neg: critters)
         pointspool_skills: int  # na platbu za edge, rasu a skilly
         # pointspool_atr_start kolik je do zacatku max na atributy - zde rozdeluji vsechny body ktere lze zakoupit (muze
         pointspool_atr_start: int  # na vypocet atributu vcetne bonusu rasy
-        # pointspool/2 must be [100,150,200,250,300] and between 425 and 600 BP
-        pointspool = random.choice((200, 150, 200, 250, 300, 850, 1200))
-        # TODO: better way for counting atributes and so one
+        # adventages celkovy pocet bodu na obdareni a postizeni
+        adventages: int
+        # pointspool/2 must be [200, 300, 340, 390, 400, 430, 440, 500, 600, 640, 690]
+        pointspool = random.choice((200, 300, 340, 390, 400, 430, 440, 500, 600, 640, 690))
+        # TODO: better way for counting atributes and so one but there is realy huge pool of skils
         pointspool_atr_start = round((pointspool/2) + (len(usedatr) * 10))
-        pointspool_skills = round(pointspool/2)
-        if pointspool_atr_start == 180:  # 100BP
-            chosensystem_dict_four = {
-                1: (4, 4, 2, 2, 2, 2, 1, 1),
-                2: (4, 3, 3, 3, 2, 1, 1, 1),
-                3: (4, 3, 3, 2, 2, 2, 1, 1),
-                4: (4, 3, 2, 2, 2, 2, 2, 1),
-                5: (4, 2, 2, 2, 2, 2, 2, 2),
-                6: (3, 3, 3, 3, 3, 1, 1, 1),
-                7: (3, 3, 3, 3, 2, 2, 1, 1),
-                8: (3, 3, 3, 2, 2, 2, 2, 1),
-                9: (3, 3, 2, 2, 2, 2, 2, 2),
-            }
-            chosed_tuple = chosensystem_dict_four[random.randint(1, len(chosensystem_dict_four))]
+        pointspool_skills = pointspool - pointspool_atr_start + adventages
+        match pointspool_atr_start:
+            case 180:  # 100BP
+                atribute_pool = {
+                    1: (4, 4, 2, 2, 2, 2, 1, 1),
+                    2: (4, 3, 3, 3, 2, 1, 1, 1),
+                    3: (4, 3, 3, 2, 2, 2, 1, 1),
+                    4: (4, 3, 2, 2, 2, 2, 2, 1),
+                    5: (4, 2, 2, 2, 2, 2, 2, 2),
+                    6: (3, 3, 3, 3, 3, 1, 1, 1),
+                    7: (3, 3, 3, 3, 2, 2, 1, 1),
+                    8: (3, 3, 3, 2, 2, 2, 2, 1),
+                    9: (3, 3, 2, 2, 2, 2, 2, 2),
+                }
+                chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
-        if pointspool_atr_start == 230:  # 150BP
-            chosensystem_dict_six = {
-                1: (6, 3, 3, 2, 2, 2, 2, 1),
-                2: (6, 3, 2, 2, 2, 2, 2, 2),
-            }
-            chosensystem_dict_five = {
-                1: (5, 5, 4, 3, 3, 2, 1, 1),
-                2: (5, 4, 4, 3, 3, 2, 1, 1),
-                3: (5, 4, 4, 3, 2, 2, 2, 1),
-                4: (5, 4, 4, 2, 2, 2, 2, 2),
-                5: (5, 4, 3, 3, 3, 3, 1, 1),
-                6: (5, 4, 3, 3, 3, 2, 2, 1),
-                7: (5, 4, 3, 3, 2, 2, 2, 2),
-                8: (5, 3, 3, 3, 3, 3, 2, 1),
-                9: (5, 3, 3, 3, 3, 2, 2, 2),
-            }
-            chosensystem_dict_four = {
-                1: (4, 4, 4, 3, 3, 3, 1, 1),
-                2: (4, 4, 4, 3, 3, 2, 2, 1),
-                3: (4, 4, 4, 3, 2, 2, 2, 2),
-                4: (4, 4, 3, 3, 3, 3, 2, 1),
-                5: (4, 4, 3, 3, 3, 2, 2, 2),
-                6: (4, 3, 3, 3, 3, 3, 3, 1),
-                5: (4, 3, 3, 3, 3, 3, 2, 2),
-                5: (3, 3, 3, 3, 3, 3, 3, 2),
-            }
-            choose_dict = random.randint(1, 3)
-            if choose_dict == 1:
-                chosed_tuple = chosensystem_dict_six[random.randint(1, len(chosensystem_dict_six))]
-            if choose_dict == 2:
-                chosed_tuple = chosensystem_dict_five[random.randint(1, len(chosensystem_dict_five))]
-            if choose_dict == 3:
-                chosed_tuple = chosensystem_dict_four[random.randint(1, len(chosensystem_dict_four))]
+            case 230:  # 150BP
+                atribute_pool = {
+                    1: (5, 5, 4, 3, 3, 2, 1, 1),
+                    2: (5, 4, 4, 3, 3, 2, 1, 1),
+                    3: (5, 4, 4, 3, 2, 2, 2, 1),
+                    4: (5, 4, 4, 2, 2, 2, 2, 2),
+                    5: (5, 4, 3, 3, 3, 3, 1, 1),
+                    6: (5, 4, 3, 3, 3, 2, 2, 1),
+                    7: (5, 4, 3, 3, 2, 2, 2, 2),
+                    8: (5, 3, 3, 3, 3, 3, 2, 1),
+                    9: (5, 3, 3, 3, 3, 2, 2, 2),
+                    10: (4, 4, 4, 3, 3, 3, 1, 1),
+                    11: (4, 4, 4, 3, 3, 2, 2, 1),
+                    12: (4, 4, 4, 3, 2, 2, 2, 2),
+                    13: (4, 4, 3, 3, 3, 3, 2, 1),
+                    14: (4, 4, 3, 3, 3, 2, 2, 2),
+                    15: (4, 3, 3, 3, 3, 3, 3, 1),
+                    16: (4, 3, 3, 3, 3, 3, 2, 2),
+                    17: (3, 3, 3, 3, 3, 3, 3, 2),
+                }
+                chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
+            case 250:  # 170BP
+                atribute_pool = {
+                    1: (5, 5, 3, 3, 3, 2, 2, 2),
+                    2: (5, 4, 4, 3, 3, 2, 2, 2),
+                    3: (5, 4, 4, 3, 3, 3, 2, 1),
+                    4: (5, 4, 4, 3, 3, 2, 2, 2),
+                    5: (5, 4, 3, 3, 3, 3, 2, 2),
+                    6: (5, 5, 4, 4, 2, 2, 2, 1),
+                    7: (5, 5, 5, 2, 2, 2, 2, 2),
+                    8: (5, 3, 3, 3, 3, 3, 3, 2),
+                    10: (4, 4, 4, 3, 3, 3, 2, 2),
+                    13: (4, 4, 3, 3, 3, 3, 3, 2),
+                    14: (4, 3, 3, 3, 3, 3, 3, 3),
+                }
+                chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
+            case 275:  # 195 BP
+                atribute_pool = {
+                    1: (6, 5, 4, 3, 3, 3, 1, 1),
+                    2: (6, 5, 4, 3, 2, 2, 2, 2),
+                    3: (6, 5, 4, 4, 3, 2, 1, 1),
+                    4: (6, 5, 4, 3, 3, 3, 1, 1),
+                    5: (6, 5, 4, 3, 2, 2, 2, 2),
+                    6: (6, 5, 3, 3, 3, 3, 2, 1),
+                    7: (6, 4, 4, 3, 3, 3, 2, 1),
+                    8: (6, 4, 3, 3, 3, 3, 3, 1),
+                    9: (6, 3, 3, 3, 3, 3, 3, 2),
+                    }
+                chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
+            case 280:  # 200 BP
+                atribute_pool = {
+                    1: (5, 5, 4, 4, 4, 3, 2, 1),
+                    2: (5, 5, 4, 4, 3, 3, 3, 1),
+                    3: (5, 5, 4, 4, 3, 3, 2, 2),
+                    4: (5, 5, 4, 3, 3, 3, 3, 2),
+                    5: (5, 4, 4, 4, 3, 3, 3, 2),
+                    6: (5, 4, 4, 3, 3, 3, 3, 3),
+                    7: (4, 4, 4, 4, 3, 3, 3, 3),
+                    8: (4, 4, 4, 4, 4, 4, 2, 2),
+                    10: (4, 4, 4, 4, 4, 3, 3, 2),
+                }
+                chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
-        if pointspool_atr_start == 280:  # 200 BP
-            chosensystem_dict_six = {
-                1: (6, 5, 4, 3, 3, 3, 1, 1),
-                2: (6, 5, 4, 3, 2, 2, 2, 2),
-                3: (6, 5, 4, 4, 3, 2, 1, 1),
-                4: (6, 5, 4, 3, 3, 3, 1, 1),
-                5: (6, 5, 4, 3, 2, 2, 2, 2),
-                6: (6, 5, 3, 3, 3, 3, 2, 1),
-                7: (6, 4, 4, 3, 3, 3, 2, 1),
-                8: (6, 4, 3, 3, 3, 3, 3, 1),
-                9: (6, 3, 3, 3, 3, 3, 3, 2)
-            }
-            chosensystem_dict_five = {
-                1: (5, 5, 4, 4, 4, 3, 2, 1),
-                2: (5, 5, 4, 4, 3, 3, 3, 1),
-                3: (5, 5, 4, 4, 3, 3, 2, 2),
-                4: (5, 5, 4, 3, 3, 3, 3, 2),
-                5: (5, 4, 4, 4, 3, 3, 3, 2),
-                6: (5, 4, 4, 3, 3, 3, 3, 3)
-            }
-            chosensystem_dict_four = {
-                1: (4, 4, 4, 4, 3, 3, 3, 3),
-                2: (4, 4, 4, 4, 3, 3, 3, 1),
-                3: (4, 4, 4, 4, 4, 4, 2, 2),
-                4: (4, 4, 4, 4, 4, 3, 3, 2),
-            }
-            choose_dict = random.randint(1, 3)
-            if choose_dict == 1:
-                chosed_tuple = chosensystem_dict_six[random.randint(1, len(chosensystem_dict_six))]
-            if choose_dict == 2:
-                chosed_tuple = chosensystem_dict_five[random.randint(1, len(chosensystem_dict_five))]
-            if choose_dict == 3:
-                chosed_tuple = chosensystem_dict_four[random.randint(1, len(chosensystem_dict_four))]
+            case 295:  # 215 BP
+                atribute_pool = {
+                    1: (6, 5, 4, 4, 4, 3, 2, 1),
+                    2: (6, 5, 4, 4, 3, 3, 3, 1),
+                    3: (6, 5, 4, 4, 3, 3, 2, 2),
+                    4: (6, 5, 4, 3, 3, 3, 3, 2),
+                    5: (6, 4, 4, 4, 3, 3, 3, 2),
+                    6: (6, 4, 4, 3, 3, 3, 3, 3),
+                    7: (6, 4, 4, 4, 3, 3, 3, 3),
+                    8: (6, 5, 5, 3, 3, 3, 3, 1),
+                    9: (6, 5, 5, 3, 3, 3, 2, 2),
+                }
+                chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
-        if pointspool_atr_start == 330:  # 250 BP
-            chosensystem_dict_six = {
-                1: (6, 6, 5, 5, 4, 2, 1, 1),
-                2: (6, 6, 5, 4, 4, 2, 2, 1),
-                3: (6, 6, 5, 4, 3, 3, 2, 1),
-                4: (6, 6, 5, 3, 3, 3, 3, 1),
-                5: (6, 6, 5, 3, 3, 3, 2, 2),
-                6: (6, 6, 4, 3, 3, 3, 3, 2),
-                7: (6, 5, 5, 4, 4, 3, 3, 1),
-                8: (6, 5, 5, 4, 4, 3, 2, 2),
-                9: (6, 5, 5, 4, 3, 3, 3, 2),
-                10: (6, 5, 4, 4, 4, 3, 3, 2),
-                11: (6, 4, 4, 4, 4, 3, 3, 3)
-            }
-            chosensystem_dict_five = {
-                1: (5, 5, 5, 4, 4, 4, 3, 3),
-                2: (5, 5, 4, 4, 4, 4, 4, 3),
-                3: (5, 4, 4, 4, 4, 4, 4, 4)
-            }
+            case 300:  # 220 BP
+                atribute_pool = {
+                    10: (5, 5, 4, 4, 4, 3, 2, 1),
+                    11: (5, 5, 4, 4, 3, 3, 3, 1),
+                    12: (5, 5, 4, 4, 3, 3, 2, 2),
+                    13: (5, 5, 4, 3, 3, 3, 3, 2),
+                    14: (5, 4, 4, 4, 3, 3, 3, 2),
+                    15: (5, 4, 4, 3, 3, 3, 3, 3),
+                    16: (4, 4, 4, 4, 3, 3, 3, 3),
+                    17: (4, 4, 4, 4, 3, 3, 3, 1),
+                    18: (4, 4, 4, 4, 4, 4, 2, 2),
+                    19: (4, 4, 4, 4, 4, 3, 3, 2),
+                }
+                chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
-            choose_dict = random.randint(1, 2)
-            if choose_dict == 1:
-                chosed_tuple = chosensystem_dict_six[random.randint(1, len(chosensystem_dict_six))]
-            if choose_dict == 2:
-                chosed_tuple = chosensystem_dict_five[random.randint(1, len(chosensystem_dict_five))]
+            case 330:  # 250 BP
+                atribute_pool = {
+                    1: (6, 6, 5, 5, 4, 2, 1, 1),
+                    2: (6, 6, 5, 4, 4, 2, 2, 1),
+                    3: (6, 6, 5, 4, 3, 3, 2, 1),
+                    4: (6, 6, 5, 3, 3, 3, 3, 1),
+                    5: (6, 6, 5, 3, 3, 3, 2, 2),
+                    6: (6, 6, 4, 3, 3, 3, 3, 2),
+                    7: (6, 5, 5, 4, 4, 3, 3, 1),
+                    8: (6, 5, 5, 4, 4, 3, 2, 2),
+                    9: (6, 5, 5, 4, 3, 3, 3, 2),
+                    10: (6, 5, 4, 4, 4, 3, 3, 2),
+                    11: (6, 4, 4, 4, 4, 3, 3, 3),
+                    12: (5, 5, 5, 4, 4, 4, 3, 3),
+                    13: (5, 5, 4, 4, 4, 4, 4, 3),
+                    14: (5, 4, 4, 4, 4, 4, 4, 4)
+                }
+                chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
-        if pointspool_atr_start == 380:  # 300 BP
-            chosensystem_dict_six = {
-                1: (6, 6, 5, 5, 4, 4, 4, 1),
-                2: (6, 6, 5, 5, 4, 4, 3, 2),
-                3: (6, 6, 5, 5, 4, 3, 3, 3),
-                4: (6, 6, 5, 4, 4, 4, 3, 3),
-                5: (6, 6, 4, 4, 4, 4, 4, 3),
-                6: (6, 5, 5, 5, 4, 4, 4, 3),
-                7: (6, 5, 5, 4, 4, 4, 4, 4)
-            }
-            chosensystem_dict_five = {
-                1: (5, 5, 5, 5, 5, 5, 4, 4)
-            }
-            choose_dict = random.randint(1, 2)
-            if choose_dict == 1:
-                chosed_tuple = chosensystem_dict_six[random.randint(1, len(chosensystem_dict_six))]
-            if choose_dict == 2:
-                chosed_tuple = chosensystem_dict_five[random.randint(1, len(chosensystem_dict_five))]
+            case 380: # 300 BP   
+                atribute_pool = {
+                    1: (6, 6, 5, 5, 4, 4, 4, 1),
+                    2: (6, 6, 5, 5, 4, 4, 3, 2),
+                    3: (6, 6, 5, 5, 4, 3, 3, 3),
+                    4: (6, 6, 5, 4, 4, 4, 3, 3),
+                    5: (6, 6, 4, 4, 4, 4, 4, 3),
+                    6: (6, 5, 5, 5, 4, 4, 4, 3),
+                    7: (6, 5, 5, 4, 4, 4, 4, 4),
+                    8: (5, 5, 5, 5, 5, 5, 4, 4)
+                }
+                chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
-        if pointspool_atr_start >= 425 and pointspool_atr_start <= 600:
-            chosen_realy_big_pool = {
-                1: (6, 5, 5, 5, 5, 5, 5, 5),
-                2: (6, 6, 5, 5, 5, 5, 5, 5),
-                3: (6, 6, 6, 5, 5, 5, 5, 5),
-                4: (6, 6, 6, 6, 5, 5, 5, 5),
-                5: (6, 6, 6, 6, 6, 5, 5, 5),
-                6: (6, 6, 6, 6, 6, 6, 5, 5),
-                7: (6, 6, 6, 6, 6, 6, 6, 5),
-                8: (6, 6, 6, 6, 6, 6, 6, 6)
-            }
-            chosed_tuple = chosen_realy_big_pool[random.randint(1, len(chosen_realy_big_pool))]
+            case 400: # 320 BP
+                atribute_pool = (
+                    (5, 5, 5, 5, 5, 5, 5, 5),    # 8×50+0 (6) = 400
+                    (6, 6, 5, 5, 5, 4, 3, 3),    # 5×50+40+2×30+50 (6) = 400
+                    (6, 6, 5, 4, 4, 4, 4, 4),    # 5×40+3×50+50 (6) = 400
+                    (6, 6, 5, 4, 4, 4, 4, 4),    # 3×50+5×40+50 (6) = 400
+                )
+                chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
+
+            case 425: # 345 BP
+                atribute_pool = (
+                    (6, 5, 5, 5, 5, 5, 5, 5),    # 8×50+25 (6) = 425
+                    (6, 6, 6, 5, 5, 4, 3, 3),    # 5×50+40+2×30+75 (6) = 425
+                    (6, 6, 6, 4, 4, 4, 4, 4),    # 5×40+3×50+75 (6) = 425
+                )
+                chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
+
+
             # 330 and 380 BP don't have combination with 4 numbers
             # 425 BP up to the 600 BP is only number of 5 in pool of 6, 600 is maximum when all 6 is set
         chosen_tuple = chosed_tuple

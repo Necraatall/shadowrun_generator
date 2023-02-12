@@ -85,6 +85,17 @@ if race_choice == 'Middle_Eastern':
 if race_choice == 'African':
     sub_race_african_choice = random.choice(('Hamitic'))
 
+class Height(Enum):
+    VERY_TALL_HEIGHT = "very tall"
+    TALL_HEIGHT = "tall"
+    AVERAGE_HEIGHT = "average height"
+    SHORT_HEIGHT = "short"
+    VERY_SHORT_HEIGHT ="very short"
+
+make_list = list(Weight)
+WEIGHT = random.choice(make_list)
+WEIGHT = (WEIGHT.value)
+
 race_details = {
     'Europoidic' : {
         "Nordic" : {
@@ -387,6 +398,16 @@ race_details = {
         "skin_tone" : random.choice((skin_tone[9], skin_tone[6], skin_tone[7] ,skin_tone[2], skin_tone[2], skin_tone[8], skin_tone[3]))
     }}
 }
+
+# Kapoidni - Capoid
+# krovaci
+# O Khoisanech se ve své knize O původu člověka z roku 1871 zmiňoval i Charles Darwin, kdy komentoval výraznou steatopygii a prodloužené malé stydké pysky u žen.[8] Od okolních bantuských populací se rovněž liší přítomností epikantu. Tyto typické a výrazné fyziologické rysy vedly ve 20. století C. S. Coona k popisu Khoisanů jako samostatné lidské rasy (kapoidní rasy),[9][10] přestože snaha klasifikovat lidstvo do ras je dnes mnohdy považována za překonanou.[11][12] Geneticky jsou Khoisany velmi starobylou monofyletickou skupinou, od které se odštěpil a později vyvinul celý zbytek lidstva.[13] Haploskupina L0, která je typická pro mitochondriální genom Khoisanů, je první odnoží mitochondriální Evy. Její odštěpení datujeme do doby před 170 000 až 150 000 lety.
+
+# Australci:
+# výrazný nadočnicový oblouk,
+# absence nosního prahu a jamky, široký a kruhovitý nosní otvor, zvětšení lebky v oblasti horní čelisti (prognatie) a dlouhou (dolichocefalní) hlavu. Mezi další tradičně sdílené znaky patří plochý široký nos, silné terciární tělesné ochlupení, tmavě hnědé zbarvení kůže a kudrnaté vlasy.
+# 
+# Častým znakem australoidní rasy jsou také světlé (blond) vlasy, které se vyskytují hlavně u dětí a s přibývajícím věkem tmavnou. Jev je nápadný zvláště u Austrálců žijících ve středozápadní části Austrálie, kde má 90–100 % dětí světlé vlasy. Tato barva vlasů je způsobena mutací genu TYRP1, která se vyvinula nezávisle a je odlišná od mechanismu, jakým vznikají světlé vlasy u europoidů. Může jít o důsledek mísení s neznámým lidským předkem.[3]
 
 if any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
     race_chosen=race_details[race_choice]

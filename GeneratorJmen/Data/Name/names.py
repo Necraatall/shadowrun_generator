@@ -15,6 +15,7 @@ from GeneratorJmen.Data.Name.names_es import *
 from GeneratorJmen.Data.Name.names_vn import *
 from GeneratorJmen.Data.Name.names_au_aboriginal import *
 from GeneratorJmen.Data.Name.names_au import *
+from GeneratorJmen.Data.Name.names_eg_ancient import *
 
 from GeneratorJmen.Data.Name.Mans.mnames_cz import *
 from GeneratorJmen.Data.Name.Womans.wnames_cz import *
@@ -24,6 +25,7 @@ from GeneratorJmen.Data.Name.Mans.mnames_au_aboriginal import *
 from GeneratorJmen.Data.Name.Womans.wnames_au_aboriginal import *
 from GeneratorJmen.Data.Name.Mans.mnames_au import *
 from GeneratorJmen.Data.Name.Womans.wnames_au import *
+
 
 intent_names_cz = (
     intent_mnames_cz,
@@ -65,6 +67,7 @@ names_all = (
     intent_names_cz,
     intent_names_gb_scotish,
     intent_names_au_aboriginal,
+    intent_names_eg_ancient,
 )
 
 

@@ -17,7 +17,8 @@ from GeneratorJmen.Data.Name import (
     names_se,
     names_sk,
     names_us,
-    names_vn
+    names_vn,
+    names_eg_ancient,
 )
 
 from GeneratorJmen.Data.NickName import (
@@ -54,8 +55,10 @@ from GeneratorAtributu.generator_atributu import *
 
 # TODO: nejdrive generovat gender, sexualni preference, rasu, z jake lidske rasy je, 
 # zemi puvodu, pak jmeno a pak dalsi
-# TODO: lidske/metalidske rasy predelat samostatne
-# TODO: vymyslet jak generovat a z ceho - ? - sehnat data net ? zivotni udalosti
+# TODO: prelozit lidske rasy a udelat zaklad na prekladac do cestiny, pokud se nebude nacitat ze souboru
+# TODO: lidske/metalidske rasy predelat samostatne do enumu a dodelat Aborigince a Kapoidy
+# TODO: Udalosti od 6ho roku narozeni - vymyslet jak generovat a z ceho - ? - sehnat data net ?
+# TODO: ??? Predelat do souboru intenty ???? nebo rovnou vse udelat pres pydantic a nacitat z scv/excelu... ?
 # TODO: rozmyslet si lepe adresarovou strukturu
 # TODO: printovat bude jeden soubor k tomu urcenej - pokud soubory ci print dict
 # TODO: dodelat testy a kouknout na "navrhove vzory" k priprave na dalsi verzi
@@ -222,6 +225,8 @@ def tribe_name_origin_input():
             tribe_name_origin = random.choice(names.intent_names_gb_scotish[gender_name])
         case 17:
             tribe_name_origin = random.choice(names.intent_names_au[random.randint(0, 2)])
+        case 18:
+            tribe_name_origin = random.choice(names_eg_ancient.intent_names_vn)
     return tribe_name_origin
 
 

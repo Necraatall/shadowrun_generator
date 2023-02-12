@@ -1,35 +1,59 @@
 # Co od toho chci:
 
 ## otazky: 
-jaky system:
+<pre><code>
+#### jaky system:
+</code></pre>
+<pre><code>
 shadowrun 4th edice ktery s kamarady hrajeme a mohu si vysledky ozkouset
 ??? mozna i VOID d6, ktery vypada ze ma jen vicero skillu
-
-### jake svety: 
+</code></pre>
+### jake svety a atypicky background: 
+<pre><code>
 kvuli zdrojum dat uvazuji o fantasy, sci-fi jako shadorun a pod., post apo, mozna dark (to by byl chalenge)
-
+    - moznost zvolit si rasy ktere tam nejsou
+    - moznost zvolit si Slovany, Germany, Nordicy, Galy, Skoty, Iry, Americke indiany, Eskymaky, Aborigince, Krovaky
+</code></pre>
 ### nove rasy a pod.
+<pre><code>
 ne ted mozna az to budu mit v DB
-
+</code></pre>
 ### Koncept:
+<pre><code>
 - NPC generator backgoundu - zivotni udalosti od 6teho roku zivota
 - po te co refaktoruji rasy, prejdu na novou verzi kdy vsechny vstupni staticke data si budu ukladat do souboru abych je pak pouzil 
 - napriklad ve verzi 3 kdy by uz mela byt databaze a zaklad webu
 - generator by mel vyplivnout postavu s dobrym backgroundem a popisem vzhledu
 - komunikace s lidmi a prace s lidmi muze mit stejnou stupnici
-
+</code></pre>
 ### Jak na to:
+<pre><code>
 - typ sveta
+</code></pre>
+<pre><code>
 - nejdrive pohlavi,
+</code></pre>
+<pre><code>
 - volba za kolik bodu (asi pridam vybery slovni plus v zavorce pocet bodu)
-
+</code></pre>
+<pre><code>
 - generator jmen
+</code></pre>
+<pre><code>
 - atributy
+</code></pre>
+<pre><code>
 - merits and flows max 2+ a 2- (???s okecem ci bez??? - asi na volbe uzivatele)
+</code></pre>
+<pre><code>
 - skilly vzdy s pouzitym atributem - to bude orisek a obavam se ze bez nacitani dat z txt ci db to nepujde
+</code></pre>
+<pre><code>
 - vzhled
     - pozdeji i zapojim AI na generovani obrazku postavy, mozna i toho co vlastni a mozna i pribehu
     - co ma na sobe a pod. - bude ovlivneno ostatnimi - napriklad ze je bezdak
+</code></pre>
+<pre><code>
 - charakter
     - vira - viz bohove
     - sexualni preference uchylky/orientace
@@ -133,9 +157,10 @@ ne ted mozna az to budu mit v DB
         - informace na mediich
         - dluzni upisy a jine prisliby
         - otroci, vojaci, remeslnici ci nevolnici
+</code></pre>
 
-
-
+<pre><code>This is a code block.
+</code></pre>
 
 
 

@@ -1,5 +1,5 @@
 """
-    High level: kod dokaze vygenerovat atributy, ovlivnit rasou, zapsat do atributes_dict (vcetne Magie a resonance) a vypsat je
+    High level: kod dokaze vygenerovat atributy, ovlivnit rasou, zapsat do slovniku (vcetne Magie a resonance) a vypsat je
     Deep level: kod vyrandomuje zda dotycny je magic/resonance user (a odecte je ze zbyvajicich Pointspool)
                 kod vybere z ktereho listu hodnot bude pridelovat hodnoty do atributu
                 kod vybere hodnoty a priradi
@@ -27,8 +27,10 @@ LISTATR = list(LISTATR)
 RACE_DICT: dict = {}
 final_atributes: dict= {}
 chosed_tuple: tuple = ()
-# choose_destiny = None   # 96 - 100 is full Thaumaturgic, 91-95 is full shamanic, 86-90 is Thaumaturgy Adept, 81-85 is Shamanic Adept, 75-80 is Technomancer  
-# is_mage = None          # 10 is full Thaumaturgic, 9 is full shamanic, 8 is Thaumaturgy Adept, 7 is Shamanic Adept, 6 physical Adept, 7 is Technomancer 
+# adventages celkovy pocet bodu na obdareni a postizeni
+adventages: int = 0
+# pointspool_skills pocet bodu na skilly, Edge, rasu, Merits and Flows (neg: critters)
+pointspool_skills: int  # na platbu za edge, rasu a skilly
 
 HUMAN_RACE_DICT = {
     'BS': 0,
@@ -125,12 +127,9 @@ class Atributes():
         # TODO: definovat nekde nahore ci uplne bokem body pres promennou
         # pointspool celkovy pocet bodu na postavu
         pointspool: int
-        # pointspool_skills pocet bodu na skilly, Edge, rasu, Merits and Flows (neg: critters)
-        pointspool_skills: int  # na platbu za edge, rasu a skilly
+
         # pointspool_atr_start kolik je do zacatku max na atributy - zde rozdeluji vsechny body ktere lze zakoupit (muze
         pointspool_atr_start: int  # na vypocet atributu vcetne bonusu rasy
-        # adventages celkovy pocet bodu na obdareni a postizeni
-        adventages: int
         # pointspool/2 must be [200, 300, 340, 390, 400, 430, 440, 500, 600, 640, 690]
         pointspool = random.choice((200, 300, 340, 390, 400, 430, 440, 500, 600, 640, 690))
         # TODO: better way for counting atributes and so one but there is realy huge pool of skils
@@ -138,165 +137,164 @@ class Atributes():
         pointspool_skills = pointspool - pointspool_atr_start + adventages
         match pointspool_atr_start:
             case 180:  # 100BP
-                atribute_pool = {
-                    1: (4, 4, 2, 2, 2, 2, 1, 1),
-                    2: (4, 3, 3, 3, 2, 1, 1, 1),
-                    3: (4, 3, 3, 2, 2, 2, 1, 1),
-                    4: (4, 3, 2, 2, 2, 2, 2, 1),
-                    5: (4, 2, 2, 2, 2, 2, 2, 2),
-                    6: (3, 3, 3, 3, 3, 1, 1, 1),
-                    7: (3, 3, 3, 3, 2, 2, 1, 1),
-                    8: (3, 3, 3, 2, 2, 2, 2, 1),
-                    9: (3, 3, 2, 2, 2, 2, 2, 2),
-                }
+                atribute_pool = (
+                    (4, 4, 2, 2, 2, 2, 1, 1),
+                    (4, 3, 3, 3, 2, 1, 1, 1),
+                    (4, 3, 3, 2, 2, 2, 1, 1),
+                    (4, 3, 2, 2, 2, 2, 2, 1),
+                    (4, 2, 2, 2, 2, 2, 2, 2),
+                    (3, 3, 3, 3, 3, 1, 1, 1),
+                    (3, 3, 3, 3, 2, 2, 1, 1),
+                    (3, 3, 3, 2, 2, 2, 2, 1),
+                    (3, 3, 2, 2, 2, 2, 2, 2),
+                )
                 chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
             case 230:  # 150BP
-                atribute_pool = {
-                    1: (5, 5, 4, 3, 3, 2, 1, 1),
-                    2: (5, 4, 4, 3, 3, 2, 1, 1),
-                    3: (5, 4, 4, 3, 2, 2, 2, 1),
-                    4: (5, 4, 4, 2, 2, 2, 2, 2),
-                    5: (5, 4, 3, 3, 3, 3, 1, 1),
-                    6: (5, 4, 3, 3, 3, 2, 2, 1),
-                    7: (5, 4, 3, 3, 2, 2, 2, 2),
-                    8: (5, 3, 3, 3, 3, 3, 2, 1),
-                    9: (5, 3, 3, 3, 3, 2, 2, 2),
-                    10: (4, 4, 4, 3, 3, 3, 1, 1),
-                    11: (4, 4, 4, 3, 3, 2, 2, 1),
-                    12: (4, 4, 4, 3, 2, 2, 2, 2),
-                    13: (4, 4, 3, 3, 3, 3, 2, 1),
-                    14: (4, 4, 3, 3, 3, 2, 2, 2),
-                    15: (4, 3, 3, 3, 3, 3, 3, 1),
-                    16: (4, 3, 3, 3, 3, 3, 2, 2),
-                    17: (3, 3, 3, 3, 3, 3, 3, 2),
-                }
+                atribute_pool = (
+                    (5, 5, 4, 3, 3, 2, 1, 1),
+                    (5, 4, 4, 3, 3, 2, 1, 1),
+                    (5, 4, 4, 3, 2, 2, 2, 1),
+                    (5, 4, 4, 2, 2, 2, 2, 2),
+                    (5, 4, 3, 3, 3, 3, 1, 1),
+                    (5, 4, 3, 3, 3, 2, 2, 1),
+                    (5, 4, 3, 3, 2, 2, 2, 2),
+                    (5, 3, 3, 3, 3, 3, 2, 1),
+                    (5, 3, 3, 3, 3, 2, 2, 2),
+                    (4, 4, 4, 3, 3, 3, 1, 1),
+                    (4, 4, 4, 3, 3, 2, 2, 1),
+                    (4, 4, 4, 3, 2, 2, 2, 2),
+                    (4, 4, 3, 3, 3, 3, 2, 1),
+                    (4, 4, 3, 3, 3, 2, 2, 2),
+                    (4, 3, 3, 3, 3, 3, 3, 1),
+                    (4, 3, 3, 3, 3, 3, 2, 2),
+                    (3, 3, 3, 3, 3, 3, 3, 2),
+                )
                 chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
             case 250:  # 170BP
-                atribute_pool = {
-                    1: (5, 5, 3, 3, 3, 2, 2, 2),
-                    2: (5, 4, 4, 3, 3, 2, 2, 2),
-                    3: (5, 4, 4, 3, 3, 3, 2, 1),
-                    4: (5, 4, 4, 3, 3, 2, 2, 2),
-                    5: (5, 4, 3, 3, 3, 3, 2, 2),
-                    6: (5, 5, 4, 4, 2, 2, 2, 1),
-                    7: (5, 5, 5, 2, 2, 2, 2, 2),
-                    8: (5, 3, 3, 3, 3, 3, 3, 2),
-                    10: (4, 4, 4, 3, 3, 3, 2, 2),
-                    13: (4, 4, 3, 3, 3, 3, 3, 2),
-                    14: (4, 3, 3, 3, 3, 3, 3, 3),
-                }
+                atribute_pool = (
+                    (5, 5, 3, 3, 3, 2, 2, 2),
+                    (5, 4, 4, 3, 3, 2, 2, 2),
+                    (5, 4, 4, 3, 3, 3, 2, 1),
+                    (5, 4, 4, 3, 3, 2, 2, 2),
+                    (5, 4, 3, 3, 3, 3, 2, 2),
+                    (5, 5, 4, 4, 2, 2, 2, 1),
+                    (5, 5, 5, 2, 2, 2, 2, 2),
+                    (5, 3, 3, 3, 3, 3, 3, 2),
+                    (4, 4, 4, 3, 3, 3, 2, 2),
+                    (4, 4, 3, 3, 3, 3, 3, 2),
+                    (4, 3, 3, 3, 3, 3, 3, 3),
+                )
                 chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
             case 275:  # 195 BP
-                atribute_pool = {
-                    1: (6, 5, 4, 3, 3, 3, 1, 1),
-                    2: (6, 5, 4, 3, 2, 2, 2, 2),
-                    3: (6, 5, 4, 4, 3, 2, 1, 1),
-                    4: (6, 5, 4, 3, 3, 3, 1, 1),
-                    5: (6, 5, 4, 3, 2, 2, 2, 2),
-                    6: (6, 5, 3, 3, 3, 3, 2, 1),
-                    7: (6, 4, 4, 3, 3, 3, 2, 1),
-                    8: (6, 4, 3, 3, 3, 3, 3, 1),
-                    9: (6, 3, 3, 3, 3, 3, 3, 2),
-                    }
+                atribute_pool = (
+                    (6, 5, 4, 3, 3, 3, 1, 1),
+                    (6, 5, 4, 3, 2, 2, 2, 2),
+                    (6, 5, 4, 4, 3, 2, 1, 1),
+                    (6, 5, 4, 3, 3, 3, 1, 1),
+                    (6, 5, 4, 3, 2, 2, 2, 2),
+                    (6, 5, 3, 3, 3, 3, 2, 1),
+                    (6, 4, 4, 3, 3, 3, 2, 1),
+                    (6, 4, 3, 3, 3, 3, 3, 1),
+                    (6, 3, 3, 3, 3, 3, 3, 2),
+                    )
                 chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
             case 280:  # 200 BP
-                atribute_pool = {
-                    1: (5, 5, 4, 4, 4, 3, 2, 1),
-                    2: (5, 5, 4, 4, 3, 3, 3, 1),
-                    3: (5, 5, 4, 4, 3, 3, 2, 2),
-                    4: (5, 5, 4, 3, 3, 3, 3, 2),
-                    5: (5, 4, 4, 4, 3, 3, 3, 2),
-                    6: (5, 4, 4, 3, 3, 3, 3, 3),
-                    7: (4, 4, 4, 4, 3, 3, 3, 3),
-                    8: (4, 4, 4, 4, 4, 4, 2, 2),
-                    10: (4, 4, 4, 4, 4, 3, 3, 2),
-                }
+                atribute_pool = (
+                    (5, 5, 4, 4, 4, 3, 2, 1),
+                    (5, 5, 4, 4, 3, 3, 3, 1),
+                    (5, 5, 4, 4, 3, 3, 2, 2),
+                    (5, 5, 4, 3, 3, 3, 3, 2),
+                    (5, 4, 4, 4, 3, 3, 3, 2),
+                    (5, 4, 4, 3, 3, 3, 3, 3),
+                    (4, 4, 4, 4, 3, 3, 3, 3),
+                    (4, 4, 4, 4, 4, 4, 2, 2),
+                    (4, 4, 4, 4, 4, 3, 3, 2),
+                )
                 chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
             case 295:  # 215 BP
-                atribute_pool = {
-                    1: (6, 5, 4, 4, 4, 3, 2, 1),
-                    2: (6, 5, 4, 4, 3, 3, 3, 1),
-                    3: (6, 5, 4, 4, 3, 3, 2, 2),
-                    4: (6, 5, 4, 3, 3, 3, 3, 2),
-                    5: (6, 4, 4, 4, 3, 3, 3, 2),
-                    6: (6, 4, 4, 3, 3, 3, 3, 3),
-                    7: (6, 4, 4, 4, 3, 3, 3, 3),
-                    8: (6, 5, 5, 3, 3, 3, 3, 1),
-                    9: (6, 5, 5, 3, 3, 3, 2, 2),
-                }
+                atribute_pool = (
+                    (6, 5, 4, 4, 4, 3, 2, 1),
+                    (6, 5, 4, 4, 3, 3, 3, 1),
+                    (6, 5, 4, 4, 3, 3, 2, 2),
+                    (6, 5, 4, 3, 3, 3, 3, 2),
+                    (6, 4, 4, 4, 3, 3, 3, 2),
+                    (6, 4, 4, 3, 3, 3, 3, 3),
+                    (6, 4, 4, 4, 3, 3, 3, 3),
+                    (6, 5, 5, 3, 3, 3, 3, 1),
+                    (6, 5, 5, 3, 3, 3, 2, 2),
+                )
                 chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
             case 300:  # 220 BP
-                atribute_pool = {
-                    10: (5, 5, 4, 4, 4, 3, 2, 1),
-                    11: (5, 5, 4, 4, 3, 3, 3, 1),
-                    12: (5, 5, 4, 4, 3, 3, 2, 2),
-                    13: (5, 5, 4, 3, 3, 3, 3, 2),
-                    14: (5, 4, 4, 4, 3, 3, 3, 2),
-                    15: (5, 4, 4, 3, 3, 3, 3, 3),
-                    16: (4, 4, 4, 4, 3, 3, 3, 3),
-                    17: (4, 4, 4, 4, 3, 3, 3, 1),
-                    18: (4, 4, 4, 4, 4, 4, 2, 2),
-                    19: (4, 4, 4, 4, 4, 3, 3, 2),
-                }
+                atribute_pool = (
+                    (5, 5, 4, 4, 4, 3, 2, 1),
+                    (5, 5, 4, 4, 3, 3, 3, 1),
+                    (5, 5, 4, 4, 3, 3, 2, 2),
+                    (5, 5, 4, 3, 3, 3, 3, 2),
+                    (5, 4, 4, 4, 3, 3, 3, 2),
+                    (5, 4, 4, 3, 3, 3, 3, 3),
+                    (4, 4, 4, 4, 3, 3, 3, 3),
+                    (4, 4, 4, 4, 3, 3, 3, 1),
+                    (4, 4, 4, 4, 4, 4, 2, 2),
+                    (4, 4, 4, 4, 4, 3, 3, 2),
+                )
                 chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
             case 330:  # 250 BP
-                atribute_pool = {
-                    1: (6, 6, 5, 5, 4, 2, 1, 1),
-                    2: (6, 6, 5, 4, 4, 2, 2, 1),
-                    3: (6, 6, 5, 4, 3, 3, 2, 1),
-                    4: (6, 6, 5, 3, 3, 3, 3, 1),
-                    5: (6, 6, 5, 3, 3, 3, 2, 2),
-                    6: (6, 6, 4, 3, 3, 3, 3, 2),
-                    7: (6, 5, 5, 4, 4, 3, 3, 1),
-                    8: (6, 5, 5, 4, 4, 3, 2, 2),
-                    9: (6, 5, 5, 4, 3, 3, 3, 2),
-                    10: (6, 5, 4, 4, 4, 3, 3, 2),
-                    11: (6, 4, 4, 4, 4, 3, 3, 3),
-                    12: (5, 5, 5, 4, 4, 4, 3, 3),
-                    13: (5, 5, 4, 4, 4, 4, 4, 3),
-                    14: (5, 4, 4, 4, 4, 4, 4, 4)
-                }
+                atribute_pool = (
+                    (6, 6, 5, 5, 4, 2, 1, 1),
+                    (6, 6, 5, 4, 4, 2, 2, 1),
+                    (6, 6, 5, 4, 3, 3, 2, 1),
+                    (6, 6, 5, 3, 3, 3, 3, 1),
+                    (6, 6, 5, 3, 3, 3, 2, 2),
+                    (6, 6, 4, 3, 3, 3, 3, 2),
+                    (6, 5, 5, 4, 4, 3, 3, 1),
+                    (6, 5, 5, 4, 4, 3, 2, 2),
+                    (6, 5, 5, 4, 3, 3, 3, 2),
+                    (6, 5, 4, 4, 4, 3, 3, 2),
+                    (6, 4, 4, 4, 4, 3, 3, 3),
+                    (5, 5, 5, 4, 4, 4, 3, 3),
+                    (5, 5, 4, 4, 4, 4, 4, 3),
+                    (5, 4, 4, 4, 4, 4, 4, 4)
+                )
                 chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
             case 380: # 300 BP   
-                atribute_pool = {
-                    1: (6, 6, 5, 5, 4, 4, 4, 1),
-                    2: (6, 6, 5, 5, 4, 4, 3, 2),
-                    3: (6, 6, 5, 5, 4, 3, 3, 3),
-                    4: (6, 6, 5, 4, 4, 4, 3, 3),
-                    5: (6, 6, 4, 4, 4, 4, 4, 3),
-                    6: (6, 5, 5, 5, 4, 4, 4, 3),
-                    7: (6, 5, 5, 4, 4, 4, 4, 4),
-                    8: (5, 5, 5, 5, 5, 5, 4, 4)
-                }
+                atribute_pool = (
+                    (6, 6, 5, 5, 4, 4, 4, 1),
+                    (6, 6, 5, 5, 4, 4, 3, 2),
+                    (6, 6, 5, 5, 4, 3, 3, 3),
+                    (6, 6, 5, 4, 4, 4, 3, 3),
+                    (6, 6, 4, 4, 4, 4, 4, 3),
+                    (6, 5, 5, 5, 4, 4, 4, 3),
+                    (6, 5, 5, 4, 4, 4, 4, 4),
+                    (5, 5, 5, 5, 5, 5, 4, 4)
+                )
                 chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
             case 400: # 320 BP
                 atribute_pool = (
-                    (5, 5, 5, 5, 5, 5, 5, 5),    # 8×50+0 (6) = 400
-                    (6, 6, 5, 5, 5, 4, 3, 3),    # 5×50+40+2×30+50 (6) = 400
-                    (6, 6, 5, 4, 4, 4, 4, 4),    # 5×40+3×50+50 (6) = 400
-                    (6, 6, 5, 4, 4, 4, 4, 4),    # 3×50+5×40+50 (6) = 400
+                    (5, 5, 5, 5, 5, 5, 5, 5),
+                    (6, 6, 5, 5, 5, 4, 3, 3),
+                    (6, 6, 5, 4, 4, 4, 4, 4),
+                    (6, 6, 5, 4, 4, 4, 4, 4),
                 )
                 chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
             case 425: # 345 BP
                 atribute_pool = (
-                    (6, 5, 5, 5, 5, 5, 5, 5),    # 8×50+25 (6) = 425
-                    (6, 6, 6, 5, 5, 4, 3, 3),    # 5×50+40+2×30+75 (6) = 425
-                    (6, 6, 6, 4, 4, 4, 4, 4),    # 5×40+3×50+75 (6) = 425
+                    (6, 5, 5, 5, 5, 5, 5, 5),
+                    (6, 6, 6, 5, 5, 4, 3, 3),
+                    (6, 6, 6, 4, 4, 4, 4, 4),
                 )
                 chosed_tuple = atribute_pool[random.randint(1, len(atribute_pool))]
 
-
-            # 330 and 380 BP don't have combination with 4 numbers
-            # 425 BP up to the 600 BP is only number of 5 in pool of 6, 600 is maximum when all 6 is set
         chosen_tuple = chosed_tuple
+
         atributes=make_decision(chosen_tuple, pointspool)
+        pointspool_skills = atributes[1]
         return atributes
 
 def make_decision(chosed_tuple, pointspool) -> dict:
@@ -370,4 +368,4 @@ def make_decision(chosed_tuple, pointspool) -> dict:
 
     # TODO: for the future whe i will make skills
     final_atributes['BS']=RACE_DICT['BS']
-    return final_atributes
+    return final_atributes, pointspool_skills

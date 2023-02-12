@@ -75,19 +75,7 @@ from GeneratorAtributu.generator_atributu import *
 # MEMO: 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 key for an openapi
 
 
-
-
-
-
-
-    
-# print(race_detail_type, 'eye_color is : ', random.choice(race_details[race_detail_type][]['eye_color']))
-# print(race_detail_type, 'hair_color is : ', random.choice(race_details[race_detail_type]['hair_color']))
-# print(race_detail_type, 'skin_tone is : ', random.choice(race_details[race_detail_type]['skin_tone']))
-
-# TODO: done races 
-# class print and choose
-# TODO: zakomponovat randomizer z shadowrunu
+# TODO: zakomponovat randomizer z shadowrunu ???
 # http://www.miyako.pro/files/Games/Shadowrun/books/Shadowrun%204th%20Edition%20-%20Anniversary.pdf
 # https://wrathofzombie.files.wordpress.com/2012/09/shadowrun-background-generator.pdf
 # TODO: zapracovat radek od print(random.choice(list(Tribe_name_origin)).value)
@@ -142,16 +130,21 @@ def write_results():
         )
         god = God.get_random_tribe_god_with_abouts()
         print("God:", god)
-    make_atributes_loop()
+    atributes = Atributes.make_atributes()
+
     print(f"\nGender: {GENDER}")
+    # TODO: Promyslet co vse tam dat
+    # print(f"Parents origin land : {tribe_name_origin}")  # TODO: dodelat potrebuje navazat
+    # print(random.choice(tuple(Tribe_name_origin)).value)
+    # print(random.choice(tuple(Tribe_surname_origin)).value)
     print(f"Pleasure preferency: {SEXUAL_PREFERENCY_LIST}")
     print(f"Physical age: {Age.PHYSICAL_AGE.value}")
     if not any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
         print(f"Human race and type: {race_choice}, {race_chosen[0]}")
     else:
         print(f"Human race: {race_choice}")
-
-    print(f"Metahuman race: {celk_atributy['Metatype']}")    
+    
+    print("Metahuman race: ", atributes["Metatype"])    
     # TODO dict race print zakomponovat do vseho vcetne randomu vysky
     if not any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
         print("Origin: \n")
@@ -175,12 +168,11 @@ def write_results():
     print(f"Political lean: {POLITICAL_LEAN}")
     
     print(f"\nAtributy:")
-    for key, value in celk_atributy.items():
+    for key, value in atributes.items():
         print(f"{key}: {value}")
     print("\n")
        
-# print(random.choice(tuple(Tribe_name_origin)).value)
-# print(random.choice(tuple(Tribe_surname_origin)).value)
+
 
 # value = random.choice(list(Hair_types))
 # print (value.value)
@@ -188,8 +180,8 @@ def write_results():
 
 @staticmethod
 def tribe_name_origin_input():
-    chosen_tribe_name = 16
-    # chosen_tribe_name = random.randint(1, 16)
+    chosen_tribe_name = 17
+    # chosen_tribe_name = random.randint(1, 17)
     gender = GENDER
     if gender == "female":
         gender_name = 1
@@ -227,7 +219,9 @@ def tribe_name_origin_input():
         case 15:
             tribe_name_origin = random.choice(names.intent_names_gb_scotish[gender_name])
         case 16:
-            tribe_name_origin = random.choice(names.intent_names_gb_scotish[random.randint(0, 2)])
+            tribe_name_origin = random.choice(names.intent_names_gb_scotish[gender_name])
+        case 17:
+            tribe_name_origin = random.choice(names.intent_names_au[random.randint(0, 2)])
     return tribe_name_origin
 
 

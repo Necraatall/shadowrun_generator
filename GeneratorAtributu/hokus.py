@@ -19,109 +19,107 @@ from dataclasses import dataclass
 from typing import Dict
 from collections import OrderedDict
 
-
 # základní list s atributy, ze kterého se vybírá
 LISTATR = ['Body', 'Agility', 'Reaction', 'Strength', 'Charisma', 'Intuition', 'Logic', 'Willpower']
 usedatr = LISTATR
 LISTATR = list(LISTATR)
-RACE_DICT: dict = {}
-final_atributes: dict= {}
-chosed_tuple: tuple = ()
+vysl_atr = []
+
 # choose_destiny = None   # 96 - 100 is full Thaumaturgic, 91-95 is full shamanic, 86-90 is Thaumaturgy Adept, 81-85 is Shamanic Adept, 75-80 is Technomancer  
 # is_mage = None          # 10 is full Thaumaturgic, 9 is full shamanic, 8 is Thaumaturgy Adept, 7 is Shamanic Adept, 6 physical Adept, 7 is Technomancer 
 
 HUMAN_RACE_DICT = {
-    'BS': 0,
-    'Metatype': "Human",
-    'Body':         (1, 6, 9, 0),
-    'Agility':      (1, 6, 9, 0),
-    'Reaction':     (1, 6, 9, 0),
-    'Strength':     (1, 6, 9, 0),
-    'Charisma':     (1, 6, 9, 0),
-    'Intuition':    (1, 6, 9, 0),
-    'Logic':        (1, 6, 9, 0),
-    'Willpower':    (1, 6, 9, 0),
-    'Initiative':   (2, 12, 18),
-    'Edge':         (2, 7, 10, 1),
-    'Initiative_Phases': 1,
-    'Metatype Ability': "+1 Edge"
+    'BS':                   0,
+    'Metatype':             "Human",
+    'Body':                 (1, 6, 9, 0),
+    'Agility':              (1, 6, 9, 0),
+    'Reaction':             (1, 6, 9, 0),
+    'Strength':             (1, 6, 9, 0),
+    'Charisma':             (1, 6, 9, 0),
+    'Intuition':            (1, 6, 9, 0),
+    'Logic':                (1, 6, 9, 0),
+    'Willpower':            (1, 6, 9, 0),
+    'Initiative':           (2, 12, 18),
+    'Edge':                 (2, 7, 10, 1),
+    'Initiative_Phases':    1,
+    'Metatype Ability':     "+1 Edge"
 }
 
 ORC_RACE_DICT = {
-    'BS': 20,
-    'Metatype': "Orc",
-    'Body':         (4, 9, 13, 3),
-    'Agility':      (1, 6, 9, 0),
-    'Reaction':     (1, 6, 9, 0),
-    'Strength':     (3, 8, 12, 2),
-    'Charisma':     (1, 5, 7, -1),
-    'Intuition':    (1, 6, 9, 0),
-    'Logic':        (1, 5, 7, -1),
-    'Willpower':    (1, 6, 9, 0),
-    'Initiative':   (2, 12, 18),
-    'Edge':         (1, 6, 9, 0),
-    'Initiative_Phases': 1,
-    'Metatype Ability': "Low-Light Vision"
+    'BS':                   20,
+    'Metatype':             "Orc",
+    'Body':                 (4, 9, 13, 3),
+    'Agility':              (1, 6, 9, 0),
+    'Reaction':             (1, 6, 9, 0),
+    'Strength':             (3, 8, 12, 2),
+    'Charisma':             (1, 5, 7, -1),
+    'Intuition':            (1, 6, 9, 0),
+    'Logic':                (1, 5, 7, -1),
+    'Willpower':            (1, 6, 9, 0),
+    'Initiative':           (2, 12, 18),
+    'Edge':                 (1, 6, 9, 0),
+    'Initiative_Phases':    1,
+    'Metatype Ability':     "Low-Light Vision"
 }
 
 DWARF_RACE_DICT = {
-    'BS': 25,
-    'Metatype': "Dwarf",
-    'Body':         (2, 7, 10, 1),
-    'Agility':      (1, 6, 9, 0),
-    'Reaction':     (1, 5, 7, -1),
-    'Strength':     (3, 8, 12, 2),
-    'Charisma':     (1, 6, 9, 0),
-    'Intuition':    (1, 6, 9, 0),
-    'Logic':        (1, 6, 9, 0),
-    'Willpower':    (2, 7, 10, 0),
-    'Initiative':   (2, 11, 16),
-    'Edge':         (1, 6, 9, 0),
-    'Initiative_Phases': 1,
-    'Metatype Ability': "Thermographic Vision, +2 dice for Body Tests to resist pathogens and toxins"
+    'BS':                   25,
+    'Metatype':             "Dwarf",
+    'Body':                 (2, 7, 10, 1),
+    'Agility':              (1, 6, 9, 0),
+    'Reaction':             (1, 5, 7, -1),
+    'Strength':             (3, 8, 12, 2),
+    'Charisma':             (1, 6, 9, 0),
+    'Intuition':            (1, 6, 9, 0),
+    'Logic':                (1, 6, 9, 0),
+    'Willpower':            (2, 7, 10, 0),
+    'Initiative':           (2, 11, 16),
+    'Edge':                 (1, 6, 9, 0),
+    'Initiative_Phases':    1,
+    'Metatype Ability':     "Thermographic Vision, +2 dice for Body Tests to resist pathogens and toxins"
 }
 
 ELF_RACE_DICT = {
-    'BS': 30,
-    'Metatype': "Elf",
-    'Body':         (1, 6, 9, 0),
-    'Agility':      (2, 7, 10, 1),
-    'Reaction':     (1, 6, 9, 0),
-    'Strength':     (1, 6, 9, 0),
-    'Charisma':     (3, 8, 12, 2),
-    'Intuition':    (1, 6, 9, 0),
-    'Logic':        (1, 6, 9, 0),
-    'Willpower':    (1, 6, 9, 0),
-    'Initiative':   (2, 12, 18),
-    'Edge':         (1, 6, 9, 0),
-    'Initiative_Phases': 1,
-    'Metatype Ability': "Low-Light Vision"
+    'BS':                   30,
+    'Metatype':             "Elf",
+    'Body':                 (1, 6, 9, 0),
+    'Agility':              (2, 7, 10, 1),
+    'Reaction':             (1, 6, 9, 0),
+    'Strength':             (1, 6, 9, 0),
+    'Charisma':             (3, 8, 12, 2),
+    'Intuition':            (1, 6, 9, 0),
+    'Logic':                (1, 6, 9, 0),
+    'Willpower':            (1, 6, 9, 0),
+    'Initiative':           (2, 12, 18),
+    'Edge':                 (1, 6, 9, 0),
+    'Initiative_Phases':    1,
+    'Metatype Ability':     "Low-Light Vision"
 }
 
 TROLL_RACE_DICT = {
-    'BS': 40,
-    'Metatype': "Troll",
-    'Body':         (5, 10, 15, 4),     # 5
-    'Agility':      (1, 5, 7, -1),      # 5
-    'Reaction':     (1, 6, 9, 0),       # 5
-    'Strength':     (5, 10, 15, 4),     # 5
-    'Charisma':     (1, 4, 6, -2),      # 5
-    'Intuition':    (1, 5, 7, -1),      # 5
-    'Logic':        (1, 5, 7, -1),      # 5
-    'Willpower':    (1, 6, 9, 0),       # 4
-    'Initiative':   (2, 11, 16),
-    'Edge':         (1, 6, 9, 1),
-    'Initiative_Phases': 1,
-    'Metatype Ability': "Thermographic Vision, +1 Reach, +1 natural armor (cumulative with worn armor)"
+    'BS':                   40,
+    'Metatype':             "Troll",
+    'Body':                 (5, 10, 15, 4),
+    'Agility':              (1, 5, 7, -1),
+    'Reaction':             (1, 6, 9, 0),
+    'Strength':             (5, 10, 15, 4),
+    'Charisma':             (1, 4, 6, -2),
+    'Intuition':            (1, 5, 7, -1),
+    'Logic':                (1, 5, 7, -1),
+    'Willpower':            (1, 6, 9, 0),
+    'Initiative':           (2, 11, 16),
+    'Edge':                 (1, 6, 9, 1),
+    'Initiative_Phases':    1,
+    'Metatype Ability':     "Thermographic Vision, +1 Reach, +1 natural armor (cumulative with worn armor)"
 }
 
+RACE_DICT: dict = HUMAN_RACE_DICT
 # this one is prepared for the future
 metahuman_race_list = ['Human', 'Orc', 'Dwarf', 'Elf', 'Troll']
-
-
+celk_atributy: dict = {}
 class Atributes():
 
-    def make_atributes():
+    def make_atributes_loop():
 
         # pointspool celkovy pocet bodu na postavu
         pointspool: int
@@ -130,7 +128,7 @@ class Atributes():
         # pointspool_atr_start kolik je do zacatku max na atributy - zde rozdeluji vsechny body ktere lze zakoupit (muze
         pointspool_atr_start: int  # na vypocet atributu vcetne bonusu rasy
         # pointspool/2 must be [100,150,200,250,300] and between 425 and 600 BP
-        pointspool = random.choice((200, 150, 200, 250, 300, 850, 1200))
+        pointspool = 600
         # TODO: better way for counting atributes and so one
         pointspool_atr_start = round((pointspool/2) + (len(usedatr) * 10))
         pointspool_skills = round(pointspool/2)
@@ -146,7 +144,8 @@ class Atributes():
                 8: (3, 3, 3, 2, 2, 2, 2, 1),
                 9: (3, 3, 2, 2, 2, 2, 2, 2),
             }
-            chosed_tuple = chosensystem_dict_four[random.randint(1, len(chosensystem_dict_four))]
+            choosen_set = chosensystem_dict_four[random.randint(1, len(chosensystem_dict_four))]
+            make_decision(choosen_set, pointspool)
 
         if pointspool_atr_start == 230:  # 150BP
             chosensystem_dict_six = {
@@ -176,11 +175,12 @@ class Atributes():
             }
             choose_dict = random.randint(1, 3)
             if choose_dict == 1:
-                chosed_tuple = chosensystem_dict_six[random.randint(1, len(chosensystem_dict_six))]
+                choosen_set = chosensystem_dict_six[random.randint(1, len(chosensystem_dict_six))]
             if choose_dict == 2:
-                chosed_tuple = chosensystem_dict_five[random.randint(1, len(chosensystem_dict_five))]
+                choosen_set = chosensystem_dict_five[random.randint(1, len(chosensystem_dict_five))]
             if choose_dict == 3:
-                chosed_tuple = chosensystem_dict_four[random.randint(1, len(chosensystem_dict_four))]
+                choosen_set = chosensystem_dict_four[random.randint(1, len(chosensystem_dict_four))]
+            make_decision(choosen_set, pointspool)
 
         if pointspool_atr_start == 280:  # 200 BP
             chosensystem_dict_six = {
@@ -210,11 +210,12 @@ class Atributes():
             }
             choose_dict = random.randint(1, 3)
             if choose_dict == 1:
-                chosed_tuple = chosensystem_dict_six[random.randint(1, len(chosensystem_dict_six))]
+                choosen_set = chosensystem_dict_six[random.randint(1, len(chosensystem_dict_six))]
             if choose_dict == 2:
-                chosed_tuple = chosensystem_dict_five[random.randint(1, len(chosensystem_dict_five))]
+                choosen_set = chosensystem_dict_five[random.randint(1, len(chosensystem_dict_five))]
             if choose_dict == 3:
-                chosed_tuple = chosensystem_dict_four[random.randint(1, len(chosensystem_dict_four))]
+                choosen_set = chosensystem_dict_four[random.randint(1, len(chosensystem_dict_four))]
+            make_decision(choosen_set, pointspool)
 
         if pointspool_atr_start == 330:  # 250 BP
             chosensystem_dict_six = {
@@ -238,9 +239,10 @@ class Atributes():
 
             choose_dict = random.randint(1, 2)
             if choose_dict == 1:
-                chosed_tuple = chosensystem_dict_six[random.randint(1, len(chosensystem_dict_six))]
+                choosen_set = chosensystem_dict_six[random.randint(1, len(chosensystem_dict_six))]
             if choose_dict == 2:
-                chosed_tuple = chosensystem_dict_five[random.randint(1, len(chosensystem_dict_five))]
+                choosen_set = chosensystem_dict_five[random.randint(1, len(chosensystem_dict_five))]
+            make_decision(choosen_set, pointspool)
 
         if pointspool_atr_start == 380:  # 300 BP
             chosensystem_dict_six = {
@@ -257,9 +259,10 @@ class Atributes():
             }
             choose_dict = random.randint(1, 2)
             if choose_dict == 1:
-                chosed_tuple = chosensystem_dict_six[random.randint(1, len(chosensystem_dict_six))]
+                choosen_set = chosensystem_dict_six[random.randint(1, len(chosensystem_dict_six))]
             if choose_dict == 2:
-                chosed_tuple = chosensystem_dict_five[random.randint(1, len(chosensystem_dict_five))]
+                choosen_set = chosensystem_dict_five[random.randint(1, len(chosensystem_dict_five))]
+            make_decision(choosen_set, pointspool)
 
         if pointspool_atr_start >= 425 and pointspool_atr_start <= 600:
             chosen_realy_big_pool = {
@@ -272,27 +275,53 @@ class Atributes():
                 7: (6, 6, 6, 6, 6, 6, 6, 5),
                 8: (6, 6, 6, 6, 6, 6, 6, 6)
             }
-            chosed_tuple = chosen_realy_big_pool[random.randint(1, len(chosen_realy_big_pool))]
+            choosen_set = chosen_realy_big_pool[random.randint(1, len(chosen_realy_big_pool))]
             # 330 and 380 BP don't have combination with 4 numbers
             # 425 BP up to the 600 BP is only number of 5 in pool of 6, 600 is maximum when all 6 is set
-        chosen_tuple = chosed_tuple
-        atributes=make_decision(chosen_tuple, pointspool)
-        return atributes
+            make_decision(choosen_set, pointspool)
 
-def make_decision(chosed_tuple, pointspool) -> dict:
+        for char in LISTATR:
+            addon = random.choice(choosen_set)
+            celk_atributy[char] = [(RACE_DICT[char][3] + addon), \
+                    ' min: ', RACE_DICT[char][0], \
+                        ' max: ', RACE_DICT[char][1], \
+                            ' over: ', RACE_DICT[char][2], \
+                                ' race modifier ', RACE_DICT[char][3]]
+
+        celk_atributy=OrderedDict(sorted(celk_atributy.items(), key=lambda t: t[0]))
+        RACE_DICT=OrderedDict(sorted(RACE_DICT.items(), key=lambda t: t[0]))
+        # choose_destiny - urci zda je mag, technomancer, remeslnik, vagus... 
+        choose_destiny: int = random.randint(1, 100)
+        if choose_destiny in range(95, 101):
+            atributgen = random.randint(1, 4)
+            celk_atributy['Magic'] = atributgen
+            pointspool_skills = (pointspool + 10) - (atributgen * 10)
+        elif choose_destiny in range(80, 96):
+            atributgen = random.randint(1, 3)
+            celk_atributy['Magic'] = atributgen
+            pointspool_skills = (pointspool + 10) - (atributgen * 10)
+        elif choose_destiny in range(75, 81):
+            atributgen = random.randint(1, 3)
+            celk_atributy['Resonance'] = atributgen
+            pointspool_skills = (pointspool + 10) - (atributgen * 10)
+        if choose_destiny in range(0, 76):
+            None
+
+
+
+
+@staticmethod
+def make_decision(choosen_set, pointspool):
     # choose_destiny - urci zda je mag, technomancer, remeslnik, vagus... 
     choose_destiny: int = random.randint(1, 100)
     metahuman_race_decision = 100 # random.randint(96, 100)
-    celk_atributy: dict = HUMAN_RACE_DICT
-    RACE_DICT: dict = HUMAN_RACE_DICT
-    final_atributes: dict = HUMAN_RACE_DICT
     match metahuman_race_decision:
-        case metahuman_race_decision if metahuman_race_decision in range(95, 101):
+        case metahuman_race_decision if metahuman_race_decision in range(96, 100):
             # this is Troll
             metahuman_race_decision = metahuman_race_list[4]
             RACE_DICT: dict = TROLL_RACE_DICT
 
-        case metahuman_race_decision if metahuman_race_decision in range(90, 94):
+        case metahuman_race_decision if metahuman_race_decision in range(90, 95):
             # this is Elf
             metahuman_race_decision = metahuman_race_list[3]
             RACE_DICT: dict = ELF_RACE_DICT
@@ -311,43 +340,4 @@ def make_decision(chosed_tuple, pointspool) -> dict:
             # this is Human
             metahuman_race_decision = metahuman_race_list[0]
             RACE_DICT: dict = HUMAN_RACE_DICT
-    
-    # choose_destiny - urci zda je mag, technomancer, remeslnik, vagus... 
-    choose_destiny: int = random.randint(1, 100)
-    if choose_destiny in range(95, 100):
-        atributgen = random.randint(1, 4)
-        final_atributes['Magic'] = atributgen
-        pointspool_skills = (pointspool + 10) - (atributgen * 10)
-    elif choose_destiny in range(80, 94):
-        atributgen = random.randint(1, 3)
-        final_atributes['Magic'] = atributgen
-        pointspool_skills = (pointspool + 10) - (atributgen * 10)
-    elif choose_destiny in range(75, 79):
-        atributgen = random.randint(1, 3)
-        final_atributes['Resonance'] = atributgen
-        pointspool_skills = (pointspool + 10) - (atributgen * 10)
-    if choose_destiny in range(0, 76):
-        None
-
-
-    for char in LISTATR:
-        addon = random.choice(chosed_tuple)
-        celk_atributy[char] = [(RACE_DICT[char][3] + addon), \
-                ' min: ', RACE_DICT[char][0], \
-                    ' max: ', RACE_DICT[char][1], \
-                        ' over: ', RACE_DICT[char][2], \
-                            ' race modifier ', RACE_DICT[char][3]]
-        final_atributes = celk_atributy
-
-    final_atributes=OrderedDict(sorted(celk_atributy.items(), key=lambda t: t[0]))
-    RACE_DICT=OrderedDict(sorted(RACE_DICT.items(), key=lambda t: t[0]))
-
-    final_atributes['Metatype'] = RACE_DICT['Metatype']
-    final_atributes['Edge'] = RACE_DICT['Edge'][0]
-
-    final_atributes['Initiative'] = round((celk_atributy['Reaction'][0] + celk_atributy['Intuition'][0])/2)
-    final_atributes['Initiative_Phases'] = RACE_DICT['Initiative_Phases']
-
-    # TODO: for the future whe i will make skills
-    final_atributes['BS']=RACE_DICT['BS']
-    return final_atributes
+    return RACE_DICT

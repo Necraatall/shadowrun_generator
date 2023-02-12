@@ -14,6 +14,7 @@ from GeneratorJmen.Data.Name.names_fr import *
 from GeneratorJmen.Data.Name.names_es import *
 from GeneratorJmen.Data.Name.names_vn import *
 from GeneratorJmen.Data.Name.names_au_aboriginal import *
+from GeneratorJmen.Data.Name.names_au import *
 
 from GeneratorJmen.Data.Name.Mans.mnames_cz import *
 from GeneratorJmen.Data.Name.Womans.wnames_cz import *
@@ -21,7 +22,8 @@ from GeneratorJmen.Data.Name.Mans.mnames_gb_scotish import *
 from GeneratorJmen.Data.Name.Womans.wnames_gb_scotish import *
 from GeneratorJmen.Data.Name.Mans.mnames_au_aboriginal import *
 from GeneratorJmen.Data.Name.Womans.wnames_au_aboriginal import *
-
+from GeneratorJmen.Data.Name.Mans.mnames_au import *
+from GeneratorJmen.Data.Name.Womans.wnames_au import *
 
 intent_names_cz = (
     intent_mnames_cz,
@@ -38,6 +40,12 @@ intent_names_au_aboriginal=(
     intent_wnames_au_aboriginal,
     intent_mnames_au_aboriginal,
     intent_names_au_aboriginal,                 # jmena pro obe pohlavi
+)
+
+intent_names_au=(
+    intent_mnames_au,
+    intent_wnames_au,
+    intent_names_au                             # jmena pro obe pohlavi
 )
 
 names_all = (

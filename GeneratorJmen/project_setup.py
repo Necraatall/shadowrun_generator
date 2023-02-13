@@ -136,7 +136,7 @@ def write_results():
     atributes = Atributes.make_atributes()
 
     print(f"\nGender: {GENDER}")
-    # TODO: Promyslet co vse tam dat
+    # TODO: Promyslet co vse tam dat tribe_name_origin asi jo
     # print(f"Parents origin land : {tribe_name_origin}")  # TODO: dodelat potrebuje navazat
     # print(random.choice(tuple(Tribe_name_origin)).value)
     # print(random.choice(tuple(Tribe_surname_origin)).value)
@@ -196,9 +196,9 @@ def tribe_name_origin_input():
         case 2:
             tribe_name_origin = random.choice(names_ne.intent_names_ne)
         case 3:
-            tribe_name_origin = random.choice(names_es.intent_names_es)
+            tribe_name_origin = random.choice(names.intent_names_es[random.randint(0, 2)])
         case 4:
-            tribe_name_origin = random.choice(names_fr.intent_names_fr)
+            tribe_name_origin = random.choice(names.intent_names_fr[random.randint(0, 2)])
         case 5:
             tribe_name_origin = random.choice(names_gk.intent_names_gk)
         case 6:
@@ -222,11 +222,11 @@ def tribe_name_origin_input():
         case 15:
             tribe_name_origin = random.choice(names.intent_names_gb_scotish[gender_name])
         case 16:
-            tribe_name_origin = random.choice(names.intent_names_gb_scotish[gender_name])
+            tribe_name_origin = random.choice(names.intent_names_au_aboriginal[random.randint(0, 2)])
         case 17:
             tribe_name_origin = random.choice(names.intent_names_au[random.randint(0, 2)])
         case 18:
-            tribe_name_origin = random.choice(names_eg_ancient.intent_names_vn)
+            tribe_name_origin = random.choice(names_eg_ancient.intent_names_eg_ancient)
     return tribe_name_origin
 
 

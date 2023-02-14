@@ -421,10 +421,3 @@ else:
     race_chosen_data=race_details[race_choice][race_chosen[0]]
     # print(random.choice(list(race_details[race_choice].items())), "\n")
 
-thus = race_chosen_data
-if thus !="":
-    for key, value in thus.items():
-        if key != 'Eyes':
-            HEIGHT = thus['Eyes']
-        elif key == 'Eyes':
-            HEIGHT = thus['Eyes']

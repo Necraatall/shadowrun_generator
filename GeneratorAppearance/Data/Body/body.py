@@ -420,4 +420,3 @@ else:
     race_chosen=random.choice(list(race_details[race_choice].items()))
     race_chosen_data=race_details[race_choice][race_chosen[0]]
     # print(random.choice(list(race_details[race_choice].items())), "\n")
-

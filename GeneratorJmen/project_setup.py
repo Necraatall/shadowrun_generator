@@ -163,7 +163,6 @@ def write_results():
     print(f"Body: {BODY}")
     print(f"Body shape: {BODY_SHAPE}")
     print(f"Face and Hair: {FACE_AND_HAIR}")
-    print(f"Face and Hair: {haircut_by_face_shape()}")
 
     print("\nCharacter:")
     print(f"Psychical age: {Age.PSYCHICAL_AGE.value}")

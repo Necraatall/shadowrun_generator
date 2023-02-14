@@ -162,7 +162,7 @@ HAIR_TYPES = (HAIR_TYPES.value)
 @staticmethod
 def haircut_by_face_shape():
     if not FACE_SHAPE:
-        longiness = random.choice("short","long")
+        longiness = random.choice("short", "long")
         if longiness == "long":
             return LONG_HAIR_STYLES
         else:

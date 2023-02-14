@@ -86,6 +86,10 @@ class Square_short_hair_styles(Enum):
     FAUX_HAWK_SQUARE_HAIR_STYLE_SHORT = "faux hawk"
     SLICKED_BACK_SIDE_PART_SQUARE_HAIR_STYLE_SHORT = "slicked back side part"
 
+make_list = list(Square_short_hair_styles)
+SQUARE_SHORT_HAIR_STYLES = random.choice(make_list)
+SQUARE_SHORT_HAIR_STYLES = (SQUARE_SHORT_HAIR_STYLES.value)
+
 class Oblong_short_hair_styles(Enum):
     SIDE_PARTED_OBLONG_HAIR_STYLE_SHORT = "side parted"
     BUZZ_CUT_OBLONG_HAIR_STYLE_SHORT = "buz cut"
@@ -114,6 +118,8 @@ class Heart_short_hair_styles(Enum):
     SIDE_PARTED_LONG_HEART_HAIR_STYLE_SHORT = "side parted long"
     PUSHED_BACK_HEART_HAIR_STYLE_SHORT = "pushed back"
     UNDERCUT_HEART_HAIR_STYLE_SHORT = "undercut"
+
+
 
 class Hair_color(Enum):
     AUBURN_HAIR_COLOR = 'auburn'
@@ -155,6 +161,12 @@ HAIR_TYPES = (HAIR_TYPES.value)
 
 @staticmethod
 def haircut_by_face_shape():
+    if not FACE_SHAPE:
+        longiness = random.choice("short","long")
+        if longiness == "long":
+            return LONG_HAIR_STYLES
+        else:
+            FACE_SHAPE = random.choice("Oval", "Square", "Oblong", "Triangular", "Round", "Diamond", "Heart")
 
     match FACE_SHAPE:
         case "Oval":

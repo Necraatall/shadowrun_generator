@@ -299,7 +299,8 @@ class Atributes():
 def make_decision(chosed_tuple:dict, pointspool:int, pointspool_skills:int) -> dict:
     # choose_destiny - urci zda je mag, technomancer, remeslnik, vagus... 
     choose_destiny: int = random.randint(1, 100)
-    metahuman_race_decision = 100 # random.randint(96, 100)
+    metahuman_race_decision = random.randint(0, 100)
+    print ("\n \nmetahuman_race_decision", metahuman_race_decision, "\n")
     celk_atributy: dict = HUMAN_RACE_DICT
     RACE_DICT: dict = HUMAN_RACE_DICT
     final_atributes: dict = HUMAN_RACE_DICT
@@ -309,22 +310,22 @@ def make_decision(chosed_tuple:dict, pointspool:int, pointspool_skills:int) -> d
             metahuman_race_decision = metahuman_race_list[4]
             RACE_DICT: dict = TROLL_RACE_DICT
 
-        case metahuman_race_decision if metahuman_race_decision in range(90, 94):
+        case metahuman_race_decision if metahuman_race_decision in range(90, 95):
             # this is Elf
             metahuman_race_decision = metahuman_race_list[3]
             RACE_DICT: dict = ELF_RACE_DICT
 
-        case metahuman_race_decision if metahuman_race_decision in range(85, 89):
+        case metahuman_race_decision if metahuman_race_decision in range(85, 90):
             # this is Dwarf
             metahuman_race_decision = metahuman_race_list[2]
             RACE_DICT: dict = DWARF_RACE_DICT
 
-        case metahuman_race_decision if metahuman_race_decision in range(80, 84):
+        case metahuman_race_decision if metahuman_race_decision in range(80, 85):
             # this is Orc
             metahuman_race_decision = metahuman_race_list[1]            
             RACE_DICT: dict = ORC_RACE_DICT
 
-        case metahuman_race_decision if metahuman_race_decision in range(0, 79):
+        case metahuman_race_decision if metahuman_race_decision in range(0, 80):
             # this is Human
             metahuman_race_decision = metahuman_race_list[0]
             RACE_DICT: dict = HUMAN_RACE_DICT
@@ -359,8 +360,13 @@ def make_decision(chosed_tuple:dict, pointspool:int, pointspool_skills:int) -> d
     final_atributes=OrderedDict(sorted(celk_atributy.items(), key=lambda t: t[0]))
     RACE_DICT=OrderedDict(sorted(RACE_DICT.items(), key=lambda t: t[0]))
 
+    atributgen = random.randint(1, 6)
+    if final_atributes['Metatype']=="Human":
+        atributgen = random.randint(2, 7)
+        final_atributes['Edge'] = atributgen
+    else: final_atributes['Edge'] = atributgen
     final_atributes['Metatype'] = RACE_DICT['Metatype']
-    final_atributes['Edge'] = RACE_DICT['Edge'][0]
+    final_atributes['Metatype Ability'] = RACE_DICT['Metatype Ability']
 
     final_atributes['Initiative'] = round((celk_atributy['Reaction'][0] + celk_atributy['Intuition'][0])/2)
     final_atributes['Initiative_Phases'] = RACE_DICT['Initiative_Phases']

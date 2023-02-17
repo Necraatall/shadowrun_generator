@@ -121,7 +121,7 @@ Later on, this symbol evolved into the well-known Celtic cross, but it is a \"mu
 and the classical Christian cross. Many people wear it around their necks thinking it is a purely Celtic thing, \
 the opposite is true, so watch out!"),
 	VOSEGUS=(
-        "Vosegus"
+        "Vosegus",
         "Like Arduinna protects the Vosges"),
 
 make_list = list(Gods_kelt)

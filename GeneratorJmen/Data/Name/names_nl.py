@@ -1,4 +1,4 @@
-intent_names_ne = (
+intent_names_nl = (
 	"Abel",
 	"Enoch",
 	"Metusalem",

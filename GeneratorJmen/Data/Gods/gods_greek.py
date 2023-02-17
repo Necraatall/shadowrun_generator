@@ -221,7 +221,7 @@ Eros, who had already forgiven her, flew to her body and removed the sleep from 
 begging both Zeus and Aphrodite for permission to marry Psyche. The gods agreed, Zeus gave Psyche immortality, \
 and Aphrodite danced at their wedding. From the union of Eros and Psyche was born a daughter of extraordinary beauty, \
 called by the name of Hedonē (ἡδονή, i.e., Delight, in Roman mythology Voluptas)."),
-	ZEUS=("Zeus (Jupiter, jméno skloňováno Dia, Diovi...)"
+	ZEUS=("Zeus (Jupiter, jméno skloňováno Dia, Diovi...)",
 	"Son of Kronos and Rhea, the supreme god. He was born in Crete in a cave in Mount Ida (other caves in Crete are sometimes mentioned). \
 Here his mother kept him from his father, the titan Kronos, who, fearing the fulfilment of the prophecy \
 that he would be overthrown by one of his sons, devoured all his sons immediately after birth. \

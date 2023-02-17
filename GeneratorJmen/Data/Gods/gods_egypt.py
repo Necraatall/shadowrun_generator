@@ -131,7 +131,8 @@ where he was worshipped as part of a triad with his wife Hathor and son Harsomtu
 (the \"Falcon City\", ancient Nechen) in the south and the city of Behdet in the Nile Delta. \"Hor of Behdet\" \
 was represented as a winged sun disc."),
 
-	HEH=("Heh", "Heh, the frog-headed god, was the personification of formlessness and infinity. His consort was the serpent-headed goddess Hehet. \
+	HEH=("Heh", 
+	"Heh, the frog-headed god, was the personification of formlessness and infinity. His consort was the serpent-headed goddess Hehet. \
 He was often depicted anthropomorphically holding a palm leaf in each hand (hieroglyph for year)."),
 
 	CHEPRER=("Cheprer",
@@ -163,6 +164,7 @@ His main cult centre was Thebes (Veset)."),
 
 	KUK=("Kuk",
 	"This frog-headed god was the personification of darkness. His consort was the serpent-headed goddess Kauket."),
+
 	MIN=("Min",
 	"The fertility god Min was depicted as a partially mummified human. His left hand held an erect pipe, his right hand was raised. \
 The typical head ornament was a pair of high lips. The signs of his cult were a bow and an unidentified object, \
@@ -341,7 +343,7 @@ where he was worshipped along with his sister and wife Eset and son Horus. \
 Osiris was a member of the important Heliopolitan Ennead, which first appears in the pyramid texts of the Old Kingdom period \
 - more specifically, during the 5th Dynasty."),
 
-	VADŽE=("Vadžet"
+	VADŽE=("Vadžet",
 	"The ancient goddess Vayet was almost always depicted as a cobra with the red crown of Lower Egypt. \
 The Egyptians considered the cobra a symbol of sovereignty. She had her cult at Bhutto in the Nile Delta. \
 Its name means \"the green one\" or \"she who belongs to papyrus\". \

@@ -5,7 +5,7 @@ from GeneratorJmen.Data.Name.names_fi import *
 from GeneratorJmen.Data.Name.names_pl import *
 from GeneratorJmen.Data.Name.names_it import *
 from GeneratorJmen.Data.Name.names_no import *
-from GeneratorJmen.Data.Name.names_ne import *
+from GeneratorJmen.Data.Name.names_nl import *
 from GeneratorJmen.Data.Name.names_se import *
 from GeneratorJmen.Data.Name.names_hu import *
 from GeneratorJmen.Data.Name.names_us import *
@@ -72,7 +72,7 @@ names_all = (
     intent_names_pl,
     intent_names_it,
     intent_names_no,
-    intent_names_ne,
+    intent_names_nl,
     intent_names_se,
     intent_names_hu,
     intent_names_us,

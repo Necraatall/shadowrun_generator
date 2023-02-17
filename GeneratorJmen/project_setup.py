@@ -1,5 +1,6 @@
 from enum import Enum, auto
 import random
+import re
 
 from GeneratorAtributu.generator_atributu import *
 from GeneratorJmen.Data.Gods.gods import *
@@ -11,7 +12,7 @@ from GeneratorJmen.Data.Name import (
     names_gk,
     names_hu,
     names_it,
-    names_ne,
+    names_nl,
     names_no,
     names_pl,
     names_se,
@@ -120,70 +121,62 @@ def write_results():
     tribe_surname_origin = tribe_surname_origin_input()
     nickname = nicknames.Nickname.get_random_tribe_nickname()
 
-    if tribe_name_origin is not None or tribe_surname_origin is not None:
-        print("\n", tribe_name_origin + " \"" + nickname + "\" " + tribe_surname_origin, "\n")
-        god= God.get_random_tribe_god_with_abouts()
-        print("God:", (str(god)).replace("('", "").replace("'","").replace("),", ""))
-    else:
-        print(
-            "\n"
-            + names.Name.get_random_tribe_name()
-            + " \"" + nicknames.Nickname.get_random_tribe_nickname() + "\" " +
-            surname.get_random_tribe_surname(), "\n"
-        )
-        god = God.get_random_tribe_god_with_abouts()
-        print("God:", god)
+    print("\n", tribe_name_origin + " \"" + nickname + "\" " + tribe_surname_origin, "\n")
+    god=God.get_random_tribe_god_with_abouts()
+    god_about=god 
+    god_about=god_about.replace("'",'"').replace("\\","")
+    god_about = god_about.split('", "')
+    god_name = god_about[0].replace('("', "")
+    god_about=god_about[1].replace('"),', "")
+    print((f"God: \t{god_name}").replace("('", "").replace("'","").replace("),", "").expandtabs(30))
+    print((f"About God: \t{god_about}").replace("('", "").replace("'","").replace("),", "").expandtabs(30))
     atributes = Atributes.make_atributes()
 
-    print(f"\nGender: {GENDER}")
+    print((f"\nGender: \t{GENDER}").expandtabs(30))
     # TODO: Promyslet co vse tam dat tribe_name_origin asi jo
     # print(f"Parents origin land : {tribe_name_origin}")  # TODO: dodelat potrebuje navazat
     # print(random.choice(tuple(Tribe_name_origin)).value)
     # print(random.choice(tuple(Tribe_surname_origin)).value)
-    print(f"Pleasure preferency: {SEXUAL_PREFERENCY_LIST}")
-    print(f"Physical age: {Age.PHYSICAL_AGE.value}")
+    print((f"Pleasure preferency: \t{SEXUAL_PREFERENCY_LIST}").expandtabs(30))
+    print((f"Physical age: \t{Age.PHYSICAL_AGE.value}").expandtabs(30))
     if not any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
-        print(f"Human race and type: {race_choice}, {race_chosen[0]}")
+        print((f"Human race and type: \t{race_choice}, {race_chosen[0]}").expandtabs(30))
     else:
-        print(f"Human race: {race_choice}")
-    
-    print("Metahuman race: ", atributes["Metatype"])    
+        print((f"Human race: \t{race_choice}").expandtabs(30))
+    metarace=atributes["Metatype"]
+    print((f"Metahuman race: \t{metarace}").expandtabs(30))    
     # TODO dict race print zakomponovat do vseho vcetne randomu vysky
     if not any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
         print("Origin: \n")
         original_race = race_details[race_choice][race_chosen[0]]
         for keys, value in original_race.items():
-            print(f"{keys}: {value}")
+            print((f"{keys}: \t{value}").expandtabs(30))
 
     print("\nVisage:")
-    print(f"Appearence age: {Age.APPEARENCE_AGE.value}")    
-    print(f"Social Class: {SOCIAL_CLASS}")
-    print(f"Height: {HEIGHT}")
-    print(f"Weight: {WEIGHT}")
-    print(f"Body: {BODY}")
-    print(f"Body shape: {BODY_SHAPE}")
-    print(f"Face and Hair: {FACE_AND_HAIR}")
+    print((f"Appearence age: \t{Age.APPEARENCE_AGE.value}").expandtabs(30))
+    print((f"Social Class: \t{SOCIAL_CLASS}").expandtabs(30))
+    # print((f"Height: \t{HEIGHT}").expandtabs(30))
+    print(str(f"Weight: \t{WEIGHT}").expandtabs(30))
+    print((f"Body: \t{BODY}").expandtabs(30))
+    print((f"Body shape: \t{BODY_SHAPE}").expandtabs(30))
+    print((f"Face and Hair: \t{FACE_AND_HAIR}").expandtabs(30))
     
 
     print("\nCharacter:")
-    print(f"Psychical age: {Age.PSYCHICAL_AGE.value}")
-    print(f"Positive characteristics: {POSITIVE_CHARACTERISTIC[0]}, {POSITIVE_CHARACTERISTIC[1]}")
-    print(f"Negative characteristics: {NEGATIVE_CHARACTERISTIC[0]}, {NEGATIVE_CHARACTERISTIC[1]}")
-    print(f"Political lean: {POLITICAL_LEAN}")
+    print((f"Psychical age: \t{Age.PSYCHICAL_AGE.value}").expandtabs(30))
+    print((f"Positive characteristics: \t{POSITIVE_CHARACTERISTIC[0]}, {POSITIVE_CHARACTERISTIC[1]}").expandtabs(30))
+    print((f"Negative characteristics: \t{NEGATIVE_CHARACTERISTIC[0]}, {NEGATIVE_CHARACTERISTIC[1]}").expandtabs(30))
+    print((f"Political lean: \t{POLITICAL_LEAN}").expandtabs(30))
     
     print(f"\nAtributy:")
 
     for key, value in atributes.items():
-        	print(((f"{key}: \t{value}").replace("'", "").replace("[", "").replace("]", "")).expandtabs(25))
-    print("\n")
-
-
+        print(((f"{key}: \t{value}").replace("'", "").replace("[", "").replace("]", "")).expandtabs(30))
 
 
 @staticmethod
 def tribe_name_origin_input():
-    chosen_tribe_name = 17
-    # chosen_tribe_name = random.randint(1, 17)
+    chosen_tribe_name = random.randint(1, 18)
     gender = GENDER
     if gender == "female":
         gender_name = 1
@@ -191,42 +184,60 @@ def tribe_name_origin_input():
         gender_name = 0
     match chosen_tribe_name:
         case 1:
-            tribe_name_origin = random.choice(names_pl.intent_names_pl)
+            tribe_name_origin = "Polish"
+            result_name =random.choice(names_pl.intent_names_pl)
         case 2:
-            tribe_name_origin = random.choice(names_ne.intent_names_ne)
+            tribe_name_origin = "Neaderlanden"
+            result_name =random.choice(names_nl.intent_names_nl)
         case 3:
-            tribe_name_origin = random.choice(names.intent_names_es[random.randint(0, 2)])
+            tribe_name_origin = "Spanish"
+            result_name =random.choice(names.intent_names_es[random.randint(0, 2)])
         case 4:
-            tribe_name_origin = random.choice(names.intent_names_fr[random.randint(0, 2)])
+            tribe_name_origin = "French"
+            result_name =random.choice(names.intent_names_fr[random.randint(0, 2)])
         case 5:
-            tribe_name_origin = random.choice(names_gk.intent_names_gk)
+            tribe_name_origin = "Greek"
+            result_name =random.choice(names_gk.intent_names_gk)
         case 6:
-            tribe_name_origin = random.choice(names_it.intent_names_it)
+            tribe_name_origin = "Italien"
+            result_name =random.choice(names_it.intent_names_it)
         case 7:
-            tribe_name_origin = random.choice(names_us.intent_names_us)
+            tribe_name_origin = "US. American"
+            result_name =random.choice(names_us.intent_names_us)
         case 8:
-            tribe_name_origin = random.choice(names_fi.intent_names_fi)
+            tribe_name_origin = "Finlanden"
+            result_name =random.choice(names_fi.intent_names_fi)
         case 9:
-            tribe_name_origin = random.choice(names_hu.intent_names_hu)
+            tribe_name_origin = "Hungarian"
+            result_name =random.choice(names_hu.intent_names_hu)
         case 10:
-            tribe_name_origin = random.choice(names_no.intent_names_no)
+            tribe_name_origin = "Norish"
+            result_name =random.choice(names_no.intent_names_no)
         case 11:
-            tribe_name_origin = random.choice(names_se.intent_names_se)
+            tribe_name_origin = "Sveedish"
+            result_name =random.choice(names_se.intent_names_se)
         case 12:
-            tribe_name_origin = random.choice(names_sk.intent_names_sk)
+            tribe_name_origin = "Slovakian"
+            result_name =random.choice(names_sk.intent_names_sk)
         case 13:
-            tribe_name_origin = random.choice(names_vn.intent_names_vn)
+            tribe_name_origin = "Vietnamees"
+            result_name =random.choice(names_vn.intent_names_vn)
         case 14:
-            tribe_name_origin = random.choice(names.intent_names_cz[gender_name])
+            tribe_name_origin = "Czech"
+            result_name =random.choice(names.intent_names_cz[gender_name])
         case 15:
-            tribe_name_origin = random.choice(names.intent_names_gb_scotish[gender_name])
+            tribe_name_origin = "Anglish"
+            result_name =random.choice(names.intent_names_gb_scotish[gender_name])
         case 16:
-            tribe_name_origin = random.choice(names.intent_names_au_aboriginal[random.randint(0, 2)])
+            tribe_name_origin = "Aboriginal"
+            result_name =random.choice(names.intent_names_au_aboriginal[random.randint(0, 2)])
         case 17:
-            tribe_name_origin = random.choice(names.intent_names_au[random.randint(0, 2)])
+            tribe_name_origin = "Australian"
+            result_name =random.choice(names.intent_names_au[random.randint(0, 2)])
         case 18:
-            tribe_name_origin = random.choice(names_eg_ancient.intent_names_eg_ancient)
-    return tribe_name_origin
+            tribe_name_origin = "Ancient Egypt"
+            result_name =random.choice(names_eg_ancient.intent_names_eg_ancient)
+    return result_name
 
 
 @staticmethod

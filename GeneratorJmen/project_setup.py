@@ -172,14 +172,12 @@ def write_results():
     print(f"Political lean: {POLITICAL_LEAN}")
     
     print(f"\nAtributy:")
+
     for key, value in atributes.items():
-        print((f"{key}: {value}").replace("'", "").replace("[", "").replace("]", ""))
+        	print(((f"{key}: \t{value}").replace("'", "").replace("[", "").replace("]", "")).expandtabs(25))
     print("\n")
-       
 
 
-# value = random.choice(list(Hair_types))
-# print (value.value)
 
 
 @staticmethod

@@ -123,7 +123,7 @@ def write_results():
     if tribe_name_origin is not None or tribe_surname_origin is not None:
         print("\n", tribe_name_origin + " \"" + nickname + "\" " + tribe_surname_origin, "\n")
         god= God.get_random_tribe_god_with_abouts()
-        print("God:", str(god).replace("(", "").replace(")", ""))
+        print("God:", (str(god)).replace("('", "").replace("'","").replace("),", ""))
     else:
         print(
             "\n"

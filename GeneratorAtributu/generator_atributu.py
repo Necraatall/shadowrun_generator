@@ -4,7 +4,7 @@
                 kod vybere z ktereho listu hodnot bude pridelovat hodnoty do atributu
                 kod vybere hodnoty a priradi
                 kod vybere rasu a modifikuje hodnoty atributu o jeji minima a maxima
-                kod vypise hodnoty do terminalu a ulozi je docasne do slovniku
+                kod vypise hodnoty do terminalu a ulozi je docasne do slovniku TODO: jiny zpusob ukladani
     Deepest level:  kod potrebuje mit hodnotu pointspool - je to pocet bodu na celou postavu
                     kod si zjisti hodnotu poctu bodu pro generovani atributu - pointspool_atr_start (polovina pointspool) a pripocte k ni 80 (za kazdy atribut 10)
                     kod prida hodnotu 5 ke skill bodum, paklize zustal zbytek diky lichemu poctu cisel 6

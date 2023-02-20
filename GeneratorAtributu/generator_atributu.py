@@ -364,6 +364,11 @@ def make_decision(chosed_tuple:dict, pointspool:int, pointspool_skills:int) -> d
     if final_atributes['Metatype']=="Human":
         atributgen = random.randint(2, 7)
         final_atributes['Edge'] = atributgen
+
+        if atributgen == 7:
+            pointspool_skills = pointspool_skills -15
+        pointspool_skills = pointspool_skills - (atributgen * 10)
+    
     else: final_atributes['Edge'] = atributgen
     final_atributes['Metatype'] = RACE_DICT['Metatype']
     final_atributes['Metatype Ability'] = RACE_DICT['Metatype Ability']

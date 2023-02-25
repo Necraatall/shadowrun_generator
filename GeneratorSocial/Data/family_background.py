@@ -1,105 +1,114 @@
 import random
 from enum import Enum
 
-Class Family_Parents(Enum):
-    kompletni rodina,
-    vlivna a rozvetvena rodina
-    jen s otcem,
-    spolecenstvi - spolecne deti,
-    dve maminky,
-    dva tatinci,
-    jen maminka,
-    (maminka s otcimem, macecha s tatou,)
-    ustav (vojensky, noviciat na kneze, sirotcinec),
-    kocovne (cirkus, divadlo, pastevci, sberaci, lovci, lovci a sberaci z ruky do huby, strihaci vlny, honaci),
-    otrok (sexualni, tezkou praci, domaci prace, hlidani deti, schovanka),
-    na ulici (zebrani, kradeze, organizovana banda(vypalne, hazard, kradeze, zebrani, informace...))
-    na statku - (dite nevolnika, sluzebne, vychovatelky, pocestne majitelovo)
-    ve meste (rodice(remeslnici(drahe veci, - levna bezna spotreba(pekar...)), kupci, delnici, podomci, sluzebni, sprava mesta(architekti, starostove, policiste/i clo, vojaci)))
-
-if aboriginal:
-    spolecenstvi - spolecne deti,
-    kocovne (lovci a sberaci z ruky do huby)
+class Family_street_selling(Enum):
+    DRUGS = "ilegal drugs"
+    STOLEN = "stolen things"
+    BODY = "own body"
 
 
+class Family_Tragedy(Enum):
+    lost_all_betrayed = "Your family lost everything and was betrayed."
+    lost_all_investment = "Your family lost everything through bad investment."
+    captured = "Your family was captured by organleggers. So sad."
+    experimented = "Your family was experimented on. You escaped."
+    murdered = "Your family was murdered in front of you."
+    imprisoned = "Family imprisoned, you escaped."
+    killed_by_violent = "Family was killed by violent organization, such as a human policlub."
+    street_work = f"work on street in not too gentle and safe way to get by. Especially if you're selling {random.choice(list(Family_street_selling))}."
+    suicide = "that she lost everything, Committed Suicide."
+    money_freak = "gave up on the money"
 
-Class Family_ranking(Enum):
-    High Corporate/Guild/City Profile
-    Mid Corporate/Guild/City Profile
-    Corp Wage Slaves
-        pristavni delnici, namezdni delnici
-    Average Income
-        obchodnici, remeslnici
-    Poor Income
-        kocovne (cirkus, divadlo, pastevci...)
-    Shadowrunner(s)
-    Street Urchins
-        na ulici (zebrani, kradeze, organizovana banda(vypalne, hazard, kradeze, zebrani, informace...))
-    Boardlanders
-    Megaplex/Main City Dwellers
+make_list = list(Family_Tragedy)
+FAMILY_TRAGEDY = random.choice(make_list)
+FAMILY_TRAGEDY = (FAMILY_TRAGEDY.value)
 
 
-Parents
-Choose or Roll One:
-1-6 Both of your parents are
-alive go to Family Status.
-7-10 Something has happened
-to your parent(s). Go to
-Something Happened to your
-Parents.
+class Family_Parents(Enum):
+    living = "Both of your parents are alive."
+    mother_died = f"Your mother died afther {FAMILY_TRAGEDY}"
+    father_died = f"Your father died afther {FAMILY_TRAGEDY}"
+    dead = f"Your parents died afther {FAMILY_TRAGEDY}"
 
-Family Status
-Choose or Roll One:
-1-6 Family status is in danger and
-you may lose it all (if they haven’t
-drekked everything up already).
-Go to Family
-Tragedy.
-7-10 Family status is secure
-even if you’re parents are
-maimed, dead, or missing. Go
-to Childhood Environment.
+make_list = list(Family_Parents)
+family_Parents = random.choice(make_list)
+family_Parents = (family_Parents.value)
 
-Family Tragedy
-Choose or Roll One:
-1 You’re family lost everything and was
-betrayed.
-2 You’re family lost everything through bad
-investment.
-3 Family captured by organleggers. So sad.
-4 Your family was experimented on. You
-escaped.
-5 Your family was murdered in front of you.
-6 Family imprisoned, you escaped.
-7 Family was killed by violent organization, such
-as a human policlub.
-8 Parent(s) work on street in not too gentle and
-safe way to get by.
-9 Parent(s) committed suicide after losing it all.
-10 Parent(s) pissed mone
+class Family_ranking(Enum):
+    high = "Your parents ranking was High " + random.choice(("Corporate", "Guild", "City")) + " Profile."
+    mid = "Your parents ranking was Mid " + random.choice(("Corporate", "Guild", "City")) + " Profile."
+    wage = "Your parents ranking was " + random.choice(("wage earners", "wage laborers")) + "."
+    average = "Your parents has Average Income from " + random.choice((
+        "the production of expensive things on the custom",
+        "the business activities",
+        "the service" + random.choice((
+            "in the army",
+            "at the police of the flesh",
+            "at the customs")),
+        "care of the rich man's house",
+        "rents",
+        "the architectural designs",
+        "their construction company",
+        "their politic activities",
+        "the bribery",
+        "the the mayor adversely",
+        "the analytical capabilities for various organisations",
+        "their artistic activities",
+    )) + "."
+    poor = "Your parents has Poor Income."
+    nomadic = "Your parents lived nomadic life as " + random.choice((
+        "the circus artist", 
+        "the actors of the nomadic Theater", 
+        "the shepherds",
+        "the fishers",
+        "hunters",
+        "war correspondenters",
+        "highest bussinessmans",
+        "the IT developers",
+        "the tourist reporter"
+        )) + "."
+    shadowrunners="Your parents was Shadowrunners"
+    urchins = "Your parents was Street Urchins and earning money by " + random.choice((
+        "beggary",
+        "small stealing",
+        "cooperation with organized gang with speciality on " + random.choice((
+        "burning",
+        "gambling", 
+        "stealing",
+        "collecting",
+        "information"))
+    ))+ "."
+    boarderlanders = "Your parents was Boardlanders and worked as " + random.choice((
+        "an immigration guards",
+        "a customs officers",
+        "a Protectors of Protected Areas",
+        "the hotel and hospitality operators",
+        "police officers",
+        "members of the armed forces",
+        "foresters",
+        "tessars"
+        "the miners in " + random.choice(("sand", "stone", "minerals")) + " mine.",
+        "reclaimers",
+    )) + "."
+    dwellers = "Your parents was " + random.choice((
+        "Megaplex",
+        "Main City")) + " Dwellers."
 
-Something Happened to Your
-Parents
-Choose or Roll One:
-1 Your parent(s) were killed in
-gang crossfire.
-2 Your parent(s) died in an
-accident.
-3 Your parent(s) were
-murdered.
-4 Your parent(s) are on life
-support in hospital.
-5 You never knew your parents.
-6 Your parents are being hunted
-and left you to protect you.
-7 You grew up with relatives.
-8 You grew up on the street and
-never knew your parents.
-9 You grew up in an orphanage.
-10 Your parent(s) sold you for
-money.
-Go to Family Status
+make_list = list(Family_ranking)
+family_ranking = random.choice(make_list)
+family_ranking = (family_ranking.value)
 
+class Parents(Enum):
+    live = "Both of your parents are alive"
+    wrong = random.choice(())
+
+make_list = list(Parents)
+parents = random.choice(make_list)
+parents = (parents.value)
+
+
+
+"""
 Childhood Environment
 Roll or Choose One
 1 You grew up on the tough streets
@@ -460,3 +469,4 @@ Flush out the character by rolling up description
 info from Origins and Personal Style and Motivations. This info can be used to really bring
 the character to life and create some good roleplaying moments.
 
+"""

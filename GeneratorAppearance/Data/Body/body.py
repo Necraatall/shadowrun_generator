@@ -253,7 +253,7 @@ race_details = {
             "Build" : "stocky (digestive), cumbersome",
             "Limbs" : "short",
             "Pigmentation" : random.choice(("yellow-brown", "slightly fatter")),
-            "Nose" : random.choice(("short" "blunt")),
+            "Nose" : random.choice(("short", "blunt")),
             "Hair" : "thick, solid" + random.choice(("dark brown", "black")),
             "Eyes" : "dark brown",
             "Face" : "wide, round",

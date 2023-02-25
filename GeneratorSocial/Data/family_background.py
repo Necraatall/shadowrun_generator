@@ -18,6 +18,9 @@ class Family_Tragedy(Enum):
     street_work = f"work on street in not too gentle and safe way to get by. Especially if you're selling {random.choice(list(Family_street_selling))}."
     suicide = "that she lost everything, Committed Suicide."
     money_freak = "gave up on the money"
+    crossfire = "gang crossfire."
+    accident = "accident."
+    life_support = "are on life support in hospital."
 
 make_list = list(Family_Tragedy)
 FAMILY_TRAGEDY = random.choice(make_list)
@@ -28,7 +31,27 @@ class Family_Parents(Enum):
     living = "Both of your parents are alive."
     mother_died = f"Your mother died afther {FAMILY_TRAGEDY}"
     father_died = f"Your father died afther {FAMILY_TRAGEDY}"
-    dead = f"Your parents died afther {FAMILY_TRAGEDY}"
+    orphaned_died = f"Your parents died afther {FAMILY_TRAGEDY}"
+    accident_all = "Your parents are on life support in hospital. After a serious accident."
+    accident_mother = "Your mother is on life support in hospital. After a serious accident."
+    accident_father = "Your father is on life support in hospital. After a serious accident."
+    adopted_parents_unknown = "You are adopted. You never knew your real parents."
+    father_unknown = "Your mother dont't tell you about your father."
+    mother_unknown = "You grow up with your relatives and you never listen about your mom."
+    cloned = "You were cloned for organs, but you escaped during the police raid at age of 16 years."
+    street_child = "You grew up on the street and never knew your parents."
+    organization_orphan = "You grew up in an " + random.choice((
+        "cadet school",
+        "noviciat at the priest",
+        "orphanage"
+    ))
+    solded = "Your parents sold you for money " +random.choice((
+        "to the infertile rich parents.",
+        "to serve as slave and sexual toy.",
+        "to work there."
+    ))
+
+
 
 make_list = list(Family_Parents)
 family_Parents = random.choice(make_list)
@@ -54,6 +77,8 @@ class Family_ranking(Enum):
         "the the mayor adversely",
         "the analytical capabilities for various organisations",
         "their artistic activities",
+        "the heritage",
+        "family investments"
     )) + "."
     poor = "Your parents has Poor Income."
     nomadic = "Your parents lived nomadic life as " + random.choice((
@@ -90,13 +115,11 @@ class Family_ranking(Enum):
         "the miners in " + random.choice(("sand", "stone", "minerals")) + " mine.",
         "reclaimers",
     )) + "."
-    dwellers = "Your parents was " + random.choice((
-        "Megaplex",
-        "Main City")) + " Dwellers."
 
 make_list = list(Family_ranking)
 family_ranking = random.choice(make_list)
 family_ranking = (family_ranking.value)
+
 
 class Parents(Enum):
     live = "Both of your parents are alive"

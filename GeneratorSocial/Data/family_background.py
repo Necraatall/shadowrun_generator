@@ -13,49 +13,91 @@ class Family_Tragedy(Enum):
     captured = "Your family was captured by organleggers. So sad."
     experimented = "Your family was experimented on. You escaped."
     murdered = "Your family was murdered in front of you."
-    imprisoned = "Family imprisoned, you escaped."
-    killed_by_violent = "Family was killed by violent organization, such as a human policlub."
-    street_work = f"work on street in not too gentle and safe way to get by. Especially if you're selling {random.choice(list(Family_street_selling))}."
-    suicide = "that she lost everything, Committed Suicide."
+    imprisoned = "family was imprisoned, but you escaped."
+    killed_by_violent = "family was killed by violent organization, such as a human policlub."
+    street_work = f"work on street in not too gentle and safe way to get by. \
+        Especially if you're selling {random.choice(list(Family_street_selling))}."
+    suicide = "lost everything, Committed Suicide."
     money_freak = "gave up on the money"
     crossfire = "gang crossfire."
     accident = "accident."
-    life_support = "are on life support in hospital."
 
 make_list = list(Family_Tragedy)
 FAMILY_TRAGEDY = random.choice(make_list)
 FAMILY_TRAGEDY = (FAMILY_TRAGEDY.value)
 
 
+class Childhood_Environment(Enum):
+    street_child = "You grew up on the tough streets alone."
+    btl = "You grew up jacked into BTL’s because life sucked so bad."
+    megaplex = "Grew up in a safe megaplex under heavy guard."
+    squatter = "Grew up in a derelict squatter house in the Boarderlands."
+    skyscraper = "Grew up in Corporate territory in posh skyscraper."
+    ganger = "Grew up in a gang war zone."
+    slave = "Grew up in a slave shop."
+    farmed = "Grew up in human organ farm and escaped."
+    vandal = "Grew up in a boring area and sought vandalism as form of excitement."
+    mafioso = "Grew up in crime family house. Safe and secure."
+    organizationed = "Grew up in a " + random.choice((
+            "cadet school.",
+            "noviciat at the priest.",
+            "n orphanage."))
+
+make_list = list(Childhood_Environment)
+childhood_environment = random.choice(make_list)
+childhood_environment = (childhood_environment.value)
+
 class Family_Parents(Enum):
-    living = "Both of your parents are alive."
-    mother_died = f"Your mother died afther {FAMILY_TRAGEDY}"
-    father_died = f"Your father died afther {FAMILY_TRAGEDY}"
-    orphaned_died = f"Your parents died afther {FAMILY_TRAGEDY}"
-    accident_all = "Your parents are on life support in hospital. After a serious accident."
-    accident_mother = "Your mother is on life support in hospital. After a serious accident."
-    accident_father = "Your father is on life support in hospital. After a serious accident."
-    adopted_parents_unknown = "You are adopted. You never knew your real parents."
-    father_unknown = "Your mother dont't tell you about your father."
-    mother_unknown = "You grow up with your relatives and you never listen about your mom."
+    living = "Both of parents are alive."
+    mother_died = f"Mother died afther {FAMILY_TRAGEDY}"
+    father_died = f"Father died afther {FAMILY_TRAGEDY}"
+    orphaned_died = f"Parents died afther {FAMILY_TRAGEDY}"
+    accident_all = "Parents are on life support in hospital. After an serious accident."
+    accident_mother = "Mother is on life support in hospital. After an serious accident."
+    accident_father = "Father is on life support in hospital. After an serious accident."
+    adopted_parents_unknown = "Never knew real parents, is adopted."
+    father_unknown = "Mother not talking about your father."
+    mother_unknown = "Grow up with relatives and never listen about your mom."
     cloned = "You were cloned for organs, but you escaped during the police raid at age of 16 years."
     street_child = "You grew up on the street and never knew your parents."
-    organization_orphan = "You grew up in an " + random.choice((
-        "cadet school",
-        "noviciat at the priest",
-        "orphanage"
-    ))
-    solded = "Your parents sold you for money " +random.choice((
+    mother_life_support = "Mother is on life support in hospital. Afther " + random.choice(list(Family_Tragedy)).value
+    father_life_support = "Father is on life support in hospital. Afther " + random.choice(list(Family_Tragedy)).value
+    both_life_support = "Parents are on life support in hospital. Afther " + random.choice(list(Family_Tragedy)).value
+    solded = "Parents sold you for money " +random.choice((
         "to the infertile rich parents.",
         "to serve as slave and sexual toy.",
-        "to work there."
+        "to work at factory."
     ))
-
-
-
+    parents_illegal_emigrants = random.choice((
+        "Parents are lost emigrants. " + random.choice(list(Childhood_Environment)).value + random.choice((
+        " In the country of Your parent origin.",
+        " In the country of emigration.")),
+        "Your parents are arrested emigrants in country of their origin. Meanwhile he " + random.choice((
+            "raised hidden in the country of origin of the parent",
+            "raised in the country of emigration")) + " on the " + random.choice((
+            "cadet school.",
+            "noviciat at the priest.",
+            "orphanage."        
+            )),
+        "Your parents are emigrants living in the country of their origin, but trying to find you \
+            Meanwhile you " + random.choice((
+            "raised hidden in the country of origin of the parent",
+            "raised in the country of emigration")) + " on the " + random.choice((
+            "cadet school.",
+            "noviciat at the priest.",
+            "orphanage."        
+            )),
+        "Parents are emigrants living in new country, \
+            but trying to find you. Meanwhile you " + random.choice((
+            "Left hidden in the country of origin of the parent",
+            "Left in the country of emigration",
+            )) + " on the " + random.choice(list(Childhood_Environment)).value,
+    ))
 make_list = list(Family_Parents)
-family_Parents = random.choice(make_list)
-family_Parents = (family_Parents.value)
+family_parents = random.choice(make_list)
+family_parents = (family_parents.value)
+print(family_parents)
+
 
 class Family_ranking(Enum):
     high = "Your parents ranking was High " + random.choice(("Corporate", "Guild", "City")) + " Profile."
@@ -121,40 +163,10 @@ family_ranking = random.choice(make_list)
 family_ranking = (family_ranking.value)
 
 
-class Parents(Enum):
-    live = "Both of your parents are alive"
-    wrong = random.choice(())
-
-make_list = list(Parents)
-parents = random.choice(make_list)
-parents = (parents.value)
 
 
 
 """
-Childhood Environment
-Roll or Choose One
-1 You grew up on the tough streets
-alone.
-2 You grew up jacked into BTL’s
-because life sucked so bad.
-3 Grew up in a safe megaplex
-under heavy guard.
-4 Grew up in a derelict squatter
-house in the Boarderlands.
-5 Grew up in Corporate territory in
-posh skyscraper.
-6 Grew up in a gang war zone.
-7 Grew up in a slave shop.
-8 Grew up in human organ farm
-and escaped.
-9 Grew up in a boring area and
-sought vandalism as form of
-excitement.
-10 Grew up in crime family house.
-Safe and secure.
-Go to Siblings.
-
 Siblings
 Roll 1d10: 1-7 you have that amount of
 siblings. 8-10 you are an only child.

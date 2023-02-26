@@ -16,7 +16,7 @@ class Family_Tragedy(Enum):
     imprisoned = "family was imprisoned, but you escaped."
     killed_by_violent = "family was killed by violent organization, such as a human policlub."
     street_work = f"work on street in not too gentle and safe way to get by. \
-        Especially if you're selling {random.choice(list(Family_street_selling))}."
+Especially if you're selling {random.choice(list(Family_street_selling)).value}."
     suicide = "lost everything, Committed Suicide."
     money_freak = "gave up on the money"
     crossfire = "gang crossfire."
@@ -28,8 +28,8 @@ FAMILY_TRAGEDY = (FAMILY_TRAGEDY.value)
 
 
 class Childhood_Environment(Enum):
-    street_child = "You grew up on the tough streets alone."
-    btl = "You grew up jacked into BTL’s because life sucked so bad."
+    street_child = "Grew up on the tough streets alone."
+    btl = "Grew up jacked into BTL’s because life sucked so bad."
     megaplex = "Grew up in a safe megaplex under heavy guard."
     squatter = "Grew up in a derelict squatter house in the Boarderlands."
     skyscraper = "Grew up in Corporate territory in posh skyscraper."
@@ -80,7 +80,7 @@ class Family_Parents(Enum):
             "orphanage."        
             )),
         "Your parents are emigrants living in the country of their origin, but trying to find you \
-            Meanwhile you " + random.choice((
+Meanwhile you " + random.choice((
             "raised hidden in the country of origin of the parent",
             "raised in the country of emigration")) + " on the " + random.choice((
             "cadet school.",
@@ -88,10 +88,10 @@ class Family_Parents(Enum):
             "orphanage."        
             )),
         "Parents are emigrants living in new country, \
-            but trying to find you. Meanwhile you " + random.choice((
-            "Left hidden in the country of origin of the parent",
-            "Left in the country of emigration",
-            )) + " on the " + random.choice(list(Childhood_Environment)).value,
+but trying to find you. Meanwhile you " + random.choice((
+            "left hidden in the country of origin of the parent",
+            "left in the country of emigration",
+            )) + " and " + random.choice(list(Childhood_Environment)).value,
     ))
 make_list = list(Family_Parents)
 family_parents = random.choice(make_list)
@@ -163,19 +163,22 @@ family_ranking = random.choice(make_list)
 family_ranking = (family_ranking.value)
 
 
-
-
-
-"""
-Siblings
-Roll 1d10: 1-7 you have that amount of
-siblings. 8-10 you are an only child.
+# TODO find best way
+siblings_count = random.int(1,10)
+if siblings_count < 8:
+    print(f"You have {siblings_count} of siblings.")
+    # Loop here ?
+else:
+    print("You are only child.")
+class Siblings(Enum):
+8-10 you are an only child.
 1 Roll d10: Even sibling is female. Odd
 sibling is male.
 2 Roll age, relative to you:
 1-5 Older
 6-9 Younger
 10 Twin
+
 How each sibling feels about you:
 1-2 Sibling dislikes you.
 3-4 Sibling likes you.
@@ -184,6 +187,9 @@ How each sibling feels about you:
 9-10 They hate you.
 Go to Motivations.
 
+
+
+"""
 MOTIVATIONS:
 Personality Traits
 Mam uz v SocialInteractions

@@ -170,22 +170,40 @@ if siblings_count < 8:
     # Loop here ?
 else:
     print("You are only child.")
-class Siblings(Enum):
-8-10 you are an only child.
-1 Roll d10: Even sibling is female. Odd
-sibling is male.
-2 Roll age, relative to you:
-1-5 Older
-6-9 Younger
-10 Twin
 
-How each sibling feels about you:
-1-2 Sibling dislikes you.
-3-4 Sibling likes you.
-5-6 Sibling is neutral to you.
-7-8 You are Jesus to them.
-9-10 They hate you.
-Go to Motivations.
+class Siblings(Enum):
+    siblings_count = random.randint(0, 5)
+    if siblings_count > 0:
+        sibl_count=siblings_count
+        if siblings_count >= 3:
+            siblings_mother = sibl_count - 2
+        
+
+class Siblings(Enum):
+    older = " has " + random.randint(0, 10) + "years older " + random.choice(("brother.", "sister.",))
+    younger = random.randint(0, 10) + "years younger " + random.choice(("brother", "sister",))
+    twin = random.choice(("identic", "not identic",)) + " twin " + random.choice(("brother", "sister",))
+
+siblings_count = random.randint(0, 5)
+make_list = list(Siblings)
+SIBLINGS = random.sample(make_list, siblings_count)
+# SIBLINGS = SIBLINGS[0].value, SIBLINGS[1].value
+
+# 8-10 you are an only child.
+# 1 Roll d10: Even sibling is female. Odd
+# sibling is male.
+# 2 Roll age, relative to you:
+# 1-5 Older
+# 6-9 Younger
+# 10 Twin
+
+# How each sibling feels about you:
+# 1-2 Sibling dislikes you.
+# 3-4 Sibling likes you.
+# 5-6 Sibling is neutral to you.
+# 7-8 You are Jesus to them.
+# 9-10 They hate you.
+# Go to Motivations.
 
 
 

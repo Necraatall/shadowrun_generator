@@ -2,37 +2,38 @@ from enum import Enum
 import random
 from ..Body.body import *
 
-class Face_shape(Enum):
-    OVAL_FACE_SHAPE = "Oval" 
-    SQUARE_FACE_SHAPE = "Square"
-    OBLONG_FACE_SHAPE = "Oblong"
-    TRIANGULAR_FACE_SHAPE = "Triangular"
-    ROUND_FACE_SHAPE = "Round"
-    DIAMOND_FACE_SHAPE = "Diamond"
-    HEART_FACE_SHAPE = "Heart"
+# class Face_shape(Enum):
+#     OVAL_FACE_SHAPE = "Oval"
+#     SQUARE_FACE_SHAPE = "Square"
+#     OBLONG_FACE_SHAPE = "Oblong"
+#     TRIANGULAR_FACE_SHAPE = "Triangular"
+#     ROUND_FACE_SHAPE = "Round"
+#     DIAMOND_FACE_SHAPE = "Diamond"
+#     HEART_FACE_SHAPE = "Heart"
 
-make_list = list(Face_shape)
-if not any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
-    if race_chosen[0]=='Hamitic' :
-        face_shape = "Round"
+# make_list = list(Face_shape)
+# if not any(s in race_choice for s in ('Caribbean', 'Latino/Hispanic', 'Caucasian', 'South_Asian', 'East_Asian', 'Mixed')):
+#     if race_chosen[0] == 'Hamitic':
+#         face_shape = "Round"
 
-    if race_chosen[0]=='Alpine':
-        face_shape = "Round"
+#     if race_chosen[0] == 'Alpine':
+#         face_shape = "Round"
 
-    if race_chosen[0]=='Mediterran':
-        face_shape = "Oval"
+#     if race_chosen[0] == 'Mediterran':
+#         face_shape = "Oval"
 
-    if race_chosen[0]=='Falian':
-        face_shape = "Square"
-    
-    if not any(s in race_choice for s in ('Hamitic', 'Alpine', 'Mediterran', 'Falian')):
-        face_shape = random.choice(make_list)
-        face_shape = (face_shape.value)
+#     if race_chosen[0] == 'Falian':
+#         face_shape = "Square"
 
-else: 
-    face_shape = random.choice(make_list)
-    face_shape = (face_shape.value)
-FACE_SHAPE = face_shape
+#     if not any(s in race_choice for s in ('Hamitic', 'Alpine', 'Mediterran', 'Falian')):
+#         face_shape = random.choice(make_list)
+#         face_shape = (face_shape.value)
+
+# else:
+#     face_shape = random.choice(make_list)
+#     face_shape = (face_shape.value)
+# FACE_SHAPE = face_shape
+
 
 class Long_hair_styles(Enum):
     SHAG_HAIRCUT = "shag haircut"
@@ -66,9 +67,11 @@ class Long_hair_styles(Enum):
     LONG_HAIR_WITH_POMPADOUR = "long hair with pompadour"
     LONG_HAIR_HARD_PART = "long hair hard part"
 
+
 make_list = list(Long_hair_styles)
 LONG_HAIR_STYLES = random.choice(make_list)
 LONG_HAIR_STYLES = (LONG_HAIR_STYLES.value)
+
 
 class Oval_short_hair_styles(Enum):
     PUSHED_BACK_LONG_OVAL_HAIR_STYLE_SHORT = "pushed back long"
@@ -76,9 +79,11 @@ class Oval_short_hair_styles(Enum):
     UNDERCUT_OVAL_HAIR_STYLE_SHORT = "undercut"
     FRINGE_UP_OVAL_HAIR_STYLE_SHORT = "fringe up"
 
+
 make_list = list(Oval_short_hair_styles)
 OVAL_SHORT_HAIR_STYLES = random.choice(make_list)
 OVAL_SHORT_HAIR_STYLES = (OVAL_SHORT_HAIR_STYLES.value)
+
 
 class Square_short_hair_styles(Enum):
     CREW_AKA_BUZZ_CUT_SQUARE_HAIR_STYLE_SHORT = "crew aka buzz cut"
@@ -86,9 +91,11 @@ class Square_short_hair_styles(Enum):
     FAUX_HAWK_SQUARE_HAIR_STYLE_SHORT = "faux hawk"
     SLICKED_BACK_SIDE_PART_SQUARE_HAIR_STYLE_SHORT = "slicked back side part"
 
+
 make_list = list(Square_short_hair_styles)
 SQUARE_SHORT_HAIR_STYLES = random.choice(make_list)
 SQUARE_SHORT_HAIR_STYLES = (SQUARE_SHORT_HAIR_STYLES.value)
+
 
 class Oblong_short_hair_styles(Enum):
     SIDE_PARTED_OBLONG_HAIR_STYLE_SHORT = "side parted"
@@ -96,10 +103,12 @@ class Oblong_short_hair_styles(Enum):
     FRINGE_UP_OBLONG_HAIR_STYLE_SHORT = "fringe up"
     SIDE_FRINGE_OBLONG_HAIR_STYLE_SHORT = "side fringe"
 
+
 class Triangular_short_hair_styles(Enum):
     FRINGE_UP_TRIANGULAR_HAIR_STYLE_SHORT = "fringe up"
     SIDE_FRINGE_TRIANGULAR_HAIR_STYLE_SHORT = "side fringe"
     SIDE_PARTED_TRIANGULAR_HAIR_STYLE_SHORT = "side parted"
+
 
 class Round_short_hair_styles(Enum):
     FAUX_HAWK_WITH_SHORTER_SIDES_ROUND_HAIR_STYLE_SHORT = "faux hawk with shorter sides"
@@ -107,18 +116,19 @@ class Round_short_hair_styles(Enum):
     UNDERCUT_ROUND_HAIR_STYLE_SHORT = "undercut"
     QUIFF_ROUND_HAIR_STYLE_SHORT = "quiff"
 
+
 class Diamond_short_hair_styles(Enum):
     QUIFF_DIAMOND_HAIR_STYLE_SHORT = "quiff"
     LONG_HAIR_PUSHED_BACK_DIAMOND_HAIR_STYLE_SHORT = "long hair pushed back"
     FAUX_HAWK_DIAMOND_HAIR_STYLE_SHORT = "faux hawk"
     SIDE_FRINGE_DIAMOND_HAIR_STYLE_SHORT = "side fringe"
 
+
 class Heart_short_hair_styles(Enum):
     LONG_FRINGES_HEART_HAIR_STYLE_SHORT = "long fringes"
     SIDE_PARTED_LONG_HEART_HAIR_STYLE_SHORT = "side parted long"
     PUSHED_BACK_HEART_HAIR_STYLE_SHORT = "pushed back"
     UNDERCUT_HEART_HAIR_STYLE_SHORT = "undercut"
-
 
 
 class Hair_color(Enum):
@@ -135,9 +145,11 @@ class Hair_color(Enum):
     DARK_BROWN_HAIR_COLOR = 'dark brown'
     WHITE_HAIR_COLOR = 'white'
 
+
 make_list = list(Hair_color)
 HAIR_COLOR = random.choice(make_list)
 HAIR_COLOR = (HAIR_COLOR.value)
+
 
 class Hair_types(Enum):
     VERY_STRAIGHT_HAIR_TYPE = "very straight hair"
@@ -155,9 +167,11 @@ class Hair_types(Enum):
     ZIG_ZAG_HAIR_TYPE = "zig zag"
     TIGHTLY_COILED_HAIR_TYPE = "tightly coiled"
 
+
 make_list = list(Hair_types)
 HAIR_TYPES = random.choice(make_list)
 HAIR_TYPES = (HAIR_TYPES.value)
+
 
 @staticmethod
 def haircut_by_face_shape():
@@ -196,6 +210,7 @@ def haircut_by_face_shape():
 class Face_and_hair(Enum):
     FACE_LONG = f"{FACE_SHAPE} face with naturally {HAIR_TYPES} hair of the {HAIR_COLOR} color and long haircut: {LONG_HAIR_STYLES}"
     FACE_SHORT = f"{FACE_SHAPE} face with naturally {HAIR_TYPES} hair of the {HAIR_COLOR} color and short haircut: {haircut_by_face_shape()}"
+
 
 make_list = list(Face_and_hair)
 FACE_AND_HAIR = random.choice(make_list)

@@ -1,6 +1,7 @@
 import random
 from enum import Enum
 
+
 class Relatives(Enum):
     AFGHAN = 'Afghan'
     ABORIGIN = 'Aborigin'
@@ -44,9 +45,11 @@ class Relatives(Enum):
     RUSIAN = 'Rusian'
     CHINEES = 'Chinees'
 
+
 make_list = list(Relatives)
 RELATIVES = random.choice(make_list)
 RELATIVES = RELATIVES.value
+
 
 class Religion(Enum):
     EGYPTIAN = "some_other_value"
@@ -54,9 +57,11 @@ class Religion(Enum):
     KELT = "some_other_value"
     SLOVAN = "some_other_value"
 
+
 make_list = list(Religion)
 RELIGION = random.choice(make_list)
 RELIGION = RELIGION.value
+
 
 class Positive_characteristic(Enum):
     CREATIVE = "creative"
@@ -178,6 +183,7 @@ class Positive_characteristic(Enum):
     SUFFICIENT = "sufficient"
     RESOURCEFUL = "resourceful"
 
+
 make_list = list(Positive_characteristic)
 POSITIVE_CHARACTERISTIC = random.sample(make_list, 2)
 POSITIVE_CHARACTERISTIC = POSITIVE_CHARACTERISTIC[0].value, POSITIVE_CHARACTERISTIC[1].value
@@ -235,7 +241,7 @@ class Negative_characteristic(Enum):
     HAUGHTY = "haughty"
     HOSTILE = "hostile"
     HUMORLESS = "humorless"
-    HYPOCRITICAL = "hypocritical" 
+    HYPOCRITICAL = "hypocritical"
     IGNORANT = "ignorant"
     IMPATIENT = "impatient"
     IMPULSIVE = "impulsive"
@@ -269,7 +275,7 @@ class Negative_characteristic(Enum):
     PREJUDICED = "prejudiced"
     PRETENTIOUS = "pretentious"
     PUSHY = "pushy"
-    REBELLIOUS = "rebellious" 
+    REBELLIOUS = "rebellious"
     RECKLESS = "reckless"
     RESENTFUL = "resentful"
     ROWDY = "rowdy"
@@ -300,12 +306,13 @@ class Negative_characteristic(Enum):
     WORKAHOLIC = "workaholic"
     WORRYWART = "worrywart"
 
+
 make_list = list(Negative_characteristic)
 NEGATIVE_CHARACTERISTIC = random.sample(make_list, 2)
 NEGATIVE_CHARACTERISTIC = (NEGATIVE_CHARACTERISTIC[0].value, NEGATIVE_CHARACTERISTIC[1].value)
 
 
-# TODO: dopsat popisky - domyslet remeslniky a pod. 
+# TODO: dopsat popisky - domyslet remeslniky a pod.
 class Social_class(Enum):
     RUNNER = "runner"               # noqa byvalej runner, nebo popripade i modifikace bodu na rozdeleni
     HERO = "hero"                   # noqa mistni hrdina - mozno vice kontaktu, lepsi vztahy nekde - popripade i modifikace bodu na rozdeleni
@@ -322,126 +329,129 @@ class Social_class(Enum):
     NATIVE = "native"               # domorodec typu indian... ne cigan
     CRAFTER = "crafter"             # remeslnik
 
+
 make_list = list(Social_class)
 SOCIAL_CLASS = random.choice(make_list)
 SOCIAL_CLASS = SOCIAL_CLASS.value
+
 
 class Gender(Enum):
     MALE = "male"
     FEMALE = "female"
 
+
 GENDER = random.choice(list(Gender))
 GENDER = GENDER.value
 
 SEXUAL_PREFERENCY_LIST = random.choice((
-        "same gender",
-        "same gender older",
-        "same gender older 10-15 years",
-        "same gender older gerontophilia",
-        "same gender older 16-25 years",
-        "same gender 16-22 year",
-        "same gender 30-40 year",
-        "same gender 40-50 year",
-        "same gender under 16 year",
-        "oposite gender",
-        "oposite gender older 10-15 years",
-        "oposite gender older gerontophilia",
-        "oposite gender older 16-25 years",
-        "oposite gender 16-22 year",
-        "oposite gender 30-40 year",
-        "oposite gender 40-50 year",
-        "oposite gender under 16 year",
-        "bisexual",
-        "bisexual older 10-15 years",
-        "bisexual older gerontophilia",
-        "bisexual older 16-25 years",
-        "bisexual 16-22 year",
-        "bisexual 30-40 year",
-        "bisexual 40-50 year",
-        "bisexual under 16 year",
-        "group sex",
-        "group sex 2 females one male",
-        "group sex 2 females one male all others older 10-15 years",
-        "group sex 2 females one male all others older gerontophilia",
-        "group sex 2 females one male all others older 16-25 years",
-        "group sex 2 females one male all others 16-22 year",
-        "group sex 2 females one male all others 30-40 year",
-        "group sex 2 females one male all others 40-50 year",
-        "group sex 2 females one male all others under 16 year",
-        "group sex 2 males one female",
-        "group sex 2 males one female all others older 10-15 years",
-        "group sex 2 males one female all others older gerontophilia",
-        "group sex 2 males one female all others older 16-25 years",
-        "group sex 2 males one female all others 16-22 year",
-        "group sex 2 males one female all others 30-40 year",
-        "group sex 2 males one female all others 40-50 year",
-        "group sex 2 males one female all others under 16 year",
-        "big group sex",
-        "gang bang",
-        "a sexual games",
-        "a game of rape", 
-        "sexual non sado maso games",
-        "sado maso light",
-        "sado maso hard", 
-        "sex with animals", 
-        "froteur",
-        "material afilation",
-        "sex on public areas", 
-        "sex on nature",
-        "sex on holy places", 
-        "non-maried sex", 
-        "sex on brothel", 
-        "pasionate sex",
-        "bizzare sex", 
-        "watching people doing sex", 
-        "must be watched when doing sex",
-        "sex in the watter", 
-        "roleplay",
-        "be binded",
-        "bind someone",
-        "mask on eyes",
-        "anal sex", 
-        "one night sex",
-        "using erotic tools",
-        "using food",
-        "anal copulation on realy rich places with waterpool", 
-        "riping anal by female",
-        "double penetration",
-        "oral sex with many mans",
-        "swinging partners",
-        "erotic hypnotic",
-        "orgies",
-        "realy haired body",
-        "the desire to consider oneself a corpse and to be loved as a corpse",
-        "the thrill of thunder and lightning",
-        "the cancellation of the victim being beaten on the feet with a belt, a cane or even a stick",
-        "the thrill of being robbed",
-        "the pleasure of looking at or touching a particular substance",
-        "is triggered if the sufferer sees their partner crying",
-        "torture of the testicles, most commonly crushing or squeezing",
-        """he creates situations where strangers can see him naked just by chance. 
+    "same gender",
+    "same gender older",
+    "same gender older 10-15 years",
+    "same gender older gerontophilia",
+    "same gender older 16-25 years",
+    "same gender 16-22 year",
+    "same gender 30-40 year",
+    "same gender 40-50 year",
+    "same gender under 16 year",
+    "oposite gender",
+    "oposite gender older 10-15 years",
+    "oposite gender older gerontophilia",
+    "oposite gender older 16-25 years",
+    "oposite gender 16-22 year",
+    "oposite gender 30-40 year",
+    "oposite gender 40-50 year",
+    "oposite gender under 16 year",
+    "bisexual",
+    "bisexual older 10-15 years",
+    "bisexual older gerontophilia",
+    "bisexual older 16-25 years",
+    "bisexual 16-22 year",
+    "bisexual 30-40 year",
+    "bisexual 40-50 year",
+    "bisexual under 16 year",
+    "group sex",
+    "group sex 2 females one male",
+    "group sex 2 females one male all others older 10-15 years",
+    "group sex 2 females one male all others older gerontophilia",
+    "group sex 2 females one male all others older 16-25 years",
+    "group sex 2 females one male all others 16-22 year",
+    "group sex 2 females one male all others 30-40 year",
+    "group sex 2 females one male all others 40-50 year",
+    "group sex 2 females one male all others under 16 year",
+    "group sex 2 males one female",
+    "group sex 2 males one female all others older 10-15 years",
+    "group sex 2 males one female all others older gerontophilia",
+    "group sex 2 males one female all others older 16-25 years",
+    "group sex 2 males one female all others 16-22 year",
+    "group sex 2 males one female all others 30-40 year",
+    "group sex 2 males one female all others 40-50 year",
+    "group sex 2 males one female all others under 16 year",
+    "big group sex",
+    "gang bang",
+    "a sexual games",
+    "a game of rape",
+    "sexual non sado maso games",
+    "sado maso light",
+    "sado maso hard",
+    "sex with animals",
+    "froteur",
+    "material afilation",
+    "sex on public areas",
+    "sex on nature",
+    "sex on holy places",
+    "non-maried sex",
+    "sex on brothel",
+    "pasionate sex",
+    "bizzare sex",
+    "watching people doing sex",
+    "must be watched when doing sex",
+    "sex in the watter",
+    "roleplay",
+    "be binded",
+    "bind someone",
+    "mask on eyes",
+    "anal sex",
+    "one night sex",
+    "using erotic tools",
+    "using food",
+    "anal copulation on realy rich places with waterpool",
+    "riping anal by female",
+    "double penetration",
+    "oral sex with many mans",
+    "swinging partners",
+    "erotic hypnotic",
+    "orgies",
+    "realy haired body",
+    "the desire to consider oneself a corpse and to be loved as a corpse",
+    "the thrill of thunder and lightning",
+    "the cancellation of the victim being beaten on the feet with a belt, a cane or even a stick",
+    "the thrill of being robbed",
+    "the pleasure of looking at or touching a particular substance",
+    "is triggered if the sufferer sees their partner crying",
+    "torture of the testicles, most commonly crushing or squeezing",
+    """he creates situations where strangers can see him naked just by chance. 
         For example, he may leave the curtains open and walk around the apartment naked""",
-        "the excitement of observing some work activity or skill of another person",
-        "the person in question has a desire to deflower as many women as possible",
-        "attachment to sick people",
-        "sexual affection for gods, spirits and demons",
-        "preferences of partners who are blind or partially sighted",
-        "burning the brand with a very high temperature from hot metal, burning with a cigarette or candle flame",
-        "sexual arousal on the basis of a hot bath or shower",
-        "nipple orgasm",
-        "sex with pregnant womans",
-        "Multiple orgasm",
-        "Orgasm in sleep",
-        "Orgasm through erotic fantasies",
-        """Coregasm is an interesting response of the body to sport and movement. 
+    "the excitement of observing some work activity or skill of another person",
+    "the person in question has a desire to deflower as many women as possible",
+    "attachment to sick people",
+    "sexual affection for gods, spirits and demons",
+    "preferences of partners who are blind or partially sighted",
+    "burning the brand with a very high temperature from hot metal, burning with a cigarette or candle flame",
+    "sexual arousal on the basis of a hot bath or shower",
+    "nipple orgasm",
+    "sex with pregnant womans",
+    "Multiple orgasm",
+    "Orgasm in sleep",
+    "Orgasm through erotic fantasies",
+    """Coregasm is an interesting response of the body to sport and movement. 
         It is not a targeted sexual stimulation, but a pleasant part of movement, 
         where the erogenous zones are stimulated by movement and rubbing against clothes or sports equipment.""",
-        "Latex, vinyl and leather",
-        "Voyeurismus",
-        "Dendrophilia: raped roots and trunks",
-        "Hybristophilia: sex with bad guys",
-        "Catoptronophilia: without a mirror not a shot",
-        """Salirophilia: you can't be attractive!
+    "Latex, vinyl and leather",
+    "Voyeurismus",
+    "Dendrophilia: raped roots and trunks",
+    "Hybristophilia: sex with bad guys",
+    "Catoptronophilia: without a mirror not a shot",
+    """Salirophilia: you can't be attractive!
         You used to be pretty, but that's not true anymore! 
         Saliophilia consists of the actor dishonoring the object of his desire - usually an attractive person. 
         But it is only about looks, not pain. 
@@ -450,30 +460,30 @@ SEXUAL_PREFERENCY_LIST = random.choice((
         That kinda sucks when you're taking care of yourself! 
         Or do you let something like that go unnoticed?
         """,
-        "Transvestitism and sexual orientation on same gender",
-        "Transvestitism and sexual orientation on oposite gender",
-        "shemale",
-        """Erotografomanie
+    "Transvestitism and sexual orientation on same gender",
+    "Transvestitism and sexual orientation on oposite gender",
+    "shemale",
+    """Erotografomanie
         Arousal is achieved by writing letters with erotic content to unknown objects. 
         The Erotografomaniac is then satisfied by the idea of the woman reading the letter""",
-        """Skatophilia
+    """Skatophilia
         In scatophilia (or erotophilia) arousal is achieved by anonymous phone calls with erotic content. 
         Men who are aroused by calls with erotic content are usually completely sexually normal.
         """,
-        """Tushering
+    """Tushering
         Arousal is achieved by touching the private parts of anonymous female objects. 
         A tusker usually touches, as if by accident, the breast, ass or genital area of a passing woman in a park or on a vehicle.
         """,
-        "Homophilia - a sexual deviation in which a person imagines having sex during a mass or other religious ceremony",
-        "Candaulism - this deviation consists in the fact that a partner is sexually satisfied by showing his partner naked in public",
-        "Kochwarism - is a dangerous sexual deviation that consists in inducing sexual arousal by strangulation.",
-        "Narratophilia - arousal is induced by vulgar words and expressions",
-        "Ophidiophilia - ophidiophiles are aroused by snakes",
-        "Pyrophilia - a deviation in which sexual arousal is induced by fire",
-        "Retifism - a subgroup of fetishism where the erotic stimulus is women's shoes",
-        "Somnophilia - a somnophile pisses on a sleeping partner. Often over a complete stranger sleeping, for example in campsites or hostels.",
-        "Symphorophilia - a sexual deviation characterized by sexual exhibition in traffic accidents",
-        "stealing things.",
+    "Homophilia - a sexual deviation in which a person imagines having sex during a mass or other religious ceremony",
+    "Candaulism - this deviation consists in the fact that a partner is sexually satisfied by showing his partner naked in public",
+    "Kochwarism - is a dangerous sexual deviation that consists in inducing sexual arousal by strangulation.",
+    "Narratophilia - arousal is induced by vulgar words and expressions",
+    "Ophidiophilia - ophidiophiles are aroused by snakes",
+    "Pyrophilia - a deviation in which sexual arousal is induced by fire",
+    "Retifism - a subgroup of fetishism where the erotic stimulus is women's shoes",
+    "Somnophilia - a somnophile pisses on a sleeping partner. Often over a complete stranger sleeping, for example in campsites or hostels.",
+    "Symphorophilia - a sexual deviation characterized by sexual exhibition in traffic accidents",
+    "stealing things.",
 
 ))
 
@@ -487,8 +497,14 @@ class Political_lean(Enum):
     FAR_RIGHT = "far right"
     CONSTITUTIONAL_MONARCHY = "constitutional monarchy"
     SERFDOM = "serfdom"
+    SLAVERY = "slavery"
     POSPOLITE = "the original pospolite"
     MONARCHY = "monarchy"
+    ANARCHY = "anarchy"
+    COMUNISM = "comunism"
+    AUTOCRACY = "autocracy"
+    MAGIOCRACY = "magiocracy"
+
 
 POLITICAL_LEAN = random.choice(list(Political_lean))
 POLITICAL_LEAN = POLITICAL_LEAN.value

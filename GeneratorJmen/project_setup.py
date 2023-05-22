@@ -132,7 +132,7 @@ def write_results():
     print("\nVisage:")
     print((f"Appearence age: \t{Age.APPEARENCE_AGE.value}").expandtabs(30))
     print((f"Social Class: \t{SOCIAL_CLASS}").expandtabs(30))
-    print((f"Height: \t{HEIGHT}").expandtabs(30))
+    # print((f"Height: \t{HEIGHT}").expandtabs(30))
     print(str(f"Weight: \t{WEIGHT}").expandtabs(30))
     print((f"Body: \t{BODY}").expandtabs(30))
     print((f"Body shape: \t{BODY_SHAPE}").expandtabs(30))

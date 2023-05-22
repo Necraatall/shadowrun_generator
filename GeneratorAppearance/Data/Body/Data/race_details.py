@@ -96,7 +96,7 @@ race_details = {
             "Stature": random.choice(("tall", "slim")),
             "Build": "athletic (respiratory), broad shoulders, strong posture",
             "Limbs": "long arms and legs",
-            "Body_height": "175",
+            "Body_height": str(random.randint(170, 180)),
             "Pigmentation": "pale " + random.choice(("white", "pinkish, delicate")) + " complexion",
             "Nose": "long, narrow, " + random.choice(("straight", "curvy")),
             "Lips": "thin",

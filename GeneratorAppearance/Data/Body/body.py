@@ -21,7 +21,7 @@ if race_choice == 'Europoidic':
 race_chosen_height = ('Falian', 'Hamitic', 'Sudeten', 'Oriental', 'Alpine', 'Mediterran')
 
 make_list = list(Face_shape)
-if any(s in race_chosen for s in race_chosen_height):
+if any(s in race_choice for s in race_chosen_height):
     make_list = list(Height)
     HEIGHT = random.choice(make_list)
     HEIGHT = (HEIGHT.value)

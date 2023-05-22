@@ -241,7 +241,13 @@ Choose or Roll One:
 7 My word is my bond
 8 Getting even
 9 Being number one
-10 My life
+10 Pets
+11 Animals
+12 Flora (flowers, trees, muchrooms, all(Flora))
+13 My life
+14 Richness
+15 Poorichness (chudoba)
+16 Samota
 
 How Do You Feel About Most People
 Choose or Roll One:
@@ -474,12 +480,12 @@ Romeo and Juliet
 Sometimes relationships end badly…
 In this case, very badly.
 Choose or Roll One:
-1 Lover was killed by Organleggers.
+1 Lover was killed by Organleggers.gender
 2 Lover was killed in auto accident.
 3 Lover went insane.
 4 Lover committed suicide.
 5 Lover lost in VR.
-6 Lover murdered.
+6 Lover murdered.gender
 7 Lover imprisoned.
 8 Bullet meant for you killed lover.
 9 Stolen by rival.

@@ -1,0 +1,9 @@
+// {type:class}
+// {direction:topDown}
+[note: You can stick notes on diagrams too!{bg:cornsilk}]
+[Character]
+[Character]1-1>[gendre]
+[Character]1-1>[FirstName | NickName | FamilyName]
+[Character]1-1>[HumanRace | Metatype]
+[Character]1-1>[Face | Body]
+[Character]1-1>[PhysicalAge | PsychicalAge | AppearenceAge]
